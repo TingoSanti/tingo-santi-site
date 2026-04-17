@@ -26,10 +26,10 @@ const SITE = {
 
   /* ── HERO ──────────────────────────────────────────────── */
   hero: {
-    youtubeId:  "INSIRA_YOUTUBE_ID_AQUI",  // ← ID do vídeo de fundo
-    tagline:    "A obra de Roberto Carlos ao vivo — com voz natural, orquestra e emoção verdadeira.",
-    foto:       "img/hero_principal.jpg",   // ← foto de fallback (mobile e autoplay bloqueado)
-  },
+  youtubeId:  "M7ehpNbIbUY",
+  tagline:    "A obra de Roberto Carlos ao vivo — com voz natural, orquestra e emoção verdadeira.",
+  foto:       "img/hero_principal.jpg",
+},
 
   /* ── VÍDEOS ────────────────────────────────────────────── */
   /* Para trocar um vídeo: substitua o youtubeId pelo novo ID.
@@ -37,11 +37,11 @@ const SITE = {
      Para remover: apague o bloco inteiro. */
   videos: [
     {
-      titulo:    "Tributo ao Rei – Show ao Vivo",
-      categoria: "Show ao vivo",
-      youtubeId: "INSIRA_YOUTUBE_ID_AQUI",
-      thumb:     "img/frame_03.jpg"
-    },
+  titulo:    "Tributo ao Rei – Show ao Vivo",
+  categoria: "Show ao vivo",
+  youtubeId: "M7ehpNbIbUY",
+  thumb:     "img/frame_03.jpg"
+},
     {
       titulo:    "É Muita Saudade Pra Pouco Eu",
       categoria: "Clipe oficial",
