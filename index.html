@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tingo Santi canta Roberto Carlos – Espetáculo de tributo com orquestra ao vivo, fidelidade interpretativa e produção profissional. Contratação por prefeituras, fundações, Sescs e eventos corporativos.">
+<meta name="keywords" content="Tingo Santi, tributo Roberto Carlos, show Roberto Carlos prefeitura, espetáculo musical, cantor tributo Roberto Carlos, show corporativo, programação cultural">
+<meta property="og:title" content="Tingo Santi – Tributo ao Rei · Roberto Carlos">
+<meta property="og:description" content="A obra de Roberto Carlos ao vivo — com voz natural, orquestra e emoção verdadeira.">
+<meta property="og:image" content="img/hero_principal.jpg">
+<meta property="og:type" content="website">
+<title>Tingo Santi – Tributo ao Rei · Roberto Carlos</title>
+
+<!-- Google Analytics — ID inserido via data.js -->
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    if (typeof SITE === 'undefined' || !SITE.analytics.googleAnalyticsId || SITE.analytics.googleAnalyticsId.includes('INSIRA')) return;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + SITE.analytics.googleAnalyticsId;
+    s.async = true;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', SITE.analytics.googleAnalyticsId);
+    window._gtag = gtag;
+  });
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --w:#ffffff; --off:#f5f7fc; --off2:#eaeff8;
+  --navy:#02091c; --blue:#0b3480; --bm:#174fba; --bl:#2e6dd4; --bx:#9bbde8;
+  --bfaint:rgba(11,52,128,.07); --bb:rgba(11,52,128,.14);
+  --t:#0c1830; --tm:#3a4a6b; --mu:#7a88a8;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+  --r:4px; --rl:12px; --nh:80px;
+  --max:1280px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:17px}
+body{font-family:var(--sans);background:var(--w);color:var(--t);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--sans)}
+
+/* ── NAV ── */
+#nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;z-index:200;transition:all .4s;background:transparent}
+#nav.s{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bb);box-shadow:0 2px 24px rgba(11,52,128,.06)}
+.nl{display:flex;gap:1.8rem;list-style:none}
+.nl a{font-size:.76rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .2s}
+#nav.s .nl a{color:var(--tm)}
+.nl a:hover{color:var(--bl) !important}
+.nc{padding:.6rem 1.5rem;border:1px solid rgba(255,255,255,.45);border-radius:var(--r);font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:transparent;transition:all .2s}
+#nav.s .nc{border-color:var(--bb);color:var(--blue)}
+.nc:hover{background:var(--blue);border-color:var(--blue);color:#fff !important}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:#fff;transition:.3s}
+#nav.s .ham span{background:var(--t)}
+#mm{display:none;position:fixed;top:var(--nh);left:0;right:0;background:var(--w);border-bottom:1px solid var(--off2);padding:1.5rem 5vw 2rem;z-index:199;flex-direction:column;gap:1rem}
+#mm a{font-size:.9rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);padding:.5rem 0;border-bottom:1px solid var(--off2)}
+
+/* ── HERO ── */
+#hero{position:relative;width:100vw;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--navy)}
+.hbg{position:absolute;inset:0;z-index:0}
+.hfb{position:absolute;inset:0;background-size:cover;background-position:center 25%;z-index:0}
+.hbg iframe{position:absolute;inset:-10%;width:120%;height:120%;border:none;pointer-events:none;z-index:1}
+.hov{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(2,9,28,.52) 0%,rgba(2,9,28,.22) 45%,rgba(2,9,28,.82) 100%)}
+.hc{position:relative;z-index:3;text-align:center;padding:0 5vw;max-width:940px;animation:fu 1.3s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:translateY(0)}}
+.htag{font-family:var(--serif);font-size:clamp(1.2rem,2.5vw,1.75rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.86);margin-top:2.2rem;margin-bottom:2.6rem;line-height:1.42}
+.ha{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bpw{display:inline-block;padding:.95rem 2.2rem;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;transition:all .2s;cursor:pointer}
+.bpw:hover{background:var(--bm);transform:translateY(-2px)}
+.bow{display:inline-block;padding:.95rem 2.2rem;border:1px solid rgba(255,255,255,.4);color:#fff;background:transparent;border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;transition:all .2s}
+.bow:hover{border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.09)}
+.hscr{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:bob 2.5s ease-in-out infinite}
+.hscr span{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.42)}
+.hscrl{width:1px;height:42px;background:linear-gradient(to bottom,rgba(255,255,255,.36),transparent)}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ── SHARED ── */
+.sec{padding:clamp(5rem,9vw,9rem) 5vw}
+.sec-off{background:var(--off)}
+.con{max-width:var(--max);margin:0 auto}
+.ey{display:flex;align-items:center;gap:.9rem;margin-bottom:1.1rem}
+.eyl{width:36px;height:1px;background:var(--bl);flex-shrink:0}
+.eys{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.sh{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:400;line-height:1.06;color:var(--navy);margin-bottom:1.1rem}
+.sh em{font-style:italic;color:var(--blue)}
+.sl{font-size:1.05rem;font-weight:300;color:var(--tm);max-width:640px;line-height:1.82;margin-bottom:3rem}
+.bp{display:inline-block;padding:.9rem 2.2rem;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:all .2s;cursor:pointer}
+.bp:hover{background:var(--bm);transform:translateY(-2px)}
+.bout{display:inline-block;padding:.9rem 2.2rem;border:1px solid var(--bb);color:var(--blue);background:transparent;border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;transition:all .2s;cursor:pointer}
+.bout:hover{background:var(--bfaint);border-color:var(--blue)}
+
+/* ── SHOW ── */
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:center}
+.sph{position:relative;aspect-ratio:4/5;border-radius:var(--rl);background-size:cover;background-position:center;box-shadow:0 28px 64px rgba(11,52,128,.13)}
+.spa{position:absolute;bottom:-2.5rem;right:-2.5rem;width:52%;aspect-ratio:3/4;border-radius:var(--rl);background-size:cover;background-position:center;border:4px solid var(--w);box-shadow:0 16px 36px rgba(11,52,128,.15)}
+.sf{display:flex;flex-direction:column;gap:1.8rem;margin-top:2rem}
+.sfi{display:flex;gap:1.3rem;align-items:flex-start;padding-bottom:1.8rem;border-bottom:1px solid var(--off2)}
+.sfi:last-child{border-bottom:none}
+.sfd{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:9px}
+.sft{font-size:.96rem;font-weight:600;margin-bottom:.35rem;color:var(--navy)}
+.sfd2{font-size:.88rem;font-weight:300;color:var(--tm);line-height:1.68}
+
+/* ── VÍDEOS ── */
+.vf{position:relative;aspect-ratio:16/9;background:var(--navy);border-radius:var(--rl);overflow:hidden;margin-bottom:2rem;cursor:pointer}
+.vft{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .4s}
+.vf:hover .vft{transform:scale(1.03)}
+.vfo{position:absolute;inset:0;background:rgba(2,9,28,.38);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem}
+.vpb{width:84px;height:84px;border-radius:50%;border:2px solid rgba(255,255,255,.6);background:rgba(11,52,128,.36);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.9rem;transition:all .2s}
+.vf:hover .vpb{background:var(--blue);border-color:#fff}
+.vft2{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:#fff;text-align:center;padding:0 2rem}
+.vf iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.vg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.1rem}
+.vc{border-radius:var(--r);overflow:hidden;border:1px solid var(--off2);cursor:pointer;transition:all .2s;background:var(--w)}
+.vc:hover,.vc.a{box-shadow:0 8px 24px rgba(11,52,128,.1);border-color:var(--bb)}
+.vc.a{border-color:var(--blue)}
+.vct{aspect-ratio:16/9;position:relative;background:var(--off2);background-size:cover;background-position:center}
+.vcp{position:absolute;inset:0;background:rgba(2,9,28,.3);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem}
+.vci{padding:.8rem .95rem}
+.vcn{font-size:.88rem;font-weight:500;color:var(--navy);margin-bottom:.22rem}
+.vck{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--bl)}
+
+/* ── GALERIA ── */
+.gm{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:10px;margin-top:2rem}
+.gi{border-radius:var(--r);overflow:hidden;background:var(--off2);background-size:cover;background-position:center;transition:transform .3s,box-shadow .3s}
+.gi:hover{transform:scale(1.02);box-shadow:0 14px 36px rgba(11,52,128,.14)}
+.gi.tall{grid-row:span 2}
+.gi.wide{grid-column:span 2}
+
+/* ── STATS ── */
+.stg{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:1px;background:var(--off2);border:1px solid var(--off2);border-radius:var(--rl);overflow:hidden}
+.sti{padding:3rem 2rem;text-align:center;background:var(--w)}
+.stn{font-family:var(--serif);font-size:clamp(2.6rem,4.5vw,3.6rem);font-weight:400;color:var(--blue);line-height:1;margin-bottom:.65rem}
+.stl{font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);line-height:1.55}
+
+/* ── IMPRENSA ── */
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.6rem;margin-bottom:3rem}
+.pc{padding:2rem;border-radius:var(--rl);border:1px solid var(--off2);background:var(--w);transition:all .2s}
+.pc:hover{box-shadow:0 8px 28px rgba(11,52,128,.08);border-color:var(--bb)}
+.po{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:.9rem}
+.ph{font-family:var(--serif);font-size:1.15rem;font-weight:400;line-height:1.4;color:var(--navy);margin-bottom:.65rem}
+.pe{font-size:.86rem;font-weight:300;color:var(--tm);line-height:1.7}
+.plog{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center;padding-top:2.5rem;border-top:1px solid var(--off2)}
+.plk{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+.pli{padding:.45rem 1rem;border:1px solid var(--off2);border-radius:var(--r);font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mu)}
+
+/* ── CONTRATANTES ── */
+.cblock{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.cdocs{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.cdocs li{display:flex;gap:.85rem;align-items:flex-start;font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.5}
+.cdocs li::before{content:'✓';color:var(--blue);font-weight:600;flex-shrink:0;margin-top:.05rem}
+.cprec{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.cpcard{padding:1.3rem 1.5rem;border:1px solid var(--off2);border-radius:var(--r);background:var(--w)}
+.cpmun{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem}
+.cpev{font-size:.9rem;font-weight:300;color:var(--tm)}
+
+/* ── SOBRE ── */
+.sgr{display:grid;grid-template-columns:1fr 1.3fr;gap:6rem;align-items:center}
+.sphoto{aspect-ratio:3/4;border-radius:var(--rl);background-size:cover;background-position:center top;box-shadow:0 24px 56px rgba(11,52,128,.12)}
+.squote{margin-top:2rem;padding:1.8rem;border-left:3px solid var(--blue);background:var(--off);border-radius:0 var(--r) var(--r) 0}
+.sqt{font-family:var(--serif);font-size:1.1rem;font-style:italic;font-weight:300;color:var(--navy);line-height:1.55;margin-bottom:.5rem}
+.sqa{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.smil{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
+.smilc{padding:1.3rem;border-left:3px solid var(--blue);background:var(--off);border-radius:0 var(--r) var(--r) 0}
+.smily{font-family:var(--serif);font-size:1.5rem;color:var(--blue);margin-bottom:.2rem}
+.smild{font-size:.83rem;color:var(--tm)}
+
+/* ── CTA BAND ── */
+.band{background:var(--off);border-top:1px solid var(--off2);border-bottom:1px solid var(--off2);padding:5rem 5vw;text-align:center}
+.bant{font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.1rem);font-weight:400;color:var(--navy);margin-bottom:1rem}
+.bans{font-size:1rem;font-weight:300;color:var(--tm);max-width:500px;margin:0 auto 2.5rem;line-height:1.8}
+.bana{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* ── CONTATO ── */
+.csp{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start}
+.cit{display:flex;gap:1.2rem;align-items:flex-start;margin-bottom:2rem}
+.cic{width:44px;height:44px;flex-shrink:0;border:1px solid var(--bb);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1rem;background:var(--off)}
+.cil{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:.3rem}
+.civ{font-size:.98rem;font-weight:400;color:var(--navy)}
+.whatsapp-btn{display:flex;align-items:center;gap:.85rem;padding:1rem 1.8rem;background:#25D366;color:#fff;border-radius:var(--r);font-size:.9rem;font-weight:600;letter-spacing:.06em;transition:all .2s;margin-top:.5rem;width:fit-content}
+.whatsapp-btn:hover{background:#1ebe5a;transform:translateY(-2px)}
+.whatsapp-icon{width:22px;height:22px;fill:#fff}
+.ff{margin-bottom:1.2rem}
+.fl{display:block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:.5rem}
+.fi,.fsl,.ft{width:100%;padding:.95rem 1.1rem;border:1px solid var(--off2);border-radius:var(--r);font-family:var(--sans);font-size:.95rem;color:var(--t);background:var(--w);outline:none;transition:border-color .2s}
+.fi:focus,.fsl:focus,.ft:focus{border-color:var(--blue)}
+.fi::placeholder,.ft::placeholder{color:var(--mu)}
+.fsl option{background:var(--w)}
+.ft{resize:vertical;min-height:120px}
+.fmsg{margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid var(--bb);border-radius:var(--r);background:var(--bfaint);color:var(--blue);font-size:.9rem;display:none}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
+.fg{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3.5rem;max-width:var(--max);margin:0 auto 3rem}
+.ftag{font-size:.88rem;font-weight:300;color:rgba(255,255,255,.46);line-height:1.7;max-width:280px;margin-top:1rem}
+.fct{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bx);margin-bottom:1.4rem}
+.fl2{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.fl2 a{font-size:.88rem;font-weight:300;color:rgba(255,255,255,.5);transition:color .2s}
+.fl2 a:hover{color:#fff}
+.fb{max-width:var(--max);margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fleg{font-size:.8rem;color:rgba(255,255,255,.3)}
+.fso{display:flex;gap:.7rem}
+.sl2{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.82rem;transition:all .2s}
+.sl2:hover{border-color:var(--bx);color:#fff}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .sg,.sgr,.csp,.cblock{grid-template-columns:1fr;gap:3.5rem}
+  .fg{grid-template-columns:1fr 1fr}
+  .spa{display:none}
+  .gm{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
+  .gi.wide{grid-column:span 1}
+}
+@media(max-width:768px){
+  html{font-size:16px}
+  .nl,.nc{display:none}
+  .ham{display:flex}
+  #mm.o{display:flex}
+  .stg{grid-template-columns:repeat(2,1fr)}
+  .gm{grid-template-columns:1fr;grid-auto-rows:220px}
+  .gi.tall{grid-row:span 1}
+  .fg{grid-template-columns:1fr}
+  .smil{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ DADOS DO SITE (carregados antes do layout) ═══ -->
+<script src="data.js"></script>
+
+<!-- ═══ NAV ═══ -->
+<nav id="nav">
+  <a href="#hero" id="navLogo">
+    <svg id="logoL" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+      <line x1="70" y1="40" x2="195" y2="40" stroke="rgba(255,255,255,.27)" stroke-width=".8"/>
+      <circle cx="194" cy="40" r="2" fill="rgba(255,255,255,.44)"/>
+      <line x1="306" y1="40" x2="430" y2="40" stroke="rgba(255,255,255,.27)" stroke-width=".8"/>
+      <circle cx="306" cy="40" r="2" fill="rgba(255,255,255,.44)"/>
+      <g transform="translate(250,40)">
+        <circle cx="0" cy="0" r="22" fill="none" stroke="rgba(255,255,255,.11)" stroke-width=".9"/>
+        <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="rgba(255,255,255,.88)" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="0" cy="0" r="3" fill="rgba(255,255,255,.9)"/>
+        <circle cx="0" cy="0" r="1.2" fill="rgba(2,9,28,.9)"/>
+      </g>
+      <line x1="90" y1="66" x2="410" y2="66" stroke="rgba(255,255,255,.12)" stroke-width=".6"/>
+      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">TINGO</text>
+      <line x1="128" y1="135" x2="196" y2="135" stroke="rgba(255,255,255,.21)" stroke-width=".6"/>
+      <circle cx="205" cy="135" r="1.5" fill="rgba(255,255,255,.44)"/>
+      <circle cx="250" cy="135" r="2.2" fill="rgba(255,255,255,.6)"/>
+      <circle cx="295" cy="135" r="1.5" fill="rgba(255,255,255,.44)"/>
+      <line x1="304" y1="135" x2="372" y2="135" stroke="rgba(255,255,255,.21)" stroke-width=".6"/>
+      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">SANTI</text>
+      <line x1="90" y1="198" x2="410" y2="198" stroke="rgba(255,255,255,.12)" stroke-width=".6"/>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(255,255,255,.52)">Tributo ao Rei</text>
+    </svg>
+    <svg id="logoD" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <line x1="70" y1="40" x2="195" y2="40" stroke="rgba(11,52,128,.2)" stroke-width=".8"/>
+      <circle cx="194" cy="40" r="2" fill="rgba(11,52,128,.38)"/>
+      <line x1="306" y1="40" x2="430" y2="40" stroke="rgba(11,52,128,.2)" stroke-width=".8"/>
+      <circle cx="306" cy="40" r="2" fill="rgba(11,52,128,.38)"/>
+      <g transform="translate(250,40)">
+        <circle cx="0" cy="0" r="22" fill="none" stroke="rgba(11,52,128,.11)" stroke-width=".9"/>
+        <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="#0b3480" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="0" cy="0" r="3" fill="#0b3480"/>
+        <circle cx="0" cy="0" r="1.2" fill="#f5f7fc"/>
+      </g>
+      <line x1="90" y1="66" x2="410" y2="66" stroke="rgba(11,52,128,.1)" stroke-width=".6"/>
+      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">TINGO</text>
+      <line x1="128" y1="135" x2="196" y2="135" stroke="rgba(11,52,128,.18)" stroke-width=".6"/>
+      <circle cx="205" cy="135" r="1.5" fill="rgba(11,52,128,.38)"/>
+      <circle cx="250" cy="135" r="2.2" fill="#0b3480"/>
+      <circle cx="295" cy="135" r="1.5" fill="rgba(11,52,128,.38)"/>
+      <line x1="304" y1="135" x2="372" y2="135" stroke="rgba(11,52,128,.18)" stroke-width=".6"/>
+      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">SANTI</text>
+      <line x1="90" y1="198" x2="410" y2="198" stroke="rgba(11,52,128,.1)" stroke-width=".6"/>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(11,52,128,.55)">Tributo ao Rei</text>
+    </svg>
+  </a>
+  <ul class="nl">
+    <li><a href="#show">O Espetáculo</a></li>
+    <li><a href="#videos">Vídeos</a></li>
+    <li><a href="#not">Notoriedade</a></li>
+    <li><a href="#cont">Contratantes</a></li>
+    <li><a href="#sobre">O Artista</a></li>
+  </ul>
+  <a href="#contact" class="nc" onclick="trackCTA('nav_contato')">Falar com a Produção</a>
+  <button class="ham" id="ham"><span></span><span></span><span></span></button>
+</nav>
+<div id="mm">
+  <a href="#show"    onclick="cm()">O Espetáculo</a>
+  <a href="#videos"  onclick="cm()">Vídeos</a>
+  <a href="#galeria" onclick="cm()">Galeria</a>
+  <a href="#not"     onclick="cm()">Notoriedade</a>
+  <a href="#cont"    onclick="cm()">Contratantes</a>
+  <a href="#sobre"   onclick="cm()">O Artista</a>
+  <a href="#contact" onclick="cm()">Contato</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hbg">
+    <div class="hfb" id="heroBg"></div>
+    <iframe id="hyt" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
+  </div>
+  <div class="hov"></div>
+  <div class="hc">
+    <div style="display:flex;justify-content:center">
+      <svg width="380" height="166" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 32px rgba(2,9,28,.48))">
+        <line x1="55" y1="40" x2="194" y2="40" stroke="rgba(155,189,232,.32)" stroke-width="1"/>
+        <circle cx="192" cy="40" r="2.4" fill="rgba(155,189,232,.55)"/>
+        <line x1="308" y1="40" x2="445" y2="40" stroke="rgba(155,189,232,.32)" stroke-width="1"/>
+        <circle cx="308" cy="40" r="2.4" fill="rgba(155,189,232,.55)"/>
+        <g transform="translate(250,40)">
+          <circle cx="0" cy="0" r="28" fill="none" stroke="rgba(155,189,232,.13)" stroke-width="1.1"/>
+          <polygon points="0,-22 6.43,-8.84 20.87,-6.8 10.43,3.57 12.86,18.05 0,11 -12.86,18.05 -10.43,3.57 -20.87,-6.8 -6.43,-8.84" fill="none" stroke="#9bbde8" stroke-width="1.7" stroke-linejoin="round"/>
+          <circle cx="0" cy="0" r="4.2" fill="#9bbde8"/>
+          <circle cx="0" cy="0" r="1.7" fill="#02091c"/>
+        </g>
+        <line x1="80" y1="74" x2="420" y2="74" stroke="rgba(155,189,232,.17)" stroke-width=".7"/>
+        <text x="250" y="138" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">TINGO</text>
+        <line x1="114" y1="154" x2="190" y2="154" stroke="rgba(155,189,232,.3)" stroke-width=".7"/>
+        <circle cx="200" cy="154" r="2" fill="rgba(155,189,232,.55)"/>
+        <circle cx="250" cy="154" r="3" fill="rgba(155,189,232,.75)"/>
+        <circle cx="300" cy="154" r="2" fill="rgba(155,189,232,.55)"/>
+        <line x1="310" y1="154" x2="386" y2="154" stroke="rgba(155,189,232,.3)" stroke-width=".7"/>
+        <text x="250" y="206" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">SANTI</text>
+        <line x1="80" y1="216" x2="420" y2="216" stroke="rgba(155,189,232,.17)" stroke-width=".7"/>
+      </svg>
+    </div>
+    <p class="htag" id="heroTagline"></p>
+    <div class="ha">
+      <a href="#videos" class="bpw" onclick="trackCTA('hero_videos')">▶ Assistir ao Show</a>
+      <a href="#not"    class="bow"  onclick="trackCTA('hero_notoriedade')">Ver Notoriedade</a>
+      <a href="#contact" class="bow" onclick="trackCTA('hero_contato')">Falar com a Produção</a>
+    </div>
+  </div>
+  <div class="hscr"><span>Role</span><div class="hscrl"></div></div>
+</section>
+
+<!-- ═══ O ESPETÁCULO ═══ -->
+<section id="show" class="sec">
+  <div class="con">
+    <div class="sg">
+      <div style="position:relative">
+        <div class="sph" id="showPhotoMain"></div>
+        <div class="spa" id="showPhotoAccent"></div>
+      </div>
+      <div>
+        <div class="ey"><div class="eyl"></div><span class="eys">O Espetáculo</span></div>
+        <h2 class="sh">Tributo ao <em>Rei</em></h2>
+        <p class="sl" id="showIntro" style="margin-bottom:2rem"></p>
+        <div class="sf" id="showFeatures"></div>
+        <div style="margin-top:2.8rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="#contact" class="bp" onclick="trackCTA('show_proposta')">Solicitar Proposta</a>
+          <a href="#cont"    class="bout">Materiais Técnicos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VÍDEOS ═══ -->
+<section id="videos" class="sec sec-off">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Vídeos</span></div>
+    <h2 class="sh" style="margin-bottom:2.5rem">O show que <em>convence</em></h2>
+    <div class="vf" id="vfeat" onclick="ov(0)">
+      <div class="vft" id="vfthumb"></div>
+      <div class="vfo" id="vfov">
+        <div class="vpb">▶</div>
+        <div class="vft2" id="vfttl"></div>
+      </div>
+      <iframe id="vfif" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
+    </div>
+    <div class="vg" id="vgrid"></div>
+  </div>
+</section>
+
+<!-- ═══ GALERIA ═══ -->
+<section id="galeria" class="sec">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Galeria</span></div>
+    <h2 class="sh" style="margin-bottom:.5rem">Momentos de <em>palco</em></h2>
+    <div class="gm" id="galGrid"></div>
+  </div>
+</section>
+
+<!-- ═══ NÚMEROS ═══ -->
+<section class="sec sec-off" style="padding-top:4rem;padding-bottom:4rem">
+  <div class="con">
+    <div class="stg" id="stgrid"></div>
+    <p id="strodape" style="text-align:center;font-size:.72rem;color:var(--mu);margin-top:1.2rem"></p>
+  </div>
+</section>
+
+<!-- ═══ NOTORIEDADE ═══ -->
+<section id="not" class="sec">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Notoriedade</span></div>
+    <h2 class="sh">Relevância que se <em>prova</em></h2>
+    <p class="sl">Histórico de entregas com sucesso comprovado, prova social digital, dossiê documental completo, clipping de imprensa e aprovação por órgãos como FUNARJ.</p>
+    <div class="pg" id="pgrid"></div>
+    <div class="plog">
+      <span class="plk" style="margin-right:.8rem">Na imprensa:</span>
+      <div id="plogGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTRATANTES ═══ -->
+<section id="cont" class="sec sec-off">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Para Contratantes</span></div>
+    <h2 class="sh">Estrutura para <em>contratar</em></h2>
+    <p class="sl" id="contIntro"></p>
+    <div class="cblock">
+      <div>
+        <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Documentação disponível</p>
+        <ul class="cdocs" id="cdocsList"></ul>
+        <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="#contact" class="bp" onclick="trackCTA('cont_solicitar')">Solicitar Materiais</a>
+          <a href="javascript:void(0)" id="waContBtn" class="bout" onclick="trackWA('cont')">WhatsApp da Produção</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Precedentes de contratação</p>
+        <div class="cprec" id="cprecList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOBRE ═══ -->
+<section id="sobre" class="sec">
+  <div class="con">
+    <div class="sgr">
+      <div>
+        <div class="sphoto" id="sobreFoto"></div>
+        <div class="squote">
+          <p class="sqt" id="sobreCitacao"></p>
+          <p class="sqa">Tingo Santi · Ailton Santos</p>
+        </div>
+      </div>
+      <div>
+        <div class="ey"><div class="eyl"></div><span class="eys">Sobre o Artista</span></div>
+        <h2 class="sh">Tingo <em>Santi</em></h2>
+        <div id="sobreParas" style="margin-bottom:.5rem"></div>
+        <div class="smil" id="sobreMil"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BAND ═══ -->
+<div class="band">
+  <h2 class="bant">Leve o espetáculo para a sua programação</h2>
+  <p class="bans">Proposta comercial, agenda e documentação para contratação pública e privada disponíveis sob demanda.</p>
+  <div class="bana">
+    <a href="#contact" class="bp"  onclick="trackCTA('band_proposta')">Solicitar Proposta</a>
+    <a href="javascript:void(0)" id="waBandBtn" class="bout" onclick="trackWA('band')">WhatsApp · <span id="waBandLabel"></span></a>
+  </div>
+</div>
+
+<!-- ═══ CONTATO ═══ -->
+<section id="contact" class="sec sec-off">
+  <div class="con">
+    <div class="csp">
+      <div>
+        <div class="ey"><div class="eyl"></div><span class="eys">Contato</span></div>
+        <h2 class="sh">Fale com a <em>produção</em></h2>
+        <p style="font-size:.98rem;font-weight:300;color:var(--tm);line-height:1.82;margin-bottom:2.5rem">Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.</p>
+        <div class="cit"><div class="cic">@</div><div><div class="cil">E-mail</div><div class="civ" id="cEmail"></div></div></div>
+        <div class="cit"><div class="cic">☎</div><div><div class="cil">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
+        <div class="cit"><div class="cic">⌂</div><div><div class="cil">Endereço</div><div class="civ" style="font-size:.88rem;line-height:1.5" id="cEndereco"></div></div></div>
+        <div class="cit"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:var(--blue)"></a></div></div></div>
+        <!-- BOTÃO WHATSAPP DESTACADO -->
+        <a href="javascript:void(0)" id="waMainBtn" class="whatsapp-btn" onclick="trackWA('contato')">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Iniciar conversa no WhatsApp
+        </a>
+        <div style="margin-top:1.5rem;display:flex;gap:.8rem">
+          <a href="javascript:void(0)" id="igBtn"  class="sl2" onclick="trackCTA('social_ig')" target="_blank">IG</a>
+          <a href="javascript:void(0)" id="ytBtn"  class="sl2" onclick="trackCTA('social_yt')" target="_blank">YT</a>
+          <a href="javascript:void(0)" id="spBtn"  class="sl2" onclick="trackCTA('social_sp')" target="_blank">SP</a>
+        </div>
+      </div>
+      <div>
+        <form id="cform" method="POST">
+          <div class="ff"><label class="fl">Nome</label><input type="text" name="nome" class="fi" placeholder="Seu nome" required></div>
+          <div class="ff"><label class="fl">Organização / Município</label><input type="text" name="organizacao" class="fi" placeholder="Prefeitura de... / Empresa..."></div>
+          <div class="ff"><label class="fl">E-mail</label><input type="email" name="email" class="fi" placeholder="seu@email.com" required></div>
+          <div class="ff"><label class="fl">Telefone / WhatsApp</label><input type="tel" name="telefone" class="fi" placeholder="(XX) XXXXX-XXXX"></div>
+          <div class="ff"><label class="fl">Tipo de Solicitação</label>
+            <select name="tipo" class="fsl">
+              <option value="">Selecione...</option>
+              <option>Proposta comercial</option>
+              <option>Contratação pública (inexigibilidade)</option>
+              <option>Evento corporativo</option>
+              <option>Materiais técnicos e riders</option>
+              <option>Imprensa / Assessoria</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="ff"><label class="fl">Mensagem</label><textarea name="mensagem" class="ft" placeholder="Evento, data aproximada, cidade e outras informações relevantes..."></textarea></div>
+          <button type="submit" class="bp" style="width:100%;padding:1.05rem" onclick="trackCTA('form_submit')">Enviar Solicitação</button>
+        </form>
+        <div class="fmsg" id="fmsg">Mensagem enviada. Retornaremos em até 24 horas úteis.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="fg">
+    <div>
+      <svg width="100" height="44" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(250,40)">
+          <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="rgba(155,189,232,.65)" stroke-width="1.4" stroke-linejoin="round"/>
+          <circle cx="0" cy="0" r="3" fill="rgba(155,189,232,.65)"/>
+        </g>
+        <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">TINGO</text>
+        <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">SANTI</text>
+        <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="12" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(155,189,232,.5)">Tributo ao Rei</text>
+      </svg>
+      <p class="ftag">Tributo ao Rei · Roberto Carlos<br>Espetáculo de interpretação elegante, memória afetiva e produção profissional completa.</p>
+    </div>
+    <div><div class="fct">Navegação</div><ul class="fl2">
+      <li><a href="#show">O Espetáculo</a></li>
+      <li><a href="#videos">Vídeos</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#not">Notoriedade</a></li>
+      <li><a href="#sobre">Sobre o Artista</a></li>
+    </ul></div>
+    <div><div class="fct">Contratação</div><ul class="fl2">
+      <li><a href="#cont">Para Contratantes</a></li>
+      <li><a href="#contact">Solicitar Proposta</a></li>
+      <li><a href="javascript:void(0)" id="waFooterLink" onclick="trackWA('footer')">WhatsApp</a></li>
+    </ul></div>
+    <div><div class="fct">Contato</div><ul class="fl2">
+      <li><a id="footerEmail" href="#">tingo.santi@proton.me</a></li>
+      <li><a id="footerPhone" href="#">(21) 97521-4169</a></li>
+      <li><a id="footerIG" href="#" target="_blank">Instagram</a></li>
+      <li><a id="footerYT" href="#" target="_blank">YouTube</a></li>
+      <li><a id="footerSP" href="#" target="_blank">Spotify</a></li>
+    </ul></div>
+  </div>
+  <div class="fb">
+    <span class="fleg">© 2026 Tingo Santi · NKT Artes Ltda · <a id="footerCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:rgba(255,255,255,.3)"></a></span>
+    <div class="fso">
+      <a id="fsoIG" href="#" class="sl2" target="_blank">IG</a>
+      <a id="fsoYT" href="#" class="sl2" target="_blank">YT</a>
+      <a id="fsoSP" href="#" class="sl2" target="_blank">SP</a>
+      <a id="fsoWA" href="#" class="sl2" onclick="trackWA('footer_icon')">WA</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ RENDER ENGINE ═══ -->
+<script>
+/* Tudo abaixo lê os dados de data.js e constrói o DOM.
+   Não altere este bloco. Altere apenas data.js. */
+
+function init() {
+  const C = SITE.contato;
+  const waUrl = 'https://wa.me/' + C.whatsapp;
+
+  /* ── HERO ── */
+  document.getElementById('heroBg').style.backgroundImage = "url('" + SITE.hero.foto + "')";
+  document.getElementById('heroTagline').textContent = SITE.hero.tagline;
+  if (SITE.hero.youtubeId && !SITE.hero.youtubeId.includes('INSIRA')) {
+    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+      const f = document.getElementById('hyt');
+      f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+        '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
+        '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1';
+      f.style.display = 'block';
+      setTimeout(function(){
+        try{ var d=f.contentDocument||f.contentWindow.document; if(!d||d.body.innerHTML==='')f.remove(); }
+        catch(e){}
+      }, 3500);
+    }
+  }
+
+  /* ── SHOW ── */
+  document.getElementById('showPhotoMain').style.backgroundImage = "url('" + SITE.show.fotoMain + "')";
+  document.getElementById('showPhotoAccent').style.backgroundImage = "url('" + SITE.show.fotoAccent + "')";
+  document.getElementById('showIntro').textContent = SITE.show.intro;
+  var sf = document.getElementById('showFeatures');
+  SITE.show.features.forEach(function(f) {
+    sf.innerHTML += '<div class="sfi"><div class="sfd"></div><div><div class="sft">' + f.titulo + '</div><div class="sfd2">' + f.desc + '</div></div></div>';
+  });
+
+  /* ── VÍDEOS ── */
+  var primeiroV = SITE.videos[0];
+  if (primeiroV) {
+    document.getElementById('vfthumb').style.backgroundImage = "url('" + primeiroV.thumb + "')";
+    document.getElementById('vfttl').textContent = primeiroV.titulo;
+  }
+  var vg = document.getElementById('vgrid');
+  SITE.videos.forEach(function(v, i) {
+    var e = document.createElement('div');
+    e.className = 'vc' + (i===0 ? ' a' : '');
+    e.onclick = function(){ ov(i); };
+    e.innerHTML = '<div class="vct" style="background-image:url(\'' + v.thumb + '\')"><div class="vcp">▶</div></div><div class="vci"><div class="vcn">' + v.titulo + '</div><div class="vck">' + v.categoria + '</div></div>';
+    vg.appendChild(e);
+  });
+
+  /* ── GALERIA ── */
+  var gal = document.getElementById('galGrid');
+  var hasWide = false;
+  SITE.galeria.forEach(function(g, i) {
+    var el = document.createElement('div');
+    var cls = 'gi';
+    if (g.destaque) cls += ' tall';
+    if (!hasWide && !g.destaque && i >= 5) { cls += ' wide'; hasWide = true; }
+    el.className = cls;
+    el.style.backgroundImage = "url('" + g.arquivo + "')";
+    gal.appendChild(el);
+  });
+
+  /* ── STATS ── */
+  var stg = document.getElementById('stgrid');
+  SITE.numeros.forEach(function(s) {
+    var e = document.createElement('div'); e.className = 'sti';
+    e.innerHTML = '<div class="stn">' + s.numero + '</div><div class="stl">' + s.label.replace('\n','<br>') + '</div>';
+    stg.appendChild(e);
+  });
+  document.getElementById('strodape').textContent = SITE.numerosRodape;
+
+  /* ── IMPRENSA ── */
+  var pg = document.getElementById('pgrid');
+  SITE.imprensa.forEach(function(p) {
+    var e = document.createElement('div'); e.className = 'pc';
+    e.innerHTML = '<div class="po">' + p.veiculo + '</div><div class="ph">' + p.manchete + '</div><div class="pe">' + p.resumo + '</div>';
+    pg.appendChild(e);
+  });
+  var plog = document.getElementById('plogGrid');
+  plog.style.display = 'flex'; plog.style.flexWrap = 'wrap'; plog.style.gap = '.9rem';
+  SITE.veiculosImprensa.forEach(function(v) {
+    plog.innerHTML += '<div class="pli">' + v + '</div>';
+  });
+
+  /* ── CONTRATANTES ── */
+  document.getElementById('contIntro').textContent = SITE.contratantes.intro;
+  var cl = document.getElementById('cdocsList');
+  SITE.contratantes.documentos.forEach(function(d) {
+    cl.innerHTML += '<li>' + d + '</li>';
+  });
+  var cp = document.getElementById('cprecList');
+  SITE.contratantes.precedentes.forEach(function(p) {
+    cp.innerHTML += '<div class="cpcard"><div class="cpmun">' + p.municipio + '</div><div class="cpev">' + p.evento + '</div></div>';
+  });
+  document.getElementById('waContBtn').href = waUrl;
+
+  /* ── SOBRE ── */
+  document.getElementById('sobreFoto').style.backgroundImage = "url('" + SITE.sobre.foto + "')";
+  document.getElementById('sobreCitacao').textContent = '"' + SITE.sobre.citacao + '"';
+  var sp = document.getElementById('sobreParas');
+  SITE.sobre.paras.forEach(function(p) {
+    sp.innerHTML += '<p style="font-size:1rem;font-weight:300;color:var(--tm);line-height:1.88;margin-bottom:1.2rem">' + p + '</p>';
+  });
+  var sm = document.getElementById('sobreMil');
+  SITE.sobre.marcos.forEach(function(m) {
+    sm.innerHTML += '<div class="smilc"><div class="smily">' + m.ano + '</div><div class="smild">' + m.desc + '</div></div>';
+  });
+
+  /* ── CONTATO ── */
+  document.getElementById('cEmail').textContent    = C.email;
+  document.getElementById('cPhone').textContent    = C.whatsappLabel;
+  document.getElementById('cEndereco').textContent = C.endereco;
+  document.getElementById('cCnpj').textContent     = C.cnpj;
+  document.getElementById('waMainBtn').href        = waUrl;
+  document.getElementById('waBandBtn').href        = waUrl;
+  document.getElementById('waBandLabel').textContent = C.whatsappLabel;
+  document.getElementById('igBtn').href  = 'https://instagram.com/' + C.instagram;
+  document.getElementById('ytBtn').href  = 'https://youtube.com/' + C.youtube;
+  document.getElementById('spBtn').href  = C.spotify;
+  document.getElementById('igBtn').setAttribute('target','_blank');
+  document.getElementById('ytBtn').setAttribute('target','_blank');
+  document.getElementById('spBtn').setAttribute('target','_blank');
+
+  /* ── FORMULÁRIO ── */
+  var formAction = C.formspree && !C.formspree.includes('INSIRA')
+    ? 'https://formspree.io/f/' + C.formspree
+    : '#';
+  document.getElementById('cform').action = formAction;
+  document.getElementById('cform').addEventListener('submit', function(e) {
+    if (formAction === '#') { e.preventDefault(); }
+    trackCTA('form_submit');
+    if (formAction !== '#') {
+      e.preventDefault();
+      fetch(formAction, { method:'POST', headers:{'Accept':'application/json'}, body: new FormData(this) })
+        .then(function(r){ if(r.ok){ document.getElementById('fmsg').style.display='block'; e.target.reset(); }})
+        .catch(function(){});
+    }
+  });
+
+  /* ── FOOTER ── */
+  document.getElementById('footerEmail').href        = 'mailto:' + C.email;
+  document.getElementById('footerEmail').textContent = C.email;
+  document.getElementById('footerPhone').href        = 'tel:+' + C.whatsapp;
+  document.getElementById('footerPhone').textContent = C.whatsappLabel;
+  document.getElementById('footerIG').href = 'https://instagram.com/' + C.instagram;
+  document.getElementById('footerYT').href = 'https://youtube.com/' + C.youtube;
+  document.getElementById('footerSP').href = C.spotify;
+  document.getElementById('footerCnpj').textContent = 'CNPJ ' + C.cnpj;
+  document.getElementById('fsoIG').href  = 'https://instagram.com/' + C.instagram;
+  document.getElementById('fsoYT').href  = 'https://youtube.com/' + C.youtube;
+  document.getElementById('fsoSP').href  = C.spotify;
+  document.getElementById('fsoWA').href  = waUrl;
+  document.getElementById('waFooterLink').href = waUrl;
+}
+
+/* ── VÍDEO PLAYER ── */
+function ov(i) {
+  var v = SITE.videos[i];
+  if (!v.youtubeId || v.youtubeId.includes('INSIRA')) return;
+  document.getElementById('vfov').style.display = 'none';
+  var f = document.getElementById('vfif');
+  f.style.display = 'block';
+  f.src = 'https://www.youtube.com/embed/' + v.youtubeId + '?autoplay=1&rel=0';
+  document.querySelectorAll('.vc').forEach(function(e,j){ e.classList.toggle('a', j===i); });
+  trackCTA('video_play_' + i);
+}
+
+/* ── NAV ── */
+window.addEventListener('scroll', function(){
+  var s = scrollY > 60;
+  document.getElementById('nav').classList.toggle('s', s);
+  document.getElementById('logoL').style.display = s ? 'none' : 'block';
+  document.getElementById('logoD').style.display = s ? 'block' : 'none';
+});
+document.getElementById('ham').onclick = function(){ document.getElementById('mm').classList.toggle('o'); };
+function cm(){ document.getElementById('mm').classList.remove('o'); }
+
+/* ── ANALYTICS TRACKING ── */
+function trackCTA(label) {
+  if (window._gtag) window._gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
+}
+function trackWA(origem) {
+  if (window._gtag) window._gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: 'whatsapp_' + origem });
+  var url = 'https://wa.me/' + SITE.contato.whatsapp;
+  window.open(url, '_blank');
+}
+
+/* ── INIT ── */
+if (typeof SITE !== 'undefined') {
+  init();
+} else {
+  document.addEventListener('DOMContentLoaded', init);
+}
+</script>
+</body>
+</html>
