@@ -140,7 +140,45 @@ button{cursor:pointer;font-family:var(--sans)}
 .stn{font-family:var(--serif);font-size:clamp(2.6rem,4.5vw,3.6rem);font-weight:400;color:var(--blue);line-height:1;margin-bottom:.65rem}
 .stl{font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);line-height:1.55}
 
-/* ── IMPRENSA ── */
+/* ── IMPRENSA NOVA (visual impact) ── */
+.vlogos{display:flex;flex-wrap:wrap;gap:0;align-items:center;justify-content:space-between;padding:1.5rem 0;margin-bottom:3.5rem;border-top:1px solid var(--bb);border-bottom:1px solid var(--bb)}
+.vlogo{flex:1;min-width:120px;text-align:center;padding:.5rem 1rem;font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--navy);letter-spacing:.02em;border-right:1px solid var(--bb);transition:opacity .2s}
+.vlogo:last-child{border-right:none}
+.vlogo:hover{color:var(--blue)}
+.vlogo-sub{display:block;font-family:var(--sans);font-size:.62rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);margin-top:.2rem}
+
+.pgrid2{display:grid;grid-template-columns:repeat(12,1fr);gap:1.4rem;margin-bottom:4rem}
+.pcard{position:relative;border-radius:var(--rl);overflow:hidden;background:var(--navy);cursor:pointer;transition:all .3s;border:1px solid transparent;text-decoration:none;display:block}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(11,52,128,.22);border-color:var(--bl)}
+.pcard-img{aspect-ratio:3/4;background-size:cover;background-position:top center;position:relative}
+.pcard-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(2,9,28,.05) 0%,rgba(2,9,28,.35) 55%,rgba(2,9,28,.95) 100%)}
+.pcard-body{position:absolute;bottom:0;left:0;right:0;padding:1.4rem 1.3rem;color:#fff;z-index:2}
+.pcard-vc{display:inline-block;padding:.3rem .7rem;background:var(--blue);border-radius:var(--r);font-size:.63rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.pcard-mh{font-family:var(--serif);font-size:1.1rem;font-weight:500;line-height:1.25;color:#fff;margin-bottom:.5rem}
+.pcard-dt{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.pcard.sz-l{grid-column:span 6}
+.pcard.sz-l .pcard-img{aspect-ratio:16/11}
+.pcard.sz-l .pcard-mh{font-size:1.5rem}
+.pcard.sz-m{grid-column:span 4}
+.pcard.sz-m .pcard-img{aspect-ratio:3/4}
+.pcard.sz-s{grid-column:span 3}
+.pcard.sz-s .pcard-img{aspect-ratio:3/4}
+
+.presq{max-width:920px;margin:0 auto 4rem;padding:3rem 3rem 3rem 5rem;position:relative;background:var(--navy);border-radius:var(--rl);color:#fff;overflow:hidden}
+.presq-mark{position:absolute;top:1rem;left:2rem;font-family:var(--serif);font-size:7rem;line-height:1;color:var(--bl);font-style:italic}
+.presq-text{font-family:var(--serif);font-size:1.6rem;font-weight:400;font-style:italic;line-height:1.4;color:#fff;margin-bottom:1.2rem;position:relative;z-index:1}
+.presq-src{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bx);position:relative;z-index:1}
+
+.vinst{padding:3rem 0 5rem;border-top:1px solid var(--bb);text-align:center}
+.vinst-title{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mu);margin-bottom:2rem}
+.vinst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:1100px;margin:0 auto}
+.vinst-card{padding:1.6rem 1.3rem;background:var(--w);border:1px solid var(--off2);border-radius:var(--rl);transition:all .2s}
+.vinst-card:hover{border-color:var(--bl);box-shadow:0 10px 28px rgba(11,52,128,.1)}
+.vinst-ico{font-size:1.6rem;margin-bottom:.6rem}
+.vinst-ttl{font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;line-height:1.3}
+.vinst-sub{font-size:.76rem;color:var(--tm);line-height:1.55}
+
+/* ── IMPRENSA (legado) ── */
 .pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.6rem;margin-bottom:3rem}
 .pc{padding:2rem;border-radius:var(--rl);border:1px solid var(--off2);background:var(--w);transition:all .2s}
 .pc:hover{box-shadow:0 8px 28px rgba(11,52,128,.08);border-color:var(--bb)}
@@ -217,6 +255,10 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .spa{display:none}
   .gm{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
   .gi.wide{grid-column:span 1}
+  .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 6}
+  .vlogos{flex-direction:column;gap:0}
+  .vlogo{border-right:none;border-bottom:1px solid var(--bb);width:100%;padding:1rem}
+  .vlogo:last-child{border-bottom:none}
 }
 @media(max-width:768px){
   html{font-size:16px}
@@ -228,6 +270,10 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .gi.tall{grid-row:span 1}
   .fg{grid-template-columns:1fr}
   .smil{grid-template-columns:1fr}
+  .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 12}
+  .presq{padding:2.5rem 1.8rem 2rem 1.8rem}
+  .presq-mark{top:.5rem;left:1rem;font-size:5rem}
+  .presq-text{font-size:1.2rem}
 }
 </style>
 </head>
@@ -342,6 +388,9 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
       <a href="#contact" class="bow" onclick="trackCTA('hero_contato')">Falar com a Produção</a>
     </div>
   </div>
+  <button id="soundBtn" onclick="toggleSound()" style="position:absolute;bottom:2.5rem;right:2.5rem;z-index:4;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(10px);color:#fff;font-size:1.2rem;cursor:pointer;transition:all .2s;display:none;align-items:center;justify-content:center">
+    <span id="soundIcon">🔇</span>
+  </button>
   <div class="hscr"><span>Role</span><div class="hscrl"></div></div>
 </section>
 
@@ -402,15 +451,29 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 </section>
 
 <!-- ═══ NOTORIEDADE ═══ -->
-<section id="not" class="sec">
+<section id="not" class="sec" style="background:linear-gradient(180deg,#fff 0%,var(--off) 100%);padding-bottom:0">
   <div class="con">
     <div class="ey"><div class="eyl"></div><span class="eys">Notoriedade</span></div>
-    <h2 class="sh">Relevância que se <em>prova</em></h2>
-    <p class="sl">Histórico de entregas com sucesso comprovado, prova social digital, dossiê documental completo, clipping de imprensa e aprovação por órgãos como FUNARJ.</p>
-    <div class="pg" id="pgrid"></div>
-    <div class="plog">
-      <span class="plk" style="margin-right:.8rem">Na imprensa:</span>
-      <div id="plogGrid"></div>
+    <h2 class="sh">O show que a <em>imprensa</em> cobre</h2>
+    <p class="sl">Capas de jornal, matérias em veículos regionais e nacionais, aprovação por órgãos oficiais. Cada show gera cobertura. Cada cobertura reforça o posicionamento.</p>
+
+    <!-- Faixa de logos / veículos -->
+    <div class="vlogos" id="vlogosGrid"></div>
+
+    <!-- Grid de capas e matérias -->
+    <div class="pgrid2" id="pgrid2"></div>
+
+    <!-- Quote em destaque -->
+    <div class="presq">
+      <div class="presq-mark">"</div>
+      <p class="presq-text" id="presqText"></p>
+      <p class="presq-src" id="presqSrc"></p>
+    </div>
+
+    <!-- Validações institucionais -->
+    <div class="vinst">
+      <p class="vinst-title">Validações institucionais</p>
+      <div class="vinst-grid" id="vinstGrid"></div>
     </div>
   </div>
 </section>
@@ -581,8 +644,9 @@ function init() {
       const f = document.getElementById('hyt');
       f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
         '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
-        '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1';
+        '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&enablejsapi=1';
       f.style.display = 'block';
+      document.getElementById('soundBtn').style.display = 'flex';
       setTimeout(function(){
         try{ var d=f.contentDocument||f.contentWindow.document; if(!d||d.body.innerHTML==='')f.remove(); }
         catch(e){}
@@ -636,18 +700,55 @@ function init() {
   });
   document.getElementById('strodape').textContent = SITE.numerosRodape;
 
-  /* ── IMPRENSA ── */
-  var pg = document.getElementById('pgrid');
-  SITE.imprensa.forEach(function(p) {
-    var e = document.createElement('div'); e.className = 'pc';
-    e.innerHTML = '<div class="po">' + p.veiculo + '</div><div class="ph">' + p.manchete + '</div><div class="pe">' + p.resumo + '</div>';
-    pg.appendChild(e);
-  });
-  var plog = document.getElementById('plogGrid');
-  plog.style.display = 'flex'; plog.style.flexWrap = 'wrap'; plog.style.gap = '.9rem';
-  SITE.veiculosImprensa.forEach(function(v) {
-    plog.innerHTML += '<div class="pli">' + v + '</div>';
-  });
+  /* ── IMPRENSA (nova estrutura visual) ── */
+  // 1. Veículos em barra horizontal
+  var vg = document.getElementById('vlogosGrid');
+  if (vg && SITE.veiculosImprensa) {
+    SITE.veiculosImprensa.forEach(function(v) {
+      var parts = v.split('|');
+      vg.innerHTML += '<div class="vlogo">' + parts[0] +
+        (parts[1] ? '<span class="vlogo-sub">' + parts[1] + '</span>' : '') + '</div>';
+    });
+  }
+  // 2. Grid visual de matérias
+  var pg2 = document.getElementById('pgrid2');
+  if (pg2 && SITE.imprensa) {
+    SITE.imprensa.forEach(function(p) {
+      var href = p.link ? p.link : 'javascript:void(0)';
+      var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
+      var sz   = p.tamanho || 'sz-m';
+      pg2.innerHTML +=
+        '<a class="pcard ' + sz + '" href="' + href + '" ' + tgt + '>' +
+          '<div class="pcard-img" style="background-image:url(\'' + p.imagem + '\')">' +
+            '<div class="pcard-ov"></div>' +
+            '<div class="pcard-body">' +
+              '<span class="pcard-vc">' + p.veiculo + '</span>' +
+              '<div class="pcard-mh">' + p.manchete + '</div>' +
+              (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
+            '</div>' +
+          '</div>' +
+        '</a>';
+    });
+  }
+  // 3. Quote em destaque
+  if (SITE.imprensaQuote) {
+    var qt = document.getElementById('presqText');
+    var qs = document.getElementById('presqSrc');
+    if (qt) qt.textContent = SITE.imprensaQuote.texto;
+    if (qs) qs.textContent = SITE.imprensaQuote.fonte;
+  }
+  // 4. Validações institucionais
+  var vi = document.getElementById('vinstGrid');
+  if (vi && SITE.validacoes) {
+    SITE.validacoes.forEach(function(v) {
+      vi.innerHTML +=
+        '<div class="vinst-card">' +
+          '<div class="vinst-ico">' + v.icone + '</div>' +
+          '<div class="vinst-ttl">' + v.titulo + '</div>' +
+          '<div class="vinst-sub">' + v.subtitulo + '</div>' +
+        '</div>';
+    });
+  }
 
   /* ── CONTRATANTES ── */
   document.getElementById('contIntro').textContent = SITE.contratantes.intro;
@@ -730,6 +831,28 @@ function ov(i) {
   f.src = 'https://www.youtube.com/embed/' + v.youtubeId + '?autoplay=1&rel=0';
   document.querySelectorAll('.vc').forEach(function(e,j){ e.classList.toggle('a', j===i); });
   trackCTA('video_play_' + i);
+}
+
+/* ── SOUND TOGGLE ── */
+let soundOn = false;
+function toggleSound() {
+  const f = document.getElementById('hyt');
+  const icon = document.getElementById('soundIcon');
+  const btn = document.getElementById('soundBtn');
+  if (!f || !SITE.hero.youtubeId) return;
+  
+  soundOn = !soundOn;
+  
+  const baseUrl = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+    '?autoplay=1&loop=1&playlist=' + SITE.hero.youtubeId +
+    '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&enablejsapi=1' +
+    '&mute=' + (soundOn ? '0' : '1');
+  
+  f.src = baseUrl;
+  icon.textContent = soundOn ? '🔊' : '🔇';
+  btn.style.background = soundOn ? 'rgba(11,52,128,.6)' : 'rgba(255,255,255,.1)';
+  
+  if (window._gtag) window._gtag('event', 'sound_toggle', { event_category: 'engagement', event_label: soundOn ? 'on' : 'off' });
 }
 
 /* ── NAV ── */

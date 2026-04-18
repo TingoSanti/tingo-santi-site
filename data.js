@@ -58,23 +58,76 @@ const SITE = {
 
   imprensa: [
     {
-      veiculo:  "O Dia - RJ",
-      manchete: "Natal Magia transforma a orla de Macae em palco de grandes espetaculos",
-      resumo:   "Tingo Santi encanta publico na programacao oficial de Natal do Municipio de Macae, com tributo emocionante ao Rei."
+      veiculo:  "Folha de Niteroi",
+      data:     "Capa - Outubro 2024",
+      manchete: "Em sua estreia como cantor, Tingo Santi canta e encanta",
+      imagem:   "img/imprensa/folha_capa_out2024.jpg",
+      tamanho:  "sz-l",
+      link:     ""
     },
     {
       veiculo:  "O Dia - RJ",
-      manchete: "Natal Ita Luz emociona Itaborai e encerra programacao com tributo a Roberto Carlos",
-      resumo:   "O espetaculo comove multidao em Itaborai e confirma a forca emocional do repertorio do Rei."
+      data:     "Dezembro 2025",
+      manchete: "Natal Magia transforma a orla de Macae em palco de grandes espetaculos",
+      imagem:   "img/imprensa/odia_macae.jpg",
+      tamanho:  "sz-m",
+      link:     ""
+    },
+    {
+      veiculo:  "Errejota Noticias",
+      data:     "Dezembro 2025",
+      manchete: "Natal Ita Luz encerra programacao com show em homenagem a Roberto Carlos",
+      imagem:   "img/imprensa/errejota_itaborai.jpg",
+      tamanho:  "sz-s",
+      link:     ""
+    },
+    {
+      veiculo:  "O Dia - RJ",
+      data:     "Dezembro 2025",
+      manchete: "Natal Ita Luz emociona Itaborai com tributo a Roberto Carlos",
+      imagem:   "img/imprensa/odia_itaborai.jpg",
+      tamanho:  "sz-s",
+      link:     ""
     },
     {
       veiculo:  "Folha de Niteroi",
-      manchete: "Tingo Santi - O novo fenomeno musical de Niteroi",
-      resumo:   "Artista niteroiense consolida trajetoria com projeto artistico de alto padrao e crescimento digital expressivo."
+      data:     "Maio 2025",
+      manchete: "Praia Clube Sao Francisco recebe espetaculo em tributo a Roberto Carlos",
+      imagem:   "img/imprensa/folha_materia_maio2025.jpg",
+      tamanho:  "sz-m",
+      link:     ""
+    },
+    {
+      veiculo:  "Folha de Niteroi",
+      data:     "Outubro 2024",
+      manchete: "Tingo Santi: O novo fenomeno musical de Niteroi debuta com sucesso",
+      imagem:   "img/imprensa/folha_materia_out2024.jpg",
+      tamanho:  "sz-s",
+      link:     ""
     }
   ],
+
+  imprensaQuote: {
+    texto: "O novo fenomeno musical de Niteroi. Reconhecido por sua impressionante semelhanca vocal e presenca de palco, Tingo promete emocionar o publico ao interpretar os grandes sucessos do eterno Rei.",
+    fonte: "Folha de Niteroi, 2025"
+  },
+
   veiculosImprensa: [
-    "Folha de Niteroi","O Dia","Antena 1","FUNARJ","Giro","ERJOTA","CHJornal"
+    "Folha de Niteroi|Capa + Materias",
+    "O Dia|Cobertura RJ",
+    "Errejota|Noticias RJ",
+    "Giro|Costa do Sol",
+    "Antena 1|Radio",
+    "FUNARJ|Validacao"
+  ],
+
+  validacoes: [
+    { icone:"✓", titulo:"FUNARJ",                 subtitulo:"Aprovacao oficial do projeto artistico"    },
+    { icone:"✓", titulo:"Prefeitura de Macae",    subtitulo:"Natal Magia 2025 - Programacao Oficial"    },
+    { icone:"✓", titulo:"Prefeitura de Itaborai", subtitulo:"Natal Ita Luz 2024 - Secretaria de Cultura"},
+    { icone:"✓", titulo:"Prefeitura de Niteroi",  subtitulo:"Programacao Cultural Municipal"             },
+    { icone:"✓", titulo:"Presenca Internacional", subtitulo:"Apresentacao em Porto, Portugal - 2024"    },
+    { icone:"✓", titulo:"Marca INPI",             subtitulo:"Registro oficial da marca Tingo Santi"     }
   ],
 
   contratantes: {
@@ -89,10 +142,10 @@ const SITE = {
       "Perfil do Artista"
     ],
     precedentes: [
-      { municipio: "Macae - RJ",       evento: "Natal Magia 2025 - Programacao Oficial"    },
+      { municipio: "Macae - RJ",       evento: "Natal Magia 2025 - Programacao Oficial"     },
       { municipio: "Itaborai - RJ",    evento: "Natal Ita Luz 2024 - Secretaria de Cultura" },
-      { municipio: "Niteroi - RJ",     evento: "Programacao Cultural Municipal"             },
-      { municipio: "Porto - Portugal", evento: "Apresentacao Internacional - 2024"          }
+      { municipio: "Niteroi - RJ",     evento: "Programacao Cultural Municipal"              },
+      { municipio: "Porto - Portugal", evento: "Apresentacao Internacional - 2024"           }
     ]
   },
 
