@@ -68,12 +68,12 @@ const SITE = {
      Para remover: apague a linha.
      Coloque as novas fotos na pasta img/ */
   galeria: [
-    { arquivo: "img/hero_principal.jpg",              destaque: true  }, // ← destaque = ocupa coluna dupla vertical
+    { arquivo: "img/espetaculo_palco_banda.jpg",      destaque: true  },
     { arquivo: "img/galeria_microfone_close.jpg",     destaque: false },
     { arquivo: "img/galeria_apontando.jpg",           destaque: false },
-    { arquivo: "img/espetaculo_portugal.jpg",         destaque: false },
-    { arquivo: "img/prova_social_plateia_externa.jpg",destaque: false },
-    { arquivo: "img/galeria_plateia_maos.jpg",        destaque: false }, // ← ocupa largura dupla (wide)
+    { arquivo: "img/galeria_flores.jpg",              destaque: false },
+    { arquivo: "img/galeria_plateia_close.jpg",       destaque: false },
+    { arquivo: "img/galeria_plateia_maos.jpg",        destaque: false },
     { arquivo: "img/galeria_drone_igreja.jpg",        destaque: false }
   ],
 
