@@ -27,8 +27,8 @@ const SITE = {
   /* ── HERO ──────────────────────────────────────────────── */
   hero: {
     youtubeId:  "M7ehpNbIbUY",
-    tagline:    "A obra de Roberto Carlos ao vivo — com voz natural, orquestra e emoção verdadeira.",
-    foto:       "img/hero_principal.jpg",   // ← foto de fallback (mobile e autoplay bloqueado)
+    tagline:    "A obra de Roberto Carlos ao vivo - com voz natural, orquestra e emocao verdadeira.",
+    foto:       "img/hero_principal.jpg",
   },
 
   /* ── VÍDEOS ────────────────────────────────────────────── */
