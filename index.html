@@ -452,7 +452,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
         </div>
       </div>
     </div>
-    <div class="cmpnums" id="cmpNums"></div>
   </div>
 </section>
 
@@ -701,10 +700,6 @@ function init() {
   document.getElementById('cmpDestD').textContent = SITE.compositor.destaque.desc;
   document.getElementById('cmpBtnSpot').href = C.spotify;
   document.getElementById('cmpBtnIg').href = 'https://instagram.com/' + C.instagram;
-  var cn = document.getElementById('cmpNums');
-  SITE.compositor.numeros.forEach(function(n) {
-    cn.innerHTML += '<div class="cmpnumi"><div class="cmpnumn">' + n.n + '</div><div class="cmpnuml">' + n.l + '</div></div>';
-  });
 
   // VÍDEO DO SHOW
   document.getElementById('vfttl').textContent = SITE.videoShow.titulo;
