@@ -54,8 +54,8 @@ const SITE = {
 
   /* ── COMPOSITOR (nova seção) ───────────────────────────── */
   compositor: {
-    titulo:    "Além do tributo, há uma <em>obra autoral</em>",
-    subtitulo: "Tingo Santi é também compositor. O catálogo autoral está ativo em plataformas digitais globais e é uma camada do projeto que amplia a aderência do espetáculo junto ao público.",
+    titulo:    "21,4 milhões de execuções. <em>189 países.</em>",
+    subtitulo: "Mais de 50 composições próprias circulando em 189 países nas maiores plataformas do mundo.",
     youtubeShortId: "bXdIIxEg7PY",
     spotifyEmbedType: "artist",
     spotifyEmbedId:   "1XfDGJ4C2wEsrAbWbVaZ4b",
