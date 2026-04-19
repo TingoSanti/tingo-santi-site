@@ -41,15 +41,19 @@ const SITE = {
      Fotos landscape só vão em slots wide. Portraits só em tall ou default.
   */
   galeria: [
-    { arquivo: "img/galeria_flores.jpg",              tamanho: "wide", pos: "center center" },
-    { arquivo: "img/galeria_microfone_bordado.jpg",   tamanho: "tall", pos: "center top"    },
-    { arquivo: "img/galeria_palco_natal_magia.jpg",   tamanho: "wide", pos: "center 35%"    },
-    { arquivo: "img/galeria_drone_igreja.jpg",        tamanho: "tall", pos: "center center" },
-    { arquivo: "img/galeria_lencinho.jpg",            tamanho: "wide", pos: "center 35%"    },
-    { arquivo: "img/galeria_sorriso.jpg",             tamanho: "tall", pos: "center top"    },
-    { arquivo: "img/galeria_bracos_abertos.jpg",      tamanho: "tall", pos: "center top"    },
-    { arquivo: "img/galeria_plateia_natal.jpg",       tamanho: "tall", pos: "center center" },
-    { arquivo: "img/galeria_apontando.jpg",           tamanho: "tall", pos: "center 25%"    }
+    { arquivo: "img/galeria_show_braco_aberto.jpg",       tamanho: "tall", pos: "center 30%"    },
+    { arquivo: "img/galeria_flores.jpg",                  tamanho: "wide", pos: "center center" },
+    { arquivo: "img/galeria_microfone_bordado.jpg",        tamanho: "tall", pos: "center top"    },
+    { arquivo: "img/galeria_palco_natal_magia.jpg",        tamanho: "wide", pos: "center 35%"    },
+    { arquivo: "img/galeria_itaborai_flores_plateia.jpg",  tamanho: "wide", pos: "center center" },
+    { arquivo: "img/galeria_drone_igreja.jpg",             tamanho: "tall", pos: "center center" },
+    { arquivo: "img/galeria_pcsf_plateia.jpg",             tamanho: "wide", pos: "center 40%"    },
+    { arquivo: "img/galeria_lencinho.jpg",                 tamanho: "wide", pos: "center 70%"    },
+    { arquivo: "img/galeria_sorriso.jpg",                  tamanho: "tall", pos: "center top"    },
+    { arquivo: "img/galeria_palco_orquestra_pcsf.jpg",     tamanho: "wide", pos: "center 30%"    },
+    { arquivo: "img/galeria_bracos_abertos.jpg",           tamanho: "tall", pos: "center top"    },
+    { arquivo: "img/galeria_plateia_natal.jpg",            tamanho: "tall", pos: "center center" },
+    { arquivo: "img/galeria_apontando.jpg",                tamanho: "tall", pos: "center 25%"    }
   ],
 
   /* ── COMPOSITOR (nova seção) ───────────────────────────── */
@@ -102,7 +106,7 @@ const SITE = {
       desc:   "Distribuição global via CDBaby."
     },
     {
-      numero: "Porto",
+      numero: "Portugal (Porto)",
       label:  "Presença internacional",
       desc:   "Apresentação em Portugal · Natal 2024."
     }
@@ -356,7 +360,7 @@ const SITE = {
   },
 
   show: {
-    fotoMain:   "img/espetaculo_palco_novo.jpg",
+    fotoMain:   "img/espetaculo_macae_natal2025.jpg",
     fotoAccent: "img/espetaculo_accent_itaborai.jpg",
     intro:      "Tingo Santi interpreta Roberto Carlos com semelhança vocal natural, respeito profundo ao repertório e produção de palco de alto nível. O que o público sente no show é sobre a própria vida dele, ativada pelas canções do Rei, entregues com fidelidade e sofisticação.",
     features: [
