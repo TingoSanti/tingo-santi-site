@@ -107,8 +107,8 @@ button{cursor:pointer;font-family:var(--sans)}
 
 /* ── SHOW ── */
 .sg{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:center}
-.sph{position:relative;aspect-ratio:4/5;border-radius:var(--rl);background-size:cover;background-position:center;box-shadow:0 28px 64px rgba(11,52,128,.13);overflow:hidden}
-.spa{position:absolute;bottom:-2.5rem;right:-2.5rem;width:52%;aspect-ratio:3/4;border-radius:var(--rl);background-size:cover;background-position:center top;border:4px solid var(--w);box-shadow:0 16px 36px rgba(11,52,128,.15)}
+.sph{position:relative;aspect-ratio:3/2;border-radius:var(--rl);background-size:cover;background-position:left center;box-shadow:0 28px 64px rgba(11,52,128,.13);overflow:hidden}
+.spa{position:absolute;bottom:-2.5rem;right:-2.5rem;width:42%;aspect-ratio:3/4;border-radius:var(--rl);background-size:cover;background-position:center top;border:4px solid var(--w);box-shadow:0 16px 36px rgba(11,52,128,.15)}
 .sf{display:flex;flex-direction:column;gap:1.8rem;margin-top:2rem}
 .sfi{display:flex;gap:1.3rem;align-items:flex-start;padding-bottom:1.8rem;border-bottom:1px solid var(--off2)}
 .sfi:last-child{border-bottom:none}
@@ -151,11 +151,10 @@ button{cursor:pointer;font-family:var(--sans)}
 .vf iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 
 /* ── GALERIA — Mosaico corrigido ── */
-.gm{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:180px;grid-auto-flow:dense;gap:10px;margin-top:2rem}
-.gi{border-radius:var(--r);overflow:hidden;background:var(--off2);background-size:cover;transition:transform .3s,box-shadow .3s;grid-column:span 2;grid-row:span 1}
-.gi:hover{transform:scale(1.02);box-shadow:0 14px 36px rgba(11,52,128,.14)}
-.gi.tall{grid-row:span 2}
-.gi.wide{grid-column:span 3}
+.gm{columns:3;column-gap:10px;margin-top:2rem}
+.gi{break-inside:avoid;margin-bottom:10px;border-radius:var(--r);overflow:hidden;display:block}
+.gi img{width:100%;display:block;border-radius:var(--r);transition:transform .3s,box-shadow .3s}
+.gi img:hover{transform:scale(1.02);box-shadow:0 14px 36px rgba(11,52,128,.18)}
 
 /* ── NÚMEROS ── */
 #numeros{background:var(--navy);color:#fff;position:relative;overflow:hidden}
@@ -198,7 +197,7 @@ button{cursor:pointer;font-family:var(--sans)}
 .pcard-dt{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 .pcard-link{position:absolute;top:1rem;right:1rem;z-index:3;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem}
 .pcard.sz-l{grid-column:span 12}
-.pcard.sz-l .pcard-img{aspect-ratio:21/9}
+.pcard.sz-l .pcard-img{aspect-ratio:16/9}
 .pcard.sz-l .pcard-mh{font-size:2rem;line-height:1.15}
 .pcard.sz-m{grid-column:span 6}
 .pcard.sz-m .pcard-img{aspect-ratio:3/2}
@@ -291,7 +290,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .sg,.sgr,.csp,.cblock,.cmpg{grid-template-columns:1fr;gap:3.5rem}
   .fg{grid-template-columns:1fr 1fr}
   .spa{display:none}
-  .gm{grid-template-columns:repeat(4,1fr);grid-auto-rows:160px}
+  .gm{columns:2}
   .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 6}
   .vlogos{flex-direction:column;gap:0}
   .vlogo{border-right:none;border-bottom:1px solid var(--bb);width:100%;padding:1rem}
@@ -304,9 +303,9 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .nl,.nc{display:none}
   .ham{display:flex}
   #mm.o{display:flex}
-  .gm{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
-  .gi,.gi.wide{grid-column:span 1;grid-row:span 1}
-  .gi.tall{grid-row:span 2}
+  .gm{columns:1}
+  .gi,.gi.wide{display:block}
+  .gi.tall{display:block}
   .fg{grid-template-columns:1fr}
   .smil{grid-template-columns:1fr}
   .cmpnums{grid-template-columns:repeat(2,1fr)}
@@ -712,9 +711,8 @@ function init() {
   var gal = document.getElementById('galGrid');
   SITE.galeria.forEach(function(g) {
     var el = document.createElement('div');
-    el.className = 'gi' + (g.tamanho ? ' ' + g.tamanho : '');
-    el.style.backgroundImage = "url('" + g.arquivo + "')";
-    el.style.backgroundPosition = g.pos || 'center center';
+    el.className = 'gi';
+    el.innerHTML = '<img src="' + g.arquivo + '" loading="lazy" alt="Show Tingo Santi">';
     gal.appendChild(el);
   });
 
