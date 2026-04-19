@@ -11,7 +11,6 @@
 <meta property="og:type" content="website">
 <title>Tingo Santi – Tributo ao Rei · Roberto Carlos</title>
 
-<!-- Google Analytics — ID inserido via data.js -->
 <script>
   window.addEventListener('DOMContentLoaded', function() {
     if (typeof SITE === 'undefined' || !SITE.analytics.googleAnalyticsId || SITE.analytics.googleAnalyticsId.includes('INSIRA')) return;
@@ -33,6 +32,7 @@
 :root{
   --w:#ffffff; --off:#f5f7fc; --off2:#eaeff8;
   --navy:#02091c; --blue:#0b3480; --bm:#174fba; --bl:#2e6dd4; --bx:#9bbde8;
+  --gold:#c9a55a;
   --bfaint:rgba(11,52,128,.07); --bb:rgba(11,52,128,.14);
   --t:#0c1830; --tm:#3a4a6b; --mu:#7a88a8;
   --serif:'Cormorant Garamond',Georgia,serif;
@@ -82,16 +82,27 @@ button{cursor:pointer;font-family:var(--sans)}
 .hscrl{width:1px;height:42px;background:linear-gradient(to bottom,rgba(255,255,255,.36),transparent)}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 
+/* Sound button */
+#soundBtn{position:absolute;bottom:2.5rem;right:2.5rem;z-index:5;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);color:#fff;font-size:1.2rem;cursor:pointer;transition:all .25s;display:none;align-items:center;justify-content:center}
+#soundBtn:hover{background:var(--blue);border-color:var(--blue);transform:scale(1.08)}
+#soundBtn.on{background:var(--blue);border-color:var(--blue)}
+
 /* ── SHARED ── */
 .sec{padding:clamp(5rem,9vw,9rem) 5vw}
 .sec-off{background:var(--off)}
+.sec-navy{background:var(--navy);color:#fff}
 .con{max-width:var(--max);margin:0 auto}
 .ey{display:flex;align-items:center;gap:.9rem;margin-bottom:1.1rem}
 .eyl{width:36px;height:1px;background:var(--bl);flex-shrink:0}
 .eys{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.sec-navy .eys{color:var(--bx)}
+.sec-navy .eyl{background:var(--bx)}
 .sh{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:400;line-height:1.06;color:var(--navy);margin-bottom:1.1rem}
 .sh em{font-style:italic;color:var(--blue)}
+.sec-navy .sh{color:#fff}
+.sec-navy .sh em{color:var(--bx)}
 .sl{font-size:1.05rem;font-weight:300;color:var(--tm);max-width:640px;line-height:1.82;margin-bottom:3rem}
+.sec-navy .sl{color:rgba(255,255,255,.72)}
 .bp{display:inline-block;padding:.9rem 2.2rem;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:all .2s;cursor:pointer}
 .bp:hover{background:var(--bm);transform:translateY(-2px)}
 .bout{display:inline-block;padding:.9rem 2.2rem;border:1px solid var(--bb);color:var(--blue);background:transparent;border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;transition:all .2s;cursor:pointer}
@@ -99,7 +110,9 @@ button{cursor:pointer;font-family:var(--sans)}
 
 /* ── SHOW ── */
 .sg{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:center}
-.sph{position:relative;aspect-ratio:4/5;border-radius:var(--rl);background-size:cover;background-position:center;box-shadow:0 28px 64px rgba(11,52,128,.13)}
+.sph{position:relative;aspect-ratio:4/5;border-radius:var(--rl);background-size:cover;background-position:center;box-shadow:0 28px 64px rgba(11,52,128,.13);overflow:hidden}
+.sph-logo{position:absolute;top:1.5rem;left:1.5rem;right:1.5rem;z-index:2;max-width:68%}
+.sph-logo img{width:100%;filter:drop-shadow(0 6px 24px rgba(0,0,0,.6))}
 .spa{position:absolute;bottom:-2.5rem;right:-2.5rem;width:52%;aspect-ratio:3/4;border-radius:var(--rl);background-size:cover;background-position:center;border:4px solid var(--w);box-shadow:0 16px 36px rgba(11,52,128,.15)}
 .sf{display:flex;flex-direction:column;gap:1.8rem;margin-top:2rem}
 .sfi{display:flex;gap:1.3rem;align-items:flex-start;padding-bottom:1.8rem;border-bottom:1px solid var(--off2)}
@@ -127,22 +140,39 @@ button{cursor:pointer;font-family:var(--sans)}
 .vcn{font-size:.88rem;font-weight:500;color:var(--navy);margin-bottom:.22rem}
 .vck{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--bl)}
 
-/* ── GALERIA ── */
-.gm{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:10px;margin-top:2rem}
-.gi{border-radius:var(--r);overflow:hidden;background:var(--off2);background-size:cover;background-position:center;transition:transform .3s,box-shadow .3s}
+/* ── GALERIA — Mosaico inteligente ── */
+.gm{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:180px;grid-auto-flow:dense;gap:10px;margin-top:2rem}
+.gi{border-radius:var(--r);overflow:hidden;background:var(--off2);background-size:cover;background-position:center;transition:transform .3s,box-shadow .3s;grid-column:span 2;grid-row:span 1}
 .gi:hover{transform:scale(1.02);box-shadow:0 14px 36px rgba(11,52,128,.14)}
 .gi.tall{grid-row:span 2}
-.gi.wide{grid-column:span 2}
+.gi.wide{grid-column:span 3}
+.gi.big{grid-column:span 3;grid-row:span 2}
 
-/* ── STATS ── */
-.stg{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:1px;background:var(--off2);border:1px solid var(--off2);border-radius:var(--rl);overflow:hidden}
-.sti{padding:3rem 2rem;text-align:center;background:var(--w)}
-.stn{font-family:var(--serif);font-size:clamp(2.6rem,4.5vw,3.6rem);font-weight:400;color:var(--blue);line-height:1;margin-bottom:.65rem}
-.stl{font-size:.78rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);line-height:1.55}
+/* ── NÚMEROS — Nova versão com hierarquia ── */
+#numeros{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+#numeros::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--bl),transparent)}
+#numeros::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--bl),transparent)}
+.numh{text-align:center;margin-bottom:4rem;max-width:720px;margin-left:auto;margin-right:auto}
+.numht{font-family:var(--serif);font-size:clamp(2.2rem,4.4vw,3.4rem);font-weight:400;line-height:1.1;color:#fff;margin-bottom:1.3rem}
+.numht em{font-style:italic;color:var(--bx)}
+.numhs{font-size:1rem;font-weight:300;color:rgba(255,255,255,.7);line-height:1.78}
+.numg{display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;max-width:1100px;margin:0 auto 3rem}
+.numc{padding:2rem 1.8rem;border-radius:var(--rl);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);transition:all .3s;position:relative}
+.numc:hover{border-color:var(--bl);background:rgba(46,109,212,.08);transform:translateY(-3px)}
+.numc.hero{grid-column:span 12;text-align:center;padding:3rem 2rem;background:linear-gradient(135deg,rgba(46,109,212,.12) 0%,rgba(11,52,128,.05) 100%);border-color:rgba(46,109,212,.35)}
+.numc.hero .numn{font-size:clamp(4.5rem,10vw,7rem);color:#fff}
+.numc.hero .numl{font-size:1rem;letter-spacing:.16em;margin-top:.5rem;color:var(--bx)}
+.numc.hero .numd{max-width:540px;margin:1.3rem auto 0;font-size:.96rem;line-height:1.7}
+.numc.m{grid-column:span 4}
+.numc.s{grid-column:span 6}
+.numn{font-family:var(--serif);font-size:clamp(2.8rem,5vw,3.8rem);font-weight:400;color:#fff;line-height:1;margin-bottom:.55rem;letter-spacing:-.01em}
+.numl{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bx);margin-bottom:.8rem;line-height:1.4}
+.numd{font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65}
+.numrod{text-align:center;font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.08);max-width:600px;margin:0 auto}
 
-/* ── IMPRENSA NOVA (visual impact) ── */
+/* ── NOTORIEDADE / IMPRENSA ── */
 .vlogos{display:flex;flex-wrap:wrap;gap:0;align-items:center;justify-content:space-between;padding:1.5rem 0;margin-bottom:3.5rem;border-top:1px solid var(--bb);border-bottom:1px solid var(--bb)}
-.vlogo{flex:1;min-width:120px;text-align:center;padding:.5rem 1rem;font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--navy);letter-spacing:.02em;border-right:1px solid var(--bb);transition:opacity .2s}
+.vlogo{flex:1;min-width:130px;text-align:center;padding:.6rem 1rem;font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--navy);letter-spacing:.02em;border-right:1px solid var(--bb);transition:opacity .2s}
 .vlogo:last-child{border-right:none}
 .vlogo:hover{color:var(--blue)}
 .vlogo-sub{display:block;font-family:var(--sans);font-size:.62rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);margin-top:.2rem}
@@ -151,18 +181,21 @@ button{cursor:pointer;font-family:var(--sans)}
 .pcard{position:relative;border-radius:var(--rl);overflow:hidden;background:var(--navy);cursor:pointer;transition:all .3s;border:1px solid transparent;text-decoration:none;display:block}
 .pcard:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(11,52,128,.22);border-color:var(--bl)}
 .pcard-img{aspect-ratio:3/4;background-size:cover;background-position:top center;position:relative}
-.pcard-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(2,9,28,.05) 0%,rgba(2,9,28,.35) 55%,rgba(2,9,28,.95) 100%)}
+.pcard-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(2,9,28,.08) 0%,rgba(2,9,28,.38) 55%,rgba(2,9,28,.96) 100%)}
 .pcard-body{position:absolute;bottom:0;left:0;right:0;padding:1.4rem 1.3rem;color:#fff;z-index:2}
 .pcard-vc{display:inline-block;padding:.3rem .7rem;background:var(--blue);border-radius:var(--r);font-size:.63rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.pcard-vc.featured{background:var(--gold)}
 .pcard-mh{font-family:var(--serif);font-size:1.1rem;font-weight:500;line-height:1.25;color:#fff;margin-bottom:.5rem}
 .pcard-dt{font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.pcard-link{position:absolute;top:1rem;right:1rem;z-index:3;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem}
 .pcard.sz-l{grid-column:span 6}
 .pcard.sz-l .pcard-img{aspect-ratio:16/11}
-.pcard.sz-l .pcard-mh{font-size:1.5rem}
+.pcard.sz-l .pcard-mh{font-size:1.55rem;line-height:1.22}
 .pcard.sz-m{grid-column:span 4}
 .pcard.sz-m .pcard-img{aspect-ratio:3/4}
 .pcard.sz-s{grid-column:span 3}
 .pcard.sz-s .pcard-img{aspect-ratio:3/4}
+.pcard.sz-s .pcard-mh{font-size:.94rem}
 
 .presq{max-width:920px;margin:0 auto 4rem;padding:3rem 3rem 3rem 5rem;position:relative;background:var(--navy);border-radius:var(--rl);color:#fff;overflow:hidden}
 .presq-mark{position:absolute;top:1rem;left:2rem;font-family:var(--serif);font-size:7rem;line-height:1;color:var(--bl);font-style:italic}
@@ -171,23 +204,12 @@ button{cursor:pointer;font-family:var(--sans)}
 
 .vinst{padding:3rem 0 5rem;border-top:1px solid var(--bb);text-align:center}
 .vinst-title{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mu);margin-bottom:2rem}
-.vinst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:1100px;margin:0 auto}
-.vinst-card{padding:1.6rem 1.3rem;background:var(--w);border:1px solid var(--off2);border-radius:var(--rl);transition:all .2s}
+.vinst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:1100px;margin:0 auto}
+.vinst-card{padding:1.6rem 1.3rem;background:var(--w);border:1px solid var(--off2);border-radius:var(--rl);transition:all .2s;text-align:left}
 .vinst-card:hover{border-color:var(--bl);box-shadow:0 10px 28px rgba(11,52,128,.1)}
-.vinst-ico{font-size:1.6rem;margin-bottom:.6rem}
-.vinst-ttl{font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;line-height:1.3}
-.vinst-sub{font-size:.76rem;color:var(--tm);line-height:1.55}
-
-/* ── IMPRENSA (legado) ── */
-.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.6rem;margin-bottom:3rem}
-.pc{padding:2rem;border-radius:var(--rl);border:1px solid var(--off2);background:var(--w);transition:all .2s}
-.pc:hover{box-shadow:0 8px 28px rgba(11,52,128,.08);border-color:var(--bb)}
-.po{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:.9rem}
-.ph{font-family:var(--serif);font-size:1.15rem;font-weight:400;line-height:1.4;color:var(--navy);margin-bottom:.65rem}
-.pe{font-size:.86rem;font-weight:300;color:var(--tm);line-height:1.7}
-.plog{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center;padding-top:2.5rem;border-top:1px solid var(--off2)}
-.plk{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
-.pli{padding:.45rem 1rem;border:1px solid var(--off2);border-radius:var(--r);font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mu)}
+.vinst-ico{font-size:1.15rem;margin-bottom:.6rem;color:var(--blue);font-weight:700}
+.vinst-ttl{font-size:.9rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;line-height:1.3}
+.vinst-sub{font-size:.78rem;color:var(--tm);line-height:1.55}
 
 /* ── CONTRATANTES ── */
 .cblock{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
@@ -195,9 +217,10 @@ button{cursor:pointer;font-family:var(--sans)}
 .cdocs li{display:flex;gap:.85rem;align-items:flex-start;font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.5}
 .cdocs li::before{content:'✓';color:var(--blue);font-weight:600;flex-shrink:0;margin-top:.05rem}
 .cprec{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
-.cpcard{padding:1.3rem 1.5rem;border:1px solid var(--off2);border-radius:var(--r);background:var(--w)}
-.cpmun{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.25rem}
-.cpev{font-size:.9rem;font-weight:300;color:var(--tm)}
+.cpcard{padding:1.3rem 1.5rem;border:1px solid var(--off2);border-radius:var(--r);background:var(--w);border-left:3px solid var(--blue)}
+.cpcat{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem}
+.cpmun{font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.3rem}
+.cpev{font-size:.9rem;font-weight:300;color:var(--tm);line-height:1.5}
 
 /* ── SOBRE ── */
 .sgr{display:grid;grid-template-columns:1fr 1.3fr;gap:6rem;align-items:center}
@@ -230,7 +253,6 @@ button{cursor:pointer;font-family:var(--sans)}
 .fi,.fsl,.ft{width:100%;padding:.95rem 1.1rem;border:1px solid var(--off2);border-radius:var(--r);font-family:var(--sans);font-size:.95rem;color:var(--t);background:var(--w);outline:none;transition:border-color .2s}
 .fi:focus,.fsl:focus,.ft:focus{border-color:var(--blue)}
 .fi::placeholder,.ft::placeholder{color:var(--mu)}
-.fsl option{background:var(--w)}
 .ft{resize:vertical;min-height:120px}
 .fmsg{margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid var(--bb);border-radius:var(--r);background:var(--bfaint);color:var(--blue);font-size:.9rem;display:none}
 
@@ -253,81 +275,58 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .sg,.sgr,.csp,.cblock{grid-template-columns:1fr;gap:3.5rem}
   .fg{grid-template-columns:1fr 1fr}
   .spa{display:none}
-  .gm{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
-  .gi.wide{grid-column:span 1}
+  .gm{grid-template-columns:repeat(4,1fr);grid-auto-rows:160px}
+  .gi.big{grid-column:span 2;grid-row:span 2}
   .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 6}
   .vlogos{flex-direction:column;gap:0}
   .vlogo{border-right:none;border-bottom:1px solid var(--bb);width:100%;padding:1rem}
   .vlogo:last-child{border-bottom:none}
+  .numc.m{grid-column:span 6}
+  .numc.s{grid-column:span 6}
 }
 @media(max-width:768px){
   html{font-size:16px}
   .nl,.nc{display:none}
   .ham{display:flex}
   #mm.o{display:flex}
-  .stg{grid-template-columns:repeat(2,1fr)}
-  .gm{grid-template-columns:1fr;grid-auto-rows:220px}
-  .gi.tall{grid-row:span 1}
+  .gm{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  .gi,.gi.wide,.gi.big,.gi.tall{grid-column:span 1;grid-row:span 1}
+  .gi.tall,.gi.big{grid-row:span 2}
   .fg{grid-template-columns:1fr}
   .smil{grid-template-columns:1fr}
   .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 12}
   .presq{padding:2.5rem 1.8rem 2rem 1.8rem}
   .presq-mark{top:.5rem;left:1rem;font-size:5rem}
   .presq-text{font-size:1.2rem}
+  .numc.m,.numc.s{grid-column:span 12}
+  #soundBtn{bottom:1.2rem;right:1.2rem;width:46px;height:46px}
 }
 </style>
 </head>
 <body>
 
-<!-- ═══ DADOS DO SITE (carregados antes do layout) ═══ -->
 <script src="data.js"></script>
 
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
   <a href="#hero" id="navLogo">
     <svg id="logoL" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
-      <line x1="70" y1="40" x2="195" y2="40" stroke="rgba(255,255,255,.27)" stroke-width=".8"/>
-      <circle cx="194" cy="40" r="2" fill="rgba(255,255,255,.44)"/>
-      <line x1="306" y1="40" x2="430" y2="40" stroke="rgba(255,255,255,.27)" stroke-width=".8"/>
-      <circle cx="306" cy="40" r="2" fill="rgba(255,255,255,.44)"/>
       <g transform="translate(250,40)">
-        <circle cx="0" cy="0" r="22" fill="none" stroke="rgba(255,255,255,.11)" stroke-width=".9"/>
         <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="rgba(255,255,255,.88)" stroke-width="1.4" stroke-linejoin="round"/>
         <circle cx="0" cy="0" r="3" fill="rgba(255,255,255,.9)"/>
-        <circle cx="0" cy="0" r="1.2" fill="rgba(2,9,28,.9)"/>
       </g>
-      <line x1="90" y1="66" x2="410" y2="66" stroke="rgba(255,255,255,.12)" stroke-width=".6"/>
-      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">TINGO</text>
-      <line x1="128" y1="135" x2="196" y2="135" stroke="rgba(255,255,255,.21)" stroke-width=".6"/>
-      <circle cx="205" cy="135" r="1.5" fill="rgba(255,255,255,.44)"/>
-      <circle cx="250" cy="135" r="2.2" fill="rgba(255,255,255,.6)"/>
-      <circle cx="295" cy="135" r="1.5" fill="rgba(255,255,255,.44)"/>
-      <line x1="304" y1="135" x2="372" y2="135" stroke="rgba(255,255,255,.21)" stroke-width=".6"/>
-      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">SANTI</text>
-      <line x1="90" y1="198" x2="410" y2="198" stroke="rgba(255,255,255,.12)" stroke-width=".6"/>
-      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(255,255,255,.52)">Tributo ao Rei</text>
+      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">TINGO</text>
+      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">SANTI</text>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(255,255,255,.52)">Tributo ao Rei</text>
     </svg>
     <svg id="logoD" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="display:none">
-      <line x1="70" y1="40" x2="195" y2="40" stroke="rgba(11,52,128,.2)" stroke-width=".8"/>
-      <circle cx="194" cy="40" r="2" fill="rgba(11,52,128,.38)"/>
-      <line x1="306" y1="40" x2="430" y2="40" stroke="rgba(11,52,128,.2)" stroke-width=".8"/>
-      <circle cx="306" cy="40" r="2" fill="rgba(11,52,128,.38)"/>
       <g transform="translate(250,40)">
-        <circle cx="0" cy="0" r="22" fill="none" stroke="rgba(11,52,128,.11)" stroke-width=".9"/>
         <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="#0b3480" stroke-width="1.4" stroke-linejoin="round"/>
         <circle cx="0" cy="0" r="3" fill="#0b3480"/>
-        <circle cx="0" cy="0" r="1.2" fill="#f5f7fc"/>
       </g>
-      <line x1="90" y1="66" x2="410" y2="66" stroke="rgba(11,52,128,.1)" stroke-width=".6"/>
-      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">TINGO</text>
-      <line x1="128" y1="135" x2="196" y2="135" stroke="rgba(11,52,128,.18)" stroke-width=".6"/>
-      <circle cx="205" cy="135" r="1.5" fill="rgba(11,52,128,.38)"/>
-      <circle cx="250" cy="135" r="2.2" fill="#0b3480"/>
-      <circle cx="295" cy="135" r="1.5" fill="rgba(11,52,128,.38)"/>
-      <line x1="304" y1="135" x2="372" y2="135" stroke="rgba(11,52,128,.18)" stroke-width=".6"/>
-      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">SANTI</text>
-      <line x1="90" y1="198" x2="410" y2="198" stroke="rgba(11,52,128,.1)" stroke-width=".6"/>
-      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(11,52,128,.55)">Tributo ao Rei</text>
+      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">TINGO</text>
+      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">SANTI</text>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(11,52,128,.55)">Tributo ao Rei</text>
     </svg>
   </a>
   <ul class="nl">
@@ -344,6 +343,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   <a href="#show"    onclick="cm()">O Espetáculo</a>
   <a href="#videos"  onclick="cm()">Vídeos</a>
   <a href="#galeria" onclick="cm()">Galeria</a>
+  <a href="#numeros" onclick="cm()">Números</a>
   <a href="#not"     onclick="cm()">Notoriedade</a>
   <a href="#cont"    onclick="cm()">Contratantes</a>
   <a href="#sobre"   onclick="cm()">O Artista</a>
@@ -368,16 +368,15 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
           <circle cx="0" cy="0" r="28" fill="none" stroke="rgba(155,189,232,.13)" stroke-width="1.1"/>
           <polygon points="0,-22 6.43,-8.84 20.87,-6.8 10.43,3.57 12.86,18.05 0,11 -12.86,18.05 -10.43,3.57 -20.87,-6.8 -6.43,-8.84" fill="none" stroke="#9bbde8" stroke-width="1.7" stroke-linejoin="round"/>
           <circle cx="0" cy="0" r="4.2" fill="#9bbde8"/>
-          <circle cx="0" cy="0" r="1.7" fill="#02091c"/>
         </g>
         <line x1="80" y1="74" x2="420" y2="74" stroke="rgba(155,189,232,.17)" stroke-width=".7"/>
-        <text x="250" y="138" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">TINGO</text>
+        <text x="250" y="138" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">TINGO</text>
         <line x1="114" y1="154" x2="190" y2="154" stroke="rgba(155,189,232,.3)" stroke-width=".7"/>
         <circle cx="200" cy="154" r="2" fill="rgba(155,189,232,.55)"/>
         <circle cx="250" cy="154" r="3" fill="rgba(155,189,232,.75)"/>
         <circle cx="300" cy="154" r="2" fill="rgba(155,189,232,.55)"/>
         <line x1="310" y1="154" x2="386" y2="154" stroke="rgba(155,189,232,.3)" stroke-width=".7"/>
-        <text x="250" y="206" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">SANTI</text>
+        <text x="250" y="206" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">SANTI</text>
         <line x1="80" y1="216" x2="420" y2="216" stroke="rgba(155,189,232,.17)" stroke-width=".7"/>
       </svg>
     </div>
@@ -388,7 +387,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
       <a href="#contact" class="bow" onclick="trackCTA('hero_contato')">Falar com a Produção</a>
     </div>
   </div>
-  <button id="soundBtn" onclick="toggleSound()" style="position:absolute;bottom:2.5rem;right:2.5rem;z-index:4;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(10px);color:#fff;font-size:1.2rem;cursor:pointer;transition:all .2s;display:none;align-items:center;justify-content:center">
+  <button id="soundBtn" onclick="toggleSound()" title="Ativar som">
     <span id="soundIcon">🔇</span>
   </button>
   <div class="hscr"><span>Role</span><div class="hscrl"></div></div>
@@ -399,7 +398,9 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   <div class="con">
     <div class="sg">
       <div style="position:relative">
-        <div class="sph" id="showPhotoMain"></div>
+        <div class="sph" id="showPhotoMain">
+          <div class="sph-logo" id="showLogoTributo"></div>
+        </div>
         <div class="spa" id="showPhotoAccent"></div>
       </div>
       <div>
@@ -443,34 +444,31 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 </section>
 
 <!-- ═══ NÚMEROS ═══ -->
-<section class="sec sec-off" style="padding-top:4rem;padding-bottom:4rem">
+<section id="numeros" class="sec">
   <div class="con">
-    <div class="stg" id="stgrid"></div>
-    <p id="strodape" style="text-align:center;font-size:.72rem;color:var(--mu);margin-top:1.2rem"></p>
+    <div class="numh">
+      <h2 class="numht" id="numTitle"></h2>
+      <p class="numhs" id="numSubtitle"></p>
+    </div>
+    <div class="numg" id="numGrid"></div>
+    <p class="numrod" id="numRod"></p>
   </div>
 </section>
 
 <!-- ═══ NOTORIEDADE ═══ -->
-<section id="not" class="sec" style="background:linear-gradient(180deg,#fff 0%,var(--off) 100%);padding-bottom:0">
+<section id="not" class="sec" style="background:linear-gradient(180deg,#fff 0%,var(--off) 100%)">
   <div class="con">
     <div class="ey"><div class="eyl"></div><span class="eys">Notoriedade</span></div>
     <h2 class="sh">O show que a <em>imprensa</em> cobre</h2>
-    <p class="sl">Capas de jornal, matérias em veículos regionais e nacionais, aprovação por órgãos oficiais. Cada show gera cobertura. Cada cobertura reforça o posicionamento.</p>
+    <p class="sl">Publicações editoriais de peso, capas de jornal, matérias em veículos regionais e nacionais e aprovação por órgãos oficiais. Cada show gera cobertura. Cada cobertura reforça o posicionamento.</p>
 
-    <!-- Faixa de logos / veículos -->
     <div class="vlogos" id="vlogosGrid"></div>
-
-    <!-- Grid de capas e matérias -->
     <div class="pgrid2" id="pgrid2"></div>
-
-    <!-- Quote em destaque -->
     <div class="presq">
       <div class="presq-mark">"</div>
       <p class="presq-text" id="presqText"></p>
       <p class="presq-src" id="presqSrc"></p>
     </div>
-
-    <!-- Validações institucionais -->
     <div class="vinst">
       <p class="vinst-title">Validações institucionais</p>
       <div class="vinst-grid" id="vinstGrid"></div>
@@ -544,7 +542,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
         <div class="cit"><div class="cic">☎</div><div><div class="cil">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
         <div class="cit"><div class="cic">⌂</div><div><div class="cil">Endereço</div><div class="civ" style="font-size:.88rem;line-height:1.5" id="cEndereco"></div></div></div>
         <div class="cit"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:var(--blue)"></a></div></div></div>
-        <!-- BOTÃO WHATSAPP DESTACADO -->
         <a href="javascript:void(0)" id="waMainBtn" class="whatsapp-btn" onclick="trackWA('contato')">
           <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Iniciar conversa no WhatsApp
@@ -590,9 +587,8 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
           <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="rgba(155,189,232,.65)" stroke-width="1.4" stroke-linejoin="round"/>
           <circle cx="0" cy="0" r="3" fill="rgba(155,189,232,.65)"/>
         </g>
-        <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">TINGO</text>
-        <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">SANTI</text>
-        <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="12" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(155,189,232,.5)">Tributo ao Rei</text>
+        <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">TINGO</text>
+        <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">SANTI</text>
       </svg>
       <p class="ftag">Tributo ao Rei · Roberto Carlos<br>Espetáculo de interpretação elegante, memória afetiva e produção profissional completa.</p>
     </div>
@@ -609,8 +605,8 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
       <li><a href="javascript:void(0)" id="waFooterLink" onclick="trackWA('footer')">WhatsApp</a></li>
     </ul></div>
     <div><div class="fct">Contato</div><ul class="fl2">
-      <li><a id="footerEmail" href="#">tingo.santi@proton.me</a></li>
-      <li><a id="footerPhone" href="#">(21) 97521-4169</a></li>
+      <li><a id="footerEmail" href="#"></a></li>
+      <li><a id="footerPhone" href="#"></a></li>
       <li><a id="footerIG" href="#" target="_blank">Instagram</a></li>
       <li><a id="footerYT" href="#" target="_blank">YouTube</a></li>
       <li><a id="footerSP" href="#" target="_blank">Spotify</a></li>
@@ -627,16 +623,12 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   </div>
 </footer>
 
-<!-- ═══ RENDER ENGINE ═══ -->
 <script>
-/* Tudo abaixo lê os dados de data.js e constrói o DOM.
-   Não altere este bloco. Altere apenas data.js. */
-
 function init() {
   const C = SITE.contato;
   const waUrl = 'https://wa.me/' + C.whatsapp;
 
-  /* ── HERO ── */
+  // HERO
   document.getElementById('heroBg').style.backgroundImage = "url('" + SITE.hero.foto + "')";
   document.getElementById('heroTagline').textContent = SITE.hero.tagline;
   if (SITE.hero.youtubeId && !SITE.hero.youtubeId.includes('INSIRA')) {
@@ -647,23 +639,22 @@ function init() {
         '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&enablejsapi=1';
       f.style.display = 'block';
       document.getElementById('soundBtn').style.display = 'flex';
-      setTimeout(function(){
-        try{ var d=f.contentDocument||f.contentWindow.document; if(!d||d.body.innerHTML==='')f.remove(); }
-        catch(e){}
-      }, 3500);
     }
   }
 
-  /* ── SHOW ── */
+  // SHOW
   document.getElementById('showPhotoMain').style.backgroundImage = "url('" + SITE.show.fotoMain + "')";
   document.getElementById('showPhotoAccent').style.backgroundImage = "url('" + SITE.show.fotoAccent + "')";
   document.getElementById('showIntro').textContent = SITE.show.intro;
+  if (SITE.show.logo) {
+    document.getElementById('showLogoTributo').innerHTML = '<img src="' + SITE.show.logo + '" alt="Tributo ao Rei">';
+  }
   var sf = document.getElementById('showFeatures');
   SITE.show.features.forEach(function(f) {
     sf.innerHTML += '<div class="sfi"><div class="sfd"></div><div><div class="sft">' + f.titulo + '</div><div class="sfd2">' + f.desc + '</div></div></div>';
   });
 
-  /* ── VÍDEOS ── */
+  // VIDEOS
   var primeiroV = SITE.videos[0];
   if (primeiroV) {
     document.getElementById('vfthumb').style.backgroundImage = "url('" + primeiroV.thumb + "')";
@@ -678,91 +669,89 @@ function init() {
     vg.appendChild(e);
   });
 
-  /* ── GALERIA ── */
+  // GALERIA mosaico
   var gal = document.getElementById('galGrid');
-  var hasWide = false;
-  SITE.galeria.forEach(function(g, i) {
+  SITE.galeria.forEach(function(g) {
     var el = document.createElement('div');
-    var cls = 'gi';
-    if (g.destaque) cls += ' tall';
-    if (!hasWide && !g.destaque && i >= 5) { cls += ' wide'; hasWide = true; }
-    el.className = cls;
+    el.className = 'gi' + (g.tamanho ? ' ' + g.tamanho : '');
     el.style.backgroundImage = "url('" + g.arquivo + "')";
     gal.appendChild(el);
   });
 
-  /* ── STATS ── */
-  var stg = document.getElementById('stgrid');
-  SITE.numeros.forEach(function(s) {
-    var e = document.createElement('div'); e.className = 'sti';
-    e.innerHTML = '<div class="stn">' + s.numero + '</div><div class="stl">' + s.label.replace('\n','<br>') + '</div>';
-    stg.appendChild(e);
+  // NÚMEROS
+  document.getElementById('numTitle').innerHTML = SITE.numerosTitulo.replace(/cachê/, '<em>cachê</em>');
+  document.getElementById('numSubtitle').textContent = SITE.numerosSubtitulo;
+  var ng = document.getElementById('numGrid');
+  SITE.numeros.forEach(function(n) {
+    var cls = 'numc';
+    if (n.destaque) cls += ' hero';
+    else if (ng.children.length > 0 && ng.children[0].classList.contains('hero')) {
+      // Depois do hero, 3 médios (span 4) + 2 médios (span 6)
+      cls += (ng.children.length < 4) ? ' m' : ' s';
+    }
+    ng.innerHTML += '<div class="' + cls + '">' +
+      '<div class="numn">' + n.numero + '</div>' +
+      '<div class="numl">' + n.label + '</div>' +
+      (n.desc ? '<div class="numd">' + n.desc + '</div>' : '') +
+      '</div>';
   });
-  document.getElementById('strodape').textContent = SITE.numerosRodape;
+  document.getElementById('numRod').textContent = SITE.numerosRodape;
 
-  /* ── IMPRENSA (nova estrutura visual) ── */
-  // 1. Veículos em barra horizontal
-  var vg = document.getElementById('vlogosGrid');
-  if (vg && SITE.veiculosImprensa) {
-    SITE.veiculosImprensa.forEach(function(v) {
-      var parts = v.split('|');
-      vg.innerHTML += '<div class="vlogo">' + parts[0] +
-        (parts[1] ? '<span class="vlogo-sub">' + parts[1] + '</span>' : '') + '</div>';
-    });
-  }
-  // 2. Grid visual de matérias
+  // IMPRENSA
+  var vg2 = document.getElementById('vlogosGrid');
+  SITE.veiculosImprensa.forEach(function(v) {
+    var parts = v.split('|');
+    vg2.innerHTML += '<div class="vlogo">' + parts[0] +
+      (parts[1] ? '<span class="vlogo-sub">' + parts[1] + '</span>' : '') + '</div>';
+  });
   var pg2 = document.getElementById('pgrid2');
-  if (pg2 && SITE.imprensa) {
-    SITE.imprensa.forEach(function(p) {
-      var href = p.link ? p.link : 'javascript:void(0)';
-      var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
-      var sz   = p.tamanho || 'sz-m';
-      pg2.innerHTML +=
-        '<a class="pcard ' + sz + '" href="' + href + '" ' + tgt + '>' +
-          '<div class="pcard-img" style="background-image:url(\'' + p.imagem + '\')">' +
-            '<div class="pcard-ov"></div>' +
-            '<div class="pcard-body">' +
-              '<span class="pcard-vc">' + p.veiculo + '</span>' +
-              '<div class="pcard-mh">' + p.manchete + '</div>' +
-              (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
-            '</div>' +
+  SITE.imprensa.forEach(function(p) {
+    var href = p.link ? p.link : 'javascript:void(0)';
+    var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
+    var sz   = p.tamanho || 'sz-m';
+    var featured = (p.veiculo.indexOf('Draft') >= 0) ? ' featured' : '';
+    var linkIcon = p.link ? '<div class="pcard-link">↗</div>' : '';
+    pg2.innerHTML +=
+      '<a class="pcard ' + sz + '" href="' + href + '" ' + tgt + ' onclick="trackCTA(\'imprensa_' + p.veiculo.toLowerCase().replace(/[^a-z]/g,'_').slice(0,15) + '\')">' +
+        linkIcon +
+        '<div class="pcard-img" style="background-image:url(\'' + p.imagem + '\')">' +
+          '<div class="pcard-ov"></div>' +
+          '<div class="pcard-body">' +
+            '<span class="pcard-vc' + featured + '">' + p.veiculo + '</span>' +
+            '<div class="pcard-mh">' + p.manchete + '</div>' +
+            (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
           '</div>' +
-        '</a>';
-    });
-  }
-  // 3. Quote em destaque
+        '</div>' +
+      '</a>';
+  });
   if (SITE.imprensaQuote) {
-    var qt = document.getElementById('presqText');
-    var qs = document.getElementById('presqSrc');
-    if (qt) qt.textContent = SITE.imprensaQuote.texto;
-    if (qs) qs.textContent = SITE.imprensaQuote.fonte;
+    document.getElementById('presqText').textContent = SITE.imprensaQuote.texto;
+    document.getElementById('presqSrc').textContent = SITE.imprensaQuote.fonte;
   }
-  // 4. Validações institucionais
   var vi = document.getElementById('vinstGrid');
-  if (vi && SITE.validacoes) {
-    SITE.validacoes.forEach(function(v) {
-      vi.innerHTML +=
-        '<div class="vinst-card">' +
-          '<div class="vinst-ico">' + v.icone + '</div>' +
-          '<div class="vinst-ttl">' + v.titulo + '</div>' +
-          '<div class="vinst-sub">' + v.subtitulo + '</div>' +
-        '</div>';
-    });
-  }
+  SITE.validacoes.forEach(function(v) {
+    vi.innerHTML +=
+      '<div class="vinst-card">' +
+        '<div class="vinst-ico">' + v.icone + '</div>' +
+        '<div class="vinst-ttl">' + v.titulo + '</div>' +
+        '<div class="vinst-sub">' + v.subtitulo + '</div>' +
+      '</div>';
+  });
 
-  /* ── CONTRATANTES ── */
+  // CONTRATANTES
   document.getElementById('contIntro').textContent = SITE.contratantes.intro;
   var cl = document.getElementById('cdocsList');
-  SITE.contratantes.documentos.forEach(function(d) {
-    cl.innerHTML += '<li>' + d + '</li>';
-  });
+  SITE.contratantes.documentos.forEach(function(d) { cl.innerHTML += '<li>' + d + '</li>'; });
   var cp = document.getElementById('cprecList');
   SITE.contratantes.precedentes.forEach(function(p) {
-    cp.innerHTML += '<div class="cpcard"><div class="cpmun">' + p.municipio + '</div><div class="cpev">' + p.evento + '</div></div>';
+    cp.innerHTML += '<div class="cpcard">' +
+      (p.categoria ? '<div class="cpcat">' + p.categoria + '</div>' : '') +
+      '<div class="cpmun">' + p.municipio + '</div>' +
+      '<div class="cpev">' + p.evento + '</div></div>';
   });
   document.getElementById('waContBtn').href = waUrl;
 
-  /* ── SOBRE ── */
+  // SOBRE
   document.getElementById('sobreFoto').style.backgroundImage = "url('" + SITE.sobre.foto + "')";
   document.getElementById('sobreCitacao').textContent = '"' + SITE.sobre.citacao + '"';
   var sp = document.getElementById('sobreParas');
@@ -774,7 +763,7 @@ function init() {
     sm.innerHTML += '<div class="smilc"><div class="smily">' + m.ano + '</div><div class="smild">' + m.desc + '</div></div>';
   });
 
-  /* ── CONTATO ── */
+  // CONTATO
   document.getElementById('cEmail').textContent    = C.email;
   document.getElementById('cPhone').textContent    = C.whatsappLabel;
   document.getElementById('cEndereco').textContent = C.endereco;
@@ -785,27 +774,18 @@ function init() {
   document.getElementById('igBtn').href  = 'https://instagram.com/' + C.instagram;
   document.getElementById('ytBtn').href  = 'https://youtube.com/' + C.youtube;
   document.getElementById('spBtn').href  = C.spotify;
-  document.getElementById('igBtn').setAttribute('target','_blank');
-  document.getElementById('ytBtn').setAttribute('target','_blank');
-  document.getElementById('spBtn').setAttribute('target','_blank');
+  ['igBtn','ytBtn','spBtn'].forEach(function(id){document.getElementById(id).setAttribute('target','_blank');});
 
-  /* ── FORMULÁRIO ── */
-  var formAction = C.formspree && !C.formspree.includes('INSIRA')
-    ? 'https://formspree.io/f/' + C.formspree
-    : '#';
+  var formAction = C.formspree && !C.formspree.includes('INSIRA') ? 'https://formspree.io/f/' + C.formspree : '#';
   document.getElementById('cform').action = formAction;
   document.getElementById('cform').addEventListener('submit', function(e) {
-    if (formAction === '#') { e.preventDefault(); }
-    trackCTA('form_submit');
-    if (formAction !== '#') {
-      e.preventDefault();
-      fetch(formAction, { method:'POST', headers:{'Accept':'application/json'}, body: new FormData(this) })
-        .then(function(r){ if(r.ok){ document.getElementById('fmsg').style.display='block'; e.target.reset(); }})
-        .catch(function(){});
-    }
+    if (formAction === '#') { e.preventDefault(); return; }
+    e.preventDefault();
+    fetch(formAction, { method:'POST', headers:{'Accept':'application/json'}, body: new FormData(this) })
+      .then(function(r){ if(r.ok){ document.getElementById('fmsg').style.display='block'; e.target.reset(); }});
   });
 
-  /* ── FOOTER ── */
+  // FOOTER
   document.getElementById('footerEmail').href        = 'mailto:' + C.email;
   document.getElementById('footerEmail').textContent = C.email;
   document.getElementById('footerPhone').href        = 'tel:+' + C.whatsapp;
@@ -821,7 +801,6 @@ function init() {
   document.getElementById('waFooterLink').href = waUrl;
 }
 
-/* ── VÍDEO PLAYER ── */
 function ov(i) {
   var v = SITE.videos[i];
   if (!v.youtubeId || v.youtubeId.includes('INSIRA')) return;
@@ -833,29 +812,24 @@ function ov(i) {
   trackCTA('video_play_' + i);
 }
 
-/* ── SOUND TOGGLE ── */
 let soundOn = false;
 function toggleSound() {
   const f = document.getElementById('hyt');
   const icon = document.getElementById('soundIcon');
   const btn = document.getElementById('soundBtn');
   if (!f || !SITE.hero.youtubeId) return;
-  
   soundOn = !soundOn;
-  
   const baseUrl = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
     '?autoplay=1&loop=1&playlist=' + SITE.hero.youtubeId +
     '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&enablejsapi=1' +
     '&mute=' + (soundOn ? '0' : '1');
-  
   f.src = baseUrl;
   icon.textContent = soundOn ? '🔊' : '🔇';
-  btn.style.background = soundOn ? 'rgba(11,52,128,.6)' : 'rgba(255,255,255,.1)';
-  
+  btn.classList.toggle('on', soundOn);
+  btn.title = soundOn ? 'Desativar som' : 'Ativar som';
   if (window._gtag) window._gtag('event', 'sound_toggle', { event_category: 'engagement', event_label: soundOn ? 'on' : 'off' });
 }
 
-/* ── NAV ── */
 window.addEventListener('scroll', function(){
   var s = scrollY > 60;
   document.getElementById('nav').classList.toggle('s', s);
@@ -865,22 +839,15 @@ window.addEventListener('scroll', function(){
 document.getElementById('ham').onclick = function(){ document.getElementById('mm').classList.toggle('o'); };
 function cm(){ document.getElementById('mm').classList.remove('o'); }
 
-/* ── ANALYTICS TRACKING ── */
 function trackCTA(label) {
   if (window._gtag) window._gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
 }
 function trackWA(origem) {
   if (window._gtag) window._gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: 'whatsapp_' + origem });
-  var url = 'https://wa.me/' + SITE.contato.whatsapp;
-  window.open(url, '_blank');
+  window.open('https://wa.me/' + SITE.contato.whatsapp, '_blank');
 }
 
-/* ── INIT ── */
-if (typeof SITE !== 'undefined') {
-  init();
-} else {
-  document.addEventListener('DOMContentLoaded', init);
-}
+if (typeof SITE !== 'undefined') { init(); } else { document.addEventListener('DOMContentLoaded', init); }
 </script>
 </body>
 </html>

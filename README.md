@@ -1,152 +1,43 @@
-# Tingo Santi — Site Oficial v6
-**NKT Artes Ltda · CNPJ 56.047.654/0001-25**
+# Tingo Santi — Site Oficial v7
 
----
-
-## Estrutura do repositório
-
+## Estrutura
 ```
 /
-├── index.html     ← layout e código (não alterar para manutenção de rotina)
-├── data.js        ← TODO O CONTEÚDO EDITÁVEL (altere aqui)
-├── netlify.toml   ← configuração Netlify (não alterar)
-├── README.md      ← este arquivo
-└── img/           ← todas as fotos
+├── index.html     (layout e logica)
+├── data.js        (TODO conteudo editavel)
+├── netlify.toml
+├── README.md
+└── img/
     ├── hero_principal.jpg
-    ├── espetaculo_palco_banda.jpg
-    ├── espetaculo_portugal.jpg
+    ├── espetaculo_palco_novo.jpg  (Natal Magia - sem RC no telao)
     ├── sobre_artista_close.jpg
-    ├── galeria_*.jpg
-    ├── prova_social_*.jpg
-    └── frame_*.jpg
+    ├── logo_tributo.png
+    ├── galeria_*.jpg (9 fotos para mosaico)
+    └── imprensa/
+        ├── projeto_draft.jpg
+        ├── folha_capa_out2024.jpg
+        ├── folha_materia_out2024.jpg
+        ├── folha_materia_maio2025.jpg
+        ├── odia_macae.jpg
+        ├── odia_itaborai.jpg
+        └── errejota_itaborai.jpg
 ```
 
----
-
-## Como atualizar — regra geral
-
-**Abra o `data.js` no GitHub → clique no lápis → edite → Commit changes.**
-O Netlify atualiza o site em menos de 1 minuto.
-
----
-
-## Atualizações mais comuns
-
-### Trocar/adicionar vídeo do YouTube
-
-1. Vá ao vídeo no YouTube
-2. Copie o ID da URL: `youtube.com/watch?v=`**`dQw4w9WgXcQ`** → ID é `dQw4w9WgXcQ`
-3. Em `data.js`, localize `videos:` e substitua o `youtubeId`:
-
-```js
-{ titulo: "Tributo ao Rei", youtubeId: "dQw4w9WgXcQ", ... }
-```
-
-Para adicionar novo vídeo, copie um bloco inteiro e cole abaixo do último.
-
----
-
-### Atualizar número (seguidores, plays, etc.)
-
-Localize `numeros:` em `data.js` e troque o valor:
-
-```js
-{ numero: "65K+",  label: "Seguidores\nno Instagram" }
-```
-
----
-
-### Trocar foto
-
-1. Coloque a nova foto na pasta `img/`
-2. Em `data.js`, localize o arquivo antigo e substitua pelo novo nome:
-
-```js
-{ arquivo: "img/nova_foto.jpg", destaque: false }
-```
-
----
-
-### Atualizar texto (bio, intro do show, etc.)
-
-Todos os textos estão em `data.js`. Use Ctrl+F para localizar a frase que quer mudar.
-
----
-
-### Ativar vídeo de fundo no hero
-
-Em `data.js`, substitua `INSIRA_YOUTUBE_ID_AQUI` pelo ID real:
-
-```js
-hero: {
-  youtubeId: "dQw4w9WgXcQ",
-  ...
-}
-```
-
----
-
-### Configurar formulário de contato
-
-1. Crie conta em **formspree.io**
-2. Crie um form ("Contato Tingo Santi")
-3. Copie o ID gerado (ex: `xyzabc12`)
-4. Em `data.js`, substitua:
-
-```js
-formspree: "xyzabc12"
-```
-
-Pronto. Mensagens chegam no seu e-mail automaticamente.
-
----
-
-### Ativar Google Analytics
-
-1. Crie propriedade GA4 em **analytics.google.com**
-2. Copie o ID (ex: `G-ABC123456`)
-3. Em `data.js`, substitua:
-
-```js
-googleAnalyticsId: "G-ABC123456"
-```
-
----
-
-### Adicionar novo acesso de imprensa
-
-Localize `imprensa:` em `data.js` e adicione:
-
-```js
-{
-  veiculo:  "Nome do Veículo",
-  manchete: "Título da matéria",
-  resumo:   "Resumo em uma frase."
-}
-```
-
----
+## O que mudou na v7
+1. Encoding UTF-8 correto (acentos restaurados)
+2. Botao de som no hero (canto inferior direito)
+3. Foto do Espetaculo trocada (sem RC no telao, usa Natal Magia)
+4. Logo "Tributo ao Rei" sobre a foto do espetaculo
+5. Galeria com mosaico inteligente (9 fotos, formatos variados)
+6. Secao de Numeros redesenhada (fundo navy, hierarquia visual)
+7. Notoriedade com card Projeto Draft em destaque + link
+8. Precedentes categorizados (Publica / Internacional / Clubes)
+9. Correcoes: Itaborai inclui Dia das Maes 2025, PCSF 4 shows, Porto IPPB
 
 ## Checklist antes de publicar
+- [ ] Trocar INSIRA_FORMSPREE_ID pelo ID real
+- [ ] Trocar INSIRA_GA4_ID pelo ID real do Google Analytics
 
-- [ ] Inserir IDs dos vídeos do YouTube (`INSIRA_YOUTUBE_ID_AQUI`)
-- [ ] Configurar Formspree (`INSIRA_FORMSPREE_ID`)
-- [ ] Configurar Google Analytics (`INSIRA_GA4_ID`)
-- [ ] Confirmar pasta `img/` com todas as fotos
-- [ ] Testar formulário enviando uma mensagem de teste
-
----
-
-## Como publicar no GitHub + Netlify
-
-1. Crie repositório no GitHub (privado): `tingo-santi-site`
-2. Faça upload de todos os arquivos desta pasta
-3. No Netlify: "Add new site" → "Import from GitHub" → selecione o repositório
-4. Deploy automático. Site no ar em 60 segundos.
-5. Para domínio próprio: Netlify → "Domain settings" → adicione `tingosanti.com.br`
-
----
-
-## Contato técnico
-
-NKT Artes Ltda · tingo.santi@proton.me · (21) 97521-4169
+## Como editar conteudo
+Todo texto, numero, foto e link fica em `data.js`.
+O `index.html` so contem layout e logica - nao mexer em rotina.

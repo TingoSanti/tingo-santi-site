@@ -22,3 +22,4 @@
   for = "/data.js"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+    Content-Type = "application/javascript; charset=utf-8"
