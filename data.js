@@ -155,17 +155,13 @@ const SITE = {
       veiculo:  "Prefeitura de Macaé",
       data:     "Site Oficial · Dezembro 2025",
       manchete: "Tributo ao Rei é atração do Natal Magia",
-      imagem:   "img/imprensa/odia_macae.jpg",
-      pos:      "center top",
-      tamanho:  "sz-m",
-      official: true,
-      link:     "https://www.macae.rj.gov.br/turismo/leitura/noticia/tributo-ao-rei-roberto-carlos-abba-experience-e-o-rei-leao-sao-atracoes-do-natal-magia"
+      imagem:   "img/imprensa/prefeitura_macae_show.jpg",
     },
     {
       veiculo:  "Site Oficial Itaboraí",
       data:     "Portal · Dezembro 2025",
       manchete: "Natal Itá Luz encerra com tributo a Roberto Carlos",
-      imagem:   "img/imprensa/odia_itaborai.jpg",
+      imagem:   "img/imprensa/prefeitura_itaborai_show.jpg",
       pos:      "center top",
       tamanho:  "sz-m",
       official: true,
@@ -241,7 +237,7 @@ const SITE = {
       veiculo:  "Rio das Ostras Jornal",
       data:     "Dezembro 2025",
       manchete: "Tingo Santi leva o Tributo ao Rei para Macaé",
-      imagem:   "img/imprensa/odia_macae.jpg",
+      imagem:   null,
       pos:      "center top",
       tamanho:  "sz-s",
       link:     "https://riodasostrasjornal.com/tingo-santi-leva-o-tributo-ao-rei-para-macae/"
@@ -250,7 +246,7 @@ const SITE = {
       veiculo:  "A Tribuna RJ",
       data:     "Maio 2025",
       manchete: "Itaboraí realiza tributo a Roberto Carlos para celebrar seus 192 anos",
-      imagem:   "img/imprensa/odia_itaborai.jpg",
+      imagem:   null,
       pos:      "center top",
       tamanho:  "sz-s",
       link:     "https://atribunarj.com.br/materia/itaborai-realiza-tributo-a-roberto-carlos-para-celebrar-seus-192-anos"
@@ -259,7 +255,7 @@ const SITE = {
       veiculo:  "Macaé em Foco",
       data:     "Dezembro 2025",
       manchete: "Tributo ao Rei é uma das atrações do Natal Magia 2025",
-      imagem:   "img/imprensa/odia_macae.jpg",
+      imagem:   null,
       pos:      "center top",
       tamanho:  "sz-s",
       link:     "https://www.macaeemfoco.com.br/2025/12/27/tributo-ao-rei-roberto-carlos-abba-experience-e-o-rei-leao-sao-atracoes-do-natal-magia/"
@@ -268,7 +264,7 @@ const SITE = {
       veiculo:  "RJ Cidades",
       data:     "Dezembro 2025",
       manchete: "Natal Magia traz Tributo ao Rei, ABBA Experience e O Rei Leão",
-      imagem:   "img/imprensa/odia_macae.jpg",
+      imagem:   null,
       pos:      "center top",
       tamanho:  "sz-s",
       link:     "https://rjcidades.com.br/natal-magia-traz-tributo-a-roberto-carlos-abba-experience-e-o-rei-leao/"
@@ -277,7 +273,7 @@ const SITE = {
       veiculo:  "Diário de Macaé",
       data:     "Dezembro 2025",
       manchete: "Tributo ao Rei é atração cultural do Natal Magia",
-      imagem:   "img/imprensa/odia_macae.jpg",
+      imagem:   null,
       pos:      "center top",
       tamanho:  "sz-s",
       link:     "https://diariodemacae.com.br/tributo-ao-rei-roberto-carlos-abba-experience-e-o-rei-leao-sao-atracoes-do-natal-magia/"
@@ -286,7 +282,7 @@ const SITE = {
       veiculo:  "Jornal Esporte Saúde",
       data:     "Dezembro 2025",
       manchete: "Macaé: Tributo ao Rei, ABBA Experience e O Rei Leão são atrações do Natal Magia",
-      imagem:   "img/imprensa/odia_macae.jpg",
+      imagem:   null,
       pos:      "center top",
       tamanho:  "sz-s",
       link:     "https://www.jornalesportesaude.net/post/macaé-tributo-ao-rei-roberto-carlos-abba-experience-e-o-rei-leão-são-atrações-do-natal-magia"
