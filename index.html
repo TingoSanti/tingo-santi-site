@@ -197,13 +197,14 @@ button{cursor:pointer;font-family:var(--sans)}
 .pcard-dt{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 .pcard-link{position:absolute;top:1rem;right:1rem;z-index:3;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem}
 .pcard.sz-l{grid-column:span 12}
-.pcard.sz-l .pcard-img{aspect-ratio:16/9}
+.pcard.sz-l .pcard-img{aspect-ratio:21/9}
 .pcard.sz-l .pcard-mh{font-size:2rem;line-height:1.15}
 .pcard.sz-m{grid-column:span 6}
-.pcard.sz-m .pcard-img{aspect-ratio:3/2}
+.pcard.sz-m .pcard-img{aspect-ratio:4/3}
 .pcard.sz-m .pcard-mh{font-size:1.3rem}
 .pcard.sz-s{grid-column:span 4}
 .pcard.sz-s .pcard-img{aspect-ratio:4/3}
+.pblocks{display:block}
 .pblock{margin-bottom:5rem}
 .pblock-h{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--bb)}
 .pblock-official .pblock-h{color:var(--gold);border-bottom-color:rgba(201,165,90,.3)}
@@ -291,7 +292,8 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .fg{grid-template-columns:1fr 1fr}
   .spa{display:none}
   .gm{columns:2}
-  .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 6}
+  .pcard.sz-l,.pcard.sz-m{grid-column:span 6}
+  .pcard.sz-s{grid-column:span 6}
   .vlogos{flex-direction:column;gap:0}
   .vlogo{border-right:none;border-bottom:1px solid var(--bb);width:100%;padding:1rem}
   .vlogo:last-child{border-bottom:none}
@@ -503,7 +505,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <p class="sl">Publicações editoriais de peso, capas de jornal, matérias em veículos regionais e nacionais e aprovação por órgãos oficiais. Cada show gera cobertura. Cada cobertura reforça o posicionamento.</p>
 
     <div class="vlogos" id="vlogosGrid"></div>
-    <div class="pgrid2" id="pgrid2"></div>
+    <div class="pblocks" id="pgrid2"></div>
     <div class="presq">
       <div class="presq-mark">"</div>
       <p class="presq-text" id="presqText"></p>
