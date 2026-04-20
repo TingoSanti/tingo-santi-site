@@ -836,12 +836,12 @@ function init() {
           '<span class="pcard-vc">' + p.veiculo + '</span>' +
           '<div class="pcard-mh">' + p.manchete + '</div>' +
           (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
-          '</div>' +
         '</div>' +
       '</a>';
   });
   html += '</div></div>';
   pg2.innerHTML = html;
+  if (SITE.imprensaQuote) {
     document.getElementById('presqText').textContent = SITE.imprensaQuote.texto;
     document.getElementById('presqSrc').textContent = SITE.imprensaQuote.fonte;
   }
