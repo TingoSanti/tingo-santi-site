@@ -2,13 +2,12 @@
   publish = "."
 
 [[redirects]]
-  from = "/ds1/"
-  to = "/ds1"
-  status = 301
-  force = true
+  from = "/ds1"
+  to = "/index.html"
+  status = 200
 
 [[redirects]]
-  from = "/ds1"
+  from = "/ds1/*"
   to = "/index.html"
   status = 200
 
