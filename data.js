@@ -126,7 +126,7 @@ const SITE = {
       data:     "Lifehackers · Abril 2026",
       manchete: "De CEO de multinacional a cantor e doutorando: como planejei ser dono do meu próprio tempo",
       imagem:   "img/imprensa/projeto_draft.jpg",
-      pos:      "center top",
+      pos:      "center center",
       tamanho:  "sz-l",
       featured: true,
       link:     "https://www.projetodraft.com/de-ceo-de-multinacional-a-cantor-e-doutorando-como-planejei-ser-dono-do-meu-proprio-tempo/"
