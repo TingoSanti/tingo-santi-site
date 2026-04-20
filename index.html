@@ -387,7 +387,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 <section id="hero">
   <div class="hbg">
     <div class="hfb" id="heroBg"></div>
-    <iframe id="hyt" src="" allow="autoplay;encrypted-media" allowfullscreen playsinline style="display:none"></iframe>
+    <iframe id="hyt" src="" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen playsinline style="display:none"></iframe>
   </div>
   <div class="hov"></div>
   <div class="hc">
@@ -756,6 +756,80 @@ function initFormspreeForContact(C, waUrl) {
   formCol.appendChild(card);
 }
 
+let soundOn = false;
+let heroPlayer = null;
+let heroPlayerReady = false;
+
+function loadYouTubeIframeApi() {
+  if (window.YT && window.YT.Player) return;
+  if (document.getElementById('youtube-iframe-api')) return;
+  var tag = document.createElement('script');
+  tag.id = 'youtube-iframe-api';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(tag);
+}
+
+function createHeroPlayer() {
+  if (!SITE.hero.youtubeId || !(window.YT && window.YT.Player)) return;
+  if (heroPlayer) return;
+
+  heroPlayer = new YT.Player('hyt', {
+    videoId: SITE.hero.youtubeId,
+    playerVars: {
+      autoplay: 1,
+      mute: 1,
+      controls: 0,
+      rel: 0,
+      playsinline: 1,
+      loop: 1,
+      playlist: SITE.hero.youtubeId,
+      modestbranding: 1,
+      iv_load_policy: 3,
+      disablekb: 1
+    },
+    events: {
+      onReady: function (event) {
+        heroPlayerReady = true;
+        try {
+          event.target.mute();
+          event.target.playVideo();
+        } catch (e) {}
+        document.getElementById('hyt').style.display = 'block';
+        document.getElementById('soundBtn').style.display = 'flex';
+      },
+      onStateChange: function (event) {
+        if (window.YT && event.data === YT.PlayerState.ENDED) {
+          try { event.target.playVideo(); } catch (e) {}
+        }
+      }
+    }
+  });
+}
+
+window.onYouTubeIframeAPIReady = function () {
+  createHeroPlayer();
+};
+
+function fallbackHeroVideo(muted) {
+  var f = document.getElementById('hyt');
+  if (!f || !SITE.hero.youtubeId) return;
+  var origin = window.location.origin ? '&origin=' + encodeURIComponent(window.location.origin) : '';
+  f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+    '?autoplay=1&loop=1&playlist=' + SITE.hero.youtubeId +
+    '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&playsinline=1&enablejsapi=1' +
+    '&mute=' + (muted ? '1' : '0') + origin;
+  f.style.display = 'block';
+  document.getElementById('soundBtn').style.display = 'flex';
+}
+
+function updateSoundButtonUi() {
+  var icon = document.getElementById('soundIcon');
+  var btn = document.getElementById('soundBtn');
+  icon.textContent = soundOn ? '🔊' : '🔇';
+  btn.classList.toggle('on', soundOn);
+  btn.title = soundOn ? 'Desativar som' : 'Ativar som';
+}
+
 function init() {
   const C = getContatoAtivo();
   const waUrl = 'https://wa.me/' + C.whatsapp;
@@ -765,12 +839,9 @@ function init() {
   document.getElementById('heroBg').style.backgroundImage = "url('" + SITE.hero.foto + "')";
   document.getElementById('heroTagline').textContent = SITE.hero.tagline;
   if (SITE.hero.youtubeId) {
-    const f = document.getElementById('hyt');
-    f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
-      '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
-      '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&playsinline=1';
-    f.style.display = 'block';
-    document.getElementById('soundBtn').style.display = 'flex';
+    loadYouTubeIframeApi();
+    fallbackHeroVideo(true);
+    if (window.YT && window.YT.Player) createHeroPlayer();
   }
 
   // SHOW
@@ -1022,20 +1093,27 @@ function playVideo() {
   trackCTA('video_play_show');
 }
 
-let soundOn = false;
 function toggleSound() {
-  const f = document.getElementById('hyt');
-  const icon = document.getElementById('soundIcon');
-  const btn = document.getElementById('soundBtn');
-  if (!f || !SITE.hero.youtubeId) return;
+  if (!SITE.hero.youtubeId) return;
   soundOn = !soundOn;
-  f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
-    '?autoplay=1&loop=1&playlist=' + SITE.hero.youtubeId +
-    '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1' +
-    '&mute=' + (soundOn ? '0' : '1');
-  icon.textContent = soundOn ? '🔊' : '🔇';
-  btn.classList.toggle('on', soundOn);
-  btn.title = soundOn ? 'Desativar som' : 'Ativar som';
+  updateSoundButtonUi();
+
+  if (heroPlayerReady && heroPlayer) {
+    try {
+      if (soundOn) {
+        heroPlayer.unMute();
+        heroPlayer.setVolume(100);
+        heroPlayer.playVideo();
+      } else {
+        heroPlayer.mute();
+      }
+    } catch (e) {
+      fallbackHeroVideo(!soundOn ? true : false);
+    }
+  } else {
+    fallbackHeroVideo(!soundOn ? true : false);
+  }
+
   if (window._gtag) window._gtag('event', 'sound_toggle', { event_category: 'engagement', event_label: soundOn ? 'on' : 'off' });
 }
 
@@ -1057,6 +1135,7 @@ function trackWA(origem) {
   window.open('https://wa.me/' + C.whatsapp, '_blank');
 }
 
+updateSoundButtonUi();
 if (typeof SITE !== 'undefined') { init(); } else { document.addEventListener('DOMContentLoaded', init); }
 </script>
 
