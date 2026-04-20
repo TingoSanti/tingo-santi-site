@@ -43,12 +43,12 @@ const SITE = {
   galeria: [
     { arquivo: "img/galeria_natal_magia_palco.jpg"       },
     { arquivo: "img/galeria_show_braco_aberto.jpg"       },
+    { arquivo: "img/galeria_rosas_plateia.jpg"           },
     { arquivo: "img/galeria_bracos_abertos.jpg"          },
     { arquivo: "img/galeria_macae_plateia.jpg"           },
     { arquivo: "img/galeria_drone_igreja.jpg"            },
     { arquivo: "img/galeria_pcsf_plateia.jpg"            },
     { arquivo: "img/galeria_lenco_verde.jpg"             },
-    { arquivo: "img/galeria_itaborai_flores_plateia.jpg" },
     { arquivo: "img/galeria_plateia_natal.jpg"           },
     { arquivo: "img/galeria_palco_orquestra_pcsf.jpg"    },
     { arquivo: "img/galeria_apontando.jpg"               },
