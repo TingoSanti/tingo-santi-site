@@ -156,6 +156,10 @@ const SITE = {
       data:     "Site Oficial · Dezembro 2025",
       manchete: "Tributo ao Rei é atração do Natal Magia",
       imagem:   "img/imprensa/prefeitura_macae_show.jpg",
+      pos:      "center center",
+      tamanho:  "sz-m",
+      official: true,
+      link:     "https://www.macae.rj.gov.br/turismo/leitura/noticia/tributo-ao-rei-roberto-carlos-abba-experience-e-o-rei-leao-sao-atracoes-do-natal-magia"
     },
     {
       veiculo:  "Site Oficial Itaboraí",
