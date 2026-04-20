@@ -43,7 +43,6 @@ const SITE = {
   galeria: [
     { arquivo: "img/galeria_natal_magia_palco.jpg"       },
     { arquivo: "img/galeria_show_braco_aberto.jpg"       },
-    { arquivo: "img/galeria_rosas_plateia.jpg"           },
     { arquivo: "img/galeria_bracos_abertos.jpg"          },
     { arquivo: "img/galeria_macae_plateia.jpg"           },
     { arquivo: "img/galeria_drone_igreja.jpg"            },
