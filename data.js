@@ -5,10 +5,7 @@
 
 const SITE = {
 
-  contatoPadrao: {
-    nome:         "Tingo Santi",
-    responsavel:  "Tingo Santi",
-    contatoLabel: "NKT Artes Ltda",
+  contato: {
     whatsapp:     "5521975214169",
     whatsappLabel:"(21) 97521-4169",
     email:        "tingo.santi@proton.me",
@@ -18,24 +15,7 @@ const SITE = {
     spotify:      "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
     formspree:    "xyklpzbk",
     cnpj:         "56.047.654/0001-25",
-    endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006",
-    introContato: "Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.",
-    ctaLabel:     "Falar sobre contratação"
-  },
-
-  canais: {
-    ds1: {
-      slug:         "ds1",
-      nome:         "DS1 Produções",
-      responsavel:  "Uriel Marques",
-      contatoLabel: "DS1 Produções · Uriel Marques",
-      email:        "contato@ds1producoes.com.br",
-      whatsapp:     "5522998448726",
-      whatsappLabel:"(22) 99844-8726",
-      formspree:    "",
-      introContato: "Solicitações de proposta, agenda e materiais técnicos deste link são atendidas exclusivamente pela DS1 Produções, com Uriel Marques.",
-      ctaLabel:     "Falar com DS1 Produções"
-    }
+    endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006"
   },
 
   analytics: {
@@ -372,10 +352,10 @@ const SITE = {
     ],
     marcos: [
       { ano: "2021", desc: "Entrevista no podcast Lado Pessoal, da Antena 1, como CEO da Nokia Brasil." },
-      { ano: "2023", desc: "Início do projeto artístico. +50 composições autorais publicadas." },
-      { ano: "2024", desc: "Estreia internacional em Portugal. Validação pela FUNARJ." },
-      { ano: "2025", desc: "Contratos com Macaé, Itaboraí. 4 shows no PCSF. +63K seguidores. 21M+ execuções." },
-      { ano: "2026", desc: "Doutorado COPPEAD/UFRJ. Publicação autoral no Projeto Draft." }
+      { ano: "2023", desc: "Início da fase de compositor. +50 composições autorais publicadas." },
+      { ano: "2024", desc: "2 shows no PCSF. Estreia internacional em Portugal." },
+      { ano: "2025", desc: "2 shows no PCSF. Contratos com Macaé, Itaboraí. Validação pela FUNARJ." },
+      { ano: "2026", desc: "+63K seguidores. 21M+ execuções. Publicação autoral no Projeto Draft. Vários projetos em andamento com Prefeituras." }
     ]
   },
 
