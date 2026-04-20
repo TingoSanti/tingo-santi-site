@@ -387,7 +387,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 <section id="hero">
   <div class="hbg">
     <div class="hfb" id="heroBg"></div>
-    <iframe id="hyt" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
+    <iframe id="hyt" src="" allow="autoplay;encrypted-media" allowfullscreen playsinline style="display:none"></iframe>
   </div>
   <div class="hov"></div>
   <div class="hc">
@@ -692,11 +692,11 @@ function init() {
   // HERO
   document.getElementById('heroBg').style.backgroundImage = "url('" + SITE.hero.foto + "')";
   document.getElementById('heroTagline').textContent = SITE.hero.tagline;
-  if (SITE.hero.youtubeId && !/Mobi|Android/i.test(navigator.userAgent)) {
+  if (SITE.hero.youtubeId) {
     const f = document.getElementById('hyt');
     f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
       '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
-      '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1';
+      '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&playsinline=1';
     f.style.display = 'block';
     document.getElementById('soundBtn').style.display = 'flex';
   }
