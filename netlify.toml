@@ -23,3 +23,15 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
     Content-Type = "application/javascript; charset=utf-8"
+
+
+[[redirects]]
+  from = "/ds1/"
+  to = "/ds1"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ds1"
+  to = "/index.html"
+  status = 200

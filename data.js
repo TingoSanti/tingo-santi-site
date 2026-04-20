@@ -5,7 +5,10 @@
 
 const SITE = {
 
-  contato: {
+  contatoPadrao: {
+    nome:         "Tingo Santi",
+    responsavel:  "Tingo Santi",
+    contatoLabel: "NKT Artes Ltda",
     whatsapp:     "5521975214169",
     whatsappLabel:"(21) 97521-4169",
     email:        "tingo.santi@proton.me",
@@ -15,7 +18,24 @@ const SITE = {
     spotify:      "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
     formspree:    "xyklpzbk",
     cnpj:         "56.047.654/0001-25",
-    endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006"
+    endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006",
+    introContato: "Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.",
+    ctaLabel:     "Falar sobre contratação"
+  },
+
+  canais: {
+    ds1: {
+      slug:         "ds1",
+      nome:         "DS1 Produções",
+      responsavel:  "Uriel Marques",
+      contatoLabel: "DS1 Produções · Uriel Marques",
+      email:        "contato@ds1producoes.com.br",
+      whatsapp:     "5522998448726",
+      whatsappLabel:"(22) 99844-8726",
+      formspree:    "",
+      introContato: "Solicitações de proposta, agenda e materiais técnicos deste link são atendidas exclusivamente pela DS1 Produções, com Uriel Marques.",
+      ctaLabel:     "Falar com DS1 Produções"
+    }
   },
 
   analytics: {
