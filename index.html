@@ -213,6 +213,13 @@ h1,h2,h3{margin:0;line-height:1.05}
   border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)
 }
 .quote p{font-family:var(--serif);font-size:25px;line-height:1.08;margin:0 0 8px;letter-spacing:.003em}
+.official-block{background:linear-gradient(180deg,#fffaf0,#fffdf7);border:1px solid rgba(201,165,90,.34);border-radius:18px;padding:22px}
+.official-title{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 16px;padding-bottom:14px;border-bottom:1px solid rgba(201,165,90,.22)}
+.official-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.official-grid .card:first-child,.official-grid .card:nth-child(2){grid-column:span 1}
+.official-grid .card:nth-child(3){max-width:290px}
+.official-grid .card-media{aspect-ratio:16/12}
+.press-title{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin:0 0 16px;padding-top:2px;border-top:1px solid var(--bb);padding-top:18px}
 .validation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
 .validation{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:15px}
 .validation strong{display:block;font-size:15px;margin-bottom:5px}
@@ -282,7 +289,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   .hero-panel{max-width:480px}
   .numbers-grid{grid-template-columns:1fr 1fr 1fr}
   .number-card.featured{grid-column:1 / -1}
-  .editorial-grid,.press-grid,.validation-grid,.footer-grid{grid-template-columns:1fr 1fr}
+  .editorial-grid,.press-grid,.validation-grid,.footer-grid,.official-grid{grid-template-columns:1fr 1fr}
   .instagram-grid{grid-template-columns:repeat(3,1fr)}
   .gallery-row.landscape,.gallery-row.portrait{grid-template-columns:repeat(2,1fr)}
   .gallery-item.landscape-item{aspect-ratio:16/10}
@@ -297,7 +304,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   .section-head{display:block;margin-bottom:18px}
   .lead{font-size:15px;line-height:1.64}
   .title-xl{font-size:42px}
-  .editorial-grid,.press-grid,.footer-grid,.numbers-grid{grid-template-columns:1fr}
+  .editorial-grid,.press-grid,.footer-grid,.numbers-grid,.official-grid{grid-template-columns:1fr}
   .instagram-grid{grid-template-columns:repeat(3,1fr)}
   .gallery-row.landscape,.gallery-row.portrait{grid-template-columns:1fr}
   .gallery-item.landscape-item{aspect-ratio:16/10}
@@ -514,15 +521,16 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   <div class="container">
     <div class="editorial-grid" id="editorialGrid"></div>
 
-    <div style="height:18px"></div>
+    <div style="height:24px"></div>
 
-    <div class="quote">
-      <p id="pressQuote"></p>
-      <div class="muted" id="pressQuoteSource"></div>
+    <div class="official-block">
+      <div class="official-title">★ Publicado em sites oficiais</div>
+      <div class="official-grid" id="officialGrid"></div>
     </div>
 
-    <div style="height:18px"></div>
+    <div style="height:24px"></div>
 
+    <div class="press-title">Cobertura de imprensa</div>
     <div class="press-grid" id="pressGrid"></div>
   </div>
 </section>
@@ -845,21 +853,28 @@ function imprensaCard(item, compact=false){
   return `<a class="card" href="${escapeHtml(href)}" ${item.link ? 'target="_blank" rel="noopener"' : ''}>${media}<div class="card-body"><div class="card-meta">${escapeHtml(item.veiculo)} · ${escapeHtml(item.data)}</div><h3 style="${compact ? 'font-size:18px' : ''}">${escapeHtml(item.manchete)}</h3>${compact ? '' : '<p>Leitura editorial e prova pública de aderência.</p>'}</div></a>`;
 }
 function setupImprensa(){
-  const featured = (SITE.imprensa || []).filter(x => x.featured).slice(0,1);
-  const mids = (SITE.imprensa || []).filter(x => !x.featured && !x.official).slice(0,2);
-  const press = (SITE.imprensa || []).filter(x => !x.featured && !x.official).slice(2);
+  const items = SITE.imprensa || [];
+  const featured = items.filter(x => x.featured).slice(0,1);
+  const official = items.filter(x => x.official);
+  const press = items.filter(x => !x.featured && !x.official);
+
   const editorialWrap = $('#editorialGrid');
-  [...featured, ...mids].forEach((item, idx) => {
-    editorialWrap.insertAdjacentHTML('beforeend', imprensaCard(item, idx>0));
+  featured.forEach(item => {
+    editorialWrap.insertAdjacentHTML('beforeend', imprensaCard(item, false));
   });
-  $('#pressQuote').textContent = SITE.imprensaQuote.texto || '';
-  $('#pressQuoteSource').textContent = SITE.imprensaQuote.fonte || '';
+
+  const officialWrap = $('#officialGrid');
+  official.forEach(item => {
+    officialWrap.insertAdjacentHTML('beforeend', imprensaCard(item, true));
+  });
+
   const pressWrap = $('#pressGrid');
   press.forEach(item => pressWrap.insertAdjacentHTML('beforeend', imprensaCard(item, true)));
+
   const validations = (SITE.validacoes || []).slice(0,6);
   if(validations.length){
     const container = $('#imprensa .container');
-    container.appendChild(el('div','', '<div style="height:18px"></div><div class="kicker">Validações institucionais</div><h3 style="margin:0 0 14px;font-size:26px;line-height:1.08">Presença pública e institucional já consolidada.</h3>'));
+    container.appendChild(el('div','', '<div style="height:24px"></div><div class="kicker">Validações institucionais</div><h3 style="margin:0 0 14px;font-size:26px;line-height:1.08">Presença pública e institucional já consolidada.</h3>'));
     const grid = el('div','validation-grid','');
     validations.forEach(v=> grid.appendChild(el('div','validation',`<strong>${escapeHtml(v.titulo)}</strong><span>${escapeHtml(v.subtitulo)}</span>`)));
     container.appendChild(grid);
