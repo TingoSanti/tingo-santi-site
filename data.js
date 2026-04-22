@@ -36,7 +36,21 @@ const SITE = {
     ctaLabel:     "Falar no WhatsApp"
   },
 
-  canais: {},
+  canais: {
+    ds1: {
+      nome:         "DS1 Produções",
+      responsavel:  "Uriel Marques",
+      contatoLabel: "Canal",
+      whatsapp:     "5522998448726",
+      whatsappLabel:"(22) 99844-8726",
+      email:        "contato@ds1producoes.com.br",
+      formspree:    "",
+      endereco:     "",
+      cnpj:         "",
+      introContato: "Solicitações comerciais encaminhadas exclusivamente para o canal DS1 Produções.",
+      ctaLabel:     "Falar no WhatsApp"
+    }
+  },
 
   analytics: {
     googleAnalyticsId: "G-9T397607Z9"
