@@ -34,6 +34,52 @@ const SITE = {
     youtubeId: "M7ehpNbIbUY"
   },
 
+  instagram: {
+    titulo: '@TingoSanti',
+    subtitulo: 'Instagram',
+    beholdFeedId: 'xrPM3fmIf0SxWE0aNL2H',
+    itensFallback: [
+      { imagem: '1.png', link: 'https://www.instagram.com/p/DW9lfFnDAVl/?igsh=MXRkbG0yOXNjNmtvaw==', alt: 'Instagram 1' },
+      { imagem: '2.png', link: 'https://www.instagram.com/p/DTsxyx8gHAS/?igsh=b2xjaXR0Z2RjNjFo', alt: 'Instagram 2' },
+      { imagem: '3.png', link: 'https://www.instagram.com/reel/DSxRWragF_R/?igsh=MWhyNXdzY3Vnd282Zg==', alt: 'Instagram 3' },
+      { imagem: '4.png', link: 'https://www.instagram.com/reel/DSqI2COj-in/?igsh=Y3Z6ZmllbGRjODBt', alt: 'Instagram 4' },
+      { imagem: '5.png', link: 'https://www.instagram.com/reel/DQXRmv1Eazh/?igsh=MXZxeGZ1bmdxN2d2NA==', alt: 'Instagram 5' },
+      { imagem: '6.png', link: 'https://www.instagram.com/reel/DWrE2y1AHzb/?igsh=bmtscXcyeTM4NGh0', alt: 'Instagram 6' }
+    ]
+  },
+
+  contatoPadrao: {
+    whatsapp:     '5521975214169',
+    whatsappLabel:'(21) 97521-4169',
+    email:        'tingo.santi@proton.me',
+    instagram:    'tingosanti',
+    youtube:      '@tingosanti',
+    spotify:      'https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b',
+    formspree:    'xyklpzbk',
+    cnpj:         '56.047.654/0001-25',
+    endereco:     'Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006',
+    contatoIntro: 'Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.',
+    contatoLabel: 'NKT Artes Ltda'
+  },
+
+  canais: {
+    ds1: {
+      nome: 'DS1 Produções',
+      responsavel: 'Uriel Marques',
+      whatsapp: '5522998448726',
+      whatsappLabel: '(22) 99844-8726',
+      email: 'contato@ds1producoes.com.br',
+      instagram: 'tingosanti',
+      youtube: '@tingosanti',
+      spotify: 'https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b',
+      formspree: '',
+      cnpj: '56.047.654/0001-25',
+      endereco: 'Produção e atendimento comercial · Canal DS1',
+      contatoIntro: 'Solicitações comerciais deste canal são atendidas pela DS1 Produções, com Uriel Marques como contato responsável.',
+      contatoLabel: 'DS1 Produções · Uriel Marques'
+    }
+  },
+
   /* ── GALERIA — mosaico com orientação corrigida ────────
      'wide' = landscape (2 colunas, 1 linha)
      'tall' = portrait (1 coluna, 2 linhas)

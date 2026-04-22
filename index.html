@@ -158,6 +158,20 @@ button{cursor:pointer;font-family:var(--sans)}
 .vft2{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:#fff;text-align:center;padding:0 2rem}
 .vf iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 
+/* ── INSTAGRAM ── */
+.igwrap{max-width:760px;margin:0 auto}
+.ighead{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.2rem}
+.igey{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--mu)}
+.ighandle{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:500;color:var(--navy);line-height:1}
+.igwidgetwrap{max-width:760px;margin:0 auto}
+.igwidgetwrap behold-widget{display:block;width:100%}
+.iggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.igcard{position:relative;display:block;aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:var(--off2);box-shadow:0 10px 24px rgba(11,52,128,.08)}
+.igcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}
+.igcard:hover img{transform:scale(1.03)}
+.igcard::after{content:'↗';position:absolute;right:8px;bottom:8px;width:26px;height:26px;border-radius:999px;background:rgba(2,9,28,.52);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.78rem}
+.igempty{padding:1rem 1.1rem;border:1px dashed var(--bb);border-radius:10px;color:var(--tm);font-size:.9rem;background:var(--w)}
+
 /* ── GALERIA — Mosaico corrigido ── */
 .gm{columns:3;column-gap:10px;margin-top:2rem}
 .gi{break-inside:avoid;margin-bottom:10px;border-radius:var(--r);overflow:hidden;display:block}
@@ -331,6 +345,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .presq-text{font-size:1.2rem}
   .numc.m,.numc.s{grid-column:span 12}
   #soundBtn{bottom:1.2rem;right:1.2rem;width:46px;height:46px}
+  .iggrid{gap:8px}
 }
 </style>
 </head>
@@ -364,6 +379,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <li><a href="#show">O Espetáculo</a></li>
     <li><a href="#compositor">O Compositor</a></li>
     <li><a href="#videos">Vídeo</a></li>
+    <li><a href="#instagram">Instagram</a></li>
     <li><a href="#not">Notoriedade</a></li>
     <li><a href="#cont">Contratantes</a></li>
     <li><a href="#sobre">O Artista</a></li>
@@ -375,6 +391,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   <a href="#show"       onclick="cm()">O Espetáculo</a>
   <a href="#compositor" onclick="cm()">O Compositor</a>
   <a href="#videos"     onclick="cm()">Vídeo do Show</a>
+  <a href="#instagram"  onclick="cm()">Instagram</a>
   <a href="#galeria"    onclick="cm()">Galeria</a>
   <a href="#numeros"    onclick="cm()">Números</a>
   <a href="#not"        onclick="cm()">Notoriedade</a>
@@ -490,6 +507,22 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   </div>
 </section>
 
+<!-- INSTAGRAM -->
+<section id="instagram" class="sec">
+  <div class="con">
+    <div class="igwrap">
+      <div class="ighead">
+        <div>
+          <div class="igey" id="igSub">Instagram</div>
+          <h2 class="ighandle" id="igTitle">@TingoSanti</h2>
+        </div>
+      </div>
+      <div class="igwidgetwrap" id="igWidgetWrap"></div>
+      <div class="iggrid" id="igGrid" style="display:none"></div>
+    </div>
+  </div>
+</section>
+
 <!-- GALERIA -->
 <section id="galeria" class="sec">
   <div class="con">
@@ -593,9 +626,9 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
       <div>
         <div class="ey"><div class="eyl"></div><span class="eys">Contato</span></div>
         <h2 class="sh">Fale com a <em>produção</em></h2>
-        <p style="font-size:.98rem;font-weight:300;color:var(--tm);line-height:1.82;margin-bottom:2.5rem">Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.</p>
+        <p style="font-size:.98rem;font-weight:300;color:var(--tm);line-height:1.82;margin-bottom:2.5rem"><span id="contactIntro"></span></p>
         <div class="cit"><div class="cic">@</div><div><div class="cil">E-mail</div><div class="civ" id="cEmail"></div></div></div>
-        <div class="cit"><div class="cic">☎</div><div><div class="cil">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
+        <div class="cit"><div class="cic">☎</div><div><div class="cil" id="cLabel">Contato comercial</div><div class="civ" id="cPhone"></div></div></div>
         <div class="cit"><div class="cic">⌂</div><div><div class="cil">Endereço</div><div class="civ" style="font-size:.88rem;line-height:1.5" id="cEndereco"></div></div></div>
         <div class="cit"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:var(--blue)"></a></div></div></div>
         <a href="javascript:void(0)" id="waMainBtn" class="whatsapp-btn" onclick="trackWA('contato')">
@@ -657,6 +690,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
       <li><a href="#show">O Espetáculo</a></li>
       <li><a href="#compositor">O Compositor</a></li>
       <li><a href="#videos">Vídeo do Show</a></li>
+      <li><a href="#instagram">Instagram</a></li>
       <li><a href="#not">Notoriedade</a></li>
       <li><a href="#sobre">Sobre o Artista</a></li>
     </ul></div>
@@ -685,8 +719,69 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 </footer>
 
 <script>
+function getPathSlug() {
+  var path = (window.location.pathname || '/').replace(/^\/+|\/+$/g, '');
+  if (!path) return '';
+  return path.split('/')[0].toLowerCase();
+}
+function getActiveContact() {
+  var base = SITE.contatoPadrao || SITE.contato || {};
+  var canais = SITE.canais || {};
+  var slug = getPathSlug();
+  var canal = slug && canais[slug] ? canais[slug] : {};
+  return Object.assign({}, base, canal);
+}
+function escapeHtml(str) {
+  return String(str || '').replace(/[&<>"']/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]; });
+}
+function renderInstagramItems(items) {
+  var grid = document.getElementById('igGrid');
+  if (!grid) return;
+  if (!items || !items.length) {
+    grid.innerHTML = '<div class="igempty">Instagram temporariamente indisponível.</div>';
+    return;
+  }
+  grid.innerHTML = items.slice(0,6).map(function(item){
+    return '<a class="igcard" href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener" aria-label="Abrir post do Instagram">' +
+      '<img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.alt || 'Instagram Tingo Santi') + '" loading="lazy">' +
+    '</a>';
+  }).join('');
+}
+function ensureBeholdScript() {
+  if (document.querySelector('script[data-behold-widget="1"]')) return;
+  var s = document.createElement('script');
+  s.type = 'module';
+  s.src = 'https://w.behold.so/widget.js';
+  s.setAttribute('data-behold-widget', '1');
+  document.head.appendChild(s);
+}
+function loadInstagramSection() {
+  var conf = SITE.instagram || {};
+  var title = document.getElementById('igTitle');
+  var sub = document.getElementById('igSub');
+  var widgetWrap = document.getElementById('igWidgetWrap');
+  var grid = document.getElementById('igGrid');
+  if (title) title.textContent = conf.titulo || '@TingoSanti';
+  if (sub) sub.textContent = conf.subtitulo || 'Instagram';
+
+  var fallback = (conf.itensFallback || []).map(function(item){
+    return { image: item.imagem, link: item.link, alt: item.alt };
+  });
+
+  var feedId = conf.beholdFeedId;
+  if (feedId && widgetWrap) {
+    widgetWrap.innerHTML = '<behold-widget feed-id="' + escapeHtml(feedId) + '"></behold-widget>';
+    ensureBeholdScript();
+    if (grid) grid.style.display = 'none';
+    return;
+  }
+
+  if (grid) grid.style.display = 'grid';
+  renderInstagramItems(fallback);
+}
+
 function init() {
-  const C = SITE.contato;
+  const C = getActiveContact();
   const waUrl = 'https://wa.me/' + C.whatsapp;
 
   // HERO
@@ -722,6 +817,9 @@ function init() {
 
   // VÍDEO DO SHOW
   document.getElementById('vfttl').textContent = SITE.videoShow.titulo;
+
+  // INSTAGRAM
+  loadInstagramSection();
 
   // GALERIA
   var gal = document.getElementById('galGrid');
@@ -896,10 +994,12 @@ function init() {
   });
 
   // CONTATO
-  document.getElementById('cEmail').textContent    = C.email;
-  document.getElementById('cPhone').textContent    = C.whatsappLabel;
-  document.getElementById('cEndereco').textContent = C.endereco;
-  document.getElementById('cCnpj').textContent     = C.cnpj;
+  document.getElementById('contactIntro').textContent = C.contatoIntro || '';
+  document.getElementById('cLabel').textContent    = C.contatoLabel || 'Contato comercial';
+  document.getElementById('cEmail').textContent    = C.email || '';
+  document.getElementById('cPhone').textContent    = C.whatsappLabel || '';
+  document.getElementById('cEndereco').textContent = C.endereco || '';
+  document.getElementById('cCnpj').textContent     = C.cnpj || '';
   document.getElementById('waMainBtn').href        = waUrl;
   document.getElementById('waBandBtn').href        = waUrl;
   document.getElementById('waBandLabel').textContent = C.whatsappLabel;
@@ -964,7 +1064,7 @@ function trackCTA(label) {
 }
 function trackWA(origem) {
   if (window._gtag) window._gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: 'whatsapp_' + origem });
-  window.open('https://wa.me/' + SITE.contato.whatsapp, '_blank');
+  window.open('https://wa.me/' + getActiveContact().whatsapp, '_blank');
 }
 
 if (typeof SITE !== 'undefined') { init(); } else { document.addEventListener('DOMContentLoaded', init); }
@@ -972,9 +1072,33 @@ if (typeof SITE !== 'undefined') { init(); } else { document.addEventListener('D
 
 <!-- Formspree Ajax Integration -->
 <script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#cform', formId: 'xyklpzbk' });
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('cform');
+    if (!form) return;
+    var active = getActiveContact();
+    var formId = active.formspree || (SITE.contatoPadrao && SITE.contatoPadrao.formspree) || (SITE.contato && SITE.contato.formspree) || '';
+    if (!formId) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = form.querySelector('[data-fs-submit-btn]');
+      var ok = document.querySelector('[data-fs-success]');
+      var err = document.querySelector('[data-fs-error]');
+      if (btn) btn.disabled = true;
+      if (ok) ok.style.display = 'none';
+      if (err) { err.style.display = 'none'; err.textContent = ''; }
+      fetch('https://formspree.io/f/' + formId, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      }).then(function(r){
+        if (!r.ok) throw new Error('form_error');
+        form.reset();
+        if (ok) ok.style.display = 'block';
+      }).catch(function(){
+        if (err) { err.textContent = 'Não foi possível enviar agora. Tente novamente em instantes.'; err.style.display = 'block'; }
+      }).finally(function(){ if (btn) btn.disabled = false; });
+    });
+  });
 </script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
