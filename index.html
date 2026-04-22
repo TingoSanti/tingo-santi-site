@@ -120,7 +120,7 @@ h1,h2,h3{margin:0;line-height:1.05}
 }
 .sound-btn:hover{transform:translateY(-1px) scale(1.02)}
 .sound-btn.is-on{animation:none;background:rgba(18,40,67,.82);border-color:rgba(255,255,255,.34)}
-.hero-sound-row{display:flex;justify-content:center;margin-top:14px}
+.hero-sound-row{display:flex;justify-content:center;margin-top:18px}
 .sound-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(255,255,255,.2))}
 .sound-btn .sound-label{white-space:nowrap}
 @keyframes pulseMute{
@@ -171,7 +171,7 @@ h1,h2,h3{margin:0;line-height:1.05}
 .ig-item img{width:100%;height:100%;object-fit:cover;transition:transform .22s ease}
 .ig-item:hover img{transform:scale(1.04)}
 
-.composer-grid{grid-template-columns:minmax(0,340px) minmax(0,1fr);align-items:start}
+.composer-grid{grid-template-columns:minmax(0,290px) minmax(0,1fr);align-items:start}
 .composer-stack{display:grid;gap:14px}
 .embed-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:13px;box-shadow:var(--shadow)}
 .embed-card iframe{display:block;width:100%;border:0;border-radius:16px}
@@ -233,6 +233,7 @@ h1,h2,h3{margin:0;line-height:1.05}
 #compositor{padding-top:44px}
 
 .about-grid{grid-template-columns:1fr 1fr;align-items:start;gap:24px}
+.about-timeline-wrap{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px 22px;box-shadow:var(--shadow)}
 .about-photo{border-radius:24px;overflow:hidden;background:#dce7f6;border:1px solid var(--line);box-shadow:var(--shadow);height:100%}
 .about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 12%}
 .about-copy{display:grid;gap:14px}
@@ -378,10 +379,6 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
       <div class="hero-copy">
         <h1 class="title-xl">Tributo ao Rei com elegância, emoção e estrutura profissional.</h1>
         <p id="heroTagline"></p>
-        <div class="btn-row">
-          <a class="btn primary" href="#cont">Ver estrutura para contratação</a>
-          <a class="btn secondary" href="#contact">Falar com a produção</a>
-        </div>
         <div class="hero-sound-row">
           <button id="soundBtn" class="sound-btn" aria-label="Ligue o som"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18 6a8.5 8.5 0 0 1 0 12"></path></svg><span class="sound-label">Ligue o som</span></button>
         </div>
@@ -477,10 +474,6 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
             <div class="short-overlay">▶</div>
           </a>
         </div>
-        <div class="composer-note">
-          <strong id="composerHighlightTitle" style="display:block;font-size:18px;margin-bottom:6px"></strong>
-          <span id="composerHighlightDesc" class="muted"></span>
-        </div>
       </div>
       <div class="composer-stack">
         <div class="embed-card">
@@ -560,8 +553,10 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
           <p id="aboutQuote" style="font-size:30px"></p>
         </div>
         <div id="aboutParagraphs" class="muted" style="display:grid;gap:14px;font-size:16px"></div>
-        <div class="timeline" id="timeline"></div>
       </div>
+    </div>
+    <div class="about-timeline-wrap">
+      <div class="timeline" id="timeline"></div>
     </div>
   </div>
 </section>
