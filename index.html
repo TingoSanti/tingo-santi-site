@@ -91,26 +91,37 @@ h1,h2,h3{margin:0;line-height:1.05}
   display:flex;align-items:center;
   background:#0f2748;
 }
-.hero-media,.hero-overlay{position:absolute;inset:0}
+.hero-media,.hero-overlay,.hero-video{position:absolute;inset:0}
 .hero-media{background-position:center 28%;background-size:cover;filter:saturate(1.02)}
+.hero-video{
+  width:100%;height:100%;border:0;pointer-events:none;
+  transform:scale(1.16);
+  opacity:.96;
+}
 .hero-overlay{
   background:
-    linear-gradient(180deg, rgba(7,21,40,.28) 0%, rgba(7,21,40,.30) 36%, rgba(7,21,40,.84) 100%),
-    radial-gradient(circle at top right, rgba(122,157,206,.22), transparent 32%);
+    linear-gradient(180deg, rgba(7,21,40,.26) 0%, rgba(7,21,40,.28) 34%, rgba(7,21,40,.82) 100%),
+    radial-gradient(circle at top right, rgba(122,157,206,.18), transparent 30%);
 }
-.hero-body{position:relative;z-index:2;padding:68px 0 44px;color:#fff}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) 300px;gap:22px;align-items:end}
-.hero-copy{max-width:720px}
-.hero-copy p{color:rgba(255,255,255,.82);font-size:17px;max-width:570px;margin:12px 0 20px;line-height:1.66}
-.hero-panel{
-  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);
-  border-radius:20px;padding:16px 16px 14px;backdrop-filter:blur(14px)
+.hero-body{position:relative;z-index:2;padding:72px 0 44px;color:#fff}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:end}
+.hero-copy{max-width:760px}
+.hero-copy p{color:rgba(255,255,255,.84);font-size:17px;max-width:590px;margin:12px 0 20px;line-height:1.66}
+.sound-btn{
+  position:absolute;right:24px;bottom:24px;z-index:3;
+  width:56px;height:56px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.12);color:#fff;
+  display:grid;place-items:center;font-size:20px;cursor:pointer;
+  backdrop-filter:blur(12px);transition:.22s ease;
+  animation:pulseMute 1.4s infinite;
 }
-.hero-panel h3{font-size:10px;letter-spacing:.20em;text-transform:uppercase;color:#c6d6eb;margin-bottom:9px}
-.hero-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.hero-stat{padding:12px;border-radius:15px;background:rgba(255,255,255,.06)}
-.hero-stat strong{display:block;font-family:var(--serif);font-size:29px;font-weight:500;line-height:1;color:#fff;margin-bottom:4px}
-.hero-stat span{font-size:10px;color:rgba(255,255,255,.74);line-height:1.42}
+.sound-btn:hover{background:rgba(255,255,255,.18);transform:translateY(-1px)}
+.sound-btn.is-on{animation:none;background:rgba(42,93,148,.9);border-color:rgba(255,255,255,.34)}
+@keyframes pulseMute{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.16)}
+  50%{box-shadow:0 0 0 10px rgba(255,255,255,0)}
+}
 
 .show-grid,.composer-grid,.about-grid,.contact-grid,.contract-grid{display:grid;gap:22px}
 .show-grid{grid-template-columns:1.02fr .98fr;align-items:center}
@@ -154,13 +165,19 @@ h1,h2,h3{margin:0;line-height:1.05}
 
 .composer-grid{grid-template-columns:1.02fr .98fr;align-items:start}
 .composer-stack{display:grid;gap:14px}
-.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
-.kpi{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:13px}
-.kpi strong{display:block;font-family:var(--serif);font-size:28px;font-weight:500;color:var(--blue);line-height:1;margin-bottom:4px}
-.kpi span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.10em;line-height:1.35}
 .embed-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:13px;box-shadow:var(--shadow)}
 .embed-card iframe{display:block;width:100%;border:0;border-radius:16px}
-.short-frame{aspect-ratio:9/16;max-width:340px;margin:0 auto;background:#081423;border-radius:18px;overflow:hidden}
+.short-frame{
+  display:block;aspect-ratio:9/16;max-width:340px;margin:0 auto;
+  background:#081423;border-radius:18px;overflow:hidden;position:relative;
+  border:1px solid var(--line)
+}
+.short-frame img{width:100%;height:100%;object-fit:cover}
+.short-frame .short-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(7,21,40,.12), rgba(7,21,40,.52));
+  display:grid;place-items:center;color:#fff;font-size:38px
+}
 .composer-note{padding:16px;border-radius:18px;background:var(--surface-2);border:1px solid var(--line)}
 
 .numbers-grid{display:grid;grid-template-columns:1.3fr repeat(5,1fr);gap:11px}
@@ -268,7 +285,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   .section-head{display:block;margin-bottom:18px}
   .lead{font-size:15px;line-height:1.64}
   .title-xl{font-size:42px}
-  .editorial-grid,.press-grid,.validation-grid,.footer-grid,.numbers-grid,.kpi-row{grid-template-columns:1fr}
+  .editorial-grid,.press-grid,.footer-grid,.numbers-grid{grid-template-columns:1fr}
   .instagram-grid{grid-template-columns:repeat(3,1fr)}
   .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:108px}
   #instagram{padding-top:24px}
@@ -277,8 +294,9 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
 
 @media (max-width: 560px){
   .container{padding:0 18px}
-  .hero-body{padding:54px 0 34px}
+  .hero-body{padding:56px 0 34px}
   .title-xl{font-size:35px}
+  .sound-btn{right:18px;bottom:18px;width:50px;height:50px;font-size:18px}
   .title-lg{font-size:30px}
   .title-md{font-size:26px}
   .hero-copy p{font-size:15px;line-height:1.6}
@@ -339,6 +357,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
 
 <header id="hero" class="hero">
   <div class="hero-media" id="heroMedia"></div>
+  <iframe id="heroVideo" class="hero-video" title="Vídeo de fundo do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
   <div class="hero-overlay"></div>
   <div class="container hero-body">
     <div class="hero-grid">
@@ -351,12 +370,9 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
           <a class="btn secondary" href="#contact">Falar com a produção</a>
         </div>
       </div>
-      <aside class="hero-panel">
-        <h3>Visão rápida</h3>
-        <div class="hero-stat-grid" id="heroStats"></div>
-      </aside>
     </div>
   </div>
+  <button id="soundBtn" class="sound-btn" aria-label="Ativar som">🔇</button>
 </header>
 
 <section id="show" class="section soft">
@@ -441,15 +457,15 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
     <div class="composer-grid">
       <div class="composer-stack">
         <div class="embed-card">
-          <div class="short-frame">
-            <iframe id="shortFrame" title="Short autoral" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+          <a id="shortLink" class="short-frame" target="_blank" rel="noopener">
+            <img id="shortPoster" alt="Vídeo autoral">
+            <div class="short-overlay">▶</div>
+          </a>
         </div>
         <div class="composer-note">
           <strong id="composerHighlightTitle" style="display:block;font-size:18px;margin-bottom:6px"></strong>
           <span id="composerHighlightDesc" class="muted"></span>
         </div>
-        <div class="kpi-row" id="composerKpis"></div>
       </div>
       <div class="composer-stack">
         <div class="embed-card">
@@ -486,7 +502,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
         <h2 class="title-md">Cobertura, validação institucional e sinais concretos de aderência pública.</h2>
       </div>
     </div>
-    <div class="pill-grid" id="vehiclePills"></div>
+    <p class="lead" style="margin:14px 0 0;max-width:720px">Evidências editoriais e institucionais do projeto, organizadas de forma mais direta logo abaixo.</p>
   </div>
 </section>
 
@@ -511,10 +527,6 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
     <div style="height:18px"></div>
 
     <div class="press-grid" id="pressGrid"></div>
-
-    <div style="height:18px"></div>
-
-    <div class="validation-grid" id="validationGrid"></div>
   </div>
 </section>
 
@@ -700,20 +712,26 @@ function setupMenu(){
   btn.addEventListener('click', () => panel.classList.toggle('open'));
   panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
 }
+let heroMuted = true;
 function setupHero(){
   $('#heroMedia').style.backgroundImage = `url('${SITE.hero.foto}')`;
   $('#heroTagline').textContent = SITE.hero.tagline || '';
-  const stats = [
-    {n:'21,4M', l:'execuções'},
-    {n:'63K+', l:'seguidores'},
-    {n:'189', l:'países'},
-    {n:'4', l:'shows PCSF'}
-  ];
-  const wrap = $('#heroStats');
-  stats.forEach(s => {
-    const card = el('div','hero-stat', `<strong>${escapeHtml(s.n)}</strong><span>${escapeHtml(s.l)}</span>`);
-    wrap.appendChild(card);
-  });
+  const heroVideoId = SITE.hero.youtubeId || SITE.videoShow.youtubeId || '';
+  if(heroVideoId){
+    $('#heroVideo').src = `https://www.youtube.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${heroVideoId}&playsinline=1&modestbranding=1&rel=0&enablejsapi=1`;
+  }
+  const btn = $('#soundBtn');
+  btn.addEventListener('click', toggleHeroSound);
+}
+function toggleHeroSound(){
+  const iframe = $('#heroVideo');
+  if(!iframe || !iframe.contentWindow) return;
+  heroMuted = !heroMuted;
+  const command = heroMuted ? 'mute' : 'unMute';
+  iframe.contentWindow.postMessage(JSON.stringify({event:'command',func:command,args:[]}), '*');
+  const btn = $('#soundBtn');
+  btn.textContent = heroMuted ? '🔇' : '🔊';
+  btn.classList.toggle('is-on', !heroMuted);
 }
 function setupShow(){
   $('#showMain').src = SITE.show.fotoMain;
@@ -759,15 +777,13 @@ function setupInstagram(){
 function setupComposer(){
   $('#composerTitle').innerHTML = SITE.compositor.titulo || '';
   $('#composerSubtitle').textContent = SITE.compositor.subtitulo || '';
-  $('#shortFrame').src = `https://www.youtube.com/embed/${SITE.compositor.youtubeShortId}?rel=0`;
+  const shortId = SITE.compositor.youtubeShortId || '';
+  $('#shortPoster').src = `https://img.youtube.com/vi/${shortId}/hqdefault.jpg`;
+  $('#shortLink').href = `https://www.youtube.com/watch?v=${shortId}`;
   const type = SITE.compositor.spotifyEmbedType || 'artist';
   $('#spotifyEmbed').src = `https://open.spotify.com/embed/${type}/${SITE.compositor.spotifyEmbedId}?utm_source=generator&theme=0`;
   $('#composerHighlightTitle').textContent = SITE.compositor.destaque.titulo || '';
   $('#composerHighlightDesc').textContent = SITE.compositor.destaque.desc || '';
-  const kpis = $('#composerKpis');
-  (SITE.compositor.numeros || []).forEach(item => {
-    kpis.appendChild(el('div','kpi', `<strong>${escapeHtml(item.n)}</strong><span>${escapeHtml(item.l)}</span>`));
-  });
   $('#spotifyBtn').href = SITE.contato.spotify || '#';
   $('#instagramBtn').href = `https://instagram.com/${(SITE.contato.instagram || 'tingosanti').replace('@','')}`;
 }
@@ -782,11 +798,7 @@ function setupNumbers(){
   });
 }
 function setupNotoriedade(){
-  const wrap = $('#vehiclePills');
-  (SITE.veiculosImprensa || []).forEach(v => {
-    const [nome, sub] = String(v).split('|');
-    wrap.appendChild(el('div','pill', `${escapeHtml(nome)}<span style="color:var(--muted);font-weight:500"> · ${escapeHtml(sub || '')}</span>`));
-  });
+  return;
 }
 function imprensaCard(item, compact=false){
   const href = item.link || '#';
@@ -805,10 +817,6 @@ function setupImprensa(){
   $('#pressQuoteSource').textContent = SITE.imprensaQuote.fonte || '';
   const pressWrap = $('#pressGrid');
   press.forEach(item => pressWrap.insertAdjacentHTML('beforeend', imprensaCard(item, true)));
-  const valWrap = $('#validationGrid');
-  (SITE.validacoes || []).forEach(v => {
-    valWrap.appendChild(el('div','validation', `<strong>${escapeHtml(v.titulo)}</strong><span>${escapeHtml(v.subtitulo)}</span>`));
-  });
 }
 function setupSobre(){
   $('#aboutPhoto').src = SITE.sobre.foto;
