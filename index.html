@@ -288,19 +288,74 @@ button{cursor:pointer;font-family:var(--sans)}
 
 /* ── INSTAGRAM ── */
 .igsec{padding-top:0}
-.igwrap{max-width:980px;margin:0 auto;padding:2.2rem 2.2rem 2.4rem;border:1px solid var(--bb);border-radius:28px;background:linear-gradient(180deg,#fff 0%,var(--off) 100%);box-shadow:0 18px 42px rgba(11,52,128,.06)}
-.ighd{margin-bottom:1.8rem}
-.ight{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1.02;color:var(--navy);margin-bottom:.2rem}
+.igwrap{
+  max-width:840px;
+  margin:0 auto;
+  padding:2.1rem 2.1rem 2.3rem;
+  border:1px solid var(--bb);
+  border-radius:28px;
+  background:linear-gradient(180deg,#fff 0%,var(--off) 100%);
+  box-shadow:0 18px 42px rgba(11,52,128,.06)
+}
+.ighd{margin-bottom:1.5rem}
+.ight{
+  font-family:var(--serif);
+  font-size:clamp(2.4rem,5vw,3.8rem);
+  font-weight:400;
+  line-height:1.02;
+  color:var(--navy);
+  margin-bottom:.2rem
+}
 .ight em{font-style:italic;color:var(--blue)}
-.igsub{font-size:.78rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#7c2940}
-.iggrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
-.igcard{display:block;transition:transform .2s ease, box-shadow .2s ease}
-.igcard:hover{transform:translateY(-3px)}
-.igthumb{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:var(--off2);box-shadow:0 10px 24px rgba(11,52,128,.08)}
-.igthumb img{width:100%;height:100%;object-fit:cover;display:block}
-.igoverlay{position:absolute;inset:auto .7rem .7rem auto;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);color:var(--blue);font-size:1.05rem;font-weight:700;box-shadow:0 6px 18px rgba(2,9,28,.12)}
+.igsub{
+  font-size:.78rem;
+  font-weight:500;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:#7c2940
+}
+.iggrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem
+}
+.igcard{
+  display:block;
+  text-decoration:none;
+  transition:transform .2s ease, box-shadow .2s ease
+}
+.igcard:hover{transform:translateY(-2px)}
+.igthumb{
+  position:relative;
+  aspect-ratio:1/1.18;
+  border-radius:18px;
+  overflow:hidden;
+  background:var(--off2);
+  box-shadow:0 10px 24px rgba(11,52,128,.08)
+}
+.igthumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block
+}
+.igoverlay{
+  position:absolute;
+  right:.65rem;
+  bottom:.65rem;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.92);
+  color:var(--blue);
+  font-size:1rem;
+  font-weight:700;
+  box-shadow:0 6px 18px rgba(2,9,28,.12)
+}
 .igmeta{display:none}
-
 
 /* ── FOOTER ── */
 footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
@@ -346,16 +401,15 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .presq-mark{top:.5rem;left:1rem;font-size:5rem}
   .presq-text{font-size:1.2rem}
   .numc.m,.numc.s{grid-column:span 12}
-  .igwrap{padding:1.25rem}
   #soundBtn{bottom:1.2rem;right:1.2rem;width:46px;height:46px}
-  .igwrap{padding:1.5rem 1.2rem 1.6rem;border-radius:22px}
-  .ight{font-size:3.2rem;line-height:1.02}
+  .igwrap{padding:1.4rem 1.2rem 1.5rem;border-radius:22px}
+  .ight{font-size:3rem;line-height:1.02}
   .igsub{font-size:.72rem;letter-spacing:.18em}
-  .iggrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}
-  .igthumb{border-radius:16px}
+  .iggrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem}
+  .igthumb{border-radius:14px}
 }
 @media(max-width:420px){
-  .ight{font-size:3rem}
+  .ight{font-size:2.8rem}
   .iggrid{gap:.75rem}
 }
 </style>
@@ -917,24 +971,20 @@ function init() {
     var igGrid = document.getElementById('igGrid');
     igGrid.innerHTML = '';
     (SITE.instagramSection.items || []).forEach(function(item, index) {
-      var tipo = (item.tipo || 'Post').toUpperCase();
       var card = document.createElement('a');
       card.className = 'igcard';
-      card.href = item.link;
+      card.href = item.link || ('https://instagram.com/' + C.instagram);
       card.target = '_blank';
       card.rel = 'noopener noreferrer';
-      card.setAttribute('aria-label', item.titulo || ('Abrir ' + tipo + ' no Instagram'));
-      card.innerHTML = '' +
-        '<div class="igmedia" style="background-image:url(\' + item.capa + \')">' +
-          '<span class="igbadge">' + tipo + '</span>' +
-          '<span class="igicon">↗</span>' +
-        '</div>' +
-        '<div class="igbody">' +
-          '<div class="ighandle">@TingoSanti</div>' +
-          '<div class="igtitle2">' + (item.titulo || ('Instagram ' + (index + 1))) + '</div>' +
-          '<div class="igdesc">' + (item.descricao || 'Abrir no Instagram') + '</div>' +
-          '<span class="igcta">Ver no Instagram ↗</span>' +
-        '</div>';
+      card.setAttribute('aria-label', item.titulo || ('Abrir item ' + (index + 1) + ' no Instagram'));
+      var alt = item.titulo || ('Instagram ' + (index + 1));
+      var capa = item.capa || '';
+      card.innerHTML = `
+        <div class="igthumb">
+          <img src="${capa}" alt="${alt}" loading="lazy">
+          <span class="igoverlay">↗</span>
+        </div>
+      `;
       igGrid.appendChild(card);
     });
   }
