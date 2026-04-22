@@ -39,12 +39,12 @@ const SITE = {
     subtitulo: 'Instagram',
     beholdFeedId: 'xrPM3fmIf0SxWE0aNL2H',
     itensFallback: [
-      { imagem: '1.png', link: 'https://www.instagram.com/p/DW9lfFnDAVl/?igsh=MXRkbG0yOXNjNmtvaw==', alt: 'Instagram 1' },
-      { imagem: '2.png', link: 'https://www.instagram.com/p/DTsxyx8gHAS/?igsh=b2xjaXR0Z2RjNjFo', alt: 'Instagram 2' },
-      { imagem: '3.png', link: 'https://www.instagram.com/reel/DSxRWragF_R/?igsh=MWhyNXdzY3Vnd282Zg==', alt: 'Instagram 3' },
-      { imagem: '4.png', link: 'https://www.instagram.com/reel/DSqI2COj-in/?igsh=Y3Z6ZmllbGRjODBt', alt: 'Instagram 4' },
-      { imagem: '5.png', link: 'https://www.instagram.com/reel/DQXRmv1Eazh/?igsh=MXZxeGZ1bmdxN2d2NA==', alt: 'Instagram 5' },
-      { imagem: '6.png', link: 'https://www.instagram.com/reel/DWrE2y1AHzb/?igsh=bmtscXcyeTM4NGh0', alt: 'Instagram 6' }
+      { imagem: 'img/1.png', link: 'https://www.instagram.com/p/DW9lfFnDAVl/?igsh=MXRkbG0yOXNjNmtvaw==', alt: 'Instagram 1' },
+      { imagem: 'img/2.png', link: 'https://www.instagram.com/p/DTsxyx8gHAS/?igsh=b2xjaXR0Z2RjNjFo', alt: 'Instagram 2' },
+      { imagem: 'img/3.png', link: 'https://www.instagram.com/reel/DSxRWragF_R/?igsh=MWhyNXdzY3Vnd282Zg==', alt: 'Instagram 3' },
+      { imagem: 'img/4.png', link: 'https://www.instagram.com/reel/DSqI2COj-in/?igsh=Y3Z6ZmllbGRjODBt', alt: 'Instagram 4' },
+      { imagem: 'img/5.png', link: 'https://www.instagram.com/reel/DQXRmv1Eazh/?igsh=MXZxeGZ1bmdxN2d2NA==', alt: 'Instagram 5' },
+      { imagem: 'img/6.png', link: 'https://www.instagram.com/reel/DWrE2y1AHzb/?igsh=bmtscXcyeTM4NGh0', alt: 'Instagram 6' }
     ]
   },
 
