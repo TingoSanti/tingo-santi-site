@@ -172,11 +172,11 @@ h1,h2,h3{margin:0;line-height:1.05}
 .ig-item img{width:100%;height:100%;object-fit:cover;transition:transform .22s ease}
 .ig-item:hover img{transform:scale(1.04)}
 
-.composer-grid{grid-template-columns:minmax(0,260px) minmax(0,820px);justify-content:center;align-items:start;gap:24px}
+.composer-grid{grid-template-columns:minmax(0,300px) minmax(0,1fr);align-items:start;gap:18px}
 .composer-stack{display:grid;gap:14px}
 .embed-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:13px;box-shadow:var(--shadow)}
 .embed-card iframe{display:block;width:100%;border:0;border-radius:16px}
-.short-panel{min-height:430px;display:flex;align-items:center;justify-content:center}
+.short-panel{min-height:468px;display:flex;align-items:center;justify-content:center}
 .short-frame{
   display:block;aspect-ratio:9/16;width:min(100%,240px);margin:0 auto;
   background:#081423;border-radius:18px;overflow:hidden;position:relative;
@@ -233,12 +233,10 @@ h1,h2,h3{margin:0;line-height:1.05}
 #instagram{padding-top:28px}
 #compositor{padding-top:44px}
 
-.about-grid{grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);align-items:stretch;gap:24px}
-.about-photo{border-radius:24px;overflow:hidden;background:#dce7f6;border:1px solid var(--line);box-shadow:var(--shadow);height:100%;min-height:100%}
-.about-photo img{width:100%;height:100%;min-height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 8%}
-.about-copy{display:grid;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);align-content:start}
-.timeline-card{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}
-.timeline-title{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700;margin:0 0 10px}
+.about-grid{grid-template-columns:1fr 1fr;align-items:start;gap:24px}
+.about-photo{border-radius:24px;overflow:hidden;background:#dce7f6;border:1px solid var(--line);box-shadow:var(--shadow);height:100%}
+.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 12%}
+.about-copy{display:grid;gap:14px}
 .timeline{display:grid;gap:10px}
 .timeline-item{display:grid;grid-template-columns:74px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
 .timeline-item:first-child{border-top:0;padding-top:0}
@@ -480,7 +478,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
       </div>
       <div class="composer-stack">
         <div class="embed-card">
-          <iframe id="spotifyEmbed" height="430" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          <iframe id="spotifyEmbed" height="468" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
       </div>
     </div>
@@ -542,16 +540,13 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
         <img id="aboutPhoto" alt="Tingo Santi">
       </div>
       <div class="about-copy">
-        <div class="quote" style="padding:20px;margin:0">
-          <p id="aboutQuote" style="font-size:28px"></p>
+        <div class="quote" style="padding:22px">
+          <p id="aboutQuote" style="font-size:30px"></p>
         </div>
         <div id="aboutParagraphs" class="muted" style="display:grid;gap:14px;font-size:16px"></div>
       </div>
     </div>
-    <div class="timeline-card">
-      <div class="timeline-title">Trajetória em marcos</div>
-      <div class="timeline" id="timeline"></div>
-    </div>
+    <div class="timeline" id="timeline"></div>
   </div>
 </section>
 
@@ -852,7 +847,7 @@ function imprensaCard(item, compact=false){
 function setupImprensa(){
   const featured = (SITE.imprensa || []).filter(x => x.featured).slice(0,1);
   const mids = (SITE.imprensa || []).filter(x => !x.featured && !x.official).slice(0,2);
-  const press = (SITE.imprensa || []).filter(x => !x.featured && !x.official).slice(2,8);
+  const press = (SITE.imprensa || []).filter(x => !x.featured && !x.official).slice(2);
   const editorialWrap = $('#editorialGrid');
   [...featured, ...mids].forEach((item, idx) => {
     editorialWrap.insertAdjacentHTML('beforeend', imprensaCard(item, idx>0));
