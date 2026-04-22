@@ -286,77 +286,6 @@ button{cursor:pointer;font-family:var(--sans)}
 .ft{resize:vertical;min-height:120px}
 .fmsg{margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid var(--bb);border-radius:var(--r);background:var(--bfaint);color:var(--blue);font-size:.9rem;display:none}
 
-/* ── INSTAGRAM ── */
-.igsec{padding-top:0}
-.igwrap{
-  max-width:840px;
-  margin:0 auto;
-  padding:2.1rem 2.1rem 2.3rem;
-  border:1px solid var(--bb);
-  border-radius:28px;
-  background:linear-gradient(180deg,#fff 0%,var(--off) 100%);
-  box-shadow:0 18px 42px rgba(11,52,128,.06)
-}
-.ighd{margin-bottom:1.5rem}
-.ight{
-  font-family:var(--serif);
-  font-size:clamp(2.4rem,5vw,3.8rem);
-  font-weight:400;
-  line-height:1.02;
-  color:var(--navy);
-  margin-bottom:.2rem
-}
-.ight em{font-style:italic;color:var(--blue)}
-.igsub{
-  font-size:.78rem;
-  font-weight:500;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  color:#7c2940
-}
-.iggrid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:1rem
-}
-.igcard{
-  display:block;
-  text-decoration:none;
-  transition:transform .2s ease, box-shadow .2s ease
-}
-.igcard:hover{transform:translateY(-2px)}
-.igthumb{
-  position:relative;
-  aspect-ratio:1/1.18;
-  border-radius:18px;
-  overflow:hidden;
-  background:var(--off2);
-  box-shadow:0 10px 24px rgba(11,52,128,.08)
-}
-.igthumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block
-}
-.igoverlay{
-  position:absolute;
-  right:.65rem;
-  bottom:.65rem;
-  width:34px;
-  height:34px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(255,255,255,.92);
-  color:var(--blue);
-  font-size:1rem;
-  font-weight:700;
-  box-shadow:0 6px 18px rgba(2,9,28,.12)
-}
-.igmeta{display:none}
-
 /* ── FOOTER ── */
 footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 .fg{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3.5rem;max-width:var(--max);margin:0 auto 3rem}
@@ -402,15 +331,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .presq-text{font-size:1.2rem}
   .numc.m,.numc.s{grid-column:span 12}
   #soundBtn{bottom:1.2rem;right:1.2rem;width:46px;height:46px}
-  .igwrap{padding:1.4rem 1.2rem 1.5rem;border-radius:22px}
-  .ight{font-size:3rem;line-height:1.02}
-  .igsub{font-size:.72rem;letter-spacing:.18em}
-  .iggrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem}
-  .igthumb{border-radius:14px}
-}
-@media(max-width:420px){
-  .ight{font-size:2.8rem}
-  .iggrid{gap:.75rem}
 }
 </style>
 </head>
@@ -444,7 +364,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <li><a href="#show">O Espetáculo</a></li>
     <li><a href="#compositor">O Compositor</a></li>
     <li><a href="#videos">Vídeo</a></li>
-    <li><a href="#instagram">Instagram</a></li>
     <li><a href="#not">Notoriedade</a></li>
     <li><a href="#cont">Contratantes</a></li>
     <li><a href="#sobre">O Artista</a></li>
@@ -456,7 +375,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   <a href="#show"       onclick="cm()">O Espetáculo</a>
   <a href="#compositor" onclick="cm()">O Compositor</a>
   <a href="#videos"     onclick="cm()">Vídeo do Show</a>
-  <a href="#instagram"  onclick="cm()">Instagram</a>
   <a href="#galeria"    onclick="cm()">Galeria</a>
   <a href="#numeros"    onclick="cm()">Números</a>
   <a href="#not"        onclick="cm()">Notoriedade</a>
@@ -469,7 +387,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 <section id="hero">
   <div class="hbg">
     <div class="hfb" id="heroBg"></div>
-    <iframe id="hyt" src="" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen playsinline style="display:none"></iframe>
+    <iframe id="hyt" src="" allow="autoplay;encrypted-media" allowfullscreen playsinline style="display:none"></iframe>
   </div>
   <div class="hov"></div>
   <div class="hc">
@@ -568,19 +486,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
         <div class="vft2" id="vfttl"></div>
       </div>
       <iframe id="vfif" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- INSTAGRAM -->
-<section id="instagram" class="sec igsec">
-  <div class="con">
-    <div class="igwrap">
-      <div class="ighd">
-        <h2 class="ight" id="igTitle"></h2>
-        <p class="igsub" id="igSubtitle"></p>
-      </div>
-      <div class="iggrid" id="igGrid"></div>
     </div>
   </div>
 </section>
@@ -688,9 +593,9 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
       <div>
         <div class="ey"><div class="eyl"></div><span class="eys">Contato</span></div>
         <h2 class="sh">Fale com a <em>produção</em></h2>
-        <p id="contactIntro" style="font-size:.98rem;font-weight:300;color:var(--tm);line-height:1.82;margin-bottom:2.5rem">Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.</p>
+        <p style="font-size:.98rem;font-weight:300;color:var(--tm);line-height:1.82;margin-bottom:2.5rem">Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.</p>
         <div class="cit"><div class="cic">@</div><div><div class="cil">E-mail</div><div class="civ" id="cEmail"></div></div></div>
-        <div class="cit"><div class="cic">☎</div><div><div class="cil" id="cPhoneLabel">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
+        <div class="cit"><div class="cic">☎</div><div><div class="cil">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
         <div class="cit"><div class="cic">⌂</div><div><div class="cil">Endereço</div><div class="civ" style="font-size:.88rem;line-height:1.5" id="cEndereco"></div></div></div>
         <div class="cit"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:var(--blue)"></a></div></div></div>
         <a href="javascript:void(0)" id="waMainBtn" class="whatsapp-btn" onclick="trackWA('contato')">
@@ -703,7 +608,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
           <a href="javascript:void(0)" id="spBtn" class="sl2" onclick="trackCTA('social_sp')" target="_blank">SP</a>
         </div>
       </div>
-      <div id="contactFormCol">
+      <div>
         <form id="cform">
           <div class="ff"><label class="fl">Nome</label><input type="text" name="nome" class="fi" placeholder="Seu nome" data-fs-field required></div>
           <div class="ff"><label class="fl">Organização / Município</label><input type="text" name="organizacao" class="fi" placeholder="Prefeitura de... / Empresa..." data-fs-field></div>
@@ -752,7 +657,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
       <li><a href="#show">O Espetáculo</a></li>
       <li><a href="#compositor">O Compositor</a></li>
       <li><a href="#videos">Vídeo do Show</a></li>
-      <li><a href="#instagram">Instagram</a></li>
       <li><a href="#not">Notoriedade</a></li>
       <li><a href="#sobre">Sobre o Artista</a></li>
     </ul></div>
@@ -781,165 +685,20 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 </footer>
 
 <script>
-function getCanalSlugFromPath() {
-  var path = (window.location.pathname || '/').replace(/^\/+|\/+$/g, '');
-  if (!path || path === 'index.html') return null;
-  var slug = path.split('/')[0].toLowerCase();
-  return SITE.canais && SITE.canais[slug] ? slug : null;
-}
-
-function getContatoAtivo() {
-  var base = SITE.contatoPadrao || SITE.contato || {};
-  var slug = getCanalSlugFromPath();
-  if (!slug) return Object.assign({ isCanal: false, slug: null }, base);
-  var canal = SITE.canais[slug] || {};
-  return {
-    isCanal: true,
-    slug: slug,
-    nome: canal.nome || base.nome,
-    responsavel: canal.responsavel || base.responsavel,
-    contatoLabel: canal.contatoLabel || canal.nome || base.contatoLabel || base.nome,
-    whatsapp: canal.whatsapp || base.whatsapp,
-    whatsappLabel: canal.whatsappLabel || base.whatsappLabel,
-    email: canal.email || base.email,
-    instagram: base.instagram,
-    youtube: base.youtube,
-    spotify: base.spotify,
-    spotifyArtistId: base.spotifyArtistId,
-    formspree: Object.prototype.hasOwnProperty.call(canal, 'formspree') ? canal.formspree : base.formspree,
-    endereco: Object.prototype.hasOwnProperty.call(canal, 'endereco') ? canal.endereco : '',
-    cnpj: Object.prototype.hasOwnProperty.call(canal, 'cnpj') ? canal.cnpj : '',
-    introContato: canal.introContato || base.introContato,
-    ctaLabel: canal.ctaLabel || base.ctaLabel || 'Falar sobre contratação'
-  };
-}
-
-function initFormspreeForContact(C, waUrl) {
-  var formCol = document.getElementById('contactFormCol');
-  var formEl = document.getElementById('cform');
-  var successEl = document.querySelector('[data-fs-success]');
-  var errorEl = document.querySelector('[data-fs-error]');
-  if (!formCol || !formEl) return;
-
-  var existingNote = document.getElementById('contactFallbackCard');
-  if (existingNote) existingNote.remove();
-
-  if (C.formspree) {
-    formEl.style.display = '';
-    if (successEl) successEl.style.display = 'none';
-    if (errorEl) errorEl.style.display = 'none';
-    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#cform', formId: C.formspree });
-    return;
-  }
-
-  formEl.style.display = 'none';
-  if (successEl) successEl.style.display = 'none';
-  if (errorEl) errorEl.style.display = 'none';
-
-  var card = document.createElement('div');
-  card.id = 'contactFallbackCard';
-  card.style.cssText = 'padding:1.4rem 1.5rem;border:1px solid var(--off2);border-radius:12px;background:#fff;box-shadow:0 10px 28px rgba(11,52,128,.06)';
-  card.innerHTML =
-    '<div style="font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:.8rem">Contato Comercial</div>' +
-    '<div style="font-family:var(--serif);font-size:1.6rem;line-height:1.15;color:var(--navy);margin-bottom:.7rem">' + (C.nome || 'Produção') + '</div>' +
-    '<p style="font-size:.95rem;font-weight:300;color:var(--tm);line-height:1.7;margin-bottom:1.2rem">Este link encaminha o atendimento comercial exclusivamente para este canal. Use o WhatsApp ou o e mail abaixo.</p>' +
-    '<div style="display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.4rem">' +
-      '<a href="mailto:' + C.email + '" style="font-size:.95rem;color:var(--blue);word-break:break-word">' + C.email + '</a>' +
-      '<a href="' + waUrl + '" target="_blank" rel="noopener" onclick="trackWA(&quot;fallback_card&quot;)" style="font-size:.95rem;color:var(--blue)">' + C.whatsappLabel + '</a>' +
-    '</div>' +
-    '<a href="' + waUrl + '" target="_blank" rel="noopener" onclick="trackWA(&quot;fallback_card_button&quot;)" class="bp" style="display:block;text-align:center">' + (C.ctaLabel || 'Falar no WhatsApp') + '</a>';
-  formCol.appendChild(card);
-}
-
-
-
-let soundOn = false;
-let heroPlayer = null;
-let heroPlayerReady = false;
-
-function loadYouTubeIframeApi() {
-  if (window.YT && window.YT.Player) return;
-  if (document.getElementById('youtube-iframe-api')) return;
-  var tag = document.createElement('script');
-  tag.id = 'youtube-iframe-api';
-  tag.src = 'https://www.youtube.com/iframe_api';
-  document.head.appendChild(tag);
-}
-
-function createHeroPlayer() {
-  if (!SITE.hero.youtubeId || !(window.YT && window.YT.Player)) return;
-  if (heroPlayer) return;
-
-  heroPlayer = new YT.Player('hyt', {
-    videoId: SITE.hero.youtubeId,
-    playerVars: {
-      autoplay: 1,
-      mute: 1,
-      controls: 0,
-      rel: 0,
-      playsinline: 1,
-      loop: 1,
-      playlist: SITE.hero.youtubeId,
-      modestbranding: 1,
-      iv_load_policy: 3,
-      disablekb: 1
-    },
-    events: {
-      onReady: function (event) {
-        heroPlayerReady = true;
-        try {
-          event.target.mute();
-          event.target.playVideo();
-        } catch (e) {}
-        document.getElementById('hyt').style.display = 'block';
-        document.getElementById('soundBtn').style.display = 'flex';
-      },
-      onStateChange: function (event) {
-        if (window.YT && event.data === YT.PlayerState.ENDED) {
-          try { event.target.playVideo(); } catch (e) {}
-        }
-      }
-    }
-  });
-}
-
-window.onYouTubeIframeAPIReady = function () {
-  createHeroPlayer();
-};
-
-function fallbackHeroVideo(muted) {
-  var f = document.getElementById('hyt');
-  if (!f || !SITE.hero.youtubeId) return;
-  var origin = window.location.origin ? '&origin=' + encodeURIComponent(window.location.origin) : '';
-  f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
-    '?autoplay=1&loop=1&playlist=' + SITE.hero.youtubeId +
-    '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&playsinline=1&enablejsapi=1' +
-    '&mute=' + (muted ? '1' : '0') + origin;
-  f.style.display = 'block';
-  document.getElementById('soundBtn').style.display = 'flex';
-}
-
-function updateSoundButtonUi() {
-  var icon = document.getElementById('soundIcon');
-  var btn = document.getElementById('soundBtn');
-  icon.textContent = soundOn ? '🔊' : '🔇';
-  btn.classList.toggle('on', soundOn);
-  btn.title = soundOn ? 'Desativar som' : 'Ativar som';
-}
-
 function init() {
-  const C = getContatoAtivo();
+  const C = SITE.contato;
   const waUrl = 'https://wa.me/' + C.whatsapp;
-  window.__ACTIVE_CONTACT = C;
 
   // HERO
   document.getElementById('heroBg').style.backgroundImage = "url('" + SITE.hero.foto + "')";
   document.getElementById('heroTagline').textContent = SITE.hero.tagline;
   if (SITE.hero.youtubeId) {
-    loadYouTubeIframeApi();
-    fallbackHeroVideo(true);
-    if (window.YT && window.YT.Player) createHeroPlayer();
+    const f = document.getElementById('hyt');
+    f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+      '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
+      '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&playsinline=1';
+    f.style.display = 'block';
+    document.getElementById('soundBtn').style.display = 'flex';
   }
 
   // SHOW
@@ -963,31 +722,6 @@ function init() {
 
   // VÍDEO DO SHOW
   document.getElementById('vfttl').textContent = SITE.videoShow.titulo;
-
-  // INSTAGRAM
-  if (SITE.instagramSection) {
-    document.getElementById('igTitle').innerHTML = SITE.instagramSection.titulo || 'Instagram';
-    document.getElementById('igSubtitle').textContent = SITE.instagramSection.subtitulo || '';
-    var igGrid = document.getElementById('igGrid');
-    igGrid.innerHTML = '';
-    (SITE.instagramSection.items || []).forEach(function(item, index) {
-      var card = document.createElement('a');
-      card.className = 'igcard';
-      card.href = item.link || ('https://instagram.com/' + C.instagram);
-      card.target = '_blank';
-      card.rel = 'noopener noreferrer';
-      card.setAttribute('aria-label', item.titulo || ('Abrir item ' + (index + 1) + ' no Instagram'));
-      var alt = item.titulo || ('Instagram ' + (index + 1));
-      var capa = item.capa || '';
-      card.innerHTML = `
-        <div class="igthumb">
-          <img src="${capa}" alt="${alt}" loading="lazy">
-          <span class="igoverlay">↗</span>
-        </div>
-      `;
-      igGrid.appendChild(card);
-    });
-  }
 
   // GALERIA
   var gal = document.getElementById('galGrid');
@@ -1149,10 +883,6 @@ function init() {
   });
   document.getElementById('waContBtn').href = waUrl;
 
-  // CONTATO: conteúdo dinâmico por canal
-  document.getElementById('contactIntro').textContent = C.introContato || 'Solicitações de proposta, agenda e materiais técnicos atendidas pela produção.';
-  document.getElementById('cPhoneLabel').textContent = C.contatoLabel || C.nome || 'Produção';
-
   // SOBRE
   document.getElementById('sobreFoto').style.backgroundImage = "url('" + SITE.sobre.foto + "')";
   document.getElementById('sobreCitacao').textContent = '"' + SITE.sobre.citacao + '"';
@@ -1166,29 +896,16 @@ function init() {
   });
 
   // CONTATO
-  document.getElementById('cEmail').textContent = C.email;
-  document.getElementById('cPhone').textContent = C.whatsappLabel;
-  var enderecoRow = document.getElementById('cEndereco').closest('.cit');
-  var cnpjRow = document.getElementById('cCnpj').closest('.cit');
-  if (C.endereco) {
-    enderecoRow.style.display = '';
-    document.getElementById('cEndereco').textContent = C.endereco;
-  } else {
-    enderecoRow.style.display = 'none';
-  }
-  if (C.cnpj) {
-    cnpjRow.style.display = '';
-    document.getElementById('cCnpj').textContent = C.cnpj;
-  } else {
-    cnpjRow.style.display = 'none';
-  }
-  document.getElementById('waMainBtn').href = waUrl;
-  document.getElementById('waBandBtn').href = waUrl;
+  document.getElementById('cEmail').textContent    = C.email;
+  document.getElementById('cPhone').textContent    = C.whatsappLabel;
+  document.getElementById('cEndereco').textContent = C.endereco;
+  document.getElementById('cCnpj').textContent     = C.cnpj;
+  document.getElementById('waMainBtn').href        = waUrl;
+  document.getElementById('waBandBtn').href        = waUrl;
   document.getElementById('waBandLabel').textContent = C.whatsappLabel;
   document.getElementById('igBtn').href  = 'https://instagram.com/' + C.instagram;
   document.getElementById('ytBtn').href  = 'https://youtube.com/' + C.youtube;
   document.getElementById('spBtn').href  = C.spotify;
-  initFormspreeForContact(C, waUrl);
 
   // FOOTER
   document.getElementById('footerEmail').href        = 'mailto:' + C.email;
@@ -1198,7 +915,7 @@ function init() {
   document.getElementById('footerIG').href = 'https://instagram.com/' + C.instagram;
   document.getElementById('footerYT').href = 'https://youtube.com/' + C.youtube;
   document.getElementById('footerSP').href = C.spotify;
-  document.getElementById('footerCnpj').textContent = C.cnpj ? ('CNPJ ' + C.cnpj) : '';
+  document.getElementById('footerCnpj').textContent = 'CNPJ ' + C.cnpj;
   document.getElementById('fsoIG').href  = 'https://instagram.com/' + C.instagram;
   document.getElementById('fsoYT').href  = 'https://youtube.com/' + C.youtube;
   document.getElementById('fsoSP').href  = C.spotify;
@@ -1216,27 +933,20 @@ function playVideo() {
   trackCTA('video_play_show');
 }
 
+let soundOn = false;
 function toggleSound() {
-  if (!SITE.hero.youtubeId) return;
+  const f = document.getElementById('hyt');
+  const icon = document.getElementById('soundIcon');
+  const btn = document.getElementById('soundBtn');
+  if (!f || !SITE.hero.youtubeId) return;
   soundOn = !soundOn;
-  updateSoundButtonUi();
-
-  if (heroPlayerReady && heroPlayer) {
-    try {
-      if (soundOn) {
-        heroPlayer.unMute();
-        heroPlayer.setVolume(100);
-        heroPlayer.playVideo();
-      } else {
-        heroPlayer.mute();
-      }
-    } catch (e) {
-      fallbackHeroVideo(!soundOn ? true : false);
-    }
-  } else {
-    fallbackHeroVideo(!soundOn ? true : false);
-  }
-
+  f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+    '?autoplay=1&loop=1&playlist=' + SITE.hero.youtubeId +
+    '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1' +
+    '&mute=' + (soundOn ? '0' : '1');
+  icon.textContent = soundOn ? '🔊' : '🔇';
+  btn.classList.toggle('on', soundOn);
+  btn.title = soundOn ? 'Desativar som' : 'Ativar som';
   if (window._gtag) window._gtag('event', 'sound_toggle', { event_category: 'engagement', event_label: soundOn ? 'on' : 'off' });
 }
 
@@ -1253,18 +963,17 @@ function trackCTA(label) {
   if (window._gtag) window._gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
 }
 function trackWA(origem) {
-  var C = window.__ACTIVE_CONTACT || getContatoAtivo();
-  if (window._gtag) window._gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: 'whatsapp_' + origem + (C.slug ? '_' + C.slug : '') });
-  window.open('https://wa.me/' + C.whatsapp, '_blank');
+  if (window._gtag) window._gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: 'whatsapp_' + origem });
+  window.open('https://wa.me/' + SITE.contato.whatsapp, '_blank');
 }
 
-updateSoundButtonUi();
 if (typeof SITE !== 'undefined') { init(); } else { document.addEventListener('DOMContentLoaded', init); }
 </script>
 
 <!-- Formspree Ajax Integration -->
 <script>
   window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#cform', formId: 'xyklpzbk' });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>

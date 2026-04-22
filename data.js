@@ -18,26 +18,6 @@ const SITE = {
     endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006"
   },
 
-  contatoPadrao: {
-    nome:         "Produção",
-    responsavel:  "NKT Artes Ltda",
-    contatoLabel: "Produção",
-    whatsapp:     "5521975214169",
-    whatsappLabel:"(21) 97521-4169",
-    email:        "tingo.santi@proton.me",
-    instagram:    "tingosanti",
-    youtube:      "@tingosanti",
-    spotifyArtistId: "1XfDGJ4C2wEsrAbWbVaZ4b",
-    spotify:      "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
-    formspree:    "xyklpzbk",
-    cnpj:         "56.047.654/0001-25",
-    endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006",
-    introContato: "Solicitações de proposta, agenda e materiais técnicos atendidas pela produção.",
-    ctaLabel:     "Falar no WhatsApp"
-  },
-
-  canais: {},
-
   analytics: {
     googleAnalyticsId: "G-9T397607Z9"
   },
@@ -52,55 +32,6 @@ const SITE = {
   videoShow: {
     titulo:    "Tributo ao Rei · Show ao Vivo",
     youtubeId: "M7ehpNbIbUY"
-  },
-
-  instagramSection: {
-    titulo:    "@TingoSanti",
-    subtitulo: "Instagram",
-    items: [
-      {
-        tipo: "Post",
-        titulo: "Projeto Draft",
-        descricao: "Matéria e repercussão editorial ligadas à trajetória do artista.",
-        capa: "img/galeria_sorriso.jpg",
-        link: "https://www.instagram.com/p/DW9lfFnDAVl/?igsh=MXRkbG0yOXNjNmtvaw=="
-      },
-      {
-        tipo: "Post",
-        titulo: "Marca artística",
-        descricao: "Conteúdo institucional com identidade visual do projeto.",
-        capa: "img/galeria_apontando.jpg",
-        link: "https://www.instagram.com/p/DTsxyx8gHAS/?igsh=b2xjaXR0Z2RjNjFo"
-      },
-      {
-        tipo: "Reel",
-        titulo: "Palco e performance",
-        descricao: "Recorte de show para reforçar presença cênica e interpretação.",
-        capa: "img/galeria_natal_magia_palco.jpg",
-        link: "https://www.instagram.com/reel/DSxRWragF_R/?igsh=MWhyNXdzY3Vnd282Zg=="
-      },
-      {
-        tipo: "Reel",
-        titulo: "Momento ao vivo",
-        descricao: "Vídeo curto com energia de palco e resposta do público.",
-        capa: "img/galeria_macae_plateia.jpg",
-        link: "https://www.instagram.com/reel/DSqI2COj-in/?igsh=Y3Z6ZmllbGRjODBt"
-      },
-      {
-        tipo: "Reel",
-        titulo: "Experiência do show",
-        descricao: "Ambiência, emoção e linguagem do projeto em formato rápido.",
-        capa: "img/galeria_rosas_plateia.jpg",
-        link: "https://www.instagram.com/reel/DQXRmv1Eazh/?igsh=MXZxeGZ1bmdxN2d2NA=="
-      },
-      {
-        tipo: "Reel",
-        titulo: "Engajamento e público",
-        descricao: "Mais um recorte para evidenciar aderência do público ao projeto.",
-        capa: "img/galeria_pcsf_plateia.jpg",
-        link: "https://www.instagram.com/reel/DWrE2y1AHzb/?igsh=bmtscXcyeTM4NGh0"
-      }
-    ]
   },
 
   /* ── GALERIA — mosaico com orientação corrigida ────────
@@ -421,10 +352,10 @@ const SITE = {
     ],
     marcos: [
       { ano: "2021", desc: "Entrevista no podcast Lado Pessoal, da Antena 1, como CEO da Nokia Brasil." },
-      { ano: "2023", desc: "Início da fase de compositor. +50 composições autorais publicadas." },
-      { ano: "2024", desc: "2 shows no PCSF. Estreia internacional em Portugal." },
-      { ano: "2025", desc: "2 shows no PCSF. Contratos com Macaé, Itaboraí. Validação pela FUNARJ." },
-      { ano: "2026", desc: "+63K seguidores. 21M+ execuções. Publicação autoral no Projeto Draft. Vários projetos em andamento com Prefeituras." }
+      { ano: "2023", desc: "Início do projeto artístico. +50 composições autorais publicadas." },
+      { ano: "2024", desc: "Estreia internacional em Portugal. Validação pela FUNARJ." },
+      { ano: "2025", desc: "Contratos com Macaé, Itaboraí. 4 shows no PCSF. +63K seguidores. 21M+ execuções." },
+      { ano: "2026", desc: "Doutorado COPPEAD/UFRJ. Publicação autoral no Projeto Draft." }
     ]
   },
 
