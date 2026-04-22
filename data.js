@@ -56,14 +56,50 @@ const SITE = {
 
   instagramSection: {
     titulo:    "Instagram <em>@TingoSanti</em>",
-    subtitulo: "Prova social, palco, bastidores e recortes de qualidade artística em conteúdo publicado no Instagram.",
+    subtitulo: "Prova social, palco e qualidade artística em uma curadoria compacta, alinhada ao visual institucional do site.",
     items: [
-      "https://www.instagram.com/p/DW9lfFnDAVl/?igsh=MXRkbG0yOXNjNmtvaw==",
-      "https://www.instagram.com/p/DTsxyx8gHAS/?igsh=b2xjaXR0Z2RjNjFo",
-      "https://www.instagram.com/reel/DSxRWragF_R/?igsh=MWhyNXdzY3Vnd282Zg==",
-      "https://www.instagram.com/reel/DSqI2COj-in/?igsh=Y3Z6ZmllbGRjODBt",
-      "https://www.instagram.com/reel/DQXRmv1Eazh/?igsh=MXZxeGZ1bmdxN2d2NA==",
-      "https://www.instagram.com/reel/DWrE2y1AHzb/?igsh=bmtscXcyeTM4NGh0"
+      {
+        tipo: "Post",
+        titulo: "Projeto Draft",
+        descricao: "Matéria e repercussão editorial ligadas à trajetória do artista.",
+        capa: "img/galeria_sorriso.jpg",
+        link: "https://www.instagram.com/p/DW9lfFnDAVl/?igsh=MXRkbG0yOXNjNmtvaw=="
+      },
+      {
+        tipo: "Post",
+        titulo: "Marca artística",
+        descricao: "Conteúdo institucional com identidade visual do projeto.",
+        capa: "img/galeria_apontando.jpg",
+        link: "https://www.instagram.com/p/DTsxyx8gHAS/?igsh=b2xjaXR0Z2RjNjFo"
+      },
+      {
+        tipo: "Reel",
+        titulo: "Palco e performance",
+        descricao: "Recorte de show para reforçar presença cênica e interpretação.",
+        capa: "img/galeria_natal_magia_palco.jpg",
+        link: "https://www.instagram.com/reel/DSxRWragF_R/?igsh=MWhyNXdzY3Vnd282Zg=="
+      },
+      {
+        tipo: "Reel",
+        titulo: "Momento ao vivo",
+        descricao: "Vídeo curto com energia de palco e resposta do público.",
+        capa: "img/galeria_macae_plateia.jpg",
+        link: "https://www.instagram.com/reel/DSqI2COj-in/?igsh=Y3Z6ZmllbGRjODBt"
+      },
+      {
+        tipo: "Reel",
+        titulo: "Experiência do show",
+        descricao: "Ambiência, emoção e linguagem do projeto em formato rápido.",
+        capa: "img/galeria_rosas_plateia.jpg",
+        link: "https://www.instagram.com/reel/DQXRmv1Eazh/?igsh=MXZxeGZ1bmdxN2d2NA=="
+      },
+      {
+        tipo: "Reel",
+        titulo: "Engajamento e público",
+        descricao: "Mais um recorte para evidenciar aderência do público ao projeto.",
+        capa: "img/galeria_pcsf_plateia.jpg",
+        link: "https://www.instagram.com/reel/DWrE2y1AHzb/?igsh=bmtscXcyeTM4NGh0"
+      }
     ]
   },
 

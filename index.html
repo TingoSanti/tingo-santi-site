@@ -294,8 +294,17 @@ button{cursor:pointer;font-family:var(--sans)}
 .ight em{font-style:italic;color:var(--blue)}
 .igsub{font-size:.96rem;font-weight:300;color:var(--tm);max-width:760px;line-height:1.75}
 .iggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-.igcard{padding:.8rem;border:1px solid var(--bb);border-radius:var(--rl);background:#fff;overflow:hidden;min-height:100%}
-.igcard blockquote.instagram-media{margin:0 !important;min-width:0 !important;width:100% !important;max-width:100% !important}
+.igcard{display:block;border:1px solid var(--bb);border-radius:var(--rl);background:#fff;overflow:hidden;min-height:100%;transition:transform .2s, box-shadow .2s, border-color .2s}
+.igcard:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(11,52,128,.10);border-color:rgba(11,52,128,.28)}
+.igmedia{position:relative;aspect-ratio:4/5;background-size:cover;background-position:center;overflow:hidden}
+.igmedia::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(2,9,28,.38) 0%,rgba(2,9,28,0) 48%)}
+.igbadge{position:absolute;top:.85rem;left:.85rem;z-index:2;display:inline-flex;align-items:center;gap:.45rem;padding:.38rem .62rem;border-radius:999px;background:rgba(255,255,255,.92);color:var(--blue);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.igicon{position:absolute;right:.85rem;bottom:.85rem;z-index:2;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);color:var(--blue);font-size:1rem;font-weight:700}
+.igbody{padding:1rem 1rem 1.1rem}
+.ighandle{font-size:.7rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--mu);margin-bottom:.45rem}
+.igtitle2{font-size:1rem;font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:.45rem}
+.igdesc{font-size:.86rem;font-weight:300;color:var(--tm);line-height:1.6;margin-bottom:.9rem}
+.igcta{display:inline-flex;align-items:center;gap:.45rem;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
 
 
 /* ── FOOTER ── */
@@ -789,21 +798,6 @@ function initFormspreeForContact(C, waUrl) {
 }
 
 
-function loadInstagramEmbeds() {
-  if (window.instgrm && window.instgrm.Embeds) {
-    window.instgrm.Embeds.process();
-    return;
-  }
-  if (document.getElementById('instagram-embed-script')) return;
-  var s = document.createElement('script');
-  s.id = 'instagram-embed-script';
-  s.async = true;
-  s.src = 'https://www.instagram.com/embed.js';
-  s.onload = function () {
-    if (window.instgrm && window.instgrm.Embeds) window.instgrm.Embeds.process();
-  };
-  document.body.appendChild(s);
-}
 
 let soundOn = false;
 let heroPlayer = null;
@@ -921,13 +915,27 @@ function init() {
     document.getElementById('igSubtitle').textContent = SITE.instagramSection.subtitulo || '';
     var igGrid = document.getElementById('igGrid');
     igGrid.innerHTML = '';
-    (SITE.instagramSection.items || []).forEach(function(link) {
-      var card = document.createElement('div');
+    (SITE.instagramSection.items || []).forEach(function(item, index) {
+      var tipo = (item.tipo || 'Post').toUpperCase();
+      var card = document.createElement('a');
       card.className = 'igcard';
-      card.innerHTML = '<blockquote class="instagram-media" data-instgrm-permalink="' + link + '" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:none;margin:0;padding:0;width:100%;"></blockquote>';
+      card.href = item.link;
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+      card.setAttribute('aria-label', item.titulo || ('Abrir ' + tipo + ' no Instagram'));
+      card.innerHTML = '' +
+        '<div class="igmedia" style="background-image:url('' + item.capa + '')">' +
+          '<span class="igbadge">' + tipo + '</span>' +
+          '<span class="igicon">↗</span>' +
+        '</div>' +
+        '<div class="igbody">' +
+          '<div class="ighandle">@TingoSanti</div>' +
+          '<div class="igtitle2">' + (item.titulo || ('Instagram ' + (index + 1))) + '</div>' +
+          '<div class="igdesc">' + (item.descricao || 'Abrir no Instagram') + '</div>' +
+          '<span class="igcta">Ver no Instagram ↗</span>' +
+        '</div>';
       igGrid.appendChild(card);
     });
-    loadInstagramEmbeds();
   }
 
   // GALERIA
