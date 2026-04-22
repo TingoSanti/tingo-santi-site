@@ -286,6 +286,18 @@ button{cursor:pointer;font-family:var(--sans)}
 .ft{resize:vertical;min-height:120px}
 .fmsg{margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid var(--bb);border-radius:var(--r);background:var(--bfaint);color:var(--blue);font-size:.9rem;display:none}
 
+/* ── INSTAGRAM ── */
+.igsec{padding-top:0}
+.igwrap{padding:2rem;border:1px solid var(--off2);border-radius:var(--rl);background:linear-gradient(180deg,#fff 0%,var(--off) 100%);box-shadow:0 18px 42px rgba(11,52,128,.06)}
+.ighd{margin-bottom:1.5rem}
+.ight{font-family:var(--serif);font-size:clamp(2.1rem,4vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);margin-bottom:.6rem}
+.ight em{font-style:italic;color:var(--blue)}
+.igsub{font-size:.96rem;font-weight:300;color:var(--tm);max-width:760px;line-height:1.75}
+.iggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.igcard{padding:.8rem;border:1px solid var(--bb);border-radius:var(--rl);background:#fff;overflow:hidden;min-height:100%}
+.igcard blockquote.instagram-media{margin:0 !important;min-width:0 !important;width:100% !important;max-width:100% !important}
+
+
 /* ── FOOTER ── */
 footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 .fg{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3.5rem;max-width:var(--max);margin:0 auto 3rem}
@@ -313,6 +325,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .vlogo:last-child{border-bottom:none}
   .numc.m{grid-column:span 6}
   .numc.s{grid-column:span 6}
+  .iggrid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:768px){
   html{font-size:16px}
@@ -330,6 +343,8 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .presq-mark{top:.5rem;left:1rem;font-size:5rem}
   .presq-text{font-size:1.2rem}
   .numc.m,.numc.s{grid-column:span 12}
+  .igwrap{padding:1.25rem}
+  .iggrid{grid-template-columns:1fr}
   #soundBtn{bottom:1.2rem;right:1.2rem;width:46px;height:46px}
 }
 </style>
@@ -364,6 +379,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <li><a href="#show">O Espetáculo</a></li>
     <li><a href="#compositor">O Compositor</a></li>
     <li><a href="#videos">Vídeo</a></li>
+    <li><a href="#instagram">Instagram</a></li>
     <li><a href="#not">Notoriedade</a></li>
     <li><a href="#cont">Contratantes</a></li>
     <li><a href="#sobre">O Artista</a></li>
@@ -375,6 +391,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   <a href="#show"       onclick="cm()">O Espetáculo</a>
   <a href="#compositor" onclick="cm()">O Compositor</a>
   <a href="#videos"     onclick="cm()">Vídeo do Show</a>
+  <a href="#instagram"  onclick="cm()">Instagram</a>
   <a href="#galeria"    onclick="cm()">Galeria</a>
   <a href="#numeros"    onclick="cm()">Números</a>
   <a href="#not"        onclick="cm()">Notoriedade</a>
@@ -486,6 +503,20 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
         <div class="vft2" id="vfttl"></div>
       </div>
       <iframe id="vfif" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram" class="sec igsec">
+  <div class="con">
+    <div class="igwrap">
+      <div class="ighd">
+        <div class="ey"><div class="eyl"></div><span class="eys">Instagram</span></div>
+        <h2 class="ight" id="igTitle"></h2>
+        <p class="igsub" id="igSubtitle"></p>
+      </div>
+      <div class="iggrid" id="igGrid"></div>
     </div>
   </div>
 </section>
@@ -657,6 +688,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
       <li><a href="#show">O Espetáculo</a></li>
       <li><a href="#compositor">O Compositor</a></li>
       <li><a href="#videos">Vídeo do Show</a></li>
+      <li><a href="#instagram">Instagram</a></li>
       <li><a href="#not">Notoriedade</a></li>
       <li><a href="#sobre">Sobre o Artista</a></li>
     </ul></div>
@@ -693,7 +725,7 @@ function getCanalSlugFromPath() {
 }
 
 function getContatoAtivo() {
-  var base = SITE.contatoPadrao || {};
+  var base = SITE.contatoPadrao || SITE.contato || {};
   var slug = getCanalSlugFromPath();
   if (!slug) return Object.assign({ isCanal: false, slug: null }, base);
   var canal = SITE.canais[slug] || {};
@@ -754,6 +786,23 @@ function initFormspreeForContact(C, waUrl) {
     '</div>' +
     '<a href="' + waUrl + '" target="_blank" rel="noopener" onclick="trackWA(&quot;fallback_card_button&quot;)" class="bp" style="display:block;text-align:center">' + (C.ctaLabel || 'Falar no WhatsApp') + '</a>';
   formCol.appendChild(card);
+}
+
+
+function loadInstagramEmbeds() {
+  if (window.instgrm && window.instgrm.Embeds) {
+    window.instgrm.Embeds.process();
+    return;
+  }
+  if (document.getElementById('instagram-embed-script')) return;
+  var s = document.createElement('script');
+  s.id = 'instagram-embed-script';
+  s.async = true;
+  s.src = 'https://www.instagram.com/embed.js';
+  s.onload = function () {
+    if (window.instgrm && window.instgrm.Embeds) window.instgrm.Embeds.process();
+  };
+  document.body.appendChild(s);
 }
 
 let soundOn = false;
@@ -865,6 +914,21 @@ function init() {
 
   // VÍDEO DO SHOW
   document.getElementById('vfttl').textContent = SITE.videoShow.titulo;
+
+  // INSTAGRAM
+  if (SITE.instagramSection) {
+    document.getElementById('igTitle').innerHTML = SITE.instagramSection.titulo || 'Instagram';
+    document.getElementById('igSubtitle').textContent = SITE.instagramSection.subtitulo || '';
+    var igGrid = document.getElementById('igGrid');
+    igGrid.innerHTML = '';
+    (SITE.instagramSection.items || []).forEach(function(link) {
+      var card = document.createElement('div');
+      card.className = 'igcard';
+      card.innerHTML = '<blockquote class="instagram-media" data-instgrm-permalink="' + link + '" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:none;margin:0;padding:0;width:100%;"></blockquote>';
+      igGrid.appendChild(card);
+    });
+    loadInstagramEmbeds();
+  }
 
   // GALERIA
   var gal = document.getElementById('galGrid');
@@ -1075,7 +1139,7 @@ function init() {
   document.getElementById('footerIG').href = 'https://instagram.com/' + C.instagram;
   document.getElementById('footerYT').href = 'https://youtube.com/' + C.youtube;
   document.getElementById('footerSP').href = C.spotify;
-  document.getElementById('footerCnpj').textContent = 'CNPJ ' + C.cnpj;
+  document.getElementById('footerCnpj').textContent = C.cnpj ? ('CNPJ ' + C.cnpj) : '';
   document.getElementById('fsoIG').href  = 'https://instagram.com/' + C.instagram;
   document.getElementById('fsoYT').href  = 'https://youtube.com/' + C.youtube;
   document.getElementById('fsoSP').href  = C.spotify;

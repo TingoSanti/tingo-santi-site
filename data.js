@@ -18,6 +18,26 @@ const SITE = {
     endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006"
   },
 
+  contatoPadrao: {
+    nome:         "Produção",
+    responsavel:  "NKT Artes Ltda",
+    contatoLabel: "Produção",
+    whatsapp:     "5521975214169",
+    whatsappLabel:"(21) 97521-4169",
+    email:        "tingo.santi@proton.me",
+    instagram:    "tingosanti",
+    youtube:      "@tingosanti",
+    spotifyArtistId: "1XfDGJ4C2wEsrAbWbVaZ4b",
+    spotify:      "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
+    formspree:    "xyklpzbk",
+    cnpj:         "56.047.654/0001-25",
+    endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006",
+    introContato: "Solicitações de proposta, agenda e materiais técnicos atendidas pela produção.",
+    ctaLabel:     "Falar no WhatsApp"
+  },
+
+  canais: {},
+
   analytics: {
     googleAnalyticsId: "G-9T397607Z9"
   },
@@ -32,6 +52,19 @@ const SITE = {
   videoShow: {
     titulo:    "Tributo ao Rei · Show ao Vivo",
     youtubeId: "M7ehpNbIbUY"
+  },
+
+  instagramSection: {
+    titulo:    "Instagram <em>@TingoSanti</em>",
+    subtitulo: "Prova social, palco, bastidores e recortes de qualidade artística em conteúdo publicado no Instagram.",
+    items: [
+      "https://www.instagram.com/p/DW9lfFnDAVl/?igsh=MXRkbG0yOXNjNmtvaw==",
+      "https://www.instagram.com/p/DTsxyx8gHAS/?igsh=b2xjaXR0Z2RjNjFo",
+      "https://www.instagram.com/reel/DSxRWragF_R/?igsh=MWhyNXdzY3Vnd282Zg==",
+      "https://www.instagram.com/reel/DSqI2COj-in/?igsh=Y3Z6ZmllbGRjODBt",
+      "https://www.instagram.com/reel/DQXRmv1Eazh/?igsh=MXZxeGZ1bmdxN2d2NA==",
+      "https://www.instagram.com/reel/DWrE2y1AHzb/?igsh=bmtscXcyeTM4NGh0"
+    ]
   },
 
   /* ── GALERIA — mosaico com orientação corrigida ────────
