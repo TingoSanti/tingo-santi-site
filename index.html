@@ -57,11 +57,11 @@ button{cursor:pointer;font-family:var(--sans)}
 /* ── NAV ── */
 #nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;z-index:200;transition:all .4s;background:transparent}
 #nav.s{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bb);box-shadow:0 2px 24px rgba(11,52,128,.06)}
-.nl{display:flex;gap:1.7rem;list-style:none}
-.nl a{font-size:.74rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .2s}
+.nl{display:flex;gap:1.02rem;list-style:none}
+.nl a{font-size:.66rem;font-weight:500;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .2s}
 #nav.s .nl a{color:var(--tm)}
 .nl a:hover{color:var(--bl) !important}
-.nc{padding:.6rem 1.5rem;border:1px solid rgba(255,255,255,.45);border-radius:var(--r);font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:transparent;transition:all .2s}
+.nc{padding:.55rem 1.1rem;border:1px solid rgba(255,255,255,.45);border-radius:var(--r);font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:transparent;transition:all .2s}
 #nav.s .nc{border-color:var(--bb);color:var(--blue)}
 .nc:hover{background:var(--blue);border-color:var(--blue);color:#fff !important}
 .ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
@@ -376,27 +376,32 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     </svg>
   </a>
   <ul class="nl">
-    <li><a href="#show">O Espetáculo</a></li>
-    <li><a href="#compositor">O Compositor</a></li>
+    <li><a href="#show">Espetáculo</a></li>
     <li><a href="#videos">Vídeo</a></li>
+    <li><a href="#galeria">Galeria</a></li>
     <li><a href="#instagram">Instagram</a></li>
+    <li><a href="#compositor">Compositor</a></li>
+    <li><a href="#numeros">Números</a></li>
     <li><a href="#not">Notoriedade</a></li>
+    <li><a href="#imprensa">Imprensa</a></li>
+    <li><a href="#sobre">Artista</a></li>
     <li><a href="#cont">Contratantes</a></li>
-    <li><a href="#sobre">O Artista</a></li>
+    <li><a href="#contact">Contato</a></li>
   </ul>
   <a href="#contact" class="nc" onclick="trackCTA('nav_contato')">Falar com a Produção</a>
   <button class="ham" id="ham"><span></span><span></span><span></span></button>
 </nav>
 <div id="mm">
   <a href="#show"       onclick="cm()">O Espetáculo</a>
-  <a href="#compositor" onclick="cm()">O Compositor</a>
   <a href="#videos"     onclick="cm()">Vídeo do Show</a>
-  <a href="#instagram"  onclick="cm()">Instagram</a>
   <a href="#galeria"    onclick="cm()">Galeria</a>
-  <a href="#numeros"    onclick="cm()">Números</a>
+  <a href="#instagram"  onclick="cm()">Instagram</a>
+  <a href="#compositor" onclick="cm()">O Compositor</a>
+  <a href="#numeros"    onclick="cm()">O alcance que justifica o cachê</a>
   <a href="#not"        onclick="cm()">Notoriedade</a>
-  <a href="#cont"       onclick="cm()">Contratantes</a>
-  <a href="#sobre"      onclick="cm()">O Artista</a>
+  <a href="#imprensa"   onclick="cm()">Editorial e Imprensa</a>
+  <a href="#sobre"      onclick="cm()">Sobre o Artista</a>
+  <a href="#cont"       onclick="cm()">Para Contratantes</a>
   <a href="#contact"    onclick="cm()">Contato</a>
 </div>
 
@@ -463,6 +468,47 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   </div>
 </section>
 
+<!-- VÍDEO DO SHOW (SIMPLIFICADO) -->
+<section id="videos" class="sec sec-off">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Vídeo do Show</span></div>
+    <h2 class="sh" style="margin-bottom:2.5rem">O show que <em>convence</em></h2>
+    <div class="vf" id="vfeat" onclick="playVideo()">
+      <div class="vft"></div>
+      <div class="vfo" id="vfov">
+        <div class="vpb">▶</div>
+        <div class="vft2" id="vfttl"></div>
+      </div>
+      <iframe id="vfif" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="sec">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Galeria</span></div>
+    <h2 class="sh" style="margin-bottom:.5rem">Momentos de <em>palco</em></h2>
+    <div class="gm" id="galGrid"></div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram" class="sec">
+  <div class="con">
+    <div class="igwrap">
+      <div class="ighead">
+        <div>
+          <div class="igey" id="igSub">Instagram</div>
+          <h2 class="ighandle" id="igTitle">@TingoSanti</h2>
+        </div>
+      </div>
+      <div class="igwidgetwrap" id="igWidgetWrap"></div>
+      <div class="iggrid" id="igGrid" style="display:none"></div>
+    </div>
+  </div>
+</section>
+
 <!-- COMPOSITOR (NOVA SEÇÃO) -->
 <section id="compositor" class="sec">
   <div class="con">
@@ -491,47 +537,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   </div>
 </section>
 
-<!-- VÍDEO DO SHOW (SIMPLIFICADO) -->
-<section id="videos" class="sec sec-off">
-  <div class="con">
-    <div class="ey"><div class="eyl"></div><span class="eys">Vídeo do Show</span></div>
-    <h2 class="sh" style="margin-bottom:2.5rem">O show que <em>convence</em></h2>
-    <div class="vf" id="vfeat" onclick="playVideo()">
-      <div class="vft"></div>
-      <div class="vfo" id="vfov">
-        <div class="vpb">▶</div>
-        <div class="vft2" id="vfttl"></div>
-      </div>
-      <iframe id="vfif" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- INSTAGRAM -->
-<section id="instagram" class="sec">
-  <div class="con">
-    <div class="igwrap">
-      <div class="ighead">
-        <div>
-          <div class="igey" id="igSub">Instagram</div>
-          <h2 class="ighandle" id="igTitle">@TingoSanti</h2>
-        </div>
-      </div>
-      <div class="igwidgetwrap" id="igWidgetWrap"></div>
-      <div class="iggrid" id="igGrid" style="display:none"></div>
-    </div>
-  </div>
-</section>
-
-<!-- GALERIA -->
-<section id="galeria" class="sec">
-  <div class="con">
-    <div class="ey"><div class="eyl"></div><span class="eys">Galeria</span></div>
-    <h2 class="sh" style="margin-bottom:.5rem">Momentos de <em>palco</em></h2>
-    <div class="gm" id="galGrid"></div>
-  </div>
-</section>
-
 <!-- NÚMEROS -->
 <section id="numeros" class="sec">
   <div class="con">
@@ -550,17 +555,45 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <div class="ey"><div class="eyl"></div><span class="eys">Notoriedade</span></div>
     <h2 class="sh">O show que a <em>imprensa</em> cobre</h2>
     <p class="sl">Publicações editoriais de peso, capas de jornal, matérias em veículos regionais e nacionais e aprovação por órgãos oficiais. Cada show gera cobertura. Cada cobertura reforça o posicionamento.</p>
-
     <div class="vlogos" id="vlogosGrid"></div>
-    <div class="pblocks" id="pgrid2"></div>
     <div class="presq">
       <div class="presq-mark">"</div>
       <p class="presq-text" id="presqText"></p>
       <p class="presq-src" id="presqSrc"></p>
     </div>
+  </div>
+</section>
+
+<!-- EDITORIAL / IMPRENSA / VALIDAÇÕES -->
+<section id="imprensa" class="sec">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Editorial e Imprensa</span></div>
+    <h2 class="sh">Destaques <em>editoriais</em>, cobertura de imprensa e validações</h2>
+    <div class="pblocks" id="pgrid2"></div>
     <div class="vinst">
       <p class="vinst-title">Validações institucionais</p>
       <div class="vinst-grid" id="vinstGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="sec">
+  <div class="con">
+    <div class="sgr">
+      <div>
+        <div class="sphoto" id="sobreFoto"></div>
+        <div class="squote">
+          <p class="sqt" id="sobreCitacao"></p>
+          <p class="sqa">Tingo Santi · Ailton Santos</p>
+        </div>
+      </div>
+      <div>
+        <div class="ey"><div class="eyl"></div><span class="eys">Sobre o Artista</span></div>
+        <h2 class="sh">Tingo <em>Santi</em></h2>
+        <div id="sobreParas" style="margin-bottom:.5rem"></div>
+        <div class="smil" id="sobreMil"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -587,37 +620,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     </div>
   </div>
 </section>
-
-<!-- SOBRE -->
-<section id="sobre" class="sec">
-  <div class="con">
-    <div class="sgr">
-      <div>
-        <div class="sphoto" id="sobreFoto"></div>
-        <div class="squote">
-          <p class="sqt" id="sobreCitacao"></p>
-          <p class="sqa">Tingo Santi · Ailton Santos</p>
-        </div>
-      </div>
-      <div>
-        <div class="ey"><div class="eyl"></div><span class="eys">Sobre o Artista</span></div>
-        <h2 class="sh">Tingo <em>Santi</em></h2>
-        <div id="sobreParas" style="margin-bottom:.5rem"></div>
-        <div class="smil" id="sobreMil"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BAND -->
-<div class="band">
-  <h2 class="bant">Leve o espetáculo para a sua programação</h2>
-  <p class="bans">Proposta comercial, agenda e documentação para contratação pública e privada disponíveis sob demanda.</p>
-  <div class="bana">
-    <a href="#contact" class="bp"  onclick="trackCTA('band_proposta')">Solicitar Proposta</a>
-    <a href="javascript:void(0)" id="waBandBtn" class="bout" onclick="trackWA('band')">WhatsApp · <span id="waBandLabel"></span></a>
-  </div>
-</div>
 
 <!-- CONTATO -->
 <section id="contact" class="sec sec-off">
@@ -688,10 +690,13 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     </div>
     <div><div class="fct">Navegação</div><ul class="fl2">
       <li><a href="#show">O Espetáculo</a></li>
-      <li><a href="#compositor">O Compositor</a></li>
       <li><a href="#videos">Vídeo do Show</a></li>
+      <li><a href="#galeria">Galeria</a></li>
       <li><a href="#instagram">Instagram</a></li>
+      <li><a href="#compositor">O Compositor</a></li>
+      <li><a href="#numeros">Números</a></li>
       <li><a href="#not">Notoriedade</a></li>
+      <li><a href="#imprensa">Editorial e Imprensa</a></li>
       <li><a href="#sobre">Sobre o Artista</a></li>
     </ul></div>
     <div><div class="fct">Contratação</div><ul class="fl2">
@@ -1001,8 +1006,6 @@ function init() {
   document.getElementById('cEndereco').textContent = C.endereco || '';
   document.getElementById('cCnpj').textContent     = C.cnpj || '';
   document.getElementById('waMainBtn').href        = waUrl;
-  document.getElementById('waBandBtn').href        = waUrl;
-  document.getElementById('waBandLabel').textContent = C.whatsappLabel;
   document.getElementById('igBtn').href  = 'https://instagram.com/' + C.instagram;
   document.getElementById('ytBtn').href  = 'https://youtube.com/' + C.youtube;
   document.getElementById('spBtn').href  = C.spotify;
