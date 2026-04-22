@@ -36,21 +36,7 @@ const SITE = {
     ctaLabel:     "Falar no WhatsApp"
   },
 
-  canais: {
-    ds1: {
-      nome:         "DS1 Produções",
-      responsavel:  "Uriel Marques",
-      contatoLabel: "Canal",
-      whatsapp:     "5522998448726",
-      whatsappLabel:"(22) 99844-8726",
-      email:        "contato@ds1producoes.com.br",
-      formspree:    "",
-      endereco:     "",
-      cnpj:         "",
-      introContato: "Solicitações comerciais encaminhadas exclusivamente para o canal DS1 Produções.",
-      ctaLabel:     "Falar no WhatsApp"
-    }
-  },
+  canais: {},
 
   analytics: {
     googleAnalyticsId: "G-9T397607Z9"
@@ -69,8 +55,8 @@ const SITE = {
   },
 
   instagramSection: {
-    titulo:    "Instagram <em>@TingoSanti</em>",
-    subtitulo: "Prova social, palco e qualidade artística em uma curadoria compacta, alinhada ao visual institucional do site.",
+    titulo:    "@TingoSanti",
+    subtitulo: "Instagram",
     items: [
       {
         tipo: "Post",

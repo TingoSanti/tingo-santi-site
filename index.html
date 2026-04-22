@@ -288,23 +288,18 @@ button{cursor:pointer;font-family:var(--sans)}
 
 /* ── INSTAGRAM ── */
 .igsec{padding-top:0}
-.igwrap{padding:2rem;border:1px solid var(--off2);border-radius:var(--rl);background:linear-gradient(180deg,#fff 0%,var(--off) 100%);box-shadow:0 18px 42px rgba(11,52,128,.06)}
-.ighd{margin-bottom:1.5rem}
-.ight{font-family:var(--serif);font-size:clamp(2.1rem,4vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);margin-bottom:.6rem}
+.igwrap{max-width:980px;margin:0 auto;padding:2.2rem 2.2rem 2.4rem;border:1px solid var(--bb);border-radius:28px;background:linear-gradient(180deg,#fff 0%,var(--off) 100%);box-shadow:0 18px 42px rgba(11,52,128,.06)}
+.ighd{margin-bottom:1.8rem}
+.ight{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1.02;color:var(--navy);margin-bottom:.2rem}
 .ight em{font-style:italic;color:var(--blue)}
-.igsub{font-size:.96rem;font-weight:300;color:var(--tm);max-width:760px;line-height:1.75}
-.iggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-.igcard{display:block;border:1px solid var(--bb);border-radius:var(--rl);background:#fff;overflow:hidden;min-height:100%;transition:transform .2s, box-shadow .2s, border-color .2s}
-.igcard:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(11,52,128,.10);border-color:rgba(11,52,128,.28)}
-.igmedia{position:relative;aspect-ratio:4/5;background-size:cover;background-position:center;overflow:hidden}
-.igmedia::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(2,9,28,.38) 0%,rgba(2,9,28,0) 48%)}
-.igbadge{position:absolute;top:.85rem;left:.85rem;z-index:2;display:inline-flex;align-items:center;gap:.45rem;padding:.38rem .62rem;border-radius:999px;background:rgba(255,255,255,.92);color:var(--blue);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.igicon{position:absolute;right:.85rem;bottom:.85rem;z-index:2;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);color:var(--blue);font-size:1rem;font-weight:700}
-.igbody{padding:1rem 1rem 1.1rem}
-.ighandle{font-size:.7rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--mu);margin-bottom:.45rem}
-.igtitle2{font-size:1rem;font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:.45rem}
-.igdesc{font-size:.86rem;font-weight:300;color:var(--tm);line-height:1.6;margin-bottom:.9rem}
-.igcta{display:inline-flex;align-items:center;gap:.45rem;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.igsub{font-size:.78rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#7c2940}
+.iggrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.igcard{display:block;transition:transform .2s ease, box-shadow .2s ease}
+.igcard:hover{transform:translateY(-3px)}
+.igthumb{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:var(--off2);box-shadow:0 10px 24px rgba(11,52,128,.08)}
+.igthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.igoverlay{position:absolute;inset:auto .7rem .7rem auto;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);color:var(--blue);font-size:1.05rem;font-weight:700;box-shadow:0 6px 18px rgba(2,9,28,.12)}
+.igmeta{display:none}
 
 
 /* ── FOOTER ── */
@@ -334,7 +329,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .vlogo:last-child{border-bottom:none}
   .numc.m{grid-column:span 6}
   .numc.s{grid-column:span 6}
-  .iggrid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:768px){
   html{font-size:16px}
@@ -353,8 +347,16 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .presq-text{font-size:1.2rem}
   .numc.m,.numc.s{grid-column:span 12}
   .igwrap{padding:1.25rem}
-  .iggrid{grid-template-columns:1fr}
   #soundBtn{bottom:1.2rem;right:1.2rem;width:46px;height:46px}
+  .igwrap{padding:1.5rem 1.2rem 1.6rem;border-radius:22px}
+  .ight{font-size:3.2rem;line-height:1.02}
+  .igsub{font-size:.72rem;letter-spacing:.18em}
+  .iggrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}
+  .igthumb{border-radius:16px}
+}
+@media(max-width:420px){
+  .ight{font-size:3rem}
+  .iggrid{gap:.75rem}
 }
 </style>
 </head>
@@ -521,7 +523,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   <div class="con">
     <div class="igwrap">
       <div class="ighd">
-        <div class="ey"><div class="eyl"></div><span class="eys">Instagram</span></div>
         <h2 class="ight" id="igTitle"></h2>
         <p class="igsub" id="igSubtitle"></p>
       </div>
