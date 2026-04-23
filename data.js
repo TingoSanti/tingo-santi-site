@@ -56,23 +56,22 @@ const SITE = {
     { arquivo: "img/galeria_sorriso.jpg"                 }
   ],
 
-  /* ── COMPOSITOR (nova seção) ───────────────────────────── */
+  /* ── OUÇA & ACOMPANHE ───────────────────────────── */
   compositor: {
-    titulo:    "21,4 milhões de execuções. <em>189 países.</em>",
-    subtitulo: "Mais de 50 composições próprias circulando em 189 países nas maiores plataformas do mundo.",
-    youtubeShortId: "bXdIIxEg7PY",
-    spotifyEmbedType: "artist",
-    spotifyEmbedId:   "1XfDGJ4C2wEsrAbWbVaZ4b",
-    destaque: {
-      titulo:  "É Muita Saudade Pra Pouco Eu",
-      desc:    "Single de maior repercussão nas redes sociais, marcou o início da trajetória autoral do artista."
+    eyebrow:   "Ouça & acompanhe",
+    titulo:    "No <em>Spotify</em>, no Instagram.",
+    subtitulo: "Presença musical e conteúdo orgânico, lado a lado, no mesmo bloco. Layout em duas colunas no desktop e empilhado no mobile, preservando a paleta original do site.",
+    spotify: {
+      titulo:    "Ouça no Spotify",
+      label:     "Tributo · Brasil",
+      embedType: "artist",
+      embedId:   "1XfDGJ4C2wEsrAbWbVaZ4b"
     },
-    numeros: [
-      { n: "21,4M", l: "Execuções globais"        },
-      { n: "189",   l: "Países com consumo"       },
-      { n: "50+",   l: "Composições publicadas"   },
-      { n: "63K+",  l: "Seguidores no Instagram"  }
-    ]
+    instagram: {
+      handle:       "@tingosanti",
+      label:        "Instagram",
+      beholdFeedId: "xrPM3fmIf0SxWE0aNL2H"
+    }
   },
 
   /* ── NÚMEROS GERAIS ────────────────────────────────────── */

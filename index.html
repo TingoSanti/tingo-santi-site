@@ -156,30 +156,31 @@ button{cursor:pointer;font-family:var(--sans)}
 .sft{font-size:.96rem;font-weight:600;margin-bottom:.35rem;color:var(--navy)}
 .sfd2{font-size:.88rem;font-weight:300;color:var(--tm);line-height:1.68}
 
-/* ── COMPOSITOR ── */
-#compositor{background:linear-gradient(160deg,#eef3fb 0%,var(--off) 50%,#e8eef8 100%);position:relative;overflow:hidden}
-#compositor::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,var(--blue),var(--bl),transparent)}
-.cmpg{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:1rem}
-.cmpv{aspect-ratio:9/16;max-width:360px;margin:0 auto;background:#000;border-radius:var(--rl);overflow:hidden;box-shadow:0 28px 64px rgba(11,52,128,.18);position:relative}
-.cmpv iframe{width:100%;height:100%;border:none;display:block}
-.cmpr{display:flex;flex-direction:column;gap:1.8rem}
-.cmpdest{padding:1.5rem 1.7rem;border-left:3px solid var(--spotify);background:rgba(29,185,84,.07);border-radius:0 var(--r) var(--r) 0}
-.cmpdestl{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#15803d;margin-bottom:.5rem}
-.cmpdestt{font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--navy);margin-bottom:.5rem;line-height:1.2}
-.cmpdestd{font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.65}
-.cmpspot{border-radius:var(--rl);overflow:hidden;box-shadow:0 20px 48px rgba(11,52,128,.12)}
-.cmpspot iframe{width:100%;height:352px;border:none;display:block}
-.cmpnums{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--bb)}
-.cmpnumi{text-align:center}
-.cmpnumn{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.1rem);font-weight:500;color:var(--blue);line-height:1;margin-bottom:.35rem}
-.cmpnuml{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);line-height:1.4}
-.cmpcta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
-.cmpbtn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:all .2s}
-.cmpbtn-spot{background:var(--spotify);color:#fff}
-.cmpbtn-spot:hover{background:#1ed760;transform:translateY(-2px)}
-.cmpbtn-ig{border:1px solid var(--bb);color:var(--blue)}
-.cmpbtn-ig:hover{border-color:var(--blue);background:rgba(11,52,128,.06)}
-
+/* ── OUÇA & ACOMPANHE ── */
+#compositor{background:var(--off);position:relative;overflow:hidden}
+#compositor::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--bl),transparent)}
+.soc-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.95fr);gap:1.6rem;align-items:start}
+.soc-card{background:var(--w);border:1px solid var(--off2);border-radius:28px;padding:2.4rem;box-shadow:0 18px 44px rgba(11,52,128,.08)}
+.soc-card.spotify{background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%)}
+.soc-card.instagram{background:linear-gradient(180deg,#ffffff 0%,#fbfcff 100%)}
+.soc-kicker{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mu);margin-bottom:1.1rem}
+.soc-title{font-family:var(--serif);font-size:clamp(2.2rem,4.2vw,3.4rem);font-weight:400;line-height:1.02;color:var(--navy);margin-bottom:.75rem}
+.soc-title em{font-style:italic;color:var(--blue)}
+.soc-intro{font-size:1rem;font-weight:300;color:var(--tm);max-width:760px;line-height:1.8;margin-bottom:2.4rem}
+.soc-card-title{font-family:var(--serif);font-size:clamp(2rem,3vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);margin-bottom:.4rem}
+.soc-card-label{font-size:.7rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--mu);margin-bottom:1.6rem}
+.soc-spotify-wrap{border-radius:24px;overflow:hidden;box-shadow:0 20px 48px rgba(2,9,28,.12);background:#111}
+.soc-spotify-wrap iframe{width:100%;height:430px;border:none;display:block}
+.soc-ig-head{margin-bottom:1.5rem}
+.soc-ig-handle{font-family:var(--serif);font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);word-break:break-word}
+.soc-ig-grid{border-radius:24px;overflow:hidden;background:#fff;border:1px solid rgba(11,52,128,.08);padding:0}
+.soc-ig-grid behold-widget{display:block;width:100%;min-height:560px}
+.soc-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
+.soc-btn{display:inline-flex;align-items:center;justify-content:center;padding:1rem 1.8rem;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:all .2s}
+.soc-btn.spotify{background:var(--blue);color:#fff;border:1px solid var(--blue)}
+.soc-btn.spotify:hover{background:var(--bm);border-color:var(--bm);transform:translateY(-2px)}
+.soc-btn.instagram{background:transparent;color:var(--blue);border:1px solid var(--bb)}
+.soc-btn.instagram:hover{background:var(--bfaint);border-color:var(--blue)}
 /* ── VÍDEO — SIMPLIFICADO (1 video só) ── */
 .vf{position:relative;aspect-ratio:16/9;background:var(--navy);border-radius:var(--rl);overflow:hidden;cursor:pointer;max-width:1100px;margin:0 auto;box-shadow:0 30px 70px rgba(11,52,128,.14)}
 .vft{position:absolute;inset:0;background-image:url('https://img.youtube.com/vi/M7ehpNbIbUY/maxresdefault.jpg');background-size:cover;background-position:center;transition:transform .4s}
@@ -334,7 +335,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
-  .sg,.sgr,.csp,.cblock,.cmpg{grid-template-columns:1fr;gap:3.5rem}
+  .sg,.sgr,.csp,.cblock,.soc-grid{grid-template-columns:1fr;gap:3.5rem}
   .fg{grid-template-columns:1fr 1fr}
   .spa{display:none}
   .gm{columns:2}
@@ -356,7 +357,9 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .gi.tall{display:block}
   .fg{grid-template-columns:1fr}
   .smil{grid-template-columns:1fr}
-  .cmpnums{grid-template-columns:repeat(2,1fr)}
+    .soc-card{padding:1.6rem}
+  .soc-spotify-wrap iframe{height:380px}
+  .soc-ig-grid behold-widget{min-height:480px}
   .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 12}
   .presq{padding:2.5rem 1.8rem 2rem 1.8rem}
   .presq-mark{top:.5rem;left:1rem;font-size:5rem}
@@ -471,30 +474,35 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   </div>
 </section>
 
-<!-- COMPOSITOR (NOVA SEÇÃO) -->
+<!-- OUÇA & ACOMPANHE -->
 <section id="compositor" class="sec">
   <div class="con">
-    <div class="ey"><div class="eyl"></div><span class="eys">O Compositor</span></div>
-    <h2 class="sh" id="cmpTitulo"></h2>
-    <p class="sl" id="cmpSubtitulo"></p>
-    <div class="cmpg">
-      <div class="cmpv">
-        <iframe id="cmpYt" src="" title="É Muita Saudade Pra Pouco Eu" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="cmpr">
-        <div class="cmpdest">
-          <div class="cmpdestl">Single em destaque</div>
-          <div class="cmpdestt" id="cmpDestT"></div>
-          <div class="cmpdestd" id="cmpDestD"></div>
-        </div>
-        <div class="cmpspot">
+    <div class="ey"><div class="eyl"></div><span class="eys" id="socEyebrow"></span></div>
+    <h2 class="soc-title" id="cmpTitulo"></h2>
+    <p class="soc-intro" id="cmpSubtitulo"></p>
+
+    <div class="soc-grid">
+      <article class="soc-card spotify">
+        <h3 class="soc-card-title" id="socSpotTitle"></h3>
+        <div class="soc-card-label" id="socSpotLabel"></div>
+        <div class="soc-spotify-wrap">
           <iframe id="cmpSpot" src="" title="Spotify Tingo" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
-        <div class="cmpcta">
-          <a href="#" id="cmpBtnSpot" class="cmpbtn cmpbtn-spot" target="_blank" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify →</a>
-          <a href="#" id="cmpBtnIg"   class="cmpbtn cmpbtn-ig"   target="_blank" onclick="trackCTA('cmp_instagram')">Seguir no Instagram</a>
+      </article>
+
+      <article class="soc-card instagram">
+        <div class="soc-ig-head">
+          <div class="soc-ig-handle" id="socIgHandle"></div>
+          <div class="soc-card-label" id="socIgLabel"></div>
         </div>
-      </div>
+        <div class="soc-ig-grid">
+          <behold-widget id="socIgFeed"></behold-widget>
+        </div>
+        <div class="soc-actions">
+          <a href="#" id="cmpBtnSpot" class="soc-btn spotify" target="_blank" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify</a>
+          <a href="#" id="cmpBtnIg" class="soc-btn instagram" target="_blank" onclick="trackCTA('cmp_instagram')">Seguir no Instagram ↗</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -732,15 +740,25 @@ function init() {
     sf.innerHTML += '<div class="sfi"><div class="sfd"></div><div><div class="sft">' + f.titulo + '</div><div class="sfd2">' + f.desc + '</div></div></div>';
   });
 
-  // COMPOSITOR
+  // OUÇA & ACOMPANHE
+  document.getElementById('socEyebrow').textContent = SITE.compositor.eyebrow;
   document.getElementById('cmpTitulo').innerHTML = SITE.compositor.titulo;
   document.getElementById('cmpSubtitulo').textContent = SITE.compositor.subtitulo;
-  document.getElementById('cmpYt').src = 'https://www.youtube.com/embed/' + SITE.compositor.youtubeShortId + '?rel=0';
-  document.getElementById('cmpSpot').src = 'https://open.spotify.com/embed/' + SITE.compositor.spotifyEmbedType + '/' + SITE.compositor.spotifyEmbedId + '?utm_source=generator&theme=0';
-  document.getElementById('cmpDestT').textContent = SITE.compositor.destaque.titulo;
-  document.getElementById('cmpDestD').textContent = SITE.compositor.destaque.desc;
+  document.getElementById('socSpotTitle').textContent = SITE.compositor.spotify.titulo;
+  document.getElementById('socSpotLabel').textContent = SITE.compositor.spotify.label;
+  document.getElementById('socIgHandle').textContent = SITE.compositor.instagram.handle;
+  document.getElementById('socIgLabel').textContent = SITE.compositor.instagram.label;
+  document.getElementById('cmpSpot').src = 'https://open.spotify.com/embed/' + SITE.compositor.spotify.embedType + '/' + SITE.compositor.spotify.embedId + '?utm_source=generator&theme=0';
   document.getElementById('cmpBtnSpot').href = C.spotify;
   document.getElementById('cmpBtnIg').href = 'https://instagram.com/' + C.instagram;
+  document.getElementById('socIgFeed').setAttribute('feed-id', SITE.compositor.instagram.beholdFeedId);
+  if (!document.querySelector('script[data-behold-widget="1"]')) {
+    var beholdScript = document.createElement('script');
+    beholdScript.type = 'module';
+    beholdScript.src = 'https://w.behold.so/widget.js';
+    beholdScript.setAttribute('data-behold-widget', '1');
+    document.head.appendChild(beholdScript);
+  }
 
   // VÍDEO DO SHOW
   document.getElementById('vfttl').textContent = SITE.videoShow.titulo;
