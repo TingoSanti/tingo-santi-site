@@ -23,15 +23,24 @@ const SITE = {
   },
 
   hero: {
-    youtubeId:  "M7ehpNbIbUY",
-    tagline:    "A obra de Roberto Carlos ao vivo, com voz natural, orquestra e emoção verdadeira.",
-    foto:       "img/hero_principal.jpg"
+    tituloHtml:   "Tingo<br><em>Santi</em>",
+    subtitulo:    "Cantor e intérprete. Um tributo a Roberto Carlos com voz natural, produção profissional e repertório pensado para emocionar plateias públicas e privadas.",
+    microInfos:   ["Tributo ao Rei", "Show ao vivo", "RJ · Brasil"],
+    ctaPrimario:  "Solicitar Proposta",
+    ctaSecundario:"Ouvir no Spotify",
+    youtubeId:    "M7ehpNbIbUY",
+    youtubeTitulo:"Tributo ao Rei · Show ao Vivo",
+    youtubeAno:   "2026",
+    tagline:      "A obra de Roberto Carlos ao vivo, com voz natural, orquestra e emoção verdadeira.",
+    foto:         "img/hero_principal.jpg",
+    videoCapa:    "img/hero_video_cover.jpg"
   },
 
   /* ── VÍDEOS — APENAS 1 (SIMPLIFICADO) ─────────────────── */
   videoShow: {
     titulo:    "Tributo ao Rei · Show ao Vivo",
-    youtubeId: "M7ehpNbIbUY"
+    youtubeId: "M7ehpNbIbUY",
+    capa:      "img/hero_video_cover.jpg"
   },
 
   /* ── GALERIA — mosaico com orientação corrigida ────────
