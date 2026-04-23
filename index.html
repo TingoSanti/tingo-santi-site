@@ -84,10 +84,6 @@ button{cursor:pointer;font-family:var(--sans)}
 .hname{font-family:var(--serif);font-size:clamp(4.4rem,10vw,7rem);font-weight:400;line-height:.84;letter-spacing:-.03em;color:#f4f7ff;margin-bottom:1.4rem}
 .hname em{display:block;font-style:italic;font-weight:300;color:#d8e6ff}
 .hdesc{font-size:clamp(1.06rem,1.8vw,1.26rem);font-weight:300;color:rgba(255,255,255,.9);line-height:1.72;max-width:620px;margin-bottom:2rem}
-.hmeta{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;margin-bottom:2.2rem;padding-left:0;list-style:none}
-.hmeta li{font-size:.78rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.66)}
-.hmeta li::before{content:'•';margin-right:.8rem;color:#d8e6ff}
-.ha{display:flex;gap:1rem;flex-wrap:wrap}
 .bpw{display:inline-block;padding:1rem 2.2rem;background:#0d1020;color:#fff;border:none;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:all .2s;cursor:pointer}
 .bpw:hover{background:#151a2f;transform:translateY(-2px)}
 .bow{display:inline-block;padding:1rem 2.2rem;border:1px solid rgba(255,255,255,.28);color:#fff;background:transparent;border-radius:999px;font-size:.8rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:all .2s}
@@ -105,6 +101,13 @@ button{cursor:pointer;font-family:var(--sans)}
 .hvyr{font-size:.82rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.68);white-space:nowrap}
 .hvif{position:absolute;inset:0;width:100%;height:100%;border:none;display:none;background:#000}
 .hscr{display:none}
+.hero-player{position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;padding:calc(var(--nh) + 2.2rem) 5vw 3rem;opacity:0;visibility:hidden;pointer-events:none;background:rgba(3,10,28,.58);backdrop-filter:blur(8px);transition:opacity .28s ease,visibility .28s ease}
+#hero.is-playing .hero-player{opacity:1;visibility:visible;pointer-events:auto}
+#hero.is-playing .hc{opacity:0;pointer-events:none}
+.hero-player-inner{position:relative;width:min(100%,1100px);aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(2,9,28,.45)}
+.hero-player-frame{width:100%;height:100%;border:none;background:#000}
+.hero-player-close{position:absolute;top:14px;right:14px;z-index:2;border:none;border-radius:999px;padding:.78rem 1.15rem;background:rgba(3,10,28,.7);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
+.hero-player-close:hover{background:rgba(3,10,28,.88)}
 
 /* ── SHARED ── */
 .sec{padding:clamp(5rem,9vw,9rem) 5vw}
@@ -316,6 +319,10 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
+  .hc{padding-top:calc(var(--nh) + 2.6rem)}
+  .hgr{grid-template-columns:1fr;gap:2.8rem}
+  .hcopy{max-width:none}
+  .hvideo{max-width:720px;width:100%}
   .sg,.sgr,.csp,.cblock,.cmpg{grid-template-columns:1fr;gap:3.5rem}
   .fg{grid-template-columns:1fr 1fr}
   .spa{display:none}
@@ -330,6 +337,17 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 }
 @media(max-width:768px){
   html{font-size:16px}
+  #hero{min-height:auto}
+  .hc{padding:calc(var(--nh) + 1.8rem) 5vw 4rem}
+  .hgr{gap:2rem}
+  .hname{font-size:clamp(3.6rem,18vw,5.3rem);line-height:.88}
+  .hdesc{font-size:1.02rem;line-height:1.64;margin-bottom:1.6rem}
+  .hvc{border-radius:20px}
+  .hvplayb{width:92px;height:92px;font-size:2rem}
+  .hvcap{left:1rem;right:1rem;bottom:.9rem}
+  .hvttl{font-size:.64rem;letter-spacing:.16em}
+  .hvtt2{font-size:1rem}
+  .hvyr{font-size:.68rem;letter-spacing:.18em}
   .nl,.nc{display:none}
   .ham{display:flex}
   #mm.o{display:flex}
@@ -347,6 +365,9 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .hc{padding-top:calc(var(--nh) + 2.2rem);padding-bottom:3rem}
   .hgr{grid-template-columns:1fr;gap:2.2rem}
   .hcopy{max-width:none}
+  .hero-player{padding:calc(var(--nh) + 1.4rem) 4vw 2rem}
+  .hero-player-inner{width:100%;border-radius:18px}
+  .hero-player-close{top:10px;right:10px;padding:.65rem .9rem;font-size:.64rem}
   .hname{font-size:4rem;line-height:.9}
   .hdesc{font-size:1.02rem;line-height:1.65}
   .hmeta{gap:.8rem 1.2rem;margin-bottom:1.8rem}
@@ -390,7 +411,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   <ul class="nl">
     <li><a href="#show">O Espetáculo</a></li>
     <li><a href="#compositor">O Compositor</a></li>
-    <li><a href="#videos">Vídeo</a></li>
+    <li><a href="#hero">Vídeo</a></li>
     <li><a href="#not">Notoriedade</a></li>
     <li><a href="#cont">Contratantes</a></li>
     <li><a href="#sobre">O Artista</a></li>
@@ -401,7 +422,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 <div id="mm">
   <a href="#show"       onclick="cm()">O Espetáculo</a>
   <a href="#compositor" onclick="cm()">O Compositor</a>
-  <a href="#videos"     onclick="cm()">Vídeo do Show</a>
+  <a href="#hero"       onclick="cm()">Vídeo do Show</a>
   <a href="#galeria"    onclick="cm()">Galeria</a>
   <a href="#numeros"    onclick="cm()">Números</a>
   <a href="#not"        onclick="cm()">Notoriedade</a>
@@ -422,11 +443,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
         <div class="hk"><span class="hkd"></span><span>Tingo Santi</span></div>
         <h1 class="hname" id="heroTitle"></h1>
         <p class="hdesc" id="heroDesc"></p>
-        <ul class="hmeta" id="heroMeta"></ul>
-        <div class="ha">
-          <a href="#contact" id="heroPrimaryCta" class="bpw" onclick="trackCTA('hero_contato')"></a>
-          <a href="#" id="heroSecondaryCta" class="bow" target="_blank" onclick="trackCTA('hero_spotify')"></a>
-        </div>
       </div>
       <div class="hvideo" id="videos">
         <div class="hvc">
@@ -439,10 +455,15 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
               </div>
               <div class="hvyr" id="heroVideoYear"></div>
             </div>
-            <iframe id="heroVideoFrame" class="hvif" src="" allow="autoplay; encrypted-media" allowfullscreen playsinline></iframe>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="hero-player" id="heroPlayer">
+    <div class="hero-player-inner">
+      <button class="hero-player-close" type="button" onclick="stopHeroVideo()">Fechar vídeo</button>
+      <iframe id="heroPlayerFrame" class="hero-player-frame" src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen playsinline></iframe>
     </div>
   </div>
   <div class="hscr"><span>Role</span><div class="hscrl"></div></div>
@@ -717,17 +738,9 @@ function init() {
   document.getElementById('heroBg').style.backgroundImage = "url('" + SITE.hero.foto + "')";
   document.getElementById('heroTitle').innerHTML = SITE.hero.tituloHtml;
   document.getElementById('heroDesc').textContent = SITE.hero.subtitulo;
-  document.getElementById('heroPrimaryCta').textContent = SITE.hero.ctaPrimario;
-  document.getElementById('heroSecondaryCta').textContent = SITE.hero.ctaSecundario;
-  document.getElementById('heroSecondaryCta').href = C.spotify;
   document.getElementById('heroVideoThumb').style.backgroundImage = "url('" + (SITE.hero.videoCapa || SITE.videoShow.capa || SITE.hero.foto) + "')";
   document.getElementById('heroVideoTitle').textContent = SITE.hero.youtubeTitulo || SITE.videoShow.titulo;
   document.getElementById('heroVideoYear').textContent = SITE.hero.youtubeAno || '';
-  var hm = document.getElementById('heroMeta');
-  (SITE.hero.microInfos || []).forEach(function(info) {
-    hm.innerHTML += '<li>' + info + '</li>';
-  });
-
   // SHOW
   document.getElementById('showPhotoMain').style.backgroundImage = "url('" + SITE.show.fotoMain + "')";
   document.getElementById('showPhotoAccent').style.backgroundImage = "url('" + SITE.show.fotoAccent + "')";
@@ -953,20 +966,27 @@ function init() {
 function playHeroVideo() {
   var yid = SITE.videoShow.youtubeId || SITE.hero.youtubeId;
   if (!yid) return;
-  var thumb = document.getElementById('heroVideoThumb');
-  var frame = document.getElementById('heroVideoFrame');
-  var play = thumb.querySelector('.hvplay');
-  var cap = thumb.querySelector('.hvcap');
-  if (play) play.style.display = 'none';
-  if (cap) cap.style.display = 'none';
-  frame.style.display = 'block';
-  frame.src = 'https://www.youtube.com/embed/' + yid + '?autoplay=1&rel=0&playsinline=1';
+  var hero = document.getElementById('hero');
+  var frame = document.getElementById('heroPlayerFrame');
+  hero.classList.add('is-playing');
+  frame.src = 'https://www.youtube.com/embed/' + yid + '?autoplay=1&rel=0&playsinline=1&controls=1';
   trackCTA('hero_video_play');
+}
+
+function stopHeroVideo() {
+  var hero = document.getElementById('hero');
+  var frame = document.getElementById('heroPlayerFrame');
+  hero.classList.remove('is-playing');
+  frame.src = '';
 }
 
 function playVideo() {
   playHeroVideo();
 }
+
+window.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') stopHeroVideo();
+});
 
 window.addEventListener('scroll', function(){
   var s = scrollY > 60;
@@ -984,6 +1004,10 @@ function trackWA(origem) {
   if (window._gtag) window._gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: 'whatsapp_' + origem });
   window.open('https://wa.me/' + SITE.contato.whatsapp, '_blank');
 }
+
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') stopHeroVideo();
+});
 
 if (typeof SITE !== 'undefined') { init(); } else { document.addEventListener('DOMContentLoaded', init); }
 </script>

@@ -25,7 +25,7 @@ const SITE = {
   hero: {
     tituloHtml:   "Tingo<br><em>Santi</em>",
     subtitulo:    "Cantor e intérprete. Um tributo a Roberto Carlos com voz natural, produção profissional e repertório pensado para emocionar plateias públicas e privadas.",
-    microInfos:   ["Tributo ao Rei", "Show ao vivo", "RJ · Brasil"],
+    microInfos:   [],
     ctaPrimario:  "Solicitar Proposta",
     ctaSecundario:"Ouvir no Spotify",
     youtubeId:    "M7ehpNbIbUY",
