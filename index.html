@@ -734,18 +734,21 @@ function init() {
   const heroBg = document.getElementById('heroBg');
   const heroIframe = document.getElementById('hyt');
   const heroCover = document.querySelector('.hcover');
-  if (SITE.hero && SITE.hero.foto) {
-    heroBg.style.backgroundImage = "url('" + SITE.hero.foto + "')";
-    heroBg.style.display = 'block';
-    heroIframe.style.display = 'none';
-    heroIframe.src = '';
-    if (heroCover) heroCover.style.backgroundImage = "url('" + SITE.hero.foto + "')";
-  } else if (SITE.hero.youtubeId) {
+  if (heroCover && SITE.hero && SITE.hero.foto) {
+    heroCover.style.backgroundImage = "url('" + SITE.hero.foto + "')";
+  }
+  if (SITE.hero && SITE.hero.youtubeId) {
     heroBg.style.display = 'none';
+    heroBg.style.backgroundImage = 'none';
     heroIframe.style.display = 'block';
     heroIframe.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
       '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
       '&controls=0&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1&playsinline=1';
+  } else if (SITE.hero && SITE.hero.foto) {
+    heroBg.style.backgroundImage = "url('" + SITE.hero.foto + "')";
+    heroBg.style.display = 'block';
+    heroIframe.style.display = 'none';
+    heroIframe.src = '';
   }
 
   // SHOW
