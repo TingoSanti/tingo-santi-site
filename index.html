@@ -74,8 +74,8 @@ button{cursor:pointer;font-family:var(--sans)}
 #hero{position:relative;width:100vw;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--navy);padding:calc(var(--nh) + 2rem) 0 4rem}
 .hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hfb{display:none}
-.hbg iframe{position:absolute;top:50%;left:50%;width:177.77777778vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.18);border:none;pointer-events:none;z-index:1;opacity:.36;filter:saturate(1.05) contrast(1.02)}
-.hov{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(6,27,84,.84) 0%,rgba(7,36,112,.76) 34%,rgba(7,36,112,.64) 55%,rgba(6,27,84,.76) 100%)}
+.hbg iframe{position:absolute;top:50%;left:50%;width:177.77777778vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.18);border:none;pointer-events:none;z-index:1;opacity:.34;filter:saturate(1.08) contrast(1.02) brightness(1.06)}
+.hov{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(32,92,188,.80) 0%,rgba(56,132,233,.68) 34%,rgba(78,164,247,.58) 55%,rgba(35,102,204,.72) 100%)}
 .hc{position:relative;z-index:3;max-width:var(--max);width:100%;padding:0 5vw;animation:fu 1s ease both}
 @keyframes fu{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
 .hg{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,586px);gap:4rem;align-items:center}
@@ -173,7 +173,7 @@ button{cursor:pointer;font-family:var(--sans)}
 .soc-spotify-wrap iframe{width:100%;height:430px;border:none;display:block}
 .soc-ig-head{margin-bottom:1.5rem}
 .soc-ig-handle{font-family:var(--serif);font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);word-break:break-word}
-.soc-ig-grid{border-radius:24px;overflow:hidden;background:#fff;border:1px solid rgba(11,52,128,.08);padding:0;aspect-ratio:1/1}
+.soc-ig-grid{border-radius:24px;overflow:hidden;background:#fff;border:1px solid rgba(11,52,128,.08);padding:0;aspect-ratio:3/2}
 .soc-ig-grid behold-widget{display:block;width:100%;height:100%;min-height:0}
 .soc-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
 .soc-btn{display:inline-flex;align-items:center;justify-content:center;padding:1rem 1.8rem;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:all .2s}
@@ -398,7 +398,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   <ul class="nl">
     <li><a href="#show">O Espetáculo</a></li>
     <li><a href="#compositor">O Compositor</a></li>
-    <li><a href="#videos">Vídeo</a></li>
     <li><a href="#not">Notoriedade</a></li>
     <li><a href="#cont">Contratantes</a></li>
     <li><a href="#sobre">O Artista</a></li>
@@ -409,7 +408,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 <div id="mm">
   <a href="#show"       onclick="cm()">O Espetáculo</a>
   <a href="#compositor" onclick="cm()">O Compositor</a>
-  <a href="#videos"     onclick="cm()">Vídeo do Show</a>
   <a href="#galeria"    onclick="cm()">Galeria</a>
   <a href="#numeros"    onclick="cm()">Números</a>
   <a href="#not"        onclick="cm()">Notoriedade</a>
@@ -505,22 +503,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
           <a href="#" id="cmpBtnIg" class="soc-btn instagram" target="_blank" onclick="trackCTA('cmp_instagram')">Seguir no Instagram ↗</a>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- VÍDEO DO SHOW (SIMPLIFICADO) -->
-<section id="videos" class="sec sec-off">
-  <div class="con">
-    <div class="ey"><div class="eyl"></div><span class="eys">Vídeo do Show</span></div>
-    <h2 class="sh" style="margin-bottom:2.5rem">O show que <em>convence</em></h2>
-    <div class="vf" id="vfeat" onclick="playVideo()">
-      <div class="vft"></div>
-      <div class="vfo" id="vfov">
-        <div class="vpb">▶</div>
-        <div class="vft2" id="vfttl"></div>
-      </div>
-      <iframe id="vfif" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
     </div>
   </div>
 </section>
@@ -691,7 +673,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <div><div class="fct">Navegação</div><ul class="fl2">
       <li><a href="#show">O Espetáculo</a></li>
       <li><a href="#compositor">O Compositor</a></li>
-      <li><a href="#videos">Vídeo do Show</a></li>
       <li><a href="#not">Notoriedade</a></li>
       <li><a href="#sobre">Sobre o Artista</a></li>
     </ul></div>
@@ -763,7 +744,6 @@ function init() {
   }
 
   // VÍDEO DO SHOW
-  document.getElementById('vfttl').textContent = SITE.videoShow.titulo;
 
   // GALERIA
   var gal = document.getElementById('galGrid');
