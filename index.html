@@ -73,7 +73,7 @@ button{cursor:pointer;font-family:var(--sans)}
 /* ── HERO ── */
 #hero{position:relative;width:100vw;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--navy);padding:calc(var(--nh) + 2rem) 0 4rem}
 .hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hfb{display:none}
+.hfb{position:absolute;inset:0;display:block;background-size:cover;background-position:center center;background-repeat:no-repeat;z-index:0;filter:saturate(1.04) contrast(1.02) brightness(.98)}
 .hbg iframe{position:absolute;top:50%;left:50%;width:177.77777778vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.18);border:none;pointer-events:none;z-index:1;opacity:.34;filter:saturate(1.08) contrast(1.02) brightness(1.06)}
 .hov{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(32,92,188,.80) 0%,rgba(56,132,233,.68) 34%,rgba(78,164,247,.58) 55%,rgba(35,102,204,.72) 100%)}
 .hc{position:relative;z-index:3;max-width:var(--max);width:100%;padding:0 5vw;animation:fu 1s ease both}
@@ -86,7 +86,7 @@ button{cursor:pointer;font-family:var(--sans)}
 .htag{font-size:clamp(1.15rem,1.6vw,1.35rem);font-weight:400;color:rgba(255,255,255,.96);margin:0;line-height:1.72;max-width:32rem}
 .hcard{position:relative;aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:#08173f;box-shadow:0 34px 90px rgba(2,9,28,.34);border:1px solid rgba(255,255,255,.18);cursor:pointer;transition:transform .25s ease, box-shadow .25s ease}
 .hcard:hover{transform:translateY(-2px);box-shadow:0 38px 100px rgba(2,9,28,.4)}
-.hcover{position:absolute;inset:0;background-image:url("img/galeria_lencinho.jpg");background-size:cover;background-position:center center;z-index:1}
+.hcover{position:absolute;inset:0;background-image:url("img/hero_principal.jpg");background-size:cover;background-position:center center;z-index:1}
 .hcover::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(4,10,28,.78) 0%,rgba(4,10,28,.18) 48%,rgba(4,10,28,.08) 100%)}
 .hplay{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center}
 .hplaybtn{width:116px;height:116px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:#0b1430;font-size:3rem;display:flex;align-items:center;justify-content:center;box-shadow:0 24px 60px rgba(2,9,28,.25)}
@@ -731,9 +731,19 @@ function init() {
 
   // HERO
   document.getElementById('heroTagline').textContent = 'Cantor e intérprete. Um tributo a Roberto Carlos com voz natural, produção profissional e repertório pensado para emocionar plateias públicas e privadas.';
-  if (SITE.hero.youtubeId) {
-    const f = document.getElementById('hyt');
-    f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+  const heroBg = document.getElementById('heroBg');
+  const heroIframe = document.getElementById('hyt');
+  const heroCover = document.querySelector('.hcover');
+  if (SITE.hero && SITE.hero.foto) {
+    heroBg.style.backgroundImage = "url('" + SITE.hero.foto + "')";
+    heroBg.style.display = 'block';
+    heroIframe.style.display = 'none';
+    heroIframe.src = '';
+    if (heroCover) heroCover.style.backgroundImage = "url('" + SITE.hero.foto + "')";
+  } else if (SITE.hero.youtubeId) {
+    heroBg.style.display = 'none';
+    heroIframe.style.display = 'block';
+    heroIframe.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
       '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
       '&controls=0&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1&playsinline=1';
   }
