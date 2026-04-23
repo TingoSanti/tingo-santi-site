@@ -5,18 +5,42 @@
 
 const SITE = {
 
-  contato: {
-    whatsapp:     "5521975214169",
-    whatsappLabel:"(21) 97521-4169",
-    email:        "tingo.santi@proton.me",
-    instagram:    "tingosanti",
-    youtube:      "@tingosanti",
-    spotifyArtistId: "1XfDGJ4C2wEsrAbWbVaZ4b",
-    spotify:      "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
-    formspree:    "xyklpzbk",
-    cnpj:         "56.047.654/0001-25",
-    endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006"
+  contatos: {
+    default: {
+      whatsapp:      "5521975214169",
+      whatsappLabel: "(21) 97521-4169",
+      email:         "tingo.santi@proton.me",
+      instagram:     "tingosanti",
+      youtube:       "@tingosanti",
+      spotifyArtistId: "1XfDGJ4C2wEsrAbWbVaZ4b",
+      spotify:       "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
+      formspree:     "xyklpzbk",
+      cnpj:          "56.047.654/0001-25",
+      endereco:      "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006",
+      companyLabel:  "NKT Artes Ltda",
+      sectionTitle:  "Fale com a <em>produção</em>",
+      sectionIntro:  "Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.",
+      formEnabled:   true
+    },
+    ds1: {
+      whatsapp:      "5522998448726",
+      whatsappLabel: "(22) 99844-8726",
+      email:         "contato@ds1producoes.com.br",
+      instagram:     "tingosanti",
+      youtube:       "@tingosanti",
+      spotifyArtistId: "1XfDGJ4C2wEsrAbWbVaZ4b",
+      spotify:       "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
+      formspree:     "",
+      cnpj:          "",
+      endereco:      "",
+      companyLabel:  "DS1 Produções | Uriel Marques",
+      sectionTitle:  "Fale com a <em>DS1 Produções</em>",
+      sectionIntro:  "Solicitações comerciais, propostas e agenda via DS1 Produções | Uriel Marques.",
+      formEnabled:   false
+    }
   },
+
+  contato: null,
 
   analytics: {
     googleAnalyticsId: "G-9T397607Z9"
