@@ -481,6 +481,10 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <div class="ey"><div class="eyl"></div><span class="eys" id="socEyebrow"></span></div>
     <h2 class="soc-title" id="cmpTitulo"></h2>
     <p class="soc-intro" id="cmpSubtitulo"></p>
+    <div class="soc-highlight">
+      <div class="soc-highlight-title" id="cmpHighlightTitle"></div>
+      <div class="soc-highlight-desc" id="cmpHighlightDesc"></div>
+    </div>
 
     <div class="soc-grid">
       <article class="soc-card spotify">
@@ -730,8 +734,10 @@ function init() {
   document.getElementById('socEyebrow').textContent = SITE.compositor.eyebrow;
   document.getElementById('cmpTitulo').innerHTML = SITE.compositor.titulo;
   document.getElementById('cmpSubtitulo').textContent = SITE.compositor.subtitulo;
-  document.getElementById('cmpHighlightTitle').textContent = SITE.compositor.destaque.titulo;
-  document.getElementById('cmpHighlightDesc').textContent = SITE.compositor.destaque.desc;
+  var cmpHighlightTitle = document.getElementById('cmpHighlightTitle');
+  var cmpHighlightDesc = document.getElementById('cmpHighlightDesc');
+  if (cmpHighlightTitle && SITE.compositor.destaque) cmpHighlightTitle.textContent = SITE.compositor.destaque.titulo || '';
+  if (cmpHighlightDesc && SITE.compositor.destaque) cmpHighlightDesc.textContent = SITE.compositor.destaque.desc || '';
   document.getElementById('socSpotTitle').textContent = SITE.compositor.spotify.titulo;
   document.getElementById('socSpotLabel').textContent = SITE.compositor.spotify.label;
   document.getElementById('socIgHandle').textContent = SITE.compositor.instagram.handle;
