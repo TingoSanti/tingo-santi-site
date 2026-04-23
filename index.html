@@ -173,8 +173,8 @@ button{cursor:pointer;font-family:var(--sans)}
 .soc-spotify-wrap iframe{width:100%;height:430px;border:none;display:block}
 .soc-ig-head{margin-bottom:1.5rem}
 .soc-ig-handle{font-family:var(--serif);font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);word-break:break-word}
-.soc-ig-grid{border-radius:24px;overflow:hidden;background:#fff;border:1px solid rgba(11,52,128,.08);padding:0}
-.soc-ig-grid behold-widget{display:block;width:100%;min-height:560px}
+.soc-ig-grid{border-radius:24px;overflow:hidden;background:#fff;border:1px solid rgba(11,52,128,.08);padding:0;aspect-ratio:1/1}
+.soc-ig-grid behold-widget{display:block;width:100%;height:100%;min-height:0}
 .soc-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
 .soc-btn{display:inline-flex;align-items:center;justify-content:center;padding:1rem 1.8rem;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:all .2s}
 .soc-btn.spotify{background:var(--blue);color:#fff;border:1px solid var(--blue)}
@@ -359,7 +359,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .smil{grid-template-columns:1fr}
     .soc-card{padding:1.6rem}
   .soc-spotify-wrap iframe{height:380px}
-  .soc-ig-grid behold-widget{min-height:480px}
+  .soc-ig-grid behold-widget{min-height:0}
   .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 12}
   .presq{padding:2.5rem 1.8rem 2rem 1.8rem}
   .presq-mark{top:.5rem;left:1rem;font-size:5rem}
@@ -488,6 +488,9 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
         <div class="soc-spotify-wrap">
           <iframe id="cmpSpot" src="" title="Spotify Tingo" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
+        <div class="soc-actions">
+          <a href="#" id="cmpBtnSpot" class="soc-btn spotify" target="_blank" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify</a>
+        </div>
       </article>
 
       <article class="soc-card instagram">
@@ -499,7 +502,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
           <behold-widget id="socIgFeed"></behold-widget>
         </div>
         <div class="soc-actions">
-          <a href="#" id="cmpBtnSpot" class="soc-btn spotify" target="_blank" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify</a>
           <a href="#" id="cmpBtnIg" class="soc-btn instagram" target="_blank" onclick="trackCTA('cmp_instagram')">Seguir no Instagram ↗</a>
         </div>
       </article>
