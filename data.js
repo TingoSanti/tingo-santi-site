@@ -23,24 +23,15 @@ const SITE = {
   },
 
   hero: {
-    tituloHtml:   "TINGO<br>SANTI",
-    subtitulo:    "Cantor e intérprete. Um tributo a Roberto Carlos com voz natural, produção profissional e repertório pensado para emocionar plateias públicas e privadas.",
-    microInfos:   [],
-    ctaPrimario:  "Solicitar Proposta",
-    ctaSecundario:"Ouvir no Spotify",
-    youtubeId:    "M7ehpNbIbUY",
-    youtubeTitulo:"Tributo ao Rei · Show ao Vivo",
-    youtubeAno:   "2026",
-    tagline:      "A obra de Roberto Carlos ao vivo, com voz natural, orquestra e emoção verdadeira.",
-    foto:         "img/hero_principal.jpg",
-    videoCapa:    "img/hero_video_cover.jpg"
+    youtubeId:  "M7ehpNbIbUY",
+    tagline:    "A obra de Roberto Carlos ao vivo, com voz natural, orquestra e emoção verdadeira.",
+    foto:       "img/hero_principal.jpg"
   },
 
   /* ── VÍDEOS — APENAS 1 (SIMPLIFICADO) ─────────────────── */
   videoShow: {
     titulo:    "Tributo ao Rei · Show ao Vivo",
-    youtubeId: "M7ehpNbIbUY",
-    capa:      "img/hero_video_cover.jpg"
+    youtubeId: "M7ehpNbIbUY"
   },
 
   /* ── GALERIA — mosaico com orientação corrigida ────────
