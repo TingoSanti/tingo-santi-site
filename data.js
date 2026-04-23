@@ -49,7 +49,8 @@ const SITE = {
   hero: {
     youtubeId:  "M7ehpNbIbUY",
     tagline:    "A obra de Roberto Carlos ao vivo, com voz natural, orquestra e emoção verdadeira.",
-    foto:       "img/hero_principal.jpg"
+    foto:       "img/hero_principal.jpg",
+    videoCover: "img/hero_video_cover_v2.jpg"
   },
 
   /* ── VÍDEOS — APENAS 1 (SIMPLIFICADO) ─────────────────── */

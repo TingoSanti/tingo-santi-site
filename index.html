@@ -737,8 +737,11 @@ function init() {
   const heroBg = document.getElementById('heroBg');
   const heroIframe = document.getElementById('hyt');
   const heroCover = document.querySelector('.hcover');
-  if (heroCover && SITE.hero && SITE.hero.foto) {
-    heroCover.style.backgroundImage = "url('" + SITE.hero.foto + "')";
+  if (heroCover && SITE.hero) {
+    var heroCardCover = SITE.hero.videoCover || SITE.hero.foto;
+    if (heroCardCover) {
+      heroCover.style.backgroundImage = "url('" + heroCardCover + "')";
+    }
   }
   if (SITE.hero && SITE.hero.youtubeId) {
     heroBg.style.display = 'none';
