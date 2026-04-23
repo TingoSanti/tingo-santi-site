@@ -2,947 +2,979 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9T397607Z9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9T397607Z9');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tingo Santi · Tributo ao Rei</title>
-<meta name="description" content="Tingo Santi canta Roberto Carlos com produção de alto nível, prova social consistente e estrutura profissional para contratação pública, cultural e corporativa.">
+<meta name="description" content="Tingo Santi canta Roberto Carlos – Espetáculo de tributo com orquestra ao vivo, fidelidade interpretativa e produção profissional. Contratação por prefeituras, fundações, Sescs e eventos corporativos.">
+<meta property="og:title" content="Tingo Santi – Tributo ao Rei · Roberto Carlos">
+<meta property="og:description" content="A obra de Roberto Carlos ao vivo — com voz natural, orquestra e emoção verdadeira.">
+<meta property="og:image" content="img/hero_principal.jpg">
+<title>Tingo Santi – Tributo ao Rei · Roberto Carlos</title>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    if (typeof SITE === 'undefined' || !SITE.analytics.googleAnalyticsId || SITE.analytics.googleAnalyticsId.includes('INSIRA')) return;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + SITE.analytics.googleAnalyticsId;
+    s.async = true;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', SITE.analytics.googleAnalyticsId);
+    window._gtag = gtag;
+  });
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f4f7fb;
-  --surface:#ffffff;
-  --surface-2:#edf3fa;
-  --surface-3:#e5edf8;
-  --ink:#142843;
-  --muted:#61728d;
-  --line:rgba(20,40,67,.09);
-  --line-strong:rgba(20,40,67,.16);
-  --navy:#17365e;
-  --blue:#2a5d94;
-  --blue-2:#4b79af;
-  --blue-3:#dbe8f8;
-  --accent:#8fb0d7;
-  --max:1200px;
-  --radius:20px;
-  --radius-sm:12px;
-  --shadow:0 18px 42px rgba(15,39,72,.08);
-  --serif:"Cormorant Garamond", Georgia, serif;
-  --sans:"Inter", system-ui, sans-serif;
-  --nav-h:76px;
+  --w:#ffffff; --off:#f5f7fc; --off2:#eaeff8;
+  --navy:#02091c; --blue:#0b3480; --bm:#174fba; --bl:#2e6dd4; --bx:#9bbde8;
+  --gold:#c9a55a;
+  --bfaint:rgba(11,52,128,.07); --bb:rgba(11,52,128,.14);
+  --t:#0c1830; --tm:#3a4a6b; --mu:#7a88a8;
+  --spotify:#1DB954;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+  --r:4px; --rl:12px; --nh:80px;
+  --max:1280px;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.58;letter-spacing:-.003em}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-button,input,textarea{font:inherit}
-.container{max-width:var(--max);margin:0 auto;padding:0 24px}
-.section{padding:58px 0}
-.section.compact{padding:38px 0}
-.section.soft{background:var(--surface)}
-.section.tinted{background:linear-gradient(180deg,var(--surface) 0%, var(--surface-2) 100%)}
-.section.dark{background:linear-gradient(180deg,#112a4a 0%, #0c2038 100%);color:#fff}
-.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:20px}
-.kicker{font-size:10px;letter-spacing:.20em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:8px}
-.dark .kicker{color:#c8d7ee}
-h1,h2,h3{margin:0;line-height:1.05}
-.title-xl{font-family:var(--serif);font-size:clamp(40px,6vw,66px);font-weight:500;letter-spacing:.008em;line-height:.96}
-.title-lg{font-family:var(--serif);font-size:clamp(29px,3.3vw,43px);font-weight:500;letter-spacing:.003em;line-height:1.02}
-.title-md{font-family:var(--serif);font-size:clamp(24px,2.35vw,33px);font-weight:500;letter-spacing:.002em;line-height:1.06}
-.lead{font-size:16px;color:var(--muted);max-width:660px;line-height:1.68}
-.dark .lead{color:rgba(255,255,255,.78)}
-.muted{color:var(--muted)}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);font-size:12px;font-weight:600;color:var(--blue)}
-.btn-row{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:999px;border:1px solid transparent;font-weight:600;font-size:13px;letter-spacing:.01em;transition:.22s ease}
-.btn.primary{background:var(--blue);color:#fff}
-.btn.primary:hover{background:#17406f;transform:translateY(-1px)}
-.btn.secondary{background:rgba(255,255,255,.75);border-color:var(--line);color:var(--ink);backdrop-filter:blur(10px)}
-.btn.secondary:hover{border-color:var(--line-strong);background:#fff}
-.dark .btn.secondary{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:17px}
+body{font-family:var(--sans);background:var(--w);color:var(--t);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--sans)}
 
-.nav{
-  position:sticky;top:0;z-index:1000;height:var(--nav-h);
-  backdrop-filter:blur(14px);
-  background:rgba(244,247,251,.86);
-  border-bottom:1px solid var(--line);
-}
-.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:14px;min-width:0}
-.brand-mark{width:34px;height:34px;border-radius:50%;border:1px solid rgba(29,78,137,.25);display:grid;place-items:center;color:var(--blue);background:#fff;box-shadow:var(--shadow)}
-.brand-copy{min-width:0}
-.brand-name{font-family:var(--serif);font-size:28px;line-height:1}
-.brand-sub{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:2px}
-.nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-.nav-links a{font-size:13px;color:var(--muted);font-weight:600}
-.nav-links a:hover{color:var(--blue)}
-.nav-cta{display:inline-flex;align-items:center;padding:10px 16px;border-radius:999px;background:var(--blue);color:#fff;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.menu-btn{display:none;border:0;background:none;font-size:28px;color:var(--ink)}
-.mobile-panel{display:none;padding:12px 0 18px;border-top:1px solid var(--line)}
-.mobile-panel a{display:block;padding:11px 0;color:var(--muted);font-weight:600}
-.mobile-panel.open{display:block}
+/* ── NAV ── */
+#nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;z-index:200;transition:all .4s;background:transparent}
+#nav.s{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bb);box-shadow:0 2px 24px rgba(11,52,128,.06)}
+.nl{display:flex;gap:1.7rem;list-style:none}
+.nl a{font-size:.74rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .2s}
+#nav.s .nl a{color:var(--tm)}
+.nl a:hover{color:var(--bl) !important}
+.nc{padding:.6rem 1.5rem;border:1px solid rgba(255,255,255,.45);border-radius:var(--r);font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:transparent;transition:all .2s}
+#nav.s .nc{border-color:var(--bb);color:var(--blue)}
+.nc:hover{background:var(--blue);border-color:var(--blue);color:#fff !important}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:#fff;transition:.3s}
+#nav.s .ham span{background:var(--t)}
+#mm{display:none;position:fixed;top:var(--nh);left:0;right:0;background:var(--w);border-bottom:1px solid var(--off2);padding:1.5rem 5vw 2rem;z-index:199;flex-direction:column;gap:1rem}
+#mm a{font-size:.9rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);padding:.5rem 0;border-bottom:1px solid var(--off2)}
 
+/* ── HERO ── */
+#hero{position:relative;width:100vw;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--navy)}
+.hbg{position:absolute;inset:0;z-index:0}
+.hfb{position:absolute;inset:0;background-size:cover;background-position:center 25%;z-index:0}
+.hbg iframe{position:absolute;inset:-10%;width:120%;height:120%;border:none;pointer-events:none;z-index:1}
+.hov{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(2,9,28,.52) 0%,rgba(2,9,28,.22) 45%,rgba(2,9,28,.82) 100%)}
+.hc{position:relative;z-index:3;text-align:center;padding:0 5vw;max-width:940px;animation:fu 1.3s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:translateY(0)}}
+.htag{font-family:var(--serif);font-size:clamp(1.2rem,2.5vw,1.75rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.86);margin-top:2.2rem;margin-bottom:2.6rem;line-height:1.42}
+.ha{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.bpw{display:inline-block;padding:.95rem 2.2rem;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;transition:all .2s;cursor:pointer}
+.bpw:hover{background:var(--bm);transform:translateY(-2px)}
+.bow{display:inline-block;padding:.95rem 2.2rem;border:1px solid rgba(255,255,255,.4);color:#fff;background:transparent;border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;transition:all .2s}
+.bow:hover{border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.09)}
+.hscr{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:bob 2.5s ease-in-out infinite}
+.hscr span{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.42)}
+.hscrl{width:1px;height:42px;background:linear-gradient(to bottom,rgba(255,255,255,.36),transparent)}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+#soundBtn{position:absolute;bottom:2.5rem;right:2.5rem;z-index:5;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);color:#fff;font-size:1.2rem;cursor:pointer;transition:all .25s;display:none;align-items:center;justify-content:center}
+#soundBtn:hover{background:var(--blue);border-color:var(--blue);transform:scale(1.08)}
+#soundBtn.on{background:var(--blue);border-color:var(--blue)}
 
-.hero{
-  position:relative;overflow:hidden;min-height:calc(100svh - var(--nav-h));
-  display:flex;align-items:center;background:linear-gradient(180deg,#edf2fa 0%,#e6edf9 100%);
-}
-.hero-media,.hero-overlay,.hero-video{position:absolute;inset:0}
-.hero-media{display:none}
-.hero-video{
-  width:100%;height:100%;border:0;pointer-events:none;
-  transform:scale(1.12);opacity:.34;filter:saturate(1.02) contrast(.98);
-}
-.hero-overlay{
-  background:
-    linear-gradient(180deg, rgba(232,238,249,.82) 0%, rgba(232,238,249,.78) 36%, rgba(232,238,249,.76) 100%),
-    radial-gradient(circle at top right, rgba(59,110,189,.12), transparent 30%);
-}
-.hero-body{position:relative;z-index:2;padding:72px 0 52px;color:var(--ink)}
-.hero-grid{
-  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:44px;
-  align-items:center;min-height:calc(100svh - var(--nav-h) - 124px)
-}
-.hero-copy{max-width:520px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left}
-.hero-logo{display:none}
-.hero-title{
-  font-family:'Playfair Display', var(--serif);font-weight:700;
-  font-size:clamp(58px,8vw,86px);line-height:.92;letter-spacing:-.04em;
-  color:#2b63a8;text-transform:uppercase;margin:0 0 18px
-}
-.hero-copy p{color:#243754;font-size:18px;max-width:540px;margin:0 0 18px;line-height:1.7}
-.hero-meta{display:flex;flex-wrap:wrap;gap:22px;list-style:none;padding:0;margin:8px 0 26px}
-.hero-meta li{
-  position:relative;padding-left:14px;font-size:12px;letter-spacing:.28em;
-  text-transform:uppercase;color:#6d7d99
-}
-.hero-meta li::before{content:"•";position:absolute;left:0;top:0;color:#3f67a8}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero-actions .bp,.hero-actions .bout{
-  border-radius:999px;padding:16px 28px;font-size:12px;letter-spacing:.28em
-}
-.hero-actions .bp{background:#121418;color:#fff}
-.hero-actions .bout{background:transparent;color:#243754;border:1px solid rgba(36,55,84,.16)}
-.hero-video-col{width:100%;max-width:760px;justify-self:end}
-.hero-player{
-  position:relative;aspect-ratio:16/10;border-radius:24px;overflow:hidden;background:#0b1320;
-  box-shadow:0 26px 56px rgba(17,34,66,.16);cursor:pointer
-}
-.hero-player::after{content:"";position:absolute;inset:0;border-radius:24px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);pointer-events:none}
-.hero-player .video-thumb{position:absolute;inset:0;background-position:center;background-size:cover;transition:transform .24s ease}
-.hero-player .video-overlay{
-  position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,21,40,.08), rgba(7,21,40,.44));
-  display:grid;place-items:center
-}
-.hero-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.hero-player.is-active .video-overlay{opacity:0;pointer-events:none}
-.hero-player.is-active .video-thumb{opacity:0}
-.hero-player:hover .video-thumb{transform:scale(1.02)}
-.hero-player .play-btn{
-  width:86px;height:86px;border-radius:50%;display:grid;place-items:center;
-  background:rgba(248,242,230,.95);border:0;color:#111;font-size:30px
-}
-.hero-caption{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 4px 0;color:#627391}
-.hero-caption span{font-size:12px;letter-spacing:.28em;text-transform:uppercase}
-.sound-btn,.hero-sound-row{display:none !important}
-  50%{transform:scale(1.05);box-shadow:0 0 0 22px rgba(111,164,234,0),0 12px 30px rgba(11,33,66,.34)}
-  100%{transform:scale(1);box-shadow:0 0 0 0 rgba(111,164,234,0),0 12px 30px rgba(11,33,66,.34)}
-}
+/* ── SHARED ── */
+.sec{padding:clamp(5rem,9vw,9rem) 5vw}
+.sec-off{background:var(--off)}
+.sec-navy{background:var(--navy);color:#fff}
+.con{max-width:var(--max);margin:0 auto}
+.ey{display:flex;align-items:center;gap:.9rem;margin-bottom:1.1rem}
+.eyl{width:36px;height:1px;background:var(--bl);flex-shrink:0}
+.eys{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.sec-navy .eys{color:var(--bx)}
+.sec-navy .eyl{background:var(--bx)}
+.sh{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:400;line-height:1.06;color:var(--navy);margin-bottom:1.1rem}
+.sh em{font-style:italic;color:var(--blue)}
+.sec-navy .sh{color:#fff}
+.sec-navy .sh em{color:var(--bx)}
+.sl{font-size:1.05rem;font-weight:300;color:var(--tm);max-width:640px;line-height:1.82;margin-bottom:3rem}
+.sec-navy .sl{color:rgba(255,255,255,.72)}
+.bp{display:inline-block;padding:.9rem 2.2rem;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:all .2s;cursor:pointer}
+.bp:hover{background:var(--bm);transform:translateY(-2px)}
+.bout{display:inline-block;padding:.9rem 2.2rem;border:1px solid var(--bb);color:var(--blue);background:transparent;border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;transition:all .2s;cursor:pointer}
+.bout:hover{background:var(--bfaint);border-color:var(--blue)}
 
-.show-grid,.composer-grid,.about-grid,.contact-grid,.contract-grid{display:grid;gap:22px}
-.show-grid{grid-template-columns:1.02fr .98fr;align-items:center}
-.media-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:13px;box-shadow:var(--shadow)}
-.media-frame{position:relative;overflow:hidden;border-radius:18px;background:#d9e5f5}
-.media-frame img{width:100%;height:100%;object-fit:cover}
-.media-frame.main{aspect-ratio:4/3}
-.media-accent{position:absolute;right:18px;bottom:18px;width:34%;max-width:180px;border-radius:16px;overflow:hidden;border:4px solid rgba(255,255,255,.9);box-shadow:0 10px 30px rgba(7,21,40,.18)}
-.feature-list{display:grid;gap:12px}
-.feature{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:15px 15px 13px}
-.feature h3{font-size:16px;margin-bottom:4px}
-.feature p{margin:0;color:var(--muted);font-size:14px;line-height:1.58}
+/* ── SHOW ── */
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:center}
+.sph{position:relative;aspect-ratio:3/2;border-radius:var(--rl);background-size:cover;background-position:left center;box-shadow:0 28px 64px rgba(11,52,128,.13);overflow:hidden}
+.spa{position:absolute;bottom:-2.5rem;right:-2.5rem;width:42%;aspect-ratio:3/4;border-radius:var(--rl);background-size:cover;background-position:center top;border:4px solid var(--w);box-shadow:0 16px 36px rgba(11,52,128,.15)}
+.sf{display:flex;flex-direction:column;gap:1.8rem;margin-top:2rem}
+.sfi{display:flex;gap:1.3rem;align-items:flex-start;padding-bottom:1.8rem;border-bottom:1px solid var(--off2)}
+.sfi:last-child{border-bottom:none}
+.sfd{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:9px}
+.sft{font-size:.96rem;font-weight:600;margin-bottom:.35rem;color:var(--navy)}
+.sfd2{font-size:.88rem;font-weight:300;color:var(--tm);line-height:1.68}
 
-.video-shell{
-  background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:12px;box-shadow:var(--shadow)
+/* ── COMPOSITOR ── */
+#compositor{background:linear-gradient(160deg,#eef3fb 0%,var(--off) 50%,#e8eef8 100%);position:relative;overflow:hidden}
+#compositor::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,var(--blue),var(--bl),transparent)}
+.cmpg{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:1rem}
+.cmpv{aspect-ratio:9/16;max-width:360px;margin:0 auto;background:#000;border-radius:var(--rl);overflow:hidden;box-shadow:0 28px 64px rgba(11,52,128,.18);position:relative}
+.cmpv iframe{width:100%;height:100%;border:none;display:block}
+.cmpr{display:flex;flex-direction:column;gap:1.8rem}
+.cmpdest{padding:1.5rem 1.7rem;border-left:3px solid var(--spotify);background:rgba(29,185,84,.07);border-radius:0 var(--r) var(--r) 0}
+.cmpdestl{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#15803d;margin-bottom:.5rem}
+.cmpdestt{font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--navy);margin-bottom:.5rem;line-height:1.2}
+.cmpdestd{font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.65}
+.cmpspot{border-radius:var(--rl);overflow:hidden;box-shadow:0 20px 48px rgba(11,52,128,.12)}
+.cmpspot iframe{width:100%;height:352px;border:none;display:block}
+.cmpnums{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--bb)}
+.cmpnumi{text-align:center}
+.cmpnumn{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.1rem);font-weight:500;color:var(--blue);line-height:1;margin-bottom:.35rem}
+.cmpnuml{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);line-height:1.4}
+.cmpcta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.cmpbtn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:all .2s}
+.cmpbtn-spot{background:var(--spotify);color:#fff}
+.cmpbtn-spot:hover{background:#1ed760;transform:translateY(-2px)}
+.cmpbtn-ig{border:1px solid var(--bb);color:var(--blue)}
+.cmpbtn-ig:hover{border-color:var(--blue);background:rgba(11,52,128,.06)}
+
+/* ── VÍDEO — SIMPLIFICADO (1 video só) ── */
+.vf{position:relative;aspect-ratio:16/9;background:var(--navy);border-radius:var(--rl);overflow:hidden;cursor:pointer;max-width:1100px;margin:0 auto;box-shadow:0 30px 70px rgba(11,52,128,.14)}
+.vft{position:absolute;inset:0;background-image:url('https://img.youtube.com/vi/M7ehpNbIbUY/maxresdefault.jpg');background-size:cover;background-position:center;transition:transform .4s}
+.vf:hover .vft{transform:scale(1.03)}
+.vfo{position:absolute;inset:0;background:rgba(2,9,28,.38);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem}
+.vpb{width:84px;height:84px;border-radius:50%;border:2px solid rgba(255,255,255,.6);background:rgba(11,52,128,.36);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.9rem;transition:all .2s}
+.vf:hover .vpb{background:var(--blue);border-color:#fff}
+.vft2{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:#fff;text-align:center;padding:0 2rem}
+.vf iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+
+/* ── GALERIA — Mosaico corrigido ── */
+.gm{columns:3;column-gap:10px;margin-top:2rem}
+.gi{break-inside:avoid;margin-bottom:10px;border-radius:var(--r);overflow:hidden;display:block}
+.gi img{width:100%;display:block;border-radius:var(--r);transition:transform .3s,box-shadow .3s}
+.gi img:hover{transform:scale(1.02);box-shadow:0 14px 36px rgba(11,52,128,.18)}
+
+/* ── NÚMEROS ── */
+#numeros{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+#numeros::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--bl),transparent)}
+#numeros::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--bl),transparent)}
+.numh{text-align:center;margin-bottom:4rem;max-width:720px;margin-left:auto;margin-right:auto}
+.numht{font-family:var(--serif);font-size:clamp(2.2rem,4.4vw,3.4rem);font-weight:400;line-height:1.1;color:#fff;margin-bottom:1.3rem}
+.numht em{font-style:italic;color:var(--bx)}
+.numhs{font-size:1rem;font-weight:300;color:rgba(255,255,255,.7);line-height:1.78}
+.numg{display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;max-width:1100px;margin:0 auto 3rem}
+.numc{padding:2rem 1.8rem;border-radius:var(--rl);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);transition:all .3s}
+.numc:hover{border-color:var(--bl);background:rgba(46,109,212,.08);transform:translateY(-3px)}
+.numc.hero{grid-column:span 12;text-align:center;padding:3rem 2rem;background:linear-gradient(135deg,rgba(46,109,212,.12) 0%,rgba(11,52,128,.05) 100%);border-color:rgba(46,109,212,.35)}
+.numc.hero .numn{font-size:clamp(4.5rem,10vw,7rem);color:#fff}
+.numc.hero .numl{font-size:1rem;letter-spacing:.16em;margin-top:.5rem;color:var(--bx)}
+.numc.hero .numd{max-width:540px;margin:1.3rem auto 0;font-size:.96rem;line-height:1.7}
+.numc.m{grid-column:span 4}
+.numc.s{grid-column:span 6}
+.numn{font-family:var(--serif);font-size:clamp(2.8rem,5vw,3.8rem);font-weight:400;color:#fff;line-height:1;margin-bottom:.55rem;letter-spacing:-.01em}
+.numl{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bx);margin-bottom:.8rem;line-height:1.4}
+.numd{font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65}
+.numrod{text-align:center;font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.08);max-width:600px;margin:0 auto}
+
+/* ── NOTORIEDADE / IMPRENSA ── */
+.vlogos{display:flex;flex-wrap:wrap;gap:0;align-items:center;justify-content:space-between;padding:1.5rem 0;margin-bottom:3.5rem;border-top:1px solid var(--bb);border-bottom:1px solid var(--bb)}
+.vlogo{flex:1;min-width:130px;text-align:center;padding:.6rem 1rem;font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--navy);letter-spacing:.02em;border-right:1px solid var(--bb);transition:opacity .2s}
+.vlogo:last-child{border-right:none}
+.vlogo:hover{color:var(--blue)}
+.vlogo-sub{display:block;font-family:var(--sans);font-size:.62rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);margin-top:.2rem}
+
+.pgrid2{display:grid;grid-template-columns:repeat(12,1fr);gap:1.6rem;margin-bottom:4rem}
+.pcard{position:relative;border-radius:var(--rl);overflow:hidden;background:var(--navy);cursor:pointer;transition:all .3s;border:1px solid transparent;text-decoration:none;display:block}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 24px 56px rgba(11,52,128,.28);border-color:var(--bl)}
+.pcard-img{aspect-ratio:4/3;background-size:cover;position:relative}
+.pcard-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(2,9,28,.05) 0%,rgba(2,9,28,.35) 50%,rgba(2,9,28,.97) 100%)}
+.pcard-body{position:absolute;bottom:0;left:0;right:0;padding:1.6rem 1.4rem;color:#fff;z-index:2}
+.pcard-vc{display:inline-block;padding:.3rem .75rem;background:var(--blue);border-radius:var(--r);font-size:.63rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.pcard-vc.featured{background:var(--gold)}
+.pcard-mh{font-family:var(--serif);font-size:1.15rem;font-weight:500;line-height:1.25;color:#fff;margin-bottom:.5rem}
+.pcard-dt{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.pcard-link{position:absolute;top:1rem;right:1rem;z-index:3;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem}
+.pcard.sz-l{grid-column:span 12}
+.pcard.sz-l .pcard-img{aspect-ratio:21/9}
+.pcard.sz-l .pcard-mh{font-size:2rem;line-height:1.15}
+.pcard.sz-l .pcard-ov{background:linear-gradient(to bottom,rgba(2,9,28,0) 0%,rgba(2,9,28,0) 45%,rgba(2,9,28,.55) 75%,rgba(2,9,28,.92) 100%)}
+.pcard.sz-m{grid-column:span 6}
+.pcard.sz-m .pcard-img{aspect-ratio:4/3}
+.pcard.sz-m .pcard-mh{font-size:1.3rem}
+.pcard.sz-s{grid-column:span 4}
+.pcard.sz-s .pcard-img{aspect-ratio:4/3;background-size:cover}
+.pcard.sz-s .pcard-body{position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1.2rem;color:#fff;z-index:2}
+.pcard.sz-s .pcard-vc{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:#fff}
+.pcard.sz-s .pcard-mh{font-size:.95rem;line-height:1.3}
+.pcard.sz-s .pcard-ov{display:block}
+.pblocks{display:block}
+.pblock{margin-bottom:5rem}
+.pblock-h{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--bb)}
+.pblock-official .pblock-h{color:var(--gold);border-bottom-color:rgba(201,165,90,.3)}
+.pblock-official .pblock-h::before{content:"★ ";margin-right:.4rem}
+.pblock-official{background:linear-gradient(135deg,#fdf8ef 0%,#fffdf7 100%);border:1px solid rgba(201,165,90,.25);border-radius:var(--rl);padding:2.5rem;margin-bottom:5rem}
+.pcard-official{border-left:3px solid var(--gold) !important}
+.pcard-official .pcard-vc{background:var(--gold) !important;color:#fff}
+.pcard-official .pcard-mh{font-size:1.4rem}
+.pcard-official .pcard-ov{background:linear-gradient(to bottom,rgba(2,9,28,0) 0%,rgba(2,9,28,0) 40%,rgba(2,9,28,.6) 75%,rgba(2,9,28,.95) 100%)}
+
+.presq{max-width:920px;margin:0 auto 4rem;padding:3rem 3rem 3rem 5rem;position:relative;background:var(--navy);border-radius:var(--rl);color:#fff;overflow:hidden}
+.presq-mark{position:absolute;top:1rem;left:2rem;font-family:var(--serif);font-size:7rem;line-height:1;color:var(--bl);font-style:italic}
+.presq-text{font-family:var(--serif);font-size:1.6rem;font-weight:400;font-style:italic;line-height:1.4;color:#fff;margin-bottom:1.2rem;position:relative;z-index:1}
+.presq-src{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bx);position:relative;z-index:1}
+
+.vinst{padding:3rem 0 5rem;border-top:1px solid var(--bb);text-align:center}
+.vinst-title{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mu);margin-bottom:2rem}
+.vinst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:1100px;margin:0 auto}
+.vinst-card{padding:1.6rem 1.3rem;background:var(--w);border:1px solid var(--off2);border-radius:var(--rl);transition:all .2s;text-align:left}
+.vinst-card:hover{border-color:var(--bl);box-shadow:0 10px 28px rgba(11,52,128,.1)}
+.vinst-ico{font-size:1.15rem;margin-bottom:.6rem;color:var(--blue);font-weight:700}
+.vinst-ttl{font-size:.9rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;line-height:1.3}
+.vinst-sub{font-size:.78rem;color:var(--tm);line-height:1.55}
+
+/* ── CONTRATANTES ── */
+.cblock{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.cdocs{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.cdocs li{display:flex;gap:.85rem;align-items:flex-start;font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.5}
+.cdocs li::before{content:'✓';color:var(--blue);font-weight:600;flex-shrink:0;margin-top:.05rem}
+.cprec{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.cpcard{padding:1.3rem 1.5rem;border:1px solid var(--off2);border-radius:var(--r);background:var(--w);border-left:3px solid var(--blue)}
+.cpcat{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem}
+.cpmun{font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.3rem}
+.cpev{font-size:.9rem;font-weight:300;color:var(--tm);line-height:1.5}
+
+/* ── SOBRE ── */
+.sgr{display:grid;grid-template-columns:1fr 1.3fr;gap:6rem;align-items:center}
+.sphoto{aspect-ratio:3/4;border-radius:var(--rl);background-size:cover;background-position:center top;box-shadow:0 24px 56px rgba(11,52,128,.12)}
+.squote{margin-top:2rem;padding:1.8rem;border-left:3px solid var(--blue);background:var(--off);border-radius:0 var(--r) var(--r) 0}
+.sqt{font-family:var(--serif);font-size:1.1rem;font-style:italic;font-weight:300;color:var(--navy);line-height:1.55;margin-bottom:.5rem}
+.sqa{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.smil{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
+.smilc{padding:1.3rem;border-left:3px solid var(--blue);background:var(--off);border-radius:0 var(--r) var(--r) 0}
+.smily{font-family:var(--serif);font-size:1.5rem;color:var(--blue);margin-bottom:.2rem}
+.smild{font-size:.83rem;color:var(--tm)}
+
+/* ── CTA BAND ── */
+.band{background:var(--off);border-top:1px solid var(--off2);border-bottom:1px solid var(--off2);padding:5rem 5vw;text-align:center}
+.bant{font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.1rem);font-weight:400;color:var(--navy);margin-bottom:1rem}
+.bans{font-size:1rem;font-weight:300;color:var(--tm);max-width:500px;margin:0 auto 2.5rem;line-height:1.8}
+.bana{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* ── CONTATO ── */
+.csp{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start}
+.cit{display:flex;gap:1.2rem;align-items:flex-start;margin-bottom:2rem}
+.cic{width:44px;height:44px;flex-shrink:0;border:1px solid var(--bb);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1rem;background:var(--off)}
+.cil{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:.3rem}
+.civ{font-size:.98rem;font-weight:400;color:var(--navy)}
+.whatsapp-btn{display:flex;align-items:center;gap:.85rem;padding:1rem 1.8rem;background:#25D366;color:#fff;border-radius:var(--r);font-size:.9rem;font-weight:600;letter-spacing:.06em;transition:all .2s;margin-top:.5rem;width:fit-content}
+.whatsapp-btn:hover{background:#1ebe5a;transform:translateY(-2px)}
+.whatsapp-icon{width:22px;height:22px;fill:#fff}
+.ff{margin-bottom:1.2rem}
+.fl{display:block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:.5rem}
+.fi,.fsl,.ft{width:100%;padding:.95rem 1.1rem;border:1px solid var(--off2);border-radius:var(--r);font-family:var(--sans);font-size:.95rem;color:var(--t);background:var(--w);outline:none;transition:border-color .2s}
+.fi:focus,.fsl:focus,.ft:focus{border-color:var(--blue)}
+.ft{resize:vertical;min-height:120px}
+.fmsg{margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid var(--bb);border-radius:var(--r);background:var(--bfaint);color:var(--blue);font-size:.9rem;display:none}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
+.fg{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3.5rem;max-width:var(--max);margin:0 auto 3rem}
+.ftag{font-size:.88rem;font-weight:300;color:rgba(255,255,255,.46);line-height:1.7;max-width:280px;margin-top:1rem}
+.fct{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bx);margin-bottom:1.4rem}
+.fl2{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.fl2 a{font-size:.88rem;font-weight:300;color:rgba(255,255,255,.5);transition:color .2s}
+.fl2 a:hover{color:#fff}
+.fb{max-width:var(--max);margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fleg{font-size:.8rem;color:rgba(255,255,255,.3)}
+.fso{display:flex;gap:.7rem}
+.sl2{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.82rem;transition:all .2s}
+.sl2:hover{border-color:var(--bx);color:#fff}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .sg,.sgr,.csp,.cblock,.cmpg{grid-template-columns:1fr;gap:3.5rem}
+  .fg{grid-template-columns:1fr 1fr}
+  .spa{display:none}
+  .gm{columns:2}
+  .pcard.sz-l,.pcard.sz-m{grid-column:span 6}
+  .pcard.sz-s{grid-column:span 6}
+  .vlogos{flex-direction:column;gap:0}
+  .vlogo{border-right:none;border-bottom:1px solid var(--bb);width:100%;padding:1rem}
+  .vlogo:last-child{border-bottom:none}
+  .numc.m{grid-column:span 6}
+  .numc.s{grid-column:span 6}
 }
-.video-player{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#081423;cursor:pointer}
-.video-thumb{position:absolute;inset:0;background-position:center;background-size:cover;transition:transform .24s ease}
-.video-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,21,40,.18), rgba(7,21,40,.60));display:grid;place-items:center;transition:opacity .22s ease}
-.video-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.video-player.is-active .video-overlay{opacity:0;pointer-events:none}
-.video-player.is-active .video-thumb{opacity:0}
-.video-shell:hover .video-thumb{transform:scale(1.02)}
-.play-btn{width:90px;height:90px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);color:#fff;font-size:28px;backdrop-filter:blur(10px)}
-.video-caption{padding:12px 8px 0;color:var(--muted);font-size:13px}
-
-.gallery-block{display:grid;gap:18px}
-.gallery-row{display:grid;gap:12px}
-.gallery-row.landscape{grid-template-columns:repeat(4,1fr)}
-.gallery-row.portrait{grid-template-columns:repeat(4,1fr)}
-.gallery-item{border-radius:18px;overflow:hidden;position:relative;box-shadow:var(--shadow);background:linear-gradient(180deg,#ffffff,#f8fbff);border:1px solid var(--line);display:block;padding:12px}
-.gallery-item::before{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.65)}
-.gallery-item.landscape-item{aspect-ratio:16/10}
-.gallery-item.portrait-item{aspect-ratio:4/5}
-.gallery-item img{width:100%;height:100%;display:block;transition:transform .22s ease;border-radius:12px;object-fit:cover;background:#dfe8f4}
-.gallery-item:hover img{transform:scale(1.02)}
-
-.instagram-wrap{background:linear-gradient(180deg,var(--surface) 0%, #f8fbff 100%);border:1px solid var(--line);border-radius:22px;padding:14px;box-shadow:var(--shadow)}
-.instagram-grid{display:grid;grid-template-columns:repeat(6, 1fr);gap:9px}
-.ig-item{aspect-ratio:1/1;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface-2)}
-.ig-item img{width:100%;height:100%;object-fit:cover;transition:transform .22s ease}
-.ig-item:hover img{transform:scale(1.04)}
-
-.composer-grid{grid-template-columns:minmax(0,300px) minmax(0,1fr);align-items:start;gap:18px}
-.composer-stack{display:grid;gap:14px}
-.embed-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:13px;box-shadow:var(--shadow)}
-.embed-card iframe{display:block;width:100%;border:0;border-radius:16px}
-.short-panel{min-height:468px;display:flex;align-items:center;justify-content:center}
-.short-frame{
-  display:block;aspect-ratio:9/16;width:min(100%,240px);margin:0 auto;
-  background:#081423;border-radius:18px;overflow:hidden;position:relative;
-  border:1px solid var(--line)
-}
-.short-frame img{width:100%;height:100%;object-fit:cover}
-.short-frame .short-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(180deg, rgba(7,21,40,.1), rgba(7,21,40,.5));
-  display:grid;place-items:center;color:#fff;font-size:38px
-}
-.composer-note{padding:18px;border-radius:18px;background:var(--surface-2);border:1px solid var(--line)}
-
-.numbers-grid{display:grid;grid-template-columns:1.3fr repeat(5,1fr);gap:11px}
-.number-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:17px}
-.number-card.featured{background:linear-gradient(180deg, rgba(137,168,214,.18), rgba(255,255,255,.06));}
-.number-card strong{display:block;font-family:var(--serif);font-size:clamp(34px,5vw,64px);line-height:1;font-weight:500;margin-bottom:8px}
-.number-card .label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c8d7ee;font-weight:700;margin-bottom:8px}
-.number-card p{margin:0;color:rgba(255,255,255,.76);font-size:14px}
-.dark-note{font-size:12px;color:rgba(255,255,255,.48);margin-top:14px}
-
-.pill-grid{display:flex;flex-wrap:wrap;gap:9px}
-.pill{padding:9px 13px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:11px;font-weight:600;color:var(--ink)}
-.editorial-grid{display:grid;grid-template-columns:1.16fr .92fr .92fr;gap:12px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
-.card-media{aspect-ratio:16/10;background:#dce7f6;background-size:cover;background-position:center}
-.card-body{padding:15px}
-.card-meta{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--blue);font-weight:700;margin-bottom:7px}
-.card h3{font-size:19px;line-height:1.16;margin-bottom:5px;letter-spacing:-.01em}
-.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.56}
-.press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.quote{
-  background:linear-gradient(180deg,var(--surface) 0%, #f6faff 100%);
-  border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)
-}
-.quote p{font-family:var(--serif);font-size:25px;line-height:1.08;margin:0 0 8px;letter-spacing:.003em}
-.validation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
-.validation{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:15px}
-.validation strong{display:block;font-size:15px;margin-bottom:5px}
-.validation span{font-size:13px;color:var(--muted);line-height:1.55}
-
-#imprensa .section-head{display:none}
-#imprensa .editorial-grid .card:first-child .card-media{aspect-ratio:16/9}
-#imprensa .editorial-grid .card:first-child .card-body{padding:17px}
-#imprensa .editorial-grid .card:first-child h3{font-size:22px}
-#imprensa .press-grid .card-media{aspect-ratio:4/3}
-#imprensa .press-grid .card h3,#imprensa .validation-grid .validation strong{font-size:16px}
-#imprensa .press-grid .card-body{padding:14px}
-#imprensa .validation{background:linear-gradient(180deg,var(--surface) 0%, #f8fbff 100%)}
-#instagram .section-head{margin-bottom:12px}
-#galeria .section-head,#videos .section-head{margin-bottom:14px}
-#compositor .section-head{margin-bottom:16px}
-#compositor .lead{max-width:620px}
-#instagram{padding-top:28px}
-#compositor{padding-top:44px}
-
-.about-grid{grid-template-columns:1fr 1fr;align-items:start;gap:24px}
-.about-photo{border-radius:24px;overflow:hidden;background:#dce7f6;border:1px solid var(--line);box-shadow:var(--shadow);height:100%}
-.about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 12%}
-.about-copy{display:grid;gap:14px}
-.timeline{display:grid;gap:10px}
-.timeline-item{display:grid;grid-template-columns:74px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
-.timeline-item:first-child{border-top:0;padding-top:0}
-.timeline-item strong{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
-
-.contract-grid{grid-template-columns:1fr 1fr;align-items:start;gap:24px}
-.doc-list,.prec-list{display:grid;gap:9px}
-.doc-item,.prec-item{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 15px}
-.doc-item{display:flex;gap:12px;align-items:flex-start}
-.doc-mark{width:22px;height:22px;border-radius:50%;background:var(--surface-2);color:var(--blue);display:grid;place-items:center;font-weight:800;flex:0 0 auto}
-.prec-item small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:7px}
-.contract-cta{background:linear-gradient(180deg,var(--surface-2), var(--surface));border:1px solid var(--line);border-radius:20px;padding:17px}
-
-.contact-grid{grid-template-columns:.92fr 1.08fr;align-items:start}
-.contact-card,.form-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
-.contact-stack{display:grid;gap:12px}
-.contact-item{display:flex;gap:14px}
-.contact-icon{width:42px;height:42px;border-radius:14px;background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;color:var(--blue);flex:0 0 auto;font-weight:700}
-.contact-item strong{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.field{display:grid;gap:8px;margin-bottom:12px}
-.field label{font-size:12px;letter-spacing:.10em;text-transform:uppercase;color:var(--muted);font-weight:700}
-.field input,.field textarea{
-  width:100%;padding:13px 15px;border-radius:15px;border:1px solid var(--line);background:var(--bg);color:var(--ink);outline:none
-}
-.field input:focus,.field textarea:focus{border-color:rgba(29,78,137,.45);background:#fff}
-.field textarea{min-height:148px;resize:vertical}
-.form-actions{display:flex;justify-content:flex-start}
-.wa-btn{background:#22c55e;color:#fff}
-.form-note{font-size:13px;color:var(--muted)}
-.hidden{display:none!important}
-
-footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);margin-top:8px}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:20px}
-.footer-title{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:12px}
-.footer-links{display:grid;gap:8px}
-.footer-links a{color:var(--muted);font-size:14px}
-.footer-links a:hover{color:var(--blue)}
-.footer-copy{font-size:14px;color:var(--muted)}
-.footer-bottom{padding-top:16px;margin-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
-
-@media (max-width: 1100px){
-  .hero-grid,.show-grid,.composer-grid,.about-grid,.contract-grid,.contact-grid{grid-template-columns:1fr}
-  .hero-copy{max-width:none}
-  .hero-video-col{max-width:820px;justify-self:stretch}
-  .numbers-grid{grid-template-columns:1fr 1fr 1fr}
-  .number-card.featured{grid-column:1 / -1}
-  .editorial-grid,.press-grid,.validation-grid,.footer-grid{grid-template-columns:1fr 1fr}
-  .instagram-grid{grid-template-columns:repeat(3,1fr)}
-  .gallery-row.landscape,.gallery-row.portrait{grid-template-columns:repeat(2,1fr)}
-  .gallery-item.landscape-item{aspect-ratio:16/10}
-  .gallery-item.portrait-item{aspect-ratio:4/5}
-  .gallery-item.large,.gallery-item.wide{grid-row:span 1;grid-column:span 1}
-}
-@media (max-width: 820px){
-  .nav-links,.nav-cta{display:none}
-  .menu-btn{display:block}
-  .section{padding:46px 0}
-  .section.compact{padding:32px 0}
-  .section-head{display:block;margin-bottom:18px}
-  .lead{font-size:15px;line-height:1.64}
-  .title-xl{font-size:42px}
-  .editorial-grid,.press-grid,.footer-grid,.numbers-grid{grid-template-columns:1fr}
-  .instagram-grid{grid-template-columns:repeat(3,1fr)}
-  .gallery-row.landscape,.gallery-row.portrait{grid-template-columns:1fr}
-  .gallery-item.landscape-item{aspect-ratio:16/10}
-  .gallery-item.portrait-item{aspect-ratio:4/5}
-  #instagram{padding-top:24px}
-  #compositor{padding-top:38px}
-}
-
-@media (max-width: 560px){
-  .container{padding:0 18px}
-  .hero-body{padding:34px 0 28px}
-  .hero-grid{min-height:auto;gap:20px}
-  .hero-title{font-size:clamp(50px,19vw,72px)}
-  .hero-copy p{font-size:15px;line-height:1.62}
-  .hero-meta{gap:16px 22px;margin:2px 0 20px}
-  .hero-meta li{font-size:11px;letter-spacing:.22em}
-  .hero-actions{width:100%;flex-direction:column}
-  .hero-actions .bp,.hero-actions .bout{width:100%;justify-content:center;text-align:center;padding:15px 22px}
-  .hero-player{aspect-ratio:16/10;border-radius:20px}
-  .hero-player::after{border-radius:20px}
-  .title-lg{font-size:30px}
-  .title-md{font-size:26px}
-  .hero-copy p{font-size:15px;line-height:1.6}
-  .instagram-grid{gap:7px}
-  .gallery-row{gap:8px}
-  .contact-card,.form-card,.instagram-wrap,.card,.quote,.contract-cta,.media-card,.embed-card{border-radius:18px}
-  .btn-row{gap:9px}
-  .hero-panel{padding:15px}
-  .hero-stat strong{font-size:26px}
-  .hero-stat span{font-size:10px}
-  .quote p{font-size:22px}
+@media(max-width:768px){
+  html{font-size:16px}
+  .nl,.nc{display:none}
+  .ham{display:flex}
+  #mm.o{display:flex}
+  .gm{columns:1}
+  .gi,.gi.wide{display:block}
+  .gi.tall{display:block}
+  .fg{grid-template-columns:1fr}
+  .smil{grid-template-columns:1fr}
+  .cmpnums{grid-template-columns:repeat(2,1fr)}
+  .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 12}
+  .presq{padding:2.5rem 1.8rem 2rem 1.8rem}
+  .presq-mark{top:.5rem;left:1rem;font-size:5rem}
+  .presq-text{font-size:1.2rem}
+  .numc.m,.numc.s{grid-column:span 12}
+  #soundBtn{bottom:1.2rem;right:1.2rem;width:46px;height:46px}
 }
 </style>
 </head>
 <body>
+
 <script src="data.js"></script>
 
-<nav class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="#hero" aria-label="Tingo Santi">
-      <div class="brand-mark">✦</div>
-      <div class="brand-copy">
-        <div class="brand-name">Tingo Santi</div>
-        <div class="brand-sub">Tributo ao Rei</div>
-      </div>
-    </a>
-    <div class="nav-links">
-      <a href="#show">Espetáculo</a>
-      <a href="#videos">Vídeo</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#instagram">Instagram</a>
-      <a href="#compositor">Compositor</a>
-      <a href="#numeros">Números</a>
-      <a href="#notoriedade">Notoriedade</a>
-      <a href="#imprensa">Imprensa</a>
-      <a href="#sobre">Artista</a>
-      <a href="#cont">Contratantes</a>
-    </div>
-    <a class="nav-cta" href="#contact">Contato</a>
-    <button id="menuBtn" class="menu-btn" aria-label="Abrir menu">☰</button>
-  </div>
-  <div class="container">
-    <div id="mobilePanel" class="mobile-panel">
-      <a href="#show">Espetáculo</a>
-      <a href="#videos">Vídeo do Show</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#instagram">Instagram</a>
-      <a href="#compositor">O Compositor</a>
-      <a href="#numeros">O alcance que justifica o cachê</a>
-      <a href="#notoriedade">Notoriedade</a>
-      <a href="#imprensa">Editorial e Imprensa</a>
-      <a href="#sobre">Sobre o Artista</a>
-      <a href="#cont">Para Contratantes</a>
-      <a href="#contact">Contato</a>
-    </div>
-  </div>
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" id="navLogo">
+    <svg id="logoL" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(250,40)">
+        <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="rgba(255,255,255,.88)" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="0" cy="0" r="3" fill="rgba(255,255,255,.9)"/>
+      </g>
+      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">TINGO</text>
+      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">SANTI</text>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(255,255,255,.52)">Tributo ao Rei</text>
+    </svg>
+    <svg id="logoD" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <g transform="translate(250,40)">
+        <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="#0b3480" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="0" cy="0" r="3" fill="#0b3480"/>
+      </g>
+      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">TINGO</text>
+      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">SANTI</text>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(11,52,128,.55)">Tributo ao Rei</text>
+    </svg>
+  </a>
+  <ul class="nl">
+    <li><a href="#show">O Espetáculo</a></li>
+    <li><a href="#compositor">O Compositor</a></li>
+    <li><a href="#videos">Vídeo</a></li>
+    <li><a href="#not">Notoriedade</a></li>
+    <li><a href="#cont">Contratantes</a></li>
+    <li><a href="#sobre">O Artista</a></li>
+  </ul>
+  <a href="#contact" class="nc" onclick="trackCTA('nav_contato')">Falar com a Produção</a>
+  <button class="ham" id="ham"><span></span><span></span><span></span></button>
 </nav>
+<div id="mm">
+  <a href="#show"       onclick="cm()">O Espetáculo</a>
+  <a href="#compositor" onclick="cm()">O Compositor</a>
+  <a href="#videos"     onclick="cm()">Vídeo do Show</a>
+  <a href="#galeria"    onclick="cm()">Galeria</a>
+  <a href="#numeros"    onclick="cm()">Números</a>
+  <a href="#not"        onclick="cm()">Notoriedade</a>
+  <a href="#cont"       onclick="cm()">Contratantes</a>
+  <a href="#sobre"      onclick="cm()">O Artista</a>
+  <a href="#contact"    onclick="cm()">Contato</a>
+</div>
 
-
-<header id="hero" class="hero">
-  <div class="hero-media" id="heroMedia"></div>
-  <iframe id="heroVideo" class="hero-video" title="Vídeo de fundo do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-  <div class="hero-overlay"></div>
-  <div class="container hero-body">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <h1 class="hero-title">TINGO SANTI</h1>
-        <p>Tributo profissional a Roberto Carlos, com voz natural, entrega elegante e repertório reconhecível.</p>
-        <p>Tingo Santi é cantor, compositor e intérprete. O projeto une emoção, palco e produção profissional em um show pensado para público, instituições e contratantes.</p>
-        <ul class="hero-meta">
-          <li>TRIBUTO AO REI</li>
-          <li>SHOW AO VIVO</li>
-        </ul>
-        <div class="hero-actions">
-          <a class="bp" href="#contratantes">CONTRATAR SHOW</a>
-          <a class="bout" href="https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b" target="_blank" rel="noopener">OUVIR NO SPOTIFY</a>
-        </div>
-      </div>
-      <div class="hero-video-col">
-        <div class="hero-player video-player" id="videoPlayer">
-          <div class="video-thumb" id="videoThumb"></div>
-          <div class="video-overlay" id="videoOverlay">
-            <button class="play-btn" aria-label="Assistir vídeo">▶</button>
-          </div>
-          <iframe id="videoFrame" class="hidden" title="Vídeo do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="hero-caption">
-          <span>ASSISTA AO SHOW</span>
-          <span>2025</span>
-        </div>
-      </div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hbg">
+    <div class="hfb" id="heroBg"></div>
+    <iframe id="hyt" src="" allow="autoplay;encrypted-media" allowfullscreen playsinline style="display:none"></iframe>
+  </div>
+  <div class="hov"></div>
+  <div class="hc">
+    <div style="display:flex;justify-content:center">
+      <svg width="380" height="166" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 32px rgba(2,9,28,.48))">
+        <line x1="55" y1="40" x2="194" y2="40" stroke="rgba(155,189,232,.32)" stroke-width="1"/>
+        <circle cx="192" cy="40" r="2.4" fill="rgba(155,189,232,.55)"/>
+        <line x1="308" y1="40" x2="445" y2="40" stroke="rgba(155,189,232,.32)" stroke-width="1"/>
+        <circle cx="308" cy="40" r="2.4" fill="rgba(155,189,232,.55)"/>
+        <g transform="translate(250,40)">
+          <circle cx="0" cy="0" r="28" fill="none" stroke="rgba(155,189,232,.13)" stroke-width="1.1"/>
+          <polygon points="0,-22 6.43,-8.84 20.87,-6.8 10.43,3.57 12.86,18.05 0,11 -12.86,18.05 -10.43,3.57 -20.87,-6.8 -6.43,-8.84" fill="none" stroke="#9bbde8" stroke-width="1.7" stroke-linejoin="round"/>
+          <circle cx="0" cy="0" r="4.2" fill="#9bbde8"/>
+        </g>
+        <line x1="80" y1="74" x2="420" y2="74" stroke="rgba(155,189,232,.17)" stroke-width=".7"/>
+        <text x="250" y="138" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">TINGO</text>
+        <line x1="114" y1="154" x2="190" y2="154" stroke="rgba(155,189,232,.3)" stroke-width=".7"/>
+        <circle cx="200" cy="154" r="2" fill="rgba(155,189,232,.55)"/>
+        <circle cx="250" cy="154" r="3" fill="rgba(155,189,232,.75)"/>
+        <circle cx="300" cy="154" r="2" fill="rgba(155,189,232,.55)"/>
+        <line x1="310" y1="154" x2="386" y2="154" stroke="rgba(155,189,232,.3)" stroke-width=".7"/>
+        <text x="250" y="206" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">SANTI</text>
+        <line x1="80" y1="216" x2="420" y2="216" stroke="rgba(155,189,232,.17)" stroke-width=".7"/>
+      </svg>
+    </div>
+    <p class="htag" id="heroTagline"></p>
+    <div class="ha">
+      <a href="#videos" class="bpw" onclick="trackCTA('hero_videos')">▶ Assistir ao Show</a>
+      <a href="#not"     class="bow"  onclick="trackCTA('hero_notoriedade')">Ver Notoriedade</a>
+      <a href="#contact" class="bow"  onclick="trackCTA('hero_contato')">Falar com a Produção</a>
     </div>
   </div>
-</header>
-
-
-<section id="show" class="section soft">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">O Espetáculo</div>
-        <h2 class="title-lg">Roberto Carlos, com voz natural, repertório reconhecível e entrega profissional.</h2>
-      </div>
-    </div>
-    <div class="show-grid">
-      <div class="media-card">
-        <div class="media-frame main">
-          <img id="showMain" alt="O espetáculo">
-          <div class="media-accent"><img id="showAccent" alt="Detalhe do espetáculo"></div>
-        </div>
-      </div>
-      <div>
-        <p class="lead" id="showIntro" style="margin:0 0 20px"></p>
-        <div id="showFeatures" class="feature-list"></div>
-      </div>
-    </div>
-  </div>
+  <button id="soundBtn" onclick="toggleSound()" title="Ativar som"><span id="soundIcon">🔇</span></button>
+  <div class="hscr"><span>Role</span><div class="hscrl"></div></div>
 </section>
 
-<section id="videos" class="section compact tinted" style="display:none">
-  <div class="container">
-    <div class="section-head">
+<!-- ESPETÁCULO -->
+<section id="show" class="sec">
+  <div class="con">
+    <div class="sg">
+      <div style="position:relative">
+        <div class="sph" id="showPhotoMain"></div>
+        <div class="spa" id="showPhotoAccent"></div>
+      </div>
       <div>
-        <div class="kicker">Vídeo do Show</div>
-        <h2 class="title-md">Assista ao show</h2>
-      </div>
-    </div>
-    <div class="video-shell">
-      <div class="video-player" id="videoPlayer">
-        <div class="video-thumb" id="videoThumb"></div>
-        <div class="video-overlay" id="videoOverlay">
-          <button class="play-btn" aria-label="Assistir vídeo">▶</button>
-        </div>
-        <iframe id="videoFrame" class="hidden" title="Vídeo do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-caption" id="videoTitle"></div>
-    </div>
-  </div>
-</section>
-
-<section id="galeria" class="section compact soft">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Galeria</div>
-        <h2 class="title-md">Galeria</h2>
-      </div>
-    </div>
-    <div class="gallery-block"><div class="gallery-row landscape" id="galleryLandscape"></div><div class="gallery-row portrait" id="galleryPortrait"></div></div>
-  </div>
-</section>
-
-<section id="instagram" class="section compact">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Instagram</div>
-        <h2 class="title-md" id="instagramTitle"></h2>
-      </div>
-    </div>
-    <div class="instagram-wrap">
-      <div class="instagram-grid" id="instagramGrid"></div>
-    </div>
-  </div>
-</section>
-
-<section id="compositor" class="section tinted">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">O Compositor</div>
-        <h2 class="title-lg" id="composerTitle"></h2>
-        <p class="lead" id="composerSubtitle" style="margin-top:14px"></p>
-      </div>
-    </div>
-    <div class="composer-grid">
-      <div class="composer-stack">
-        <div class="embed-card short-panel">
-          <a id="shortLink" class="short-frame" target="_blank" rel="noopener">
-            <img id="shortPoster" alt="Vídeo autoral">
-            <div class="short-overlay">▶</div>
-          </a>
-        </div>
-      </div>
-      <div class="composer-stack">
-        <div class="embed-card">
-          <iframe id="spotifyEmbed" height="468" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <div class="ey"><div class="eyl"></div><span class="eys">O Espetáculo</span></div>
+        <h2 class="sh">Tributo ao <em>Rei</em></h2>
+        <p class="sl" id="showIntro" style="margin-bottom:2rem"></p>
+        <div class="sf" id="showFeatures"></div>
+        <div style="margin-top:2.8rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="#contact" class="bp" onclick="trackCTA('show_proposta')">Solicitar Proposta</a>
+          <a href="#cont"    class="bout">Materiais Técnicos</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="numeros" class="section dark">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2 class="title-lg" id="numbersTitle"></h2>
-        <p class="lead" id="numbersSubtitle" style="margin-top:14px"></p>
+<!-- COMPOSITOR (NOVA SEÇÃO) -->
+<section id="compositor" class="sec">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">O Compositor</span></div>
+    <h2 class="sh" id="cmpTitulo"></h2>
+    <p class="sl" id="cmpSubtitulo"></p>
+    <div class="cmpg">
+      <div class="cmpv">
+        <iframe id="cmpYt" src="" title="É Muita Saudade Pra Pouco Eu" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-    </div>
-    <div class="numbers-grid" id="numbersGrid"></div>
-    <div class="dark-note" id="numbersFootnote"></div>
-  </div>
-</section>
-
-<section id="notoriedade" class="section soft">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Notoriedade</div>
-        <h2 class="title-md">Cobertura, validação institucional e sinais concretos de aderência pública.</h2>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-<section id="imprensa" class="section">
-  <div class="container">
-    <div class="editorial-grid" id="editorialGrid"></div>
-
-    <div style="height:18px"></div>
-
-    <div class="quote">
-      <p id="pressQuote"></p>
-      <div class="muted" id="pressQuoteSource"></div>
-    </div>
-
-    <div style="height:18px"></div>
-
-    <div class="press-grid" id="pressGrid"></div>
-  </div>
-</section>
-
-<section id="sobre" class="section tinted">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Sobre o Artista</div>
-        <h2 class="title-lg">Sobre o Artista</h2>
-      </div>
-    </div>
-    <div class="about-grid">
-      <div class="about-photo">
-        <img id="aboutPhoto" alt="Tingo Santi">
-      </div>
-      <div class="about-copy">
-        <div class="quote" style="padding:22px">
-          <p id="aboutQuote" style="font-size:30px"></p>
+      <div class="cmpr">
+        <div class="cmpdest">
+          <div class="cmpdestl">Single em destaque</div>
+          <div class="cmpdestt" id="cmpDestT"></div>
+          <div class="cmpdestd" id="cmpDestD"></div>
         </div>
-        <div id="aboutParagraphs" class="muted" style="display:grid;gap:14px;font-size:16px"></div>
-      </div>
-    </div>
-    <div class="timeline" id="timeline"></div>
-  </div>
-</section>
-
-<section id="cont" class="section soft">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Para Contratantes</div>
-        <h2 class="title-lg">Estrutura para contratação</h2>
-        <p class="lead" id="contractIntro" style="margin-top:14px"></p>
-      </div>
-    </div>
-    <div class="contract-grid">
-      <div>
-        <div class="doc-list" id="docList"></div>
-      </div>
-      <div>
-        <div class="contract-cta">
-          <h3 style="font-size:26px;margin:0 0 10px">Precedentes de contratação</h3>
-          <div class="prec-list" id="precList"></div>
-          <div style="height:14px"></div>
-          <a class="btn primary" href="#contact">Solicitar materiais</a>
+        <div class="cmpspot">
+          <iframe id="cmpSpot" src="" title="Spotify Tingo" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div class="cmpcta">
+          <a href="#" id="cmpBtnSpot" class="cmpbtn cmpbtn-spot" target="_blank" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify →</a>
+          <a href="#" id="cmpBtnIg"   class="cmpbtn cmpbtn-ig"   target="_blank" onclick="trackCTA('cmp_instagram')">Seguir no Instagram</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section">
-  <div class="container">
-    <div class="section-head">
+<!-- VÍDEO DO SHOW (SIMPLIFICADO) -->
+<section id="videos" class="sec sec-off">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Vídeo do Show</span></div>
+    <h2 class="sh" style="margin-bottom:2.5rem">O show que <em>convence</em></h2>
+    <div class="vf" id="vfeat" onclick="playVideo()">
+      <div class="vft"></div>
+      <div class="vfo" id="vfov">
+        <div class="vpb">▶</div>
+        <div class="vft2" id="vfttl"></div>
+      </div>
+      <iframe id="vfif" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="sec">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Galeria</span></div>
+    <h2 class="sh" style="margin-bottom:.5rem">Momentos de <em>palco</em></h2>
+    <div class="gm" id="galGrid"></div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section id="numeros" class="sec">
+  <div class="con">
+    <div class="numh">
+      <h2 class="numht" id="numTitle"></h2>
+      <p class="numhs" id="numSubtitle"></p>
+    </div>
+    <div class="numg" id="numGrid"></div>
+    <p class="numrod" id="numRod"></p>
+  </div>
+</section>
+
+<!-- NOTORIEDADE -->
+<section id="not" class="sec" style="background:linear-gradient(180deg,#fff 0%,var(--off) 100%)">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Notoriedade</span></div>
+    <h2 class="sh">O show que a <em>imprensa</em> cobre</h2>
+    <p class="sl">Publicações editoriais de peso, capas de jornal, matérias em veículos regionais e nacionais e aprovação por órgãos oficiais. Cada show gera cobertura. Cada cobertura reforça o posicionamento.</p>
+
+    <div class="vlogos" id="vlogosGrid"></div>
+    <div class="pblocks" id="pgrid2"></div>
+    <div class="presq">
+      <div class="presq-mark">"</div>
+      <p class="presq-text" id="presqText"></p>
+      <p class="presq-src" id="presqSrc"></p>
+    </div>
+    <div class="vinst">
+      <p class="vinst-title">Validações institucionais</p>
+      <div class="vinst-grid" id="vinstGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRATANTES -->
+<section id="cont" class="sec sec-off">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Para Contratantes</span></div>
+    <h2 class="sh">Estrutura para <em>contratar</em></h2>
+    <p class="sl" id="contIntro"></p>
+    <div class="cblock">
       <div>
-        <div class="kicker">Contato</div>
-        <h2 class="title-lg">Fale com a produção</h2>
+        <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Documentação disponível</p>
+        <ul class="cdocs" id="cdocsList"></ul>
+        <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="#contact" class="bp" onclick="trackCTA('cont_solicitar')">Solicitar Materiais</a>
+          <a href="javascript:void(0)" id="waContBtn" class="bout" onclick="trackWA('cont')">WhatsApp da Produção</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Precedentes de contratação</p>
+        <div class="cprec" id="cprecList"></div>
       </div>
     </div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <p id="contactIntro" class="lead" style="margin:0 0 18px"></p>
-        <div class="contact-stack">
-          <div class="contact-item">
-            <div class="contact-icon">☎</div>
-            <div><strong id="contactLabel">Contato</strong><div id="contactPhone"></div></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">✉</div>
-            <div><strong>E-mail</strong><div id="contactEmail"></div></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">◎</div>
-            <div><strong>Instagram</strong><div id="contactInstagram"></div></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">▣</div>
-            <div><strong>CNPJ</strong><div id="contactCnpj"></div></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">⌂</div>
-            <div><strong>Endereço</strong><div id="contactAddress"></div></div>
-          </div>
-        </div>
-        <div style="height:16px"></div>
-        <div class="btn-row">
-          <a id="waBtn" class="btn wa-btn" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn secondary" href="#cont">Materiais e precedentes</a>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="sec">
+  <div class="con">
+    <div class="sgr">
+      <div>
+        <div class="sphoto" id="sobreFoto"></div>
+        <div class="squote">
+          <p class="sqt" id="sobreCitacao"></p>
+          <p class="sqa">Tingo Santi · Ailton Santos</p>
         </div>
       </div>
+      <div>
+        <div class="ey"><div class="eyl"></div><span class="eys">Sobre o Artista</span></div>
+        <h2 class="sh">Tingo <em>Santi</em></h2>
+        <div id="sobreParas" style="margin-bottom:.5rem"></div>
+        <div class="smil" id="sobreMil"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="form-card">
-        <form id="contactForm" method="POST">
-          <div class="field">
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" required>
+<!-- BAND -->
+<div class="band">
+  <h2 class="bant">Leve o espetáculo para a sua programação</h2>
+  <p class="bans">Proposta comercial, agenda e documentação para contratação pública e privada disponíveis sob demanda.</p>
+  <div class="bana">
+    <a href="#contact" class="bp"  onclick="trackCTA('band_proposta')">Solicitar Proposta</a>
+    <a href="javascript:void(0)" id="waBandBtn" class="bout" onclick="trackWA('band')">WhatsApp · <span id="waBandLabel"></span></a>
+  </div>
+</div>
+
+<!-- CONTATO -->
+<section id="contact" class="sec sec-off">
+  <div class="con">
+    <div class="csp">
+      <div>
+        <div class="ey"><div class="eyl"></div><span class="eys">Contato</span></div>
+        <h2 class="sh">Fale com a <em>produção</em></h2>
+        <p style="font-size:.98rem;font-weight:300;color:var(--tm);line-height:1.82;margin-bottom:2.5rem">Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.</p>
+        <div class="cit"><div class="cic">@</div><div><div class="cil">E-mail</div><div class="civ" id="cEmail"></div></div></div>
+        <div class="cit"><div class="cic">☎</div><div><div class="cil">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
+        <div class="cit"><div class="cic">⌂</div><div><div class="cil">Endereço</div><div class="civ" style="font-size:.88rem;line-height:1.5" id="cEndereco"></div></div></div>
+        <div class="cit"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:var(--blue)"></a></div></div></div>
+        <a href="javascript:void(0)" id="waMainBtn" class="whatsapp-btn" onclick="trackWA('contato')">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Iniciar conversa no WhatsApp
+        </a>
+        <div style="margin-top:1.5rem;display:flex;gap:.8rem">
+          <a href="javascript:void(0)" id="igBtn" class="sl2" onclick="trackCTA('social_ig')" target="_blank">IG</a>
+          <a href="javascript:void(0)" id="ytBtn" class="sl2" onclick="trackCTA('social_yt')" target="_blank">YT</a>
+          <a href="javascript:void(0)" id="spBtn" class="sl2" onclick="trackCTA('social_sp')" target="_blank">SP</a>
+        </div>
+      </div>
+      <div>
+        <form id="cform">
+          <div class="ff"><label class="fl">Nome</label><input type="text" name="nome" class="fi" placeholder="Seu nome" data-fs-field required></div>
+          <div class="ff"><label class="fl">Organização / Município</label><input type="text" name="organizacao" class="fi" placeholder="Prefeitura de... / Empresa..." data-fs-field></div>
+          <div class="ff"><label class="fl">E-mail</label><input type="email" name="email" class="fi" placeholder="seu@email.com" data-fs-field required></div>
+          <span data-fs-error="email" style="display:block;font-size:.8rem;color:#d32f2f;margin-top:.3rem;margin-bottom:.8rem"></span>
+          <div class="ff"><label class="fl">Telefone / WhatsApp</label><input type="tel" name="telefone" class="fi" placeholder="(XX) XXXXX-XXXX" data-fs-field></div>
+          <div class="ff"><label class="fl">Tipo de Solicitação</label>
+            <select name="tipo" class="fsl" data-fs-field>
+              <option value="">Selecione...</option>
+              <option>Proposta comercial</option>
+              <option>Contratação pública (inexigibilidade)</option>
+              <option>Evento corporativo</option>
+              <option>Materiais técnicos e riders</option>
+              <option>Imprensa / Assessoria</option>
+              <option>Outro</option>
+            </select>
           </div>
-          <div class="field">
-            <label for="email">E-mail</label>
-            <input id="email" type="email" name="email" required>
-          </div>
-          <div class="field">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn primary">Enviar mensagem</button>
-          </div>
-          <p class="form-note" style="margin-top:12px">Solicitações comerciais, técnicas e institucionais entram por aqui.</p>
+          <div class="ff"><label class="fl">Mensagem</label><textarea name="mensagem" class="ft" placeholder="Evento, data aproximada, cidade e outras informações relevantes..." data-fs-field required></textarea></div>
+          <span data-fs-error="mensagem" style="display:block;font-size:.8rem;color:#d32f2f;margin-top:.3rem;margin-bottom:.8rem"></span>
+          <button type="submit" class="bp" style="width:100%;padding:1.05rem" onclick="trackCTA('form_submit')" data-fs-submit-btn>Enviar Solicitação</button>
         </form>
-        <div id="formSuccess" class="hidden" style="padding:18px;border-radius:18px;background:var(--surface-2);border:1px solid var(--line);font-weight:600;color:var(--blue)">
-          Mensagem enviada com sucesso.
+        <div data-fs-success style="margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid #4caf50;border-radius:4px;background:rgba(76,175,80,.08);color:#2e7d32;font-size:.9rem;display:none">
+          ✓ Mensagem enviada com sucesso. Retornaremos em até 24 horas úteis.
         </div>
+        <div data-fs-error style="margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid #d32f2f;border-radius:4px;background:rgba(211,47,47,.08);color:#b71c1c;font-size:.9rem;display:none"></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="brand-name" style="font-size:34px">Tingo Santi</div>
-        <p class="footer-copy">Tributo a Roberto Carlos com produção profissional, sinal público de aderência e estrutura preparada para contratação.</p>
-      </div>
-      <div>
-        <div class="footer-title">Seções</div>
-        <div class="footer-links">
-          <a href="#show">Espetáculo</a>
-          <a href="#videos">Vídeo</a>
-          <a href="#galeria">Galeria</a>
-          <a href="#instagram">Instagram</a>
-          <a href="#compositor">Compositor</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-title">Conteúdo</div>
-        <div class="footer-links">
-          <a href="#numeros">Números</a>
-          <a href="#notoriedade">Notoriedade</a>
-          <a href="#imprensa">Editorial e Imprensa</a>
-          <a href="#sobre">Artista</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-title">Comercial</div>
-        <div class="footer-links">
-          <a href="#cont">Para Contratantes</a>
-          <a href="#contact">Contato</a>
-          <a id="footerInstagram" target="_blank" rel="noopener">Instagram</a>
-          <a id="footerSpotify" target="_blank" rel="noopener">Spotify</a>
-        </div>
-      </div>
+  <div class="fg">
+    <div>
+      <svg width="100" height="44" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(250,40)">
+          <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="rgba(155,189,232,.65)" stroke-width="1.4" stroke-linejoin="round"/>
+          <circle cx="0" cy="0" r="3" fill="rgba(155,189,232,.65)"/>
+        </g>
+        <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">TINGO</text>
+        <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">SANTI</text>
+      </svg>
+      <p class="ftag">Tributo ao Rei · Roberto Carlos<br>Espetáculo de interpretação elegante, memória afetiva e produção profissional completa.</p>
     </div>
-    <div class="footer-bottom">© <span id="yearNow"></span> Tingo Santi. Todos os direitos reservados.</div>
+    <div><div class="fct">Navegação</div><ul class="fl2">
+      <li><a href="#show">O Espetáculo</a></li>
+      <li><a href="#compositor">O Compositor</a></li>
+      <li><a href="#videos">Vídeo do Show</a></li>
+      <li><a href="#not">Notoriedade</a></li>
+      <li><a href="#sobre">Sobre o Artista</a></li>
+    </ul></div>
+    <div><div class="fct">Contratação</div><ul class="fl2">
+      <li><a href="#cont">Para Contratantes</a></li>
+      <li><a href="#contact">Solicitar Proposta</a></li>
+      <li><a href="javascript:void(0)" id="waFooterLink" onclick="trackWA('footer')">WhatsApp</a></li>
+    </ul></div>
+    <div><div class="fct">Contato</div><ul class="fl2">
+      <li><a id="footerEmail" href="#"></a></li>
+      <li><a id="footerPhone" href="#"></a></li>
+      <li><a id="footerIG" href="#" target="_blank">Instagram</a></li>
+      <li><a id="footerYT" href="#" target="_blank">YouTube</a></li>
+      <li><a id="footerSP" href="#" target="_blank">Spotify</a></li>
+    </ul></div>
+  </div>
+  <div class="fb">
+    <span class="fleg">© 2026 Tingo Santi · NKT Artes Ltda · <a id="footerCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:rgba(255,255,255,.3)"></a></span>
+    <div class="fso">
+      <a id="fsoIG" href="#" class="sl2" target="_blank">IG</a>
+      <a id="fsoYT" href="#" class="sl2" target="_blank">YT</a>
+      <a id="fsoSP" href="#" class="sl2" target="_blank">SP</a>
+      <a id="fsoWA" href="#" class="sl2" onclick="trackWA('footer_icon')">WA</a>
+    </div>
   </div>
 </footer>
 
 <script>
-function $(sel){ return document.querySelector(sel); }
-function el(tag, cls, html){
-  const node = document.createElement(tag);
-  if(cls) node.className = cls;
-  if(html !== undefined) node.innerHTML = html;
-  return node;
-}
-function escapeHtml(v){
-  return String(v ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-}
-function currentSlug(){
-  const seg = location.pathname.replace(/^\/+|\/+$/g,'').split('/').filter(Boolean);
-  return seg.length ? seg[seg.length-1].toLowerCase() : '';
-}
-function activeChannel(){
-  const base = SITE.contatoPadrao || SITE.contato || {};
-  const slug = currentSlug();
-  const canal = (SITE.canais && SITE.canais[slug]) ? SITE.canais[slug] : {};
-  return Object.assign({}, base, canal);
-}
-function setupMenu(){
-  const btn = $('#menuBtn');
-  const panel = $('#mobilePanel');
-  btn.addEventListener('click', () => panel.classList.toggle('open'));
-  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
-}
-function setupHero(){
-  const bg = $('#heroVideo');
-  if(bg){
-    const heroVideoId = SITE.hero.youtubeId || SITE.videoShow.youtubeId || '';
-    if(heroVideoId){
-      bg.src = `https://www.youtube.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=${heroVideoId}&playsinline=1&modestbranding=1&rel=0`;
+function init() {
+  const C = SITE.contato;
+  const waUrl = 'https://wa.me/' + C.whatsapp;
+
+  // HERO
+  document.getElementById('heroBg').style.backgroundImage = "url('" + SITE.hero.foto + "')";
+  document.getElementById('heroTagline').textContent = SITE.hero.tagline;
+  if (SITE.hero.youtubeId) {
+    const f = document.getElementById('hyt');
+    f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+      '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
+      '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&playsinline=1';
+    f.style.display = 'block';
+    document.getElementById('soundBtn').style.display = 'flex';
+  }
+
+  // SHOW
+  document.getElementById('showPhotoMain').style.backgroundImage = "url('" + SITE.show.fotoMain + "')";
+  document.getElementById('showPhotoAccent').style.backgroundImage = "url('" + SITE.show.fotoAccent + "')";
+  document.getElementById('showIntro').textContent = SITE.show.intro;
+  var sf = document.getElementById('showFeatures');
+  SITE.show.features.forEach(function(f) {
+    sf.innerHTML += '<div class="sfi"><div class="sfd"></div><div><div class="sft">' + f.titulo + '</div><div class="sfd2">' + f.desc + '</div></div></div>';
+  });
+
+  // COMPOSITOR
+  document.getElementById('cmpTitulo').innerHTML = SITE.compositor.titulo;
+  document.getElementById('cmpSubtitulo').textContent = SITE.compositor.subtitulo;
+  document.getElementById('cmpYt').src = 'https://www.youtube.com/embed/' + SITE.compositor.youtubeShortId + '?rel=0';
+  document.getElementById('cmpSpot').src = 'https://open.spotify.com/embed/' + SITE.compositor.spotifyEmbedType + '/' + SITE.compositor.spotifyEmbedId + '?utm_source=generator&theme=0';
+  document.getElementById('cmpDestT').textContent = SITE.compositor.destaque.titulo;
+  document.getElementById('cmpDestD').textContent = SITE.compositor.destaque.desc;
+  document.getElementById('cmpBtnSpot').href = C.spotify;
+  document.getElementById('cmpBtnIg').href = 'https://instagram.com/' + C.instagram;
+
+  // VÍDEO DO SHOW
+  document.getElementById('vfttl').textContent = SITE.videoShow.titulo;
+
+  // GALERIA
+  var gal = document.getElementById('galGrid');
+  SITE.galeria.forEach(function(g) {
+    var el = document.createElement('div');
+    el.className = 'gi';
+    el.innerHTML = '<img src="' + g.arquivo + '" loading="lazy" alt="Show Tingo Santi">';
+    gal.appendChild(el);
+  });
+
+  // NÚMEROS
+  document.getElementById('numTitle').innerHTML = SITE.numerosTitulo;
+  document.getElementById('numSubtitle').textContent = SITE.numerosSubtitulo;
+  var ng = document.getElementById('numGrid');
+  var idxNormal = 0;
+  SITE.numeros.forEach(function(n) {
+    var cls = 'numc';
+    if (n.destaque) cls += ' hero';
+    else {
+      cls += (idxNormal < 3) ? ' m' : ' s';
+      idxNormal++;
     }
-  }
-}
-function setupVideo(){
-  const thumb = $('#videoThumb');
-  thumb.style.backgroundImage = `url(${SITE.hero.heroCover || 'https://img.youtube.com/vi/' + SITE.videoShow.youtubeId + '/maxresdefault.jpg'})`;
-  $('#videoPlayer').addEventListener('click', loadShowVideoOnce, { once:true });
-}
-function loadShowVideoOnce(){
-  const player = $('#videoPlayer');
-  const frame = $('#videoFrame');
-  const overlay = $('#videoOverlay');
-  const videoId = SITE.videoShow.youtubeId;
-  frame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1&controls=1&enablejsapi=1&origin=${location.origin}`;
-  frame.classList.remove('hidden');
-  player.classList.add('is-active');
-  if(overlay) overlay.style.display = 'none';
-}
-function setupGallery(){
-  const landscape = $('#galleryLandscape');
-  const portrait = $('#galleryPortrait');
-  const items = (SITE.galeria || []);
-  const landscapes = items.filter(item => item.orientacao === 'landscape').slice(0,4);
-  const portraits = items.filter(item => item.orientacao === 'portrait').slice(0,4);
-  landscapes.forEach((item, i) => {
-    const a = el('a', 'gallery-item landscape-item', `<img src="${escapeHtml(item.arquivo)}" alt="Galeria horizontal ${i+1}">`);
-    a.href = item.arquivo;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    landscape.appendChild(a);
+    ng.innerHTML += '<div class="' + cls + '">' +
+      '<div class="numn">' + n.numero + '</div>' +
+      '<div class="numl">' + n.label + '</div>' +
+      (n.desc ? '<div class="numd">' + n.desc + '</div>' : '') +
+      '</div>';
   });
-  portraits.forEach((item, i) => {
-    const a = el('a', 'gallery-item portrait-item', `<img src="${escapeHtml(item.arquivo)}" alt="Galeria vertical ${i+1}">`);
-    a.href = item.arquivo;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    portrait.appendChild(a);
-  });
-}
-function setupInstagram(){
-  $('#instagramTitle').textContent = SITE.instagram.titulo || '@TingoSanti';
-  const wrap = $('#instagramGrid');
-  (SITE.instagram.itensFallback || []).slice(0,6).forEach(item => {
-    const a = el('a', 'ig-item', `<img src="${escapeHtml(item.imagem)}" alt="${escapeHtml(item.alt || 'Instagram')}">`);
-    a.href = item.link || '#';
-    a.target = '_blank';
-    a.rel = 'noopener';
-    wrap.appendChild(a);
-  });
-}
-function setupComposer(){
-  $('#composerTitle').innerHTML = SITE.compositor.titulo || '';
-  $('#composerSubtitle').textContent = SITE.compositor.subtitulo || '';
-  const shortId = SITE.compositor.youtubeShortId || '';
-  $('#shortPoster').src = `https://img.youtube.com/vi/${shortId}/maxresdefault.jpg`; 
-  $('#shortLink').href = `https://www.youtube.com/watch?v=${shortId}`;
-  const type = SITE.compositor.spotifyEmbedType || 'artist';
-  $('#spotifyEmbed').src = `https://open.spotify.com/embed/${type}/${SITE.compositor.spotifyEmbedId}?utm_source=generator&theme=0`;
-}
-function setupNumbers(){
-  $('#numbersTitle').innerHTML = SITE.numerosTitulo || '';
-  $('#numbersSubtitle').textContent = SITE.numerosSubtitulo || '';
-  $('#numbersFootnote').textContent = SITE.numerosRodape || '';
-  const wrap = $('#numbersGrid');
-  (SITE.numeros || []).forEach(item => {
-    const cls = item.destaque ? 'number-card featured' : 'number-card';
-    wrap.appendChild(el('div', cls, `<strong>${escapeHtml(item.numero)}</strong><div class="label">${escapeHtml(item.label)}</div><p>${escapeHtml(item.desc)}</p>`));
-  });
-}
-function setupNotoriedade(){
-  return;
-}
-function imprensaCard(item, compact=false){
-  const href = item.link || '#';
-  const media = `<div class="card-media" style="background-image:url('${escapeHtml(item.imagem)}');background-position:${escapeHtml(item.pos || 'center center')}"></div>`;
-  return `<a class="card" href="${escapeHtml(href)}" ${item.link ? 'target="_blank" rel="noopener"' : ''}>${media}<div class="card-body"><div class="card-meta">${escapeHtml(item.veiculo)} · ${escapeHtml(item.data)}</div><h3 style="${compact ? 'font-size:18px' : ''}">${escapeHtml(item.manchete)}</h3>${compact ? '' : '<p>Leitura editorial e prova pública de aderência.</p>'}</div></a>`;
-}
-function setupImprensa(){
-  const featured = (SITE.imprensa || []).filter(x => x.featured).slice(0,1);
-  const mids = (SITE.imprensa || []).filter(x => !x.featured && !x.official).slice(0,2);
-  const press = (SITE.imprensa || []).filter(x => !x.featured && !x.official).slice(2,8);
-  const editorialWrap = $('#editorialGrid');
-  [...featured, ...mids].forEach((item, idx) => {
-    editorialWrap.insertAdjacentHTML('beforeend', imprensaCard(item, idx>0));
-  });
-  $('#pressQuote').textContent = SITE.imprensaQuote.texto || '';
-  $('#pressQuoteSource').textContent = SITE.imprensaQuote.fonte || '';
-  const pressWrap = $('#pressGrid');
-  press.forEach(item => pressWrap.insertAdjacentHTML('beforeend', imprensaCard(item, true)));
-  const validations = (SITE.validacoes || []).slice(0,6);
-  if(validations.length){
-    const container = $('#imprensa .container');
-    container.appendChild(el('div','', '<div style="height:18px"></div><div class="kicker">Validações institucionais</div><h3 style="margin:0 0 14px;font-size:26px;line-height:1.08">Presença pública e institucional já consolidada.</h3>'));
-    const grid = el('div','validation-grid','');
-    validations.forEach(v=> grid.appendChild(el('div','validation',`<strong>${escapeHtml(v.titulo)}</strong><span>${escapeHtml(v.subtitulo)}</span>`)));
-    container.appendChild(grid);
-  }
-}
-function setupSobre(){
-  $('#aboutPhoto').src = SITE.sobre.foto;
-  $('#aboutQuote').textContent = SITE.sobre.citacao || '';
-  const paras = $('#aboutParagraphs');
-  (SITE.sobre.paras || []).forEach(p => {
-    paras.appendChild(el('p','', p));
-  });
-  const timeline = $('#timeline');
-  (SITE.sobre.marcos || []).forEach(item => {
-    timeline.appendChild(el('div','timeline-item', `<strong>${escapeHtml(item.ano)}</strong><div>${escapeHtml(item.desc)}</div>`));
-  });
-}
-function setupContratantes(){
-  $('#contractIntro').textContent = SITE.contratantes.intro || '';
-  const docs = $('#docList');
-  (SITE.contratantes.documentos || []).forEach(doc => {
-    docs.appendChild(el('div','doc-item', `<div class="doc-mark">✓</div><div>${escapeHtml(doc)}</div>`));
-  });
-  const prec = $('#precList');
-  (SITE.contratantes.precedentes || []).forEach(item => {
-    prec.appendChild(el('div','prec-item', `<small>${escapeHtml(item.categoria)}</small><div style="font-weight:700;margin-bottom:5px">${escapeHtml(item.municipio)}</div><div class="muted">${escapeHtml(item.evento)}</div>`));
-  });
-}
-function setupContato(){
-  const C = activeChannel();
-  $('#contactIntro').textContent = C.contatoIntro || 'Solicitações comerciais e técnicas atendidas pela produção.';
-  $('#contactLabel').textContent = C.contatoLabel || 'Contato comercial';
-  $('#contactPhone').textContent = C.whatsappLabel || '';
-  $('#contactEmail').textContent = C.email || '';
-  $('#contactInstagram').textContent = '@' + String(C.instagram || 'tingosanti').replace('@','');
-  $('#contactCnpj').textContent = C.cnpj || '';
-  $('#contactAddress').textContent = C.endereco || '';
+  document.getElementById('numRod').textContent = SITE.numerosRodape;
 
-  const wa = String(C.whatsapp || '').replace(/\D/g,'');
-  $('#waBtn').href = wa ? `https://wa.me/${wa}` : '#';
-  $('#waBtn').textContent = C.whatsappLabel ? `WhatsApp ${C.whatsappLabel}` : 'WhatsApp';
-
-  $('#footerInstagram').href = `https://instagram.com/${String(C.instagram || SITE.contato.instagram || 'tingosanti').replace('@','')}`;
-  $('#footerSpotify').href = C.spotify || SITE.contato.spotify || '#';
-
-  const form = $('#contactForm');
-  const success = $('#formSuccess');
-  const formspree = C.formspree || '';
-  if(formspree){
-    form.action = `https://formspree.io/f/${formspree}`;
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const res = await fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
-      if(res.ok){
-        form.classList.add('hidden');
-        success.classList.remove('hidden');
-      }else{
-        alert('Não foi possível enviar agora. Tente novamente em instantes.');
-      }
-    });
-  } else {
-    form.classList.add('hidden');
-    success.classList.remove('hidden');
-    success.textContent = 'Este canal não usa formulário. Use o WhatsApp ou o e-mail exibidos ao lado.';
+  // IMPRENSA
+  var vg2 = document.getElementById('vlogosGrid');
+  SITE.veiculosImprensa.forEach(function(v) {
+    var parts = v.split('|');
+    vg2.innerHTML += '<div class="vlogo">' + parts[0] +
+      (parts[1] ? '<span class="vlogo-sub">' + parts[1] + '</span>' : '') + '</div>';
+  });
+  var pg2 = document.getElementById('pgrid2');
+  var blocks = {
+    editorial: [],
+    official: [],
+    general: []
+  };
+  
+  // Categorizar cards em blocos
+  SITE.imprensa.forEach(function(p) {
+    if (p.featured || p.tamanho === 'sz-l') {
+      blocks.editorial.push(p);
+    } else if (p.official) {
+      blocks.official.push(p);
+    } else {
+      blocks.general.push(p);
+    }
+  });
+  
+  // Renderizar BLOCO 1: Editorial
+  var html = '<div class="pblock">' +
+    '<h3 class="pblock-h">Destaques Editorial</h3>' +
+    '<div class="pgrid2">';
+  blocks.editorial.forEach(function(p) {
+    var href = p.link ? p.link : 'javascript:void(0)';
+    var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
+    var sz   = p.tamanho || 'sz-m';
+    var featured = p.featured ? ' featured' : '';
+    var linkIcon = p.link ? '<div class="pcard-link">↗</div>' : '';
+    html +=
+      '<a class="pcard ' + sz + '" href="' + href + '" ' + tgt + ' onclick="trackCTA(\'imprensa_' + p.veiculo.toLowerCase().replace(/[^a-z]/g,'_').slice(0,15) + '\')">' +
+        linkIcon +
+        '<div class="pcard-img" style="background-image:url(\'' + p.imagem + '\');background-position:' + (p.pos || 'center top') + '">' +
+          '<div class="pcard-ov"></div>' +
+          '<div class="pcard-body">' +
+            '<span class="pcard-vc' + featured + '">' + p.veiculo + '</span>' +
+            '<div class="pcard-mh">' + p.manchete + '</div>' +
+            (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
+          '</div>' +
+        '</div>' +
+      '</a>';
+  });
+  html += '</div></div>';
+  
+  // Renderizar BLOCO 2: Oficial
+  html += '<div class="pblock pblock-official">' +
+    '<h3 class="pblock-h">Publicado em Sites Oficiais</h3>' +
+    '<div class="pgrid2">';
+  blocks.official.forEach(function(p) {
+    var href = p.link ? p.link : 'javascript:void(0)';
+    var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
+    var sz   = p.tamanho || 'sz-m';
+    var linkIcon = p.link ? '<div class="pcard-link">↗</div>' : '';
+    html +=
+      '<a class="pcard ' + sz + ' pcard-official" href="' + href + '" ' + tgt + ' onclick="trackCTA(\'imprensa_' + p.veiculo.toLowerCase().replace(/[^a-z]/g,'_').slice(0,15) + '\')">' +
+        linkIcon +
+        '<div class="pcard-img" style="background-image:url(\'' + p.imagem + '\');background-position:' + (p.pos || 'center top') + '">' +
+          '<div class="pcard-ov"></div>' +
+          '<div class="pcard-body">' +
+            '<span class="pcard-vc">' + p.veiculo + '</span>' +
+            '<div class="pcard-mh">' + p.manchete + '</div>' +
+            (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
+          '</div>' +
+        '</div>' +
+      '</a>';
+  });
+  html += '</div></div>';
+  
+  // Renderizar BLOCO 3: Imprensa geral
+  var gradients = [
+    'linear-gradient(135deg,#0b3480 0%,#02091c 100%)',
+    'linear-gradient(135deg,#1a0a3c 0%,#0b3480 100%)',
+    'linear-gradient(135deg,#02091c 0%,#174fba 100%)',
+    'linear-gradient(135deg,#0a1228 0%,#2e3a6b 100%)',
+    'linear-gradient(135deg,#1b2a5e 0%,#02091c 100%)',
+    'linear-gradient(135deg,#0d1f4a 0%,#1a3070 100%)'
+  ];
+  html += '<div class="pblock">' +
+    '<h3 class="pblock-h">Cobertura de Imprensa</h3>' +
+    '<div class="pgrid2">';
+  blocks.general.forEach(function(p, idx) {
+    var href = p.link ? p.link : 'javascript:void(0)';
+    var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
+    var sz   = p.tamanho || 'sz-m';
+    var linkIcon = p.link ? '<div class="pcard-link">↗</div>' : '';
+    var bgStyle = p.imagem
+      ? 'background-image:url(\'' + p.imagem + '\');background-position:' + (p.pos || 'center top')
+      : 'background:' + gradients[idx % gradients.length];
+    html +=
+      '<a class="pcard ' + sz + '" href="' + href + '" ' + tgt + ' onclick="trackCTA(\'imprensa_' + p.veiculo.toLowerCase().replace(/[^a-z]/g,'_').slice(0,15) + '\')">' +
+        linkIcon +
+        '<div class="pcard-img" style="' + bgStyle + '">' +
+          '<div class="pcard-ov"></div>' +
+          '<div class="pcard-body">' +
+            '<span class="pcard-vc">' + p.veiculo + '</span>' +
+            '<div class="pcard-mh">' + p.manchete + '</div>' +
+            (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
+          '</div>' +
+        '</div>' +
+      '</a>';
+  });
+  html += '</div></div>';
+  pg2.innerHTML = html;
+  if (SITE.imprensaQuote) {
+    document.getElementById('presqText').textContent = SITE.imprensaQuote.texto;
+    document.getElementById('presqSrc').textContent = SITE.imprensaQuote.fonte;
   }
+  var vi = document.getElementById('vinstGrid');
+  SITE.validacoes.forEach(function(v) {
+    vi.innerHTML += '<div class="vinst-card"><div class="vinst-ico">' + v.icone + '</div><div class="vinst-ttl">' + v.titulo + '</div><div class="vinst-sub">' + v.subtitulo + '</div></div>';
+  });
+
+  // CONTRATANTES
+  document.getElementById('contIntro').textContent = SITE.contratantes.intro;
+  var cl = document.getElementById('cdocsList');
+  SITE.contratantes.documentos.forEach(function(d) { cl.innerHTML += '<li>' + d + '</li>'; });
+  var cp = document.getElementById('cprecList');
+  SITE.contratantes.precedentes.forEach(function(p) {
+    cp.innerHTML += '<div class="cpcard">' +
+      (p.categoria ? '<div class="cpcat">' + p.categoria + '</div>' : '') +
+      '<div class="cpmun">' + p.municipio + '</div>' +
+      '<div class="cpev">' + p.evento + '</div></div>';
+  });
+  document.getElementById('waContBtn').href = waUrl;
+
+  // SOBRE
+  document.getElementById('sobreFoto').style.backgroundImage = "url('" + SITE.sobre.foto + "')";
+  document.getElementById('sobreCitacao').textContent = '"' + SITE.sobre.citacao + '"';
+  var sp = document.getElementById('sobreParas');
+  SITE.sobre.paras.forEach(function(p) {
+    sp.innerHTML += '<p style="font-size:1rem;font-weight:300;color:var(--tm);line-height:1.88;margin-bottom:1.2rem">' + p + '</p>';
+  });
+  var sm = document.getElementById('sobreMil');
+  SITE.sobre.marcos.forEach(function(m) {
+    sm.innerHTML += '<div class="smilc"><div class="smily">' + m.ano + '</div><div class="smild">' + m.desc + '</div></div>';
+  });
+
+  // CONTATO
+  document.getElementById('cEmail').textContent    = C.email;
+  document.getElementById('cPhone').textContent    = C.whatsappLabel;
+  document.getElementById('cEndereco').textContent = C.endereco;
+  document.getElementById('cCnpj').textContent     = C.cnpj;
+  document.getElementById('waMainBtn').href        = waUrl;
+  document.getElementById('waBandBtn').href        = waUrl;
+  document.getElementById('waBandLabel').textContent = C.whatsappLabel;
+  document.getElementById('igBtn').href  = 'https://instagram.com/' + C.instagram;
+  document.getElementById('ytBtn').href  = 'https://youtube.com/' + C.youtube;
+  document.getElementById('spBtn').href  = C.spotify;
+
+  // FOOTER
+  document.getElementById('footerEmail').href        = 'mailto:' + C.email;
+  document.getElementById('footerEmail').textContent = C.email;
+  document.getElementById('footerPhone').href        = 'tel:+' + C.whatsapp;
+  document.getElementById('footerPhone').textContent = C.whatsappLabel;
+  document.getElementById('footerIG').href = 'https://instagram.com/' + C.instagram;
+  document.getElementById('footerYT').href = 'https://youtube.com/' + C.youtube;
+  document.getElementById('footerSP').href = C.spotify;
+  document.getElementById('footerCnpj').textContent = 'CNPJ ' + C.cnpj;
+  document.getElementById('fsoIG').href  = 'https://instagram.com/' + C.instagram;
+  document.getElementById('fsoYT').href  = 'https://youtube.com/' + C.youtube;
+  document.getElementById('fsoSP').href  = C.spotify;
+  document.getElementById('fsoWA').href  = waUrl;
+  document.getElementById('waFooterLink').href = waUrl;
 }
-function setupFooter(){
-  $('#yearNow').textContent = new Date().getFullYear();
+
+function playVideo() {
+  var yid = SITE.videoShow.youtubeId;
+  if (!yid) return;
+  document.getElementById('vfov').style.display = 'none';
+  var f = document.getElementById('vfif');
+  f.style.display = 'block';
+  f.src = 'https://www.youtube.com/embed/' + yid + '?autoplay=1&rel=0';
+  trackCTA('video_play_show');
 }
-document.addEventListener('DOMContentLoaded', () => {
-  setupMenu();
-  setupHero();
-  setupShow();
-  setupVideo();
-  setupGallery();
-  setupInstagram();
-  setupComposer();
-  setupNumbers();
-  setupNotoriedade();
-  setupImprensa();
-  setupSobre();
-  setupContratantes();
-  setupContato();
-  setupFooter();
+
+let soundOn = false;
+function toggleSound() {
+  const f = document.getElementById('hyt');
+  const icon = document.getElementById('soundIcon');
+  const btn = document.getElementById('soundBtn');
+  if (!f || !SITE.hero.youtubeId) return;
+  soundOn = !soundOn;
+  f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+    '?autoplay=1&loop=1&playlist=' + SITE.hero.youtubeId +
+    '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1' +
+    '&mute=' + (soundOn ? '0' : '1');
+  icon.textContent = soundOn ? '🔊' : '🔇';
+  btn.classList.toggle('on', soundOn);
+  btn.title = soundOn ? 'Desativar som' : 'Ativar som';
+  if (window._gtag) window._gtag('event', 'sound_toggle', { event_category: 'engagement', event_label: soundOn ? 'on' : 'off' });
+}
+
+window.addEventListener('scroll', function(){
+  var s = scrollY > 60;
+  document.getElementById('nav').classList.toggle('s', s);
+  document.getElementById('logoL').style.display = s ? 'none' : 'block';
+  document.getElementById('logoD').style.display = s ? 'block' : 'none';
 });
+document.getElementById('ham').onclick = function(){ document.getElementById('mm').classList.toggle('o'); };
+function cm(){ document.getElementById('mm').classList.remove('o'); }
+
+function trackCTA(label) {
+  if (window._gtag) window._gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
+}
+function trackWA(origem) {
+  if (window._gtag) window._gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: 'whatsapp_' + origem });
+  window.open('https://wa.me/' + SITE.contato.whatsapp, '_blank');
+}
+
+if (typeof SITE !== 'undefined') { init(); } else { document.addEventListener('DOMContentLoaded', init); }
 </script>
+
+<!-- Formspree Ajax Integration -->
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#cform', formId: 'xyklpzbk' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

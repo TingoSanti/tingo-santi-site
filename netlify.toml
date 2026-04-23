@@ -1,16 +1,6 @@
 [build]
   publish = "."
 
-[[redirects]]
-  from = "/ds1"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/ds1/*"
-  to = "/index.html"
-  status = 200
-
 [[headers]]
   for = "/*"
   [headers.values]

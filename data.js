@@ -25,60 +25,13 @@ const SITE = {
   hero: {
     youtubeId:  "M7ehpNbIbUY",
     tagline:    "A obra de Roberto Carlos ao vivo, com voz natural, orquestra e emoção verdadeira.",
-    foto:       "img/hero_principal.jpg",
-    heroCover:  "img/IMG_8949.jpeg"
+    foto:       "img/hero_principal.jpg"
   },
 
   /* ── VÍDEOS — APENAS 1 (SIMPLIFICADO) ─────────────────── */
   videoShow: {
     titulo:    "Tributo ao Rei · Show ao Vivo",
     youtubeId: "M7ehpNbIbUY"
-  },
-
-  instagram: {
-    titulo: '@TingoSanti',
-    subtitulo: 'Instagram',
-    beholdFeedId: 'xrPM3fmIf0SxWE0aNL2H',
-    itensFallback: [
-      { imagem: 'img/1.png', link: 'https://www.instagram.com/p/DW9lfFnDAVl/?igsh=MXRkbG0yOXNjNmtvaw==', alt: 'Instagram 1' },
-      { imagem: 'img/2.png', link: 'https://www.instagram.com/p/DTsxyx8gHAS/?igsh=b2xjaXR0Z2RjNjFo', alt: 'Instagram 2' },
-      { imagem: 'img/3.png', link: 'https://www.instagram.com/reel/DSxRWragF_R/?igsh=MWhyNXdzY3Vnd282Zg==', alt: 'Instagram 3' },
-      { imagem: 'img/4.png', link: 'https://www.instagram.com/reel/DSqI2COj-in/?igsh=Y3Z6ZmllbGRjODBt', alt: 'Instagram 4' },
-      { imagem: 'img/5.png', link: 'https://www.instagram.com/reel/DQXRmv1Eazh/?igsh=MXZxeGZ1bmdxN2d2NA==', alt: 'Instagram 5' },
-      { imagem: 'img/6.png', link: 'https://www.instagram.com/reel/DWrE2y1AHzb/?igsh=bmtscXcyeTM4NGh0', alt: 'Instagram 6' }
-    ]
-  },
-
-  contatoPadrao: {
-    whatsapp:     '5521975214169',
-    whatsappLabel:'(21) 97521-4169',
-    email:        'tingo.santi@proton.me',
-    instagram:    'tingosanti',
-    youtube:      '@tingosanti',
-    spotify:      'https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b',
-    formspree:    'xyklpzbk',
-    cnpj:         '56.047.654/0001-25',
-    endereco:     'Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006',
-    contatoIntro: 'Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.',
-    contatoLabel: 'NKT Artes Ltda'
-  },
-
-  canais: {
-    ds1: {
-      nome: 'DS1 Produções',
-      responsavel: 'Uriel Marques',
-      whatsapp: '5522998448726',
-      whatsappLabel: '(22) 99844-8726',
-      email: 'contato@ds1producoes.com.br',
-      instagram: 'tingosanti',
-      youtube: '@tingosanti',
-      spotify: 'https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b',
-      formspree: '',
-      cnpj: '56.047.654/0001-25',
-      endereco: 'Produção e atendimento comercial · Canal DS1',
-      contatoIntro: 'Solicitações comerciais deste canal são atendidas pela DS1 Produções, com Uriel Marques como contato responsável.',
-      contatoLabel: 'DS1 Produções · Uriel Marques'
-    }
   },
 
   /* ── GALERIA — mosaico com orientação corrigida ────────
@@ -88,14 +41,14 @@ const SITE = {
      Fotos landscape só vão em slots wide. Portraits só em tall ou default.
   */
   galeria: [
-    { arquivo: "img/galeria_natal_magia_palco.jpg", orientacao: "landscape" },
-    { arquivo: "img/galeria_show_braco_aberto.jpg", orientacao: "portrait" },
-    { arquivo: "img/galeria_rosas_plateia.jpg", orientacao: "landscape" },
-    { arquivo: "img/galeria_bracos_abertos.jpg", orientacao: "portrait" },
-    { arquivo: "img/galeria_macae_plateia.jpg", orientacao: "landscape" },
-    { arquivo: "img/galeria_drone_igreja.jpg", orientacao: "portrait" },
-    { arquivo: "img/galeria_pcsf_plateia.jpg", orientacao: "landscape" },
-    { arquivo: "img/galeria_lenco_verde.jpg", orientacao: "portrait" },
+    { arquivo: "img/galeria_natal_magia_palco.jpg"       },
+    { arquivo: "img/galeria_show_braco_aberto.jpg"       },
+    { arquivo: "img/galeria_rosas_plateia.jpg"           },
+    { arquivo: "img/galeria_bracos_abertos.jpg"          },
+    { arquivo: "img/galeria_macae_plateia.jpg"           },
+    { arquivo: "img/galeria_drone_igreja.jpg"            },
+    { arquivo: "img/galeria_pcsf_plateia.jpg"            },
+    { arquivo: "img/galeria_lenco_verde.jpg"             },
     { arquivo: "img/galeria_plateia_natal.jpg"           },
     { arquivo: "img/galeria_palco_orquestra_pcsf.jpg"    },
     { arquivo: "img/galeria_apontando.jpg"               },
@@ -115,7 +68,10 @@ const SITE = {
       desc:    "Single de maior repercussão nas redes sociais, marcou o início da trajetória autoral do artista."
     },
     numeros: [
-      { n: "50+",   l: "Composições publicadas"   }
+      { n: "21,4M", l: "Execuções globais"        },
+      { n: "189",   l: "Países com consumo"       },
+      { n: "50+",   l: "Composições publicadas"   },
+      { n: "63K+",  l: "Seguidores no Instagram"  }
     ]
   },
 
