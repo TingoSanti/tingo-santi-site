@@ -85,47 +85,34 @@ h1,h2,h3{margin:0;line-height:1.05}
 .mobile-panel a{display:block;padding:11px 0;color:var(--muted);font-weight:600}
 .mobile-panel.open{display:block}
 
-.hero{
-  position:relative;overflow:hidden;
-  min-height:calc(92svh - var(--nav-h));
-  display:flex;align-items:center;
-  background:#0f2748;
-}
-.hero-media,.hero-overlay,.hero-video{position:absolute;inset:0}
-.hero-media{background-position:center 28%;background-size:cover;filter:saturate(1.02)}
-.hero-video{
-  width:100%;height:100%;border:0;pointer-events:none;
-  transform:scale(1.16);
-  opacity:.96;
-}
-.hero-overlay{
-  background:
-    linear-gradient(180deg, rgba(7,21,40,.26) 0%, rgba(7,21,40,.28) 34%, rgba(7,21,40,.82) 100%),
-    radial-gradient(circle at top right, rgba(122,157,206,.18), transparent 30%);
-}
-.hero-body{position:relative;z-index:2;padding:72px 0 44px;color:#fff}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:center;justify-items:center;min-height:calc(92svh - var(--nav-h) - 116px)}
-.hero-copy{max-width:900px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.hero-logo{width:min(84vw,820px);filter:drop-shadow(0 10px 28px rgba(7,21,40,.22))}
+
+.hero{position:relative;overflow:hidden;min-height:calc(100svh - var(--nav-h));display:flex;align-items:center;background:linear-gradient(180deg,#eef4fb 0%,#f4f7fb 100%)}
+.hero-media,.hero-overlay,.hero-video-bg{position:absolute;inset:0}
+.hero-media{background-position:center center;background-size:cover;filter:saturate(.92)}
+.hero-video-bg{width:100%;height:100%;border:0;pointer-events:none;transform:scale(1.1);opacity:.22;mix-blend-mode:multiply}
+.hero-overlay{background:linear-gradient(180deg,rgba(244,247,251,.88) 0%, rgba(244,247,251,.76) 50%, rgba(244,247,251,.92) 100%)}
+.hero-body{position:relative;z-index:2;padding:54px 0 48px;color:var(--ink)}
+.hero-grid{display:grid;grid-template-columns:minmax(340px,.92fr) minmax(420px,1.08fr);gap:42px;align-items:center;min-height:calc(100svh - var(--nav-h) - 102px)}
+.hero-copy{max-width:520px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left}
+.hero-logo{width:min(100%,420px);margin-bottom:20px}
 .hero-logo img{width:100%;height:auto;display:block}
-.hero-copy p{color:rgba(255,255,255,.84);font-size:17px;max-width:700px;margin:12px auto 20px;line-height:1.66}
-.sound-btn{
-  position:relative;right:auto;bottom:auto;z-index:3;
-  min-width:168px;height:58px;padding:0 18px 0 16px;border-radius:999px;
-  border:1px solid rgba(255,255,255,.34);
-  background:linear-gradient(135deg, rgba(37,97,166,.96), rgba(111,164,234,.9));color:#fff;
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:800;cursor:pointer;
-  backdrop-filter:blur(12px);transition:.22s ease;
-  box-shadow:0 12px 30px rgba(11,33,66,.34);
-  animation:pulseMute 1.45s infinite;
-}
-.sound-btn:hover{transform:translateY(-1px) scale(1.02)}
-.sound-btn.is-on{animation:none;background:rgba(18,40,67,.82);border-color:rgba(255,255,255,.34)}
-.hero-sound-row{display:flex;justify-content:center;margin-top:18px}
-.sound-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(255,255,255,.2))}
-.sound-btn .sound-label{white-space:nowrap}
-@keyframes pulseMute{
-  0%{transform:scale(1);box-shadow:0 0 0 0 rgba(111,164,234,.62),0 12px 30px rgba(11,33,66,.34)}
+.hero-copy p{color:var(--ink);font-size:16px;max-width:560px;margin:0 0 18px;line-height:1.72}
+.hero-meta{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-top:10px}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.hero-meta span::before{content:"•";color:var(--blue)}
+.hero-feature{position:relative;background:rgba(255,255,255,.62);border:1px solid rgba(20,40,67,.08);border-radius:26px;padding:12px;box-shadow:0 28px 56px rgba(18,40,67,.12);backdrop-filter:blur(8px)}
+.hero-player{position:relative;aspect-ratio:16/10;border-radius:20px;overflow:hidden;background:#071220;cursor:pointer}
+.hero-player-thumb{position:absolute;inset:0;background-position:center;background-size:cover;transition:transform .24s ease}
+.hero-player::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,18,32,.14),rgba(7,18,32,.4))}
+.hero-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+.hero-player.is-active .hero-player-thumb,.hero-player.is-active .hero-play-overlay,.hero-player.is-active .hero-caption{opacity:0;pointer-events:none}
+.hero-player:hover .hero-player-thumb{transform:scale(1.02)}
+.hero-play-overlay{position:absolute;inset:0;display:grid;place-items:center;z-index:2;transition:opacity .22s ease}
+.hero-play-btn{width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.88);border:0;color:#111;font-size:30px;box-shadow:0 18px 34px rgba(15,39,72,.18)}
+.hero-caption{position:absolute;left:26px;right:26px;bottom:22px;display:flex;justify-content:space-between;align-items:center;gap:14px;z-index:2;color:#fff;transition:opacity .22s ease}
+.hero-caption-main{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.84)}
+.hero-caption-title{font-family:var(--serif);font-size:27px;line-height:1.02;letter-spacing:.01em;margin-top:6px}
+.hero-caption-year{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8)}
   50%{transform:scale(1.05);box-shadow:0 0 0 22px rgba(111,164,234,0),0 12px 30px rgba(11,33,66,.34)}
   100%{transform:scale(1);box-shadow:0 0 0 0 rgba(111,164,234,0),0 12px 30px rgba(11,33,66,.34)}
 }
@@ -213,13 +200,6 @@ h1,h2,h3{margin:0;line-height:1.05}
   border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)
 }
 .quote p{font-family:var(--serif);font-size:25px;line-height:1.08;margin:0 0 8px;letter-spacing:.003em}
-.official-block{background:linear-gradient(180deg,#fffaf0,#fffdf7);border:1px solid rgba(201,165,90,.34);border-radius:18px;padding:22px}
-.official-title{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 16px;padding-bottom:14px;border-bottom:1px solid rgba(201,165,90,.22)}
-.official-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.official-grid .card:first-child,.official-grid .card:nth-child(2){grid-column:span 1}
-.official-grid .card:nth-child(3){max-width:290px}
-.official-grid .card-media{aspect-ratio:16/12}
-.press-title{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin:0 0 16px;padding-top:2px;border-top:1px solid var(--bb);padding-top:18px}
 .validation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
 .validation{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:15px}
 .validation strong{display:block;font-size:15px;margin-bottom:5px}
@@ -286,10 +266,13 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
 
 @media (max-width: 1100px){
   .hero-grid,.show-grid,.composer-grid,.about-grid,.contract-grid,.contact-grid{grid-template-columns:1fr}
-  .hero-panel{max-width:480px}
+  .hero-copy{max-width:640px;margin:0 auto;align-items:center;text-align:center}
+  .hero-logo{margin-left:auto;margin-right:auto}
+  .hero-feature{max-width:760px;margin:0 auto}
+  .hero-caption-title{font-size:23px}
   .numbers-grid{grid-template-columns:1fr 1fr 1fr}
   .number-card.featured{grid-column:1 / -1}
-  .editorial-grid,.press-grid,.validation-grid,.footer-grid,.official-grid{grid-template-columns:1fr 1fr}
+  .editorial-grid,.press-grid,.validation-grid,.footer-grid{grid-template-columns:1fr 1fr}
   .instagram-grid{grid-template-columns:repeat(3,1fr)}
   .gallery-row.landscape,.gallery-row.portrait{grid-template-columns:repeat(2,1fr)}
   .gallery-item.landscape-item{aspect-ratio:16/10}
@@ -304,7 +287,13 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   .section-head{display:block;margin-bottom:18px}
   .lead{font-size:15px;line-height:1.64}
   .title-xl{font-size:42px}
-  .editorial-grid,.press-grid,.footer-grid,.numbers-grid,.official-grid{grid-template-columns:1fr}
+  .editorial-grid,.press-grid,.footer-grid,.numbers-grid{grid-template-columns:1fr}
+  .hero-body{padding:44px 0 30px}
+  .hero-grid{min-height:auto;gap:26px}
+  .hero-feature{padding:10px}
+  .hero-caption{left:18px;right:18px;bottom:16px}
+  .hero-caption-title{font-size:20px}
+  .hero-play-btn{width:72px;height:72px;font-size:26px}
   .instagram-grid{grid-template-columns:repeat(3,1fr)}
   .gallery-row.landscape,.gallery-row.portrait{grid-template-columns:1fr}
   .gallery-item.landscape-item{aspect-ratio:16/10}
@@ -315,20 +304,17 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
 
 @media (max-width: 560px){
   .container{padding:0 18px}
-  .hero-body{padding:56px 0 34px}
-  .hero-grid{min-height:calc(84svh - var(--nav-h) - 90px)}
+  .hero-body{padding:34px 0 26px}
+  .hero-grid{min-height:auto;gap:22px}
   .title-xl{font-size:35px}
-  .sound-btn{right:18px;bottom:18px;min-width:118px;height:50px;font-size:12px;padding:0 14px}
   .title-lg{font-size:30px}
   .title-md{font-size:26px}
-  .hero-copy p{font-size:15px;line-height:1.6}
+  .hero-copy p{font-size:15px;line-height:1.64}
+  .hero-meta{justify-content:center;gap:12px;font-size:10px}
   .instagram-grid{gap:7px}
   .gallery-row{gap:8px}
   .contact-card,.form-card,.instagram-wrap,.card,.quote,.contract-cta,.media-card,.embed-card{border-radius:18px}
   .btn-row{gap:9px}
-  .hero-panel{padding:15px}
-  .hero-stat strong{font-size:26px}
-  .hero-stat span{font-size:10px}
   .quote p{font-size:22px}
 }
 </style>
@@ -347,8 +333,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
     </a>
     <div class="nav-links">
       <a href="#show">Espetáculo</a>
-      <a href="#videos">Vídeo</a>
-      <a href="#galeria">Galeria</a>
+            <a href="#galeria">Galeria</a>
       <a href="#instagram">Instagram</a>
       <a href="#compositor">Compositor</a>
       <a href="#numeros">Números</a>
@@ -363,8 +348,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   <div class="container">
     <div id="mobilePanel" class="mobile-panel">
       <a href="#show">Espetáculo</a>
-      <a href="#videos">Vídeo do Show</a>
-      <a href="#galeria">Galeria</a>
+            <a href="#galeria">Galeria</a>
       <a href="#instagram">Instagram</a>
       <a href="#compositor">O Compositor</a>
       <a href="#numeros">O alcance que justifica o cachê</a>
@@ -379,18 +363,33 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
 
 <header id="hero" class="hero">
   <div class="hero-media" id="heroMedia"></div>
-  <iframe id="heroVideo" class="hero-video" title="Vídeo de fundo do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="heroVideoBg" class="hero-video-bg" title="Vídeo de fundo do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
   <div class="hero-overlay"></div>
   <div class="container hero-body">
     <div class="hero-grid">
       <div class="hero-copy">
-        <div class="hero-logo">
-          <img src="img/logo-hero-tributo.png" alt="Tributo ao Rei com Tingo Santi">
+        <div class="hero-logo"><img id="heroLogo" src="" alt="Tributo ao Rei com Tingo Santi"></div>
+        <p id="heroTagline"></p>
+        <p id="heroDescription"></p>
+        <div class="hero-meta">
+          <span id="heroMeta1"></span>
+          <span id="heroMeta2"></span>
         </div>
-        <div class="hero-sound-row">
-          <button id="soundBtn" class="sound-btn" aria-label="Ligue o som"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18 6a8.5 8.5 0 0 1 0 12"></path></svg><span class="sound-label">Ligue o som</span></button>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-player" id="heroShowPlayer">
+          <div class="hero-player-thumb" id="heroShowThumb"></div>
+          <div class="hero-play-overlay" id="heroShowOverlay"><button class="hero-play-btn" aria-label="Assistir ao show">▶</button></div>
+          <div class="hero-caption" id="heroShowCaption">
+            <div>
+              <div class="hero-caption-main">Assista ao show</div>
+              <div class="hero-caption-title" id="heroShowTitle"></div>
+            </div>
+            <div class="hero-caption-year">2025</div>
+          </div>
+          <iframe id="heroShowFrame" class="hidden" title="Vídeo principal do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
         </div>
-      </div></div>
+      </div>
     </div>
   </div>
 </header>
@@ -418,26 +417,6 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   </div>
 </section>
 
-<section id="videos" class="section compact tinted">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="kicker">Vídeo do Show</div>
-        <h2 class="title-md">Assista ao show</h2>
-      </div>
-    </div>
-    <div class="video-shell">
-      <div class="video-player" id="videoPlayer">
-        <div class="video-thumb" id="videoThumb"></div>
-        <div class="video-overlay" id="videoOverlay">
-          <button class="play-btn" aria-label="Assistir vídeo">▶</button>
-        </div>
-        <iframe id="videoFrame" class="hidden" title="Vídeo do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-caption" id="videoTitle"></div>
-    </div>
-  </div>
-</section>
 
 <section id="galeria" class="section compact soft">
   <div class="container">
@@ -521,16 +500,15 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   <div class="container">
     <div class="editorial-grid" id="editorialGrid"></div>
 
-    <div style="height:24px"></div>
+    <div style="height:18px"></div>
 
-    <div class="official-block">
-      <div class="official-title">★ Publicado em sites oficiais</div>
-      <div class="official-grid" id="officialGrid"></div>
+    <div class="quote">
+      <p id="pressQuote"></p>
+      <div class="muted" id="pressQuoteSource"></div>
     </div>
 
-    <div style="height:24px"></div>
+    <div style="height:18px"></div>
 
-    <div class="press-title">Cobertura de imprensa</div>
     <div class="press-grid" id="pressGrid"></div>
   </div>
 </section>
@@ -661,8 +639,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
         <div class="footer-title">Seções</div>
         <div class="footer-links">
           <a href="#show">Espetáculo</a>
-          <a href="#videos">Vídeo</a>
-          <a href="#galeria">Galeria</a>
+                    <a href="#galeria">Galeria</a>
           <a href="#instagram">Instagram</a>
           <a href="#compositor">Compositor</a>
         </div>
@@ -717,30 +694,17 @@ function setupMenu(){
   btn.addEventListener('click', () => panel.classList.toggle('open'));
   panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
 }
-let heroMuted = true;
-function heroCommand(func){
-  const iframe = $('#heroVideo');
-  if(!iframe || !iframe.contentWindow) return;
-  iframe.contentWindow.postMessage(JSON.stringify({event:'command',func,args:[]}), '*');
-}
 function setupHero(){
   $('#heroMedia').style.backgroundImage = `url('${SITE.hero.foto}')`;
-  const tagline = $('#heroTagline');
-  if(tagline) tagline.textContent = SITE.hero.tagline || '';
+  $('#heroLogo').src = SITE.hero.logo || 'img/hero_logo_panel.png';
+  $('#heroTagline').textContent = SITE.hero.tagline || '';
+  $('#heroDescription').textContent = SITE.hero.descricao || '';
+  $('#heroMeta1').textContent = SITE.hero.selo1 || 'Tributo ao Rei';
+  $('#heroMeta2').textContent = SITE.hero.selo2 || 'Show ao vivo';
   const heroVideoId = SITE.hero.youtubeId || SITE.videoShow.youtubeId || '';
   if(heroVideoId){
-    $('#heroVideo').src = `https://www.youtube.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=${heroVideoId}&playsinline=1&modestbranding=1&rel=0&enablejsapi=1&origin=${location.origin}`;
+    $('#heroVideoBg').src = `https://www.youtube.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=${heroVideoId}&playsinline=1&modestbranding=1&rel=0&enablejsapi=1&origin=${location.origin}`;
   }
-  $('#soundBtn').addEventListener('click', toggleHeroSound);
-}
-function toggleHeroSound(){
-  heroMuted = !heroMuted;
-  heroCommand(heroMuted ? 'mute' : 'unMute');
-  const btn = $('#soundBtn');
-  btn.classList.toggle('is-on', !heroMuted);
-  btn.setAttribute('aria-label', heroMuted ? 'Ligue o som' : 'Desligar som');
-  const label = btn.querySelector('.sound-label');
-  if(label) label.textContent = heroMuted ? 'Ligue o som' : 'Som ligado';
 }
 function setupShow(){
   $('#showMain').src = SITE.show.fotoMain;
@@ -751,47 +715,20 @@ function setupShow(){
     wrap.appendChild(el('article','feature', `<h3>${escapeHtml(item.titulo)}</h3><p>${escapeHtml(item.desc)}</p>`));
   });
 }
-function setupVideo(){
-  const thumb = $('#videoThumb');
-  const player = $('#videoPlayer');
-  $('#videoTitle').textContent = SITE.videoShow.titulo || '';
-  thumb.style.backgroundImage = `url(https://img.youtube.com/vi/${SITE.videoShow.youtubeId}/maxresdefault.jpg)`;
-  player.addEventListener('click', toggleShowVideo);
-}
-let showVideoLoaded = false;
-let showVideoPlaying = false;
-function showVideoCommand(func){
-  const frame = $('#videoFrame');
-  if(!frame || !frame.contentWindow) return;
-  frame.contentWindow.postMessage(JSON.stringify({event:'command',func,args:[]}), '*');
-}
-function toggleShowVideo(){
-  const player = $('#videoPlayer');
-  const frame = $('#videoFrame');
+function setupHeroShowVideo(){
+  const thumb = $('#heroShowThumb');
+  const player = $('#heroShowPlayer');
+  const title = $('#heroShowTitle');
   const videoId = SITE.videoShow.youtubeId;
-  if(!showVideoLoaded){
-    heroMuted = true;
-    heroCommand('mute');
-    heroCommand('pauseVideo');
-    frame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=1&enablejsapi=1&origin=${location.origin}`;
+  title.textContent = SITE.videoShow.titulo || 'Tributo ao Rei · Show ao Vivo';
+  thumb.style.backgroundImage = `url(https://img.youtube.com/vi/${videoId}/maxresdefault.jpg)`;
+  player.addEventListener('click', () => {
+    if(player.classList.contains('is-active')) return;
+    const frame = $('#heroShowFrame');
+    frame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=1`;
     frame.classList.remove('hidden');
     player.classList.add('is-active');
-    showVideoLoaded = true;
-    showVideoPlaying = true;
-    return;
-  }
-  if(showVideoPlaying){
-    showVideoCommand('pauseVideo');
-    showVideoPlaying = false;
-    player.classList.remove('is-active');
-  } else {
-    heroMuted = true;
-    heroCommand('mute');
-    heroCommand('pauseVideo');
-    showVideoCommand('playVideo');
-    showVideoPlaying = true;
-    player.classList.add('is-active');
-  }
+  });
 }
 function setupGallery(){
   const landscape = $('#galleryLandscape');
@@ -853,28 +790,21 @@ function imprensaCard(item, compact=false){
   return `<a class="card" href="${escapeHtml(href)}" ${item.link ? 'target="_blank" rel="noopener"' : ''}>${media}<div class="card-body"><div class="card-meta">${escapeHtml(item.veiculo)} · ${escapeHtml(item.data)}</div><h3 style="${compact ? 'font-size:18px' : ''}">${escapeHtml(item.manchete)}</h3>${compact ? '' : '<p>Leitura editorial e prova pública de aderência.</p>'}</div></a>`;
 }
 function setupImprensa(){
-  const items = SITE.imprensa || [];
-  const featured = items.filter(x => x.featured).slice(0,1);
-  const official = items.filter(x => x.official);
-  const press = items.filter(x => !x.featured && !x.official);
-
+  const featured = (SITE.imprensa || []).filter(x => x.featured).slice(0,1);
+  const mids = (SITE.imprensa || []).filter(x => !x.featured && !x.official).slice(0,2);
+  const press = (SITE.imprensa || []).filter(x => !x.featured && !x.official).slice(2,8);
   const editorialWrap = $('#editorialGrid');
-  featured.forEach(item => {
-    editorialWrap.insertAdjacentHTML('beforeend', imprensaCard(item, false));
+  [...featured, ...mids].forEach((item, idx) => {
+    editorialWrap.insertAdjacentHTML('beforeend', imprensaCard(item, idx>0));
   });
-
-  const officialWrap = $('#officialGrid');
-  official.forEach(item => {
-    officialWrap.insertAdjacentHTML('beforeend', imprensaCard(item, true));
-  });
-
+  $('#pressQuote').textContent = SITE.imprensaQuote.texto || '';
+  $('#pressQuoteSource').textContent = SITE.imprensaQuote.fonte || '';
   const pressWrap = $('#pressGrid');
   press.forEach(item => pressWrap.insertAdjacentHTML('beforeend', imprensaCard(item, true)));
-
   const validations = (SITE.validacoes || []).slice(0,6);
   if(validations.length){
     const container = $('#imprensa .container');
-    container.appendChild(el('div','', '<div style="height:24px"></div><div class="kicker">Validações institucionais</div><h3 style="margin:0 0 14px;font-size:26px;line-height:1.08">Presença pública e institucional já consolidada.</h3>'));
+    container.appendChild(el('div','', '<div style="height:18px"></div><div class="kicker">Validações institucionais</div><h3 style="margin:0 0 14px;font-size:26px;line-height:1.08">Presença pública e institucional já consolidada.</h3>'));
     const grid = el('div','validation-grid','');
     validations.forEach(v=> grid.appendChild(el('div','validation',`<strong>${escapeHtml(v.titulo)}</strong><span>${escapeHtml(v.subtitulo)}</span>`)));
     container.appendChild(grid);
@@ -948,8 +878,8 @@ function setupFooter(){
 document.addEventListener('DOMContentLoaded', () => {
   setupMenu();
   setupHero();
+  setupHeroShowVideo();
   setupShow();
-  setupVideo();
   setupGallery();
   setupInstagram();
   setupComposer();

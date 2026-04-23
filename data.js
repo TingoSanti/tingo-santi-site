@@ -24,8 +24,12 @@ const SITE = {
 
   hero: {
     youtubeId:  "M7ehpNbIbUY",
-    tagline:    "A obra de Roberto Carlos ao vivo, com voz natural, orquestra e emoção verdadeira.",
-    foto:       "img/hero_principal.jpg"
+    tagline:    "Tributo profissional a Roberto Carlos, com voz natural, entrega elegante e repertório reconhecível.",
+    descricao:  "Tingo Santi é cantor, compositor e intérprete. O projeto une emoção, palco e produção profissional em um show pensado para público, instituições e contratantes.",
+    foto:       "img/hero_principal.jpg",
+    logo:       "img/hero_logo_panel.png",
+    selo1:      "Tributo ao Rei",
+    selo2:      "Show ao vivo"
   },
 
   /* ── VÍDEOS — APENAS 1 (SIMPLIFICADO) ─────────────────── */
