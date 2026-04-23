@@ -28,6 +28,8 @@ const SITE = {
     descricao:  "Tingo Santi é cantor, compositor e intérprete. O projeto une emoção, palco e produção profissional em um show pensado para público, instituições e contratantes.",
     foto:       "img/hero_principal.jpg",
     logo:       "img/hero_logo_panel.png",
+    tributoLogo:"img/logo_tributo.png",
+    nome:       "Tingo Santi",
     selo1:      "Tributo ao Rei",
     selo2:      "Show ao vivo"
   },
