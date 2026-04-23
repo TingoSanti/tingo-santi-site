@@ -103,7 +103,7 @@ const SITE = {
   },
 
   /* ── NÚMEROS GERAIS ────────────────────────────────────── */
-  numerosTitulo:    "O alcance que justifica o <em>cachê</em>",
+  numerosTitulo:    "Números que reforçam o <em>projeto</em>",
   numerosSubtitulo: "Indicadores orgânicos de 2024–2026 que posicionam o projeto acima da média do segmento de tributo a Roberto Carlos no Brasil.",
   numeros: [
     {
