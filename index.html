@@ -85,47 +85,69 @@ h1,h2,h3{margin:0;line-height:1.05}
 .mobile-panel a{display:block;padding:11px 0;color:var(--muted);font-weight:600}
 .mobile-panel.open{display:block}
 
+
 .hero{
-  position:relative;overflow:hidden;
-  min-height:calc(92svh - var(--nav-h));
-  display:flex;align-items:center;
-  background:#0f2748;
+  position:relative;overflow:hidden;min-height:calc(100svh - var(--nav-h));
+  display:flex;align-items:center;background:linear-gradient(180deg,#edf2fa 0%,#e6edf9 100%);
 }
 .hero-media,.hero-overlay,.hero-video{position:absolute;inset:0}
-.hero-media{background-position:center 28%;background-size:cover;filter:saturate(1.02)}
+.hero-media{display:none}
 .hero-video{
   width:100%;height:100%;border:0;pointer-events:none;
-  transform:scale(1.16);
-  opacity:.96;
+  transform:scale(1.12);opacity:.34;filter:saturate(1.02) contrast(.98);
 }
 .hero-overlay{
   background:
-    linear-gradient(180deg, rgba(7,21,40,.26) 0%, rgba(7,21,40,.28) 34%, rgba(7,21,40,.82) 100%),
-    radial-gradient(circle at top right, rgba(122,157,206,.18), transparent 30%);
+    linear-gradient(180deg, rgba(232,238,249,.82) 0%, rgba(232,238,249,.78) 36%, rgba(232,238,249,.76) 100%),
+    radial-gradient(circle at top right, rgba(59,110,189,.12), transparent 30%);
 }
-.hero-body{position:relative;z-index:2;padding:72px 0 44px;color:#fff}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:center;justify-items:center;min-height:calc(92svh - var(--nav-h) - 116px)}
-.hero-copy{max-width:900px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.hero-logo{width:min(84vw,820px);filter:drop-shadow(0 10px 28px rgba(7,21,40,.22))}
-.hero-logo img{width:100%;height:auto;display:block}
-.hero-copy p{color:rgba(255,255,255,.84);font-size:17px;max-width:700px;margin:12px auto 20px;line-height:1.66}
-.sound-btn{
-  position:relative;right:auto;bottom:auto;z-index:3;
-  min-width:168px;height:58px;padding:0 18px 0 16px;border-radius:999px;
-  border:1px solid rgba(255,255,255,.34);
-  background:linear-gradient(135deg, rgba(37,97,166,.96), rgba(111,164,234,.9));color:#fff;
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:800;cursor:pointer;
-  backdrop-filter:blur(12px);transition:.22s ease;
-  box-shadow:0 12px 30px rgba(11,33,66,.34);
-  animation:pulseMute 1.45s infinite;
+.hero-body{position:relative;z-index:2;padding:72px 0 52px;color:var(--ink)}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:44px;
+  align-items:center;min-height:calc(100svh - var(--nav-h) - 124px)
 }
-.sound-btn:hover{transform:translateY(-1px) scale(1.02)}
-.sound-btn.is-on{animation:none;background:rgba(18,40,67,.82);border-color:rgba(255,255,255,.34)}
-.hero-sound-row{display:flex;justify-content:center;margin-top:18px}
-.sound-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(255,255,255,.2))}
-.sound-btn .sound-label{white-space:nowrap}
-@keyframes pulseMute{
-  0%{transform:scale(1);box-shadow:0 0 0 0 rgba(111,164,234,.62),0 12px 30px rgba(11,33,66,.34)}
+.hero-copy{max-width:520px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left}
+.hero-logo{display:none}
+.hero-title{
+  font-family:'Playfair Display', var(--serif);font-weight:700;
+  font-size:clamp(58px,8vw,86px);line-height:.92;letter-spacing:-.04em;
+  color:#2b63a8;text-transform:uppercase;margin:0 0 18px
+}
+.hero-copy p{color:#243754;font-size:18px;max-width:540px;margin:0 0 18px;line-height:1.7}
+.hero-meta{display:flex;flex-wrap:wrap;gap:22px;list-style:none;padding:0;margin:8px 0 26px}
+.hero-meta li{
+  position:relative;padding-left:14px;font-size:12px;letter-spacing:.28em;
+  text-transform:uppercase;color:#6d7d99
+}
+.hero-meta li::before{content:"•";position:absolute;left:0;top:0;color:#3f67a8}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-actions .bp,.hero-actions .bout{
+  border-radius:999px;padding:16px 28px;font-size:12px;letter-spacing:.28em
+}
+.hero-actions .bp{background:#121418;color:#fff}
+.hero-actions .bout{background:transparent;color:#243754;border:1px solid rgba(36,55,84,.16)}
+.hero-video-col{width:100%;max-width:760px;justify-self:end}
+.hero-player{
+  position:relative;aspect-ratio:16/10;border-radius:24px;overflow:hidden;background:#0b1320;
+  box-shadow:0 26px 56px rgba(17,34,66,.16);cursor:pointer
+}
+.hero-player::after{content:"";position:absolute;inset:0;border-radius:24px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);pointer-events:none}
+.hero-player .video-thumb{position:absolute;inset:0;background-position:center;background-size:cover;transition:transform .24s ease}
+.hero-player .video-overlay{
+  position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,21,40,.08), rgba(7,21,40,.44));
+  display:grid;place-items:center
+}
+.hero-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.hero-player.is-active .video-overlay{opacity:0;pointer-events:none}
+.hero-player.is-active .video-thumb{opacity:0}
+.hero-player:hover .video-thumb{transform:scale(1.02)}
+.hero-player .play-btn{
+  width:86px;height:86px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(248,242,230,.95);border:0;color:#111;font-size:30px
+}
+.hero-caption{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 4px 0;color:#627391}
+.hero-caption span{font-size:12px;letter-spacing:.28em;text-transform:uppercase}
+.sound-btn,.hero-sound-row{display:none !important}
   50%{transform:scale(1.05);box-shadow:0 0 0 22px rgba(111,164,234,0),0 12px 30px rgba(11,33,66,.34)}
   100%{transform:scale(1);box-shadow:0 0 0 0 rgba(111,164,234,0),0 12px 30px rgba(11,33,66,.34)}
 }
@@ -279,7 +301,8 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
 
 @media (max-width: 1100px){
   .hero-grid,.show-grid,.composer-grid,.about-grid,.contract-grid,.contact-grid{grid-template-columns:1fr}
-  .hero-panel{max-width:480px}
+  .hero-copy{max-width:none}
+  .hero-video-col{max-width:820px;justify-self:stretch}
   .numbers-grid{grid-template-columns:1fr 1fr 1fr}
   .number-card.featured{grid-column:1 / -1}
   .editorial-grid,.press-grid,.validation-grid,.footer-grid{grid-template-columns:1fr 1fr}
@@ -308,10 +331,16 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
 
 @media (max-width: 560px){
   .container{padding:0 18px}
-  .hero-body{padding:56px 0 34px}
-  .hero-grid{min-height:calc(84svh - var(--nav-h) - 90px)}
-  .title-xl{font-size:35px}
-  .sound-btn{right:18px;bottom:18px;min-width:118px;height:50px;font-size:12px;padding:0 14px}
+  .hero-body{padding:34px 0 28px}
+  .hero-grid{min-height:auto;gap:20px}
+  .hero-title{font-size:clamp(50px,19vw,72px)}
+  .hero-copy p{font-size:15px;line-height:1.62}
+  .hero-meta{gap:16px 22px;margin:2px 0 20px}
+  .hero-meta li{font-size:11px;letter-spacing:.22em}
+  .hero-actions{width:100%;flex-direction:column}
+  .hero-actions .bp,.hero-actions .bout{width:100%;justify-content:center;text-align:center;padding:15px 22px}
+  .hero-player{aspect-ratio:16/10;border-radius:20px}
+  .hero-player::after{border-radius:20px}
   .title-lg{font-size:30px}
   .title-md{font-size:26px}
   .hero-copy p{font-size:15px;line-height:1.6}
@@ -370,6 +399,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   </div>
 </nav>
 
+
 <header id="hero" class="hero">
   <div class="hero-media" id="heroMedia"></div>
   <iframe id="heroVideo" class="hero-video" title="Vídeo de fundo do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
@@ -377,15 +407,35 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   <div class="container hero-body">
     <div class="hero-grid">
       <div class="hero-copy">
-        <div class="hero-logo">
-          <img src="img/logo-hero-tributo.png" alt="Tributo ao Rei com Tingo Santi">
+        <h1 class="hero-title">TINGO SANTI</h1>
+        <p>Tributo profissional a Roberto Carlos, com voz natural, entrega elegante e repertório reconhecível.</p>
+        <p>Tingo Santi é cantor, compositor e intérprete. O projeto une emoção, palco e produção profissional em um show pensado para público, instituições e contratantes.</p>
+        <ul class="hero-meta">
+          <li>TRIBUTO AO REI</li>
+          <li>SHOW AO VIVO</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="bp" href="#contratantes">CONTRATAR SHOW</a>
+          <a class="bout" href="https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b" target="_blank" rel="noopener">OUVIR NO SPOTIFY</a>
         </div>
-        <div class="hero-sound-row">
-</div>
-      </div></div>
+      </div>
+      <div class="hero-video-col">
+        <div class="hero-player video-player" id="videoPlayer">
+          <div class="video-thumb" id="videoThumb"></div>
+          <div class="video-overlay" id="videoOverlay">
+            <button class="play-btn" aria-label="Assistir vídeo">▶</button>
+          </div>
+          <iframe id="videoFrame" class="hidden" title="Vídeo do show" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="hero-caption">
+          <span>ASSISTA AO SHOW</span>
+          <span>2025</span>
+        </div>
+      </div>
     </div>
   </div>
 </header>
+
 
 <section id="show" class="section soft">
   <div class="container">
@@ -410,7 +460,7 @@ footer{padding:28px 0 38px;background:#edf2fa;border-top:1px solid var(--line);m
   </div>
 </section>
 
-<section id="videos" class="section compact tinted">
+<section id="videos" class="section compact tinted" style="display:none">
   <div class="container">
     <div class="section-head">
       <div>
@@ -708,79 +758,29 @@ function setupMenu(){
   btn.addEventListener('click', () => panel.classList.toggle('open'));
   panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
 }
-let heroMuted = true;
-function heroCommand(func){
-  const iframe = $('#heroVideo');
-  if(!iframe || !iframe.contentWindow) return;
-  iframe.contentWindow.postMessage(JSON.stringify({event:'command',func,args:[]}), '*');
-}
 function setupHero(){
-  $('#heroMedia').style.backgroundImage = `url('${SITE.hero.foto}')`;
-  const tagline = $('#heroTagline');
-  if(tagline) tagline.textContent = SITE.hero.tagline || '';
-  const heroVideoId = SITE.hero.youtubeId || SITE.videoShow.youtubeId || '';
-  if(heroVideoId){
-    $('#heroVideo').src = `https://www.youtube.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=${heroVideoId}&playsinline=1&modestbranding=1&rel=0&enablejsapi=1&origin=${location.origin}`;
+  const bg = $('#heroVideo');
+  if(bg){
+    const heroVideoId = SITE.hero.youtubeId || SITE.videoShow.youtubeId || '';
+    if(heroVideoId){
+      bg.src = `https://www.youtube.com/embed/${heroVideoId}?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=${heroVideoId}&playsinline=1&modestbranding=1&rel=0`;
+    }
   }
-}
-function toggleHeroSound(){
-  heroMuted = !heroMuted;
-  heroCommand(heroMuted ? 'mute' : 'unMute');
-  btn.classList.toggle('is-on', !heroMuted);
-  btn.setAttribute('aria-label', heroMuted ? 'Ligue o som' : 'Desligar som');
-  const label = btn.querySelector('.sound-label');
-  if(label) label.textContent = heroMuted ? 'Ligue o som' : 'Som ligado';
-}
-function setupShow(){
-  $('#showMain').src = SITE.show.fotoMain;
-  $('#showAccent').src = SITE.show.fotoAccent;
-  $('#showIntro').textContent = SITE.show.intro;
-  const wrap = $('#showFeatures');
-  SITE.show.features.forEach(item => {
-    wrap.appendChild(el('article','feature', `<h3>${escapeHtml(item.titulo)}</h3><p>${escapeHtml(item.desc)}</p>`));
-  });
 }
 function setupVideo(){
   const thumb = $('#videoThumb');
-  const player = $('#videoPlayer');
-  $('#videoTitle').textContent = SITE.videoShow.titulo || '';
   thumb.style.backgroundImage = `url(${SITE.hero.heroCover || 'https://img.youtube.com/vi/' + SITE.videoShow.youtubeId + '/maxresdefault.jpg'})`;
-  player.addEventListener('click', toggleShowVideo);
+  $('#videoPlayer').addEventListener('click', loadShowVideoOnce, { once:true });
 }
-let showVideoLoaded = false;
-let showVideoPlaying = false;
-function showVideoCommand(func){
-  const frame = $('#videoFrame');
-  if(!frame || !frame.contentWindow) return;
-  frame.contentWindow.postMessage(JSON.stringify({event:'command',func,args:[]}), '*');
-}
-function toggleShowVideo(){
+function loadShowVideoOnce(){
   const player = $('#videoPlayer');
   const frame = $('#videoFrame');
+  const overlay = $('#videoOverlay');
   const videoId = SITE.videoShow.youtubeId;
-  if(!showVideoLoaded){
-    heroMuted = true;
-    heroCommand('mute');
-    heroCommand('pauseVideo');
-    frame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=1&enablejsapi=1&origin=${location.origin}`;
-    frame.classList.remove('hidden');
-    player.classList.add('is-active');
-    showVideoLoaded = true;
-    showVideoPlaying = true;
-    return;
-  }
-  if(showVideoPlaying){
-    showVideoCommand('pauseVideo');
-    showVideoPlaying = false;
-    player.classList.remove('is-active');
-  } else {
-    heroMuted = true;
-    heroCommand('mute');
-    heroCommand('pauseVideo');
-    showVideoCommand('playVideo');
-    showVideoPlaying = true;
-    player.classList.add('is-active');
-  }
+  frame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=0&rel=0&modestbranding=1&playsinline=1&controls=1&enablejsapi=1&origin=${location.origin}`;
+  frame.classList.remove('hidden');
+  player.classList.add('is-active');
+  if(overlay) overlay.style.display = 'none';
 }
 function setupGallery(){
   const landscape = $('#galleryLandscape');
