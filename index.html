@@ -279,12 +279,14 @@ button{cursor:pointer;font-family:var(--sans)}
 .vinst-sub{font-size:.78rem;color:var(--tm);line-height:1.55}
 
 /* ── CONTRATANTES ── */
-.cblock{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.cdocs{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.cblock{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:stretch}
+.cpane{display:flex;flex-direction:column;min-height:430px}
+.cactions{margin-top:auto;padding-top:2rem;display:flex;gap:1rem;flex-wrap:wrap}
+.cdocs{list-style:none;display:flex;flex-direction:column;gap:.72rem}
 .cdocs li{display:flex;gap:.85rem;align-items:flex-start;font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.5}
 .cdocs li::before{content:'✓';color:var(--blue);font-weight:600;flex-shrink:0;margin-top:.05rem}
-.cprec{display:flex;flex-direction:column;gap:.8rem;margin-top:1.85rem}
-.cpcard{padding:1.12rem 1.35rem;border:1px solid var(--off2);border-radius:var(--r);background:var(--w);border-left:3px solid var(--blue)}
+.cprec{display:flex;flex-direction:column;gap:.72rem;margin-top:0;justify-content:space-between;flex:1}
+.cpcard{padding:1rem 1.35rem;border:1px solid var(--off2);border-radius:var(--r);background:var(--w);border-left:3px solid var(--blue)}
 .cpcat{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem}
 .cpmun{font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.3rem}
 .cpev{font-size:.9rem;font-weight:300;color:var(--tm);line-height:1.5}
@@ -339,6 +341,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .sg,.sgr,.csp,.cblock,.soc-grid{grid-template-columns:1fr;gap:3.5rem}
+  .cpane{min-height:auto}
   .fg{grid-template-columns:1fr 1fr}
   .spa{display:none}
   .gm{columns:2}
@@ -563,15 +566,15 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <h2 class="sh">Estrutura para <em>contratar</em></h2>
     <p class="sl" id="contIntro"></p>
     <div class="cblock">
-      <div>
+      <div class="cpane">
         <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Documentação disponível</p>
         <ul class="cdocs" id="cdocsList"></ul>
-        <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+        <div class="cactions">
           <a href="#contact" class="bp" onclick="trackCTA('cont_solicitar')">Solicitar Materiais</a>
           <a href="javascript:void(0)" id="waContBtn" class="bout" onclick="trackWA('cont')">WhatsApp da Produção</a>
         </div>
       </div>
-      <div>
+      <div class="cpane">
         <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Precedentes de contratação</p>
         <div class="cprec" id="cprecList"></div>
       </div>
