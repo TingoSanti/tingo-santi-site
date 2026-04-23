@@ -23,7 +23,7 @@ const SITE = {
   },
 
   hero: {
-    tituloHtml:   "Tingo<br><em>Santi</em>",
+    tituloHtml:   "TINGO<br>SANTI",
     subtitulo:    "Cantor e intérprete. Um tributo a Roberto Carlos com voz natural, produção profissional e repertório pensado para emocionar plateias públicas e privadas.",
     microInfos:   [],
     ctaPrimario:  "Solicitar Proposta",
