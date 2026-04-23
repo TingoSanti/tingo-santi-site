@@ -60,7 +60,11 @@ const SITE = {
   compositor: {
     eyebrow:   "Ouça & acompanhe",
     titulo:    "No <em>Spotify</em>, no Instagram.",
-    subtitulo: "Presença musical e conteúdo orgânico, lado a lado, no mesmo bloco. Layout em duas colunas no desktop e empilhado no mobile, preservando a paleta original do site.",
+    subtitulo: "Tingo Santi é também compositor com mais de 50 composições próprias circulando em 189 países nas maiores plataformas do mundo.",
+    destaque: {
+      titulo: "É Muita Saudade Pra Pouco Eu",
+      desc:   "Single de maior repercussão nas redes sociais, com 21,4 milhões de execuções."
+    },
     spotify: {
       titulo:    "Ouça no Spotify",
       label:     "Tributo · Brasil",

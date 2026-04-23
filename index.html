@@ -166,7 +166,10 @@ button{cursor:pointer;font-family:var(--sans)}
 .soc-kicker{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mu);margin-bottom:1.1rem}
 .soc-title{font-family:var(--serif);font-size:clamp(2.2rem,4.2vw,3.4rem);font-weight:400;line-height:1.02;color:var(--navy);margin-bottom:.75rem}
 .soc-title em{font-style:italic;color:var(--blue)}
-.soc-intro{font-size:1rem;font-weight:300;color:var(--tm);max-width:760px;line-height:1.8;margin-bottom:2.4rem}
+.soc-intro{font-size:1rem;font-weight:300;color:var(--tm);max-width:860px;line-height:1.8;margin-bottom:1.2rem}
+.soc-highlight{display:inline-flex;flex-direction:column;gap:.45rem;padding:1rem 1.2rem;border-left:3px solid var(--blue);background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%);border-radius:0 18px 18px 0;margin:0 0 2.4rem;max-width:760px;box-shadow:0 10px 24px rgba(11,52,128,.06)}
+.soc-highlight-title{font-family:var(--serif);font-size:clamp(1.35rem,2vw,1.75rem);font-weight:500;line-height:1.15;color:var(--navy)}
+.soc-highlight-desc{font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.7}
 .soc-card-title{font-family:var(--serif);font-size:clamp(2rem,3vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);margin-bottom:.4rem}
 .soc-card-label{font-size:.7rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--mu);margin-bottom:1.6rem}
 .soc-spotify-wrap{border-radius:24px;overflow:hidden;box-shadow:0 20px 48px rgba(2,9,28,.12);background:#111}
@@ -727,6 +730,8 @@ function init() {
   document.getElementById('socEyebrow').textContent = SITE.compositor.eyebrow;
   document.getElementById('cmpTitulo').innerHTML = SITE.compositor.titulo;
   document.getElementById('cmpSubtitulo').textContent = SITE.compositor.subtitulo;
+  document.getElementById('cmpHighlightTitle').textContent = SITE.compositor.destaque.titulo;
+  document.getElementById('cmpHighlightDesc').textContent = SITE.compositor.destaque.desc;
   document.getElementById('socSpotTitle').textContent = SITE.compositor.spotify.titulo;
   document.getElementById('socSpotLabel').textContent = SITE.compositor.spotify.label;
   document.getElementById('socIgHandle').textContent = SITE.compositor.instagram.handle;
