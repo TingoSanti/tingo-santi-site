@@ -5,42 +5,18 @@
 
 const SITE = {
 
-  contatos: {
-    default: {
-      whatsapp:      "5521975214169",
-      whatsappLabel: "(21) 97521-4169",
-      email:         "tingo.santi@proton.me",
-      instagram:     "tingosanti",
-      youtube:       "@tingosanti",
-      spotifyArtistId: "1XfDGJ4C2wEsrAbWbVaZ4b",
-      spotify:       "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
-      formspree:     "xyklpzbk",
-      cnpj:          "56.047.654/0001-25",
-      endereco:      "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006",
-      companyLabel:  "NKT Artes Ltda",
-      sectionTitle:  "Fale com a <em>produção</em>",
-      sectionIntro:  "Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.",
-      formEnabled:   true
-    },
-    ds1: {
-      whatsapp:      "5522998448726",
-      whatsappLabel: "(22) 99844-8726",
-      email:         "contato@ds1producoes.com.br",
-      instagram:     "tingosanti",
-      youtube:       "@tingosanti",
-      spotifyArtistId: "1XfDGJ4C2wEsrAbWbVaZ4b",
-      spotify:       "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
-      formspree:     "",
-      cnpj:          "",
-      endereco:      "",
-      companyLabel:  "DS1 Produções | Uriel Marques",
-      sectionTitle:  "Fale com a <em>DS1 Produções</em>",
-      sectionIntro:  "Solicitações comerciais, propostas e agenda via DS1 Produções | Uriel Marques.",
-      formEnabled:   false
-    }
+  contato: {
+    whatsapp:     "5521975214169",
+    whatsappLabel:"(21) 97521-4169",
+    email:        "tingo.santi@proton.me",
+    instagram:    "tingosanti",
+    youtube:      "@tingosanti",
+    spotifyArtistId: "1XfDGJ4C2wEsrAbWbVaZ4b",
+    spotify:      "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
+    formspree:    "xyklpzbk",
+    cnpj:         "56.047.654/0001-25",
+    endereco:     "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006"
   },
-
-  contato: null,
 
   analytics: {
     googleAnalyticsId: "G-9T397607Z9"
@@ -49,8 +25,7 @@ const SITE = {
   hero: {
     youtubeId:  "M7ehpNbIbUY",
     tagline:    "A obra de Roberto Carlos ao vivo, com voz natural, orquestra e emoção verdadeira.",
-    foto:       "img/hero_principal.jpg",
-    videoCover: "img/hero_video_cover_v2.jpg"
+    foto:       "img/hero_principal.jpg"
   },
 
   /* ── VÍDEOS — APENAS 1 (SIMPLIFICADO) ─────────────────── */
@@ -70,41 +45,36 @@ const SITE = {
     { arquivo: "img/galeria_show_braco_aberto.jpg"       },
     { arquivo: "img/galeria_rosas_plateia.jpg"           },
     { arquivo: "img/galeria_bracos_abertos.jpg"          },
-    { arquivo: "img/galeria_macae_plateia.jpg"           },
     { arquivo: "img/galeria_drone_igreja.jpg"            },
     { arquivo: "img/galeria_pcsf_plateia.jpg"            },
     { arquivo: "img/galeria_lenco_verde.jpg"             },
     { arquivo: "img/galeria_plateia_natal.jpg"           },
     { arquivo: "img/galeria_palco_orquestra_pcsf.jpg"    },
     { arquivo: "img/galeria_apontando.jpg"               },
-    { arquivo: "img/galeria_lencinho.jpg"                },
     { arquivo: "img/galeria_sorriso.jpg"                 }
   ],
 
-  /* ── OUÇA & ACOMPANHE ───────────────────────────── */
+  /* ── COMPOSITOR (nova seção) ───────────────────────────── */
   compositor: {
-    eyebrow:   "Ouça & acompanhe",
-    titulo:    "No <em>Spotify</em>, no Instagram.",
-    subtitulo: "Tingo Santi é também compositor com mais de 50 composições próprias circulando em 189 países nas maiores plataformas do mundo.",
+    titulo:    "21,4 milhões de execuções. <em>189 países.</em>",
+    subtitulo: "Mais de 50 composições próprias circulando em 189 países nas maiores plataformas do mundo.",
+    youtubeShortId: "bXdIIxEg7PY",
+    spotifyEmbedType: "artist",
+    spotifyEmbedId:   "1XfDGJ4C2wEsrAbWbVaZ4b",
     destaque: {
-      titulo: "É Muita Saudade Pra Pouco Eu",
-      desc:   "Single de maior repercussão nas redes sociais, com 21,4 milhões de execuções."
+      titulo:  "É Muita Saudade Pra Pouco Eu",
+      desc:    "Single de maior repercussão nas redes sociais, marcou o início da trajetória autoral do artista."
     },
-    spotify: {
-      titulo:    "Ouça no Spotify",
-      label:     "Tributo · Brasil",
-      embedType: "artist",
-      embedId:   "1XfDGJ4C2wEsrAbWbVaZ4b"
-    },
-    instagram: {
-      handle:       "@tingosanti",
-      label:        "Instagram",
-      beholdFeedId: "xrPM3fmIf0SxWE0aNL2H"
-    }
+    numeros: [
+      { n: "21,4M", l: "Execuções globais"        },
+      { n: "189",   l: "Países com consumo"       },
+      { n: "50+",   l: "Composições publicadas"   },
+      { n: "63K+",  l: "Seguidores no Instagram"  }
+    ]
   },
 
   /* ── NÚMEROS GERAIS ────────────────────────────────────── */
-  numerosTitulo:    "Números que reforçam o <em>projeto</em>",
+  numerosTitulo:    "O alcance que justifica o <em>cachê</em>",
   numerosSubtitulo: "Indicadores orgânicos de 2024–2026 que posicionam o projeto acima da média do segmento de tributo a Roberto Carlos no Brasil.",
   numeros: [
     {
