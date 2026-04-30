@@ -1,454 +1,1069 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tingo Santi | Tributo ao Rei Roberto Carlos</title>
-  <meta name="description" content="Tributo ao Rei Roberto Carlos ao vivo, com produção completa, fidelidade interpretativa, estrutura institucional e documentação para contratação por prefeituras, secretarias de cultura e eventos corporativos.">
-  <meta property="og:title" content="Tingo Santi | Tributo ao Rei Roberto Carlos">
-  <meta property="og:description" content="Espetáculo institucional disponível para contratação direta por prefeituras, secretarias de cultura e eventos corporativos.">
-  <meta property="og:image" content="img/hero_principal.jpg">
-  <meta property="og:type" content="website">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9T397607Z9"></script>
-  <script>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9T397607Z9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9T397607Z9');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tingo Santi canta Roberto Carlos – Espetáculo de tributo com orquestra ao vivo, fidelidade interpretativa e produção profissional. Contratação por prefeituras, fundações, Sescs e eventos corporativos.">
+<meta property="og:title" content="Tingo Santi – Tributo ao Rei · Roberto Carlos">
+<meta property="og:description" content="A obra de Roberto Carlos ao vivo — com voz natural, orquestra e emoção verdadeira.">
+<meta property="og:image" content="img/hero_principal.jpg">
+<title>Tingo Santi – Tributo ao Rei · Roberto Carlos</title>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    if (typeof SITE === 'undefined' || !SITE.analytics.googleAnalyticsId || SITE.analytics.googleAnalyticsId.includes('INSIRA')) return;
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + SITE.analytics.googleAnalyticsId;
+    s.async = true;
+    document.head.appendChild(s);
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-9T397607Z9');
-  </script>
-  <style>
-    :root {
-      --azul-profundo:#0A1F3D;
-      --azul-meia-noite:#06162D;
-      --branco-neve:#FAFAF7;
-      --branco-puro:#FFFFFF;
-      --grafite:#1A1A1A;
-      --cinza-titulo:#2C2C2C;
-      --cinza-corpo:#4A4A4A;
-      --cinza-claro:#D8D8D5;
-      --dourado-fino:#B8975A;
-      --dourado-suave:#C9AC76;
-      --serif:'Cormorant Garamond', Georgia, serif;
-      --sans:'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      --max:1200px;
-    }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
-    body { font-family:var(--sans); color:var(--grafite); background:var(--branco-neve); line-height:1.6; }
-    img { max-width:100%; display:block; }
-    a { color:inherit; text-decoration:none; }
-    .wrap { width:min(var(--max), calc(100% - 48px)); margin:0 auto; }
-    .section { padding:112px 0; }
-    .section.dark { background:var(--azul-profundo); color:var(--branco-puro); }
-    .section.white { background:var(--branco-puro); }
-    .eyebrow { font-size:12px; line-height:1.2; letter-spacing:.18em; text-transform:uppercase; color:var(--dourado-fino); font-weight:700; margin-bottom:18px; }
-    h1, h2, h3 { font-family:var(--serif); font-weight:600; line-height:1.04; }
-    h1 { font-size:clamp(46px, 7vw, 86px); color:var(--branco-puro); letter-spacing:.01em; }
-    h2 { font-size:clamp(34px, 4.6vw, 56px); color:var(--azul-profundo); margin-bottom:22px; }
-    .dark h2 { color:var(--branco-puro); }
-    h3 { font-size:clamp(24px, 3vw, 34px); color:var(--azul-profundo); }
-    .lead { font-size:18px; color:var(--cinza-corpo); max-width:720px; }
-    .dark .lead { color:rgba(255,255,255,.76); }
-    .btnrow { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:15px 28px; border-radius:2px; border:1px solid transparent; font-size:13px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; transition:.2s ease; cursor:pointer; }
-    .btn.primary { background:var(--azul-profundo); color:#fff; }
-    .dark .btn.primary, .hero .btn.primary { background:#fff; color:var(--azul-profundo); }
-    .btn.primary:hover { filter:brightness(1.08); transform:translateY(-1px); }
-    .btn.secondary { background:transparent; color:var(--azul-profundo); border-color:var(--azul-profundo); }
-    .dark .btn.secondary, .hero .btn.secondary { color:#fff; border-color:rgba(255,255,255,.62); }
-    .btn.secondary:hover { background:rgba(184,151,90,.1); }
-    .nav { position:fixed; top:0; left:0; right:0; z-index:50; height:76px; display:flex; align-items:center; border-bottom:1px solid rgba(255,255,255,.12); background:linear-gradient(to bottom, rgba(6,22,45,.72), rgba(6,22,45,.18)); backdrop-filter:blur(10px); }
-    .nav .wrap { display:flex; align-items:center; justify-content:space-between; }
-    .brand { font-family:var(--serif); color:#fff; font-size:26px; letter-spacing:.05em; text-transform:uppercase; }
-    .navlinks { display:flex; gap:24px; align-items:center; }
-    .navlinks a { color:rgba(255,255,255,.86); font-size:12px; letter-spacing:.13em; text-transform:uppercase; font-weight:700; }
-    .menuBtn { display:none; background:none; color:#fff; border:1px solid rgba(255,255,255,.4); padding:8px 10px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
-    .mobileMenu { display:none; position:fixed; top:76px; left:0; right:0; z-index:49; background:var(--azul-meia-noite); padding:18px 24px 28px; border-bottom:1px solid rgba(255,255,255,.12); }
-    .mobileMenu a { display:block; padding:12px 0; color:#fff; font-size:13px; letter-spacing:.12em; text-transform:uppercase; border-bottom:1px solid rgba(255,255,255,.12); }
-    .hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; background:var(--azul-meia-noite); }
-    .hero iframe { position:absolute; inset:-10%; width:120%; height:120%; border:0; pointer-events:none; opacity:.42; }
-    .hero::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(6,22,45,.9), rgba(6,22,45,.5) 48%, rgba(6,22,45,.86)), linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.58)); }
-    .heroContent { position:relative; z-index:2; padding-top:92px; max-width:840px; }
-    .heroFine { font-family:var(--serif); color:#fff; font-size:clamp(28px, 3.8vw, 46px); line-height:1.08; margin:24px 0 14px; }
-    .heroSub { color:rgba(255,255,255,.78); font-size:18px; max-width:680px; margin-bottom:32px; }
-    .heroCard { position:absolute; right:7vw; bottom:7vh; z-index:3; width:min(420px, 32vw); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); padding:10px; backdrop-filter:blur(10px); }
-    .heroCard button { width:100%; aspect-ratio:16/9; border:0; background:url('img/hero_video_cover_v2.jpg') center/cover; position:relative; cursor:pointer; }
-    .heroCard button::after { content:"▶"; position:absolute; inset:0; display:grid; place-items:center; color:#fff; font-size:44px; background:rgba(6,22,45,.28); }
-    .heroCard p { color:#fff; font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-top:10px; }
-    .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
-    .photoTrio { display:grid; grid-template-columns:1.2fr .8fr; grid-template-rows:1fr 1fr; gap:14px; }
-    .photoTrio img { width:100%; height:100%; object-fit:cover; min-height:220px; }
-    .photoTrio img:first-child { grid-row:span 2; min-height:470px; }
-    .pillars { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:42px; }
-    .pillar { background:#fff; border-top:1px solid var(--dourado-fino); padding:32px; min-height:260px; }
-    .pillar .icon { color:var(--dourado-fino); font-size:24px; margin-bottom:20px; }
-    .pillar h3 { font-family:var(--sans); font-size:18px; line-height:1.25; font-weight:700; margin-bottom:12px; }
-    .pillar p { color:var(--cinza-corpo); font-size:15px; }
-    .numbers { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:42px; }
-    .number { border:1px solid rgba(255,255,255,.16); padding:34px 26px; background:rgba(255,255,255,.04); }
-    .number strong { display:block; font-family:var(--serif); font-size:clamp(46px,6vw,78px); line-height:.95; color:#fff; font-weight:600; margin-bottom:12px; }
-    .number span { display:block; font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--dourado-suave); margin-bottom:8px; }
-    .number small { display:block; color:rgba(255,255,255,.6); font-size:12px; }
-    .sourceLine { margin-top:24px; color:rgba(255,255,255,.62); font-size:14px; font-style:italic; }
-    .videoGrid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:42px; }
-    .videoCard { background:#000; position:relative; aspect-ratio:16/9; overflow:hidden; }
-    .videoCard iframe { width:100%; height:100%; border:0; display:block; }
-    .videoCard .fallback { position:absolute; inset:0; display:grid; place-items:center; color:#fff; background:linear-gradient(135deg,var(--azul-meia-noite),var(--azul-profundo)); text-align:center; padding:28px; }
-    .gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:36px; }
-    .gallery img { width:100%; height:320px; object-fit:cover; }
-    .validationBox { border:1px solid var(--dourado-fino); background:#fff; padding:34px; display:grid; grid-template-columns:1fr 2fr; gap:28px; margin-top:36px; }
-    .validationBox strong { color:var(--azul-profundo); font-family:var(--serif); font-size:32px; line-height:1.1; }
-    .logos { display:flex; flex-wrap:wrap; gap:14px; margin-top:28px; }
-    .logoPill { border:1px solid var(--cinza-claro); padding:12px 16px; color:var(--cinza-corpo); font-weight:700; font-size:13px; background:#fff; }
-    .sealGrid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:28px; }
-    .seal { border:1px solid var(--cinza-claro); padding:20px; background:#fff; font-size:14px; }
-    .paths { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:36px; }
-    .path { background:#fff; border:1px solid var(--cinza-claro); padding:34px; display:flex; flex-direction:column; gap:18px; }
-    .path h3 { margin-bottom:4px; }
-    .path ul { padding-left:18px; color:var(--cinza-corpo); }
-    .path li { margin-bottom:8px; }
-    .portal { background:linear-gradient(135deg,var(--azul-meia-noite),var(--azul-profundo)); color:#fff; padding:48px; display:grid; grid-template-columns:1fr 1fr; gap:38px; align-items:start; }
-    .portal h2 { color:#fff; }
-    form { display:grid; gap:14px; }
-    input, textarea, select { width:100%; padding:15px 14px; border:1px solid var(--cinza-claro); background:#fff; color:var(--grafite); font-family:var(--sans); font-size:15px; border-radius:2px; }
-    textarea { min-height:132px; resize:vertical; }
-    .portal input { border-color:rgba(255,255,255,.22); }
-    .field2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-    .platforms { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:36px; }
-    .platform { background:#fff; border:1px solid var(--cinza-claro); padding:28px; }
-    .platform h3 { font-size:28px; margin-bottom:10px; }
-    .spotify iframe { width:100%; height:352px; border:0; margin-top:22px; border-radius:12px; }
-    .contactGrid { display:grid; grid-template-columns:.9fr 1.1fr; gap:48px; }
-    .contactItem { padding:18px 0; border-bottom:1px solid var(--cinza-claro); }
-    .contactItem b { display:block; color:var(--azul-profundo); margin-bottom:4px; }
-    .footer { background:var(--azul-meia-noite); color:rgba(255,255,255,.72); padding:42px 0; font-size:14px; }
-    .footer .wrap { display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; }
-    .modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,.86); z-index:100; align-items:center; justify-content:center; padding:24px; }
-    .modal.open { display:flex; }
-    .modalInner { width:min(1000px,100%); aspect-ratio:16/9; background:#000; position:relative; }
-    .modalInner iframe { width:100%; height:100%; border:0; }
-    .close { position:absolute; right:0; top:-48px; background:#fff; border:0; color:#000; width:38px; height:38px; font-size:22px; cursor:pointer; }
-    @media (max-width: 980px) {
-      .navlinks { display:none; }
-      .menuBtn { display:block; }
-      .mobileMenu.open { display:block; }
-      .heroCard { position:relative; right:auto; bottom:auto; width:100%; margin-top:36px; }
-      .hero { padding:120px 0 70px; min-height:auto; }
-      .grid2, .portal, .contactGrid { grid-template-columns:1fr; }
-      .pillars, .numbers, .platforms, .sealGrid { grid-template-columns:repeat(2,1fr); }
-      .videoGrid, .paths { grid-template-columns:1fr; }
-    }
-    @media (max-width: 640px) {
-      .wrap { width:min(100% - 32px, var(--max)); }
-      .section { padding:76px 0; }
-      .pillars, .numbers, .platforms, .sealGrid, .gallery { grid-template-columns:1fr; }
-      .photoTrio { grid-template-columns:1fr; grid-template-rows:auto; }
-      .photoTrio img:first-child { grid-row:auto; min-height:320px; }
-      .gallery img { height:auto; }
-      .validationBox { grid-template-columns:1fr; padding:24px; }
-      .portal { padding:28px 20px; }
-      .field2 { grid-template-columns:1fr; }
-      .brand { font-size:20px; }
-    }
-  </style>
+    gtag('config', SITE.analytics.googleAnalyticsId);
+    window._gtag = gtag;
+  });
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --w:#ffffff; --off:#f5f7fc; --off2:#eaeff8;
+  --navy:#02091c; --blue:#0b3480; --bm:#174fba; --bl:#2e6dd4; --bx:#9bbde8;
+  --gold:#c9a55a;
+  --bfaint:rgba(11,52,128,.07); --bb:rgba(11,52,128,.14);
+  --t:#0c1830; --tm:#3a4a6b; --mu:#7a88a8;
+  --spotify:#1DB954;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+  --r:4px; --rl:12px; --nh:80px;
+  --max:1280px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:17px}
+body{font-family:var(--sans);background:var(--w);color:var(--t);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--sans)}
+
+/* ── NAV ── */
+#nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;z-index:200;transition:all .4s;background:transparent}
+#nav.s{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bb);box-shadow:0 2px 24px rgba(11,52,128,.06)}
+.nl{display:flex;gap:1.7rem;list-style:none}
+.nl a{font-size:.74rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .2s}
+#nav.s .nl a{color:var(--tm)}
+.nl a:hover{color:var(--bl) !important}
+.nc{padding:.6rem 1.5rem;border:1px solid rgba(255,255,255,.45);border-radius:var(--r);font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:transparent;transition:all .2s}
+#nav.s .nc{border-color:var(--bb);color:var(--blue)}
+.nc:hover{background:var(--blue);border-color:var(--blue);color:#fff !important}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:#fff;transition:.3s}
+#nav.s .ham span{background:var(--t)}
+#mm{display:none;position:fixed;top:var(--nh);left:0;right:0;background:var(--w);border-bottom:1px solid var(--off2);padding:1.5rem 5vw 2rem;z-index:199;flex-direction:column;gap:1rem}
+#mm a{font-size:.9rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);padding:.5rem 0;border-bottom:1px solid var(--off2)}
+
+/* ── HERO ── */
+#hero{position:relative;width:100vw;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--navy);padding:calc(var(--nh) + 2rem) 0 4rem}
+.hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hfb{position:absolute;inset:0;display:block;background-size:cover;background-position:center center;background-repeat:no-repeat;z-index:0;filter:saturate(1.04) contrast(1.02) brightness(.98)}
+.hbg iframe{position:absolute;top:50%;left:50%;width:177.77777778vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.18);border:none;pointer-events:none;z-index:1;opacity:.34;filter:saturate(1.08) contrast(1.02) brightness(1.06)}
+.hov{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(32,92,188,.80) 0%,rgba(56,132,233,.68) 34%,rgba(78,164,247,.58) 55%,rgba(35,102,204,.72) 100%)}
+.hc{position:relative;z-index:3;max-width:var(--max);width:100%;padding:0 5vw;animation:fu 1s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.hg{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,586px);gap:4rem;align-items:center}
+.hcopy{max-width:560px}
+.hk{display:flex;align-items:center;gap:.8rem;margin-bottom:1.4rem;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.86)}
+.hk::before{content:"";width:12px;height:12px;border-radius:50%;background:rgba(155,189,232,.9);box-shadow:0 0 0 6px rgba(155,189,232,.12)}
+.hname{font-family:'Playfair Display',var(--serif);font-size:clamp(4rem,8vw,6.8rem);font-weight:700;line-height:.94;letter-spacing:.01em;color:#f3f6ff;text-transform:uppercase;margin:0 0 1.8rem;text-shadow:0 8px 32px rgba(2,9,28,.22)}
+.htag{font-size:clamp(1.15rem,1.6vw,1.35rem);font-weight:400;color:rgba(255,255,255,.96);margin:0;line-height:1.72;max-width:32rem}
+.hcard{position:relative;aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:#08173f;box-shadow:0 34px 90px rgba(2,9,28,.34);border:1px solid rgba(255,255,255,.18);cursor:pointer;transition:transform .25s ease, box-shadow .25s ease}
+.hcard:hover{transform:translateY(-2px);box-shadow:0 38px 100px rgba(2,9,28,.4)}
+.hcover{position:absolute;inset:0;background-image:url("img/hero_principal.jpg");background-size:cover;background-position:center center;z-index:1}
+.hcover::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(4,10,28,.78) 0%,rgba(4,10,28,.18) 48%,rgba(4,10,28,.08) 100%)}
+.hplay{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center}
+.hplaybtn{width:116px;height:116px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:#0b1430;font-size:3rem;display:flex;align-items:center;justify-content:center;box-shadow:0 24px 60px rgba(2,9,28,.25)}
+.hmeta{position:absolute;left:2rem;right:2rem;bottom:1.4rem;z-index:3;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;color:#fff}
+.hmeta-label{font-size:.82rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:.45rem}
+.hmeta-title{font-family:var(--serif);font-size:1.05rem;font-weight:500;line-height:1.2;color:#fff}
+.hmeta-year{font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+.hplayer{position:absolute;inset:0;z-index:4;display:none;background:rgba(2,9,28,.18)}
+.hplayer iframe{width:100%;height:100%;border:none}
+.hclose{position:absolute;top:1rem;right:1rem;z-index:5;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.38);background:rgba(2,9,28,.5);backdrop-filter:blur(10px);color:#fff;font-size:1.2rem;display:none;align-items:center;justify-content:center}
+#hero.is-playing .hcopy,#hero.is-playing .hcard{opacity:0;pointer-events:none;transition:opacity .2s ease}
+#hero.is-playing .hplayer{display:block;position:absolute;left:5vw;right:5vw;top:calc(var(--nh) + 2.25rem);bottom:3rem;border-radius:28px;overflow:hidden;box-shadow:0 30px 80px rgba(2,9,28,.45)}
+#hero.is-playing .hclose{display:flex}
+.hscr{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:bob 2.5s ease-in-out infinite}
+.hscr span{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.42)}
+.hscrl{width:1px;height:42px;background:linear-gradient(to bottom,rgba(255,255,255,.36),transparent)}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+#soundBtn{display:none !important}
+@media (max-width: 980px){
+  #hero{padding:calc(var(--nh) + 1.4rem) 0 3rem;min-height:auto}
+  .hg{grid-template-columns:1fr;gap:2rem}
+  .hcopy{max-width:none}
+  .hname{font-size:clamp(3rem,17vw,5rem);line-height:.9}
+  .htag{font-size:1.05rem;max-width:none}
+  .hcard{max-width:100%}
+  #hero.is-playing .hplayer{left:4vw;right:4vw;top:calc(var(--nh) + 1.2rem);bottom:2rem;border-radius:20px}
+}
+@media (max-width: 640px){
+  .hc{padding:0 1.25rem}
+  .hname{font-size:clamp(2.75rem,18vw,4.2rem)}
+  .hk{font-size:.78rem;margin-bottom:1rem}
+  .hplaybtn{width:92px;height:92px;font-size:2.4rem}
+  .hmeta{left:1.25rem;right:1.25rem;bottom:1rem}
+  .hmeta-title{font-size:.95rem}
+  .hmeta-year,.hmeta-label{font-size:.72rem}
+}
+
+/* ── SHARED ── */
+.sec{padding:clamp(5rem,9vw,9rem) 5vw}
+.sec-off{background:var(--off)}
+.sec-navy{background:var(--navy);color:#fff}
+.con{max-width:var(--max);margin:0 auto}
+.ey{display:flex;align-items:center;gap:.9rem;margin-bottom:1.1rem}
+.eyl{width:36px;height:1px;background:var(--bl);flex-shrink:0}
+.eys{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.sec-navy .eys{color:var(--bx)}
+.sec-navy .eyl{background:var(--bx)}
+.sh{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:400;line-height:1.06;color:var(--navy);margin-bottom:1.1rem}
+.sh em{font-style:italic;color:var(--blue)}
+.sec-navy .sh{color:#fff}
+.sec-navy .sh em{color:var(--bx)}
+.sl{font-size:1.05rem;font-weight:300;color:var(--tm);max-width:640px;line-height:1.82;margin-bottom:3rem}
+.sec-navy .sl{color:rgba(255,255,255,.72)}
+.bp{display:inline-block;padding:.9rem 2.2rem;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transition:all .2s;cursor:pointer}
+.bp:hover{background:var(--bm);transform:translateY(-2px)}
+.bout{display:inline-block;padding:.9rem 2.2rem;border:1px solid var(--bb);color:var(--blue);background:transparent;border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;transition:all .2s;cursor:pointer}
+.bout:hover{background:var(--bfaint);border-color:var(--blue)}
+
+/* ── SHOW ── */
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:center}
+.sph{position:relative;aspect-ratio:3/2;border-radius:var(--rl);background-size:cover;background-position:left center;box-shadow:0 28px 64px rgba(11,52,128,.13);overflow:hidden}
+.spa{position:absolute;bottom:-2.5rem;right:-2.5rem;width:42%;aspect-ratio:3/4;border-radius:var(--rl);background-size:cover;background-position:center top;border:4px solid var(--w);box-shadow:0 16px 36px rgba(11,52,128,.15)}
+.sf{display:flex;flex-direction:column;gap:1.8rem;margin-top:2rem}
+.sfi{display:flex;gap:1.3rem;align-items:flex-start;padding-bottom:1.8rem;border-bottom:1px solid var(--off2)}
+.sfi:last-child{border-bottom:none}
+.sfd{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:9px}
+.sft{font-size:.96rem;font-weight:600;margin-bottom:.35rem;color:var(--navy)}
+.sfd2{font-size:.88rem;font-weight:300;color:var(--tm);line-height:1.68}
+
+/* ── OUÇA & ACOMPANHE ── */
+#compositor{background:var(--off);position:relative;overflow:hidden}
+#compositor::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--bl),transparent)}
+.soc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.8rem;align-items:stretch}
+.soc-card{background:var(--w);border:1px solid var(--off2);border-radius:28px;padding:2.4rem;box-shadow:0 18px 44px rgba(11,52,128,.08);display:flex;flex-direction:column;height:100%}
+.soc-card.spotify{background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%)}
+.soc-card.instagram{background:linear-gradient(180deg,#ffffff 0%,#fbfcff 100%)}
+.soc-kicker{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mu);margin-bottom:1.1rem}
+.soc-title{font-family:var(--serif);font-size:clamp(2.2rem,4.2vw,3.4rem);font-weight:400;line-height:1.02;color:var(--navy);margin-bottom:.75rem}
+.soc-title em{font-style:italic;color:var(--blue)}
+.soc-intro{font-size:1rem;font-weight:300;color:var(--tm);max-width:860px;line-height:1.8;margin-bottom:1.2rem}
+.soc-highlight{display:inline-flex;flex-direction:column;gap:.45rem;padding:1rem 1.2rem;border-left:3px solid var(--blue);background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%);border-radius:0 18px 18px 0;margin:0 0 2.4rem;max-width:760px;box-shadow:0 10px 24px rgba(11,52,128,.06)}
+.soc-highlight-title{font-family:var(--serif);font-size:clamp(1.35rem,2vw,1.75rem);font-weight:500;line-height:1.15;color:var(--navy)}
+.soc-highlight-desc{font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.7}
+.soc-card-title{font-family:var(--serif);font-size:clamp(2rem,3vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);margin-bottom:.4rem}
+.soc-card-label{font-size:.7rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--mu);margin-bottom:1.6rem}
+.soc-spotify-wrap{border-radius:24px;overflow:hidden;box-shadow:0 20px 48px rgba(2,9,28,.12);background:#111;aspect-ratio:3/2}
+.soc-spotify-wrap iframe{width:100%;height:100%;border:none;display:block}
+.soc-ig-head{margin-bottom:1.5rem}
+.soc-ig-handle{font-family:var(--serif);font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);word-break:break-word}
+.soc-ig-grid{border-radius:24px;overflow:hidden;background:#fff;border:1px solid rgba(11,52,128,.08);padding:0;aspect-ratio:3/2}
+.soc-ig-grid behold-widget{display:block;width:100%;height:100%;min-height:0}
+.soc-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
+.soc-btn{display:inline-flex;align-items:center;justify-content:center;padding:1rem 1.8rem;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:all .2s}
+.soc-btn.spotify{background:var(--blue);color:#fff;border:1px solid var(--blue)}
+.soc-btn.spotify:hover{background:var(--bm);border-color:var(--bm);transform:translateY(-2px)}
+.soc-btn.instagram{background:transparent;color:var(--blue);border:1px solid var(--bb)}
+.soc-btn.instagram:hover{background:var(--bfaint);border-color:var(--blue)}
+/* ── VÍDEO — SIMPLIFICADO (1 video só) ── */
+.vf{position:relative;aspect-ratio:16/9;background:var(--navy);border-radius:var(--rl);overflow:hidden;cursor:pointer;max-width:1100px;margin:0 auto;box-shadow:0 30px 70px rgba(11,52,128,.14)}
+.vft{position:absolute;inset:0;background-image:url('https://img.youtube.com/vi/M7ehpNbIbUY/maxresdefault.jpg');background-size:cover;background-position:center;transition:transform .4s}
+.vf:hover .vft{transform:scale(1.03)}
+.vfo{position:absolute;inset:0;background:rgba(2,9,28,.38);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem}
+.vpb{width:84px;height:84px;border-radius:50%;border:2px solid rgba(255,255,255,.6);background:rgba(11,52,128,.36);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.9rem;transition:all .2s}
+.vf:hover .vpb{background:var(--blue);border-color:#fff}
+.vft2{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:#fff;text-align:center;padding:0 2rem}
+.vf iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+
+/* ── GALERIA — Mosaico corrigido ── */
+.gm{columns:3;column-gap:10px;margin-top:2rem}
+.gi{break-inside:avoid;margin-bottom:10px;border-radius:var(--r);overflow:hidden;display:block}
+.gi img{width:100%;display:block;border-radius:var(--r);transition:transform .3s,box-shadow .3s}
+.gi img:hover{transform:scale(1.02);box-shadow:0 14px 36px rgba(11,52,128,.18)}
+
+/* ── NÚMEROS ── */
+#numeros{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+#numeros::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--bl),transparent)}
+#numeros::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--bl),transparent)}
+.numh{text-align:center;margin-bottom:4rem;max-width:720px;margin-left:auto;margin-right:auto}
+.numht{font-family:var(--serif);font-size:clamp(2.2rem,4.4vw,3.4rem);font-weight:400;line-height:1.1;color:#fff;margin-bottom:1.3rem}
+.numht em{font-style:italic;color:var(--bx)}
+.numhs{font-size:1rem;font-weight:300;color:rgba(255,255,255,.7);line-height:1.78}
+.numg{display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;max-width:1100px;margin:0 auto 3rem}
+.numc{padding:2rem 1.8rem;border-radius:var(--rl);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);transition:all .3s}
+.numc:hover{border-color:var(--bl);background:rgba(46,109,212,.08);transform:translateY(-3px)}
+.numc.hero{grid-column:span 12;text-align:center;padding:3rem 2rem;background:linear-gradient(135deg,rgba(46,109,212,.12) 0%,rgba(11,52,128,.05) 100%);border-color:rgba(46,109,212,.35)}
+.numc.hero .numn{font-size:clamp(4.5rem,10vw,7rem);color:#fff}
+.numc.hero .numl{font-size:1rem;letter-spacing:.16em;margin-top:.5rem;color:var(--bx)}
+.numc.hero .numd{max-width:540px;margin:1.3rem auto 0;font-size:.96rem;line-height:1.7}
+.numc.m{grid-column:span 4}
+.numc.s{grid-column:span 6}
+.numn{font-family:var(--serif);font-size:clamp(2.8rem,5vw,3.8rem);font-weight:400;color:#fff;line-height:1;margin-bottom:.55rem;letter-spacing:-.01em}
+.numl{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bx);margin-bottom:.8rem;line-height:1.4}
+.numd{font-size:.84rem;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65}
+.numrod{text-align:center;font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.08);max-width:600px;margin:0 auto}
+
+/* ── NOTORIEDADE / IMPRENSA ── */
+.vlogos{display:flex;flex-wrap:wrap;gap:0;align-items:center;justify-content:space-between;padding:1.5rem 0;margin-bottom:3.5rem;border-top:1px solid var(--bb);border-bottom:1px solid var(--bb)}
+.vlogo{flex:1;min-width:130px;text-align:center;padding:.6rem 1rem;font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--navy);letter-spacing:.02em;border-right:1px solid var(--bb);transition:opacity .2s}
+.vlogo:last-child{border-right:none}
+.vlogo:hover{color:var(--blue)}
+.vlogo-sub{display:block;font-family:var(--sans);font-size:.62rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);margin-top:.2rem}
+
+.pgrid2{display:grid;grid-template-columns:repeat(12,1fr);gap:1.6rem;margin-bottom:4rem}
+.pcard{position:relative;border-radius:var(--rl);overflow:hidden;background:var(--navy);cursor:pointer;transition:all .3s;border:1px solid transparent;text-decoration:none;display:block}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 24px 56px rgba(11,52,128,.28);border-color:var(--bl)}
+.pcard-img{aspect-ratio:4/3;background-size:cover;position:relative}
+.pcard-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(2,9,28,.05) 0%,rgba(2,9,28,.35) 50%,rgba(2,9,28,.97) 100%)}
+.pcard-body{position:absolute;bottom:0;left:0;right:0;padding:1.6rem 1.4rem;color:#fff;z-index:2}
+.pcard-vc{display:inline-block;padding:.3rem .75rem;background:var(--blue);border-radius:var(--r);font-size:.63rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem}
+.pcard-vc.featured{background:var(--gold)}
+.pcard-mh{font-family:var(--serif);font-size:1.15rem;font-weight:500;line-height:1.25;color:#fff;margin-bottom:.5rem}
+.pcard-dt{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.pcard-link{position:absolute;top:1rem;right:1rem;z-index:3;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem}
+.pcard.sz-l{grid-column:span 12}
+.pcard.sz-l .pcard-img{aspect-ratio:21/9}
+.pcard.sz-l .pcard-mh{font-size:2rem;line-height:1.15}
+.pcard.sz-l .pcard-ov{background:linear-gradient(to bottom,rgba(2,9,28,0) 0%,rgba(2,9,28,0) 45%,rgba(2,9,28,.55) 75%,rgba(2,9,28,.92) 100%)}
+.pcard.sz-m{grid-column:span 6}
+.pcard.sz-m .pcard-img{aspect-ratio:4/3}
+.pcard.sz-m .pcard-mh{font-size:1.3rem}
+.pcard.sz-s{grid-column:span 4}
+.pcard.sz-s .pcard-img{aspect-ratio:4/3;background-size:cover}
+.pcard.sz-s .pcard-body{position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1.2rem;color:#fff;z-index:2}
+.pcard.sz-s .pcard-vc{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);color:#fff}
+.pcard.sz-s .pcard-mh{font-size:.95rem;line-height:1.3}
+.pcard.sz-s .pcard-ov{display:block}
+.pblocks{display:block}
+.pblock{margin-bottom:5rem}
+.pblock-h{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid var(--bb)}
+.pblock-official .pblock-h{color:var(--gold);border-bottom-color:rgba(201,165,90,.3)}
+.pblock-official .pblock-h::before{content:"★ ";margin-right:.4rem}
+.pblock-official{background:linear-gradient(135deg,#fdf8ef 0%,#fffdf7 100%);border:1px solid rgba(201,165,90,.25);border-radius:var(--rl);padding:2.5rem;margin-bottom:5rem}
+.pcard-official{border-left:3px solid var(--gold) !important}
+.pcard-official .pcard-vc{background:var(--gold) !important;color:#fff}
+.pcard-official .pcard-mh{font-size:1.4rem}
+.pcard-official .pcard-ov{background:linear-gradient(to bottom,rgba(2,9,28,0) 0%,rgba(2,9,28,0) 40%,rgba(2,9,28,.6) 75%,rgba(2,9,28,.95) 100%)}
+
+.presq{max-width:920px;margin:0 auto 4rem;padding:3rem 3rem 3rem 5rem;position:relative;background:var(--navy);border-radius:var(--rl);color:#fff;overflow:hidden}
+.presq-mark{position:absolute;top:1rem;left:2rem;font-family:var(--serif);font-size:7rem;line-height:1;color:var(--bl);font-style:italic}
+.presq-text{font-family:var(--serif);font-size:1.6rem;font-weight:400;font-style:italic;line-height:1.4;color:#fff;margin-bottom:1.2rem;position:relative;z-index:1}
+.presq-src{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bx);position:relative;z-index:1}
+
+.vinst{padding:3rem 0 5rem;border-top:1px solid var(--bb);text-align:center}
+.vinst-title{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mu);margin-bottom:2rem}
+.vinst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:1100px;margin:0 auto}
+.vinst-card{padding:1.6rem 1.3rem;background:var(--w);border:1px solid var(--off2);border-radius:var(--rl);transition:all .2s;text-align:left}
+.vinst-card:hover{border-color:var(--bl);box-shadow:0 10px 28px rgba(11,52,128,.1)}
+.vinst-ico{font-size:1.15rem;margin-bottom:.6rem;color:var(--blue);font-weight:700}
+.vinst-ttl{font-size:.9rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;line-height:1.3}
+.vinst-sub{font-size:.78rem;color:var(--tm);line-height:1.55}
+
+/* ── CONTRATANTES ── */
+.cblock{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:stretch}
+.cpane{display:flex;flex-direction:column;min-height:430px}
+.cactions{margin-top:auto;padding-top:2rem;display:flex;gap:1rem;flex-wrap:wrap}
+.cdocs{list-style:none;display:flex;flex-direction:column;gap:.72rem}
+.cdocs li{display:flex;gap:.85rem;align-items:flex-start;font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.5}
+.cdocs li::before{content:'✓';color:var(--blue);font-weight:600;flex-shrink:0;margin-top:.05rem}
+.cprec{display:flex;flex-direction:column;gap:.72rem;margin-top:0;justify-content:space-between;flex:1}
+.cpcard{padding:1rem 1.35rem;border:1px solid var(--off2);border-radius:var(--r);background:var(--w);border-left:3px solid var(--blue)}
+.cpcat{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem}
+.cpmun{font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.3rem}
+.cpev{font-size:.9rem;font-weight:300;color:var(--tm);line-height:1.5}
+
+/* ── SOBRE ── */
+.sgr{display:grid;grid-template-columns:1fr 1.3fr;gap:6rem;align-items:center}
+.sphoto{aspect-ratio:3/4;border-radius:var(--rl);background-size:cover;background-position:center top;box-shadow:0 24px 56px rgba(11,52,128,.12)}
+.squote{margin-top:2rem;padding:1.8rem;border-left:3px solid var(--blue);background:var(--off);border-radius:0 var(--r) var(--r) 0}
+.sqt{font-family:var(--serif);font-size:1.1rem;font-style:italic;font-weight:300;color:var(--navy);line-height:1.55;margin-bottom:.5rem}
+.sqa{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.smil{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
+.smilc{padding:1.3rem;border-left:3px solid var(--blue);background:var(--off);border-radius:0 var(--r) var(--r) 0}
+.smily{font-family:var(--serif);font-size:1.5rem;color:var(--blue);margin-bottom:.2rem}
+.smild{font-size:.83rem;color:var(--tm)}
+
+/* ── CTA BAND ── */
+.band{background:var(--off);border-top:1px solid var(--off2);border-bottom:1px solid var(--off2);padding:5rem 5vw;text-align:center}
+.bant{font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.1rem);font-weight:400;color:var(--navy);margin-bottom:1rem}
+.bans{font-size:1rem;font-weight:300;color:var(--tm);max-width:500px;margin:0 auto 2.5rem;line-height:1.8}
+.bana{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* ── CONTATO ── */
+.csp{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start}
+.cit{display:flex;gap:1.2rem;align-items:flex-start;margin-bottom:2rem}
+.cic{width:44px;height:44px;flex-shrink:0;border:1px solid var(--bb);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1rem;background:var(--off)}
+.cil{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:.3rem}
+.civ{font-size:.98rem;font-weight:400;color:var(--navy)}
+.whatsapp-btn{display:flex;align-items:center;gap:.85rem;padding:1rem 1.8rem;background:#25D366;color:#fff;border-radius:var(--r);font-size:.9rem;font-weight:600;letter-spacing:.06em;transition:all .2s;margin-top:.5rem;width:fit-content}
+.whatsapp-btn:hover{background:#1ebe5a;transform:translateY(-2px)}
+.whatsapp-icon{width:22px;height:22px;fill:#fff}
+.ff{margin-bottom:1.2rem}
+.fl{display:block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:.5rem}
+.fi,.fsl,.ft{width:100%;padding:.95rem 1.1rem;border:1px solid var(--off2);border-radius:var(--r);font-family:var(--sans);font-size:.95rem;color:var(--t);background:var(--w);outline:none;transition:border-color .2s}
+.fi:focus,.fsl:focus,.ft:focus{border-color:var(--blue)}
+.ft{resize:vertical;min-height:120px}
+.fmsg{margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid var(--bb);border-radius:var(--r);background:var(--bfaint);color:var(--blue);font-size:.9rem;display:none}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
+.fg{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3.5rem;max-width:var(--max);margin:0 auto 3rem}
+.ftag{font-size:.88rem;font-weight:300;color:rgba(255,255,255,.46);line-height:1.7;max-width:280px;margin-top:1rem}
+.fct{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bx);margin-bottom:1.4rem}
+.fl2{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.fl2 a{font-size:.88rem;font-weight:300;color:rgba(255,255,255,.5);transition:color .2s}
+.fl2 a:hover{color:#fff}
+.fb{max-width:var(--max);margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fleg{font-size:.8rem;color:rgba(255,255,255,.3)}
+.fso{display:flex;gap:.7rem}
+.sl2{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.82rem;transition:all .2s}
+.sl2:hover{border-color:var(--bx);color:#fff}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .sg,.sgr,.csp,.cblock,.soc-grid{grid-template-columns:1fr;gap:3.5rem}
+  .cpane{min-height:auto}
+  .fg{grid-template-columns:1fr 1fr}
+  .spa{display:none}
+  .gm{columns:2}
+  .pcard.sz-l,.pcard.sz-m{grid-column:span 6}
+  .pcard.sz-s{grid-column:span 6}
+  .vlogos{flex-direction:column;gap:0}
+  .vlogo{border-right:none;border-bottom:1px solid var(--bb);width:100%;padding:1rem}
+  .vlogo:last-child{border-bottom:none}
+  .numc.m{grid-column:span 6}
+  .numc.s{grid-column:span 6}
+}
+@media(max-width:768px){
+  html{font-size:16px}
+  .nl,.nc{display:none}
+  .ham{display:flex}
+  #mm.o{display:flex}
+  .gm{columns:1}
+  .gi,.gi.wide{display:block}
+  .gi.tall{display:block}
+  .fg{grid-template-columns:1fr}
+  .smil{grid-template-columns:1fr}
+    .soc-card{padding:1.6rem}
+  .soc-ig-grid behold-widget{min-height:0}
+  .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 12}
+  .presq{padding:2.5rem 1.8rem 2rem 1.8rem}
+  .presq-mark{top:.5rem;left:1rem;font-size:5rem}
+  .presq-text{font-size:1.2rem}
+  .numc.m,.numc.s{grid-column:span 12}
+  #soundBtn{bottom:1.2rem;right:1.2rem;width:46px;height:46px}
+}
+</style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="wrap">
-      <a class="brand" href="#hero">Tingo Santi</a>
-      <div class="navlinks">
-        <a href="#espetaculo">Espetáculo</a>
-        <a href="#prova">Números</a>
-        <a href="#videos">Vídeos</a>
-        <a href="#contratantes">Contratantes</a>
-        <a href="#contato">Contato</a>
-      </div>
-      <button class="menuBtn" onclick="toggleMenu()">Menu</button>
-    </div>
-  </nav>
-  <div class="mobileMenu" id="mobileMenu">
-    <a href="#espetaculo" onclick="toggleMenu(false)">Espetáculo</a>
-    <a href="#prova" onclick="toggleMenu(false)">Números</a>
-    <a href="#videos" onclick="toggleMenu(false)">Vídeos</a>
-    <a href="#contratantes" onclick="toggleMenu(false)">Contratantes</a>
-    <a href="#contato" onclick="toggleMenu(false)">Contato</a>
+
+<script src="data.js"></script>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" id="navLogo">
+    <svg id="logoL" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(250,40)">
+        <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="rgba(255,255,255,.88)" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="0" cy="0" r="3" fill="rgba(255,255,255,.9)"/>
+      </g>
+      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">TINGO</text>
+      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">SANTI</text>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(255,255,255,.52)">Tributo ao Rei</text>
+    </svg>
+    <svg id="logoD" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <g transform="translate(250,40)">
+        <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="#0b3480" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="0" cy="0" r="3" fill="#0b3480"/>
+      </g>
+      <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">TINGO</text>
+      <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">SANTI</text>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(11,52,128,.55)">Tributo ao Rei</text>
+    </svg>
+  </a>
+  <ul class="nl">
+    <li><a href="#show">O Espetáculo</a></li>
+    <li><a href="#compositor">O Compositor</a></li>
+    <li><a href="#not">Notoriedade</a></li>
+    <li><a href="#cont">Contratantes</a></li>
+    <li><a href="#sobre">O Artista</a></li>
+  </ul>
+  <a href="#contact" class="nc" onclick="trackCTA('nav_contato')">Falar com a Produção</a>
+  <button class="ham" id="ham"><span></span><span></span><span></span></button>
+</nav>
+<div id="mm">
+  <a href="#show"       onclick="cm()">O Espetáculo</a>
+  <a href="#compositor" onclick="cm()">O Compositor</a>
+  <a href="#galeria"    onclick="cm()">Galeria</a>
+  <a href="#numeros"    onclick="cm()">Números</a>
+  <a href="#not"        onclick="cm()">Notoriedade</a>
+  <a href="#cont"       onclick="cm()">Contratantes</a>
+  <a href="#sobre"      onclick="cm()">O Artista</a>
+  <a href="#contact"    onclick="cm()">Contato</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hbg">
+    <div class="hfb" id="heroBg"></div>
+    <iframe id="hyt" src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen playsinline></iframe>
   </div>
-
-  <header class="hero" id="hero">
-    <iframe src="https://www.youtube.com/embed/M7ehpNbIbUY?autoplay=1&mute=1&loop=1&playlist=M7ehpNbIbUY&controls=0&modestbranding=1&playsinline=1&rel=0" title="Tingo Santi ao vivo" allow="autoplay; encrypted-media; picture-in-picture"></iframe>
-    <div class="wrap heroContent">
-      <div class="eyebrow">Espetáculo institucional</div>
-      <h1>Tributo ao Rei</h1>
-      <p class="heroFine">Roberto Carlos ao vivo, com produção completa.</p>
-      <p class="heroSub">Espetáculo disponível para contratação direta por prefeituras, secretarias de cultura e eventos corporativos.</p>
-      <div class="btnrow">
-        <a class="btn primary" href="#contato">Solicitar proposta</a>
-        <a class="btn secondary" href="#portal">Portal do contratante</a>
+  <div class="hov"></div>
+  <div class="hc">
+    <div class="hg">
+      <div class="hcopy">
+        <div class="hk">TINGO SANTI</div>
+        <h1 class="hname">TINGO<br>SANTI</h1>
+        <p class="htag" id="heroTagline"></p>
       </div>
-      <div class="heroCard">
-        <button aria-label="Assistir vídeo principal" onclick="openVideo('M7ehpNbIbUY')"></button>
-        <p>Assistir registro de palco</p>
-      </div>
-    </div>
-  </header>
-
-  <section class="section white" id="espetaculo">
-    <div class="wrap grid2">
-      <div>
-        <div class="eyebrow">O espetáculo</div>
-        <h2>Memória afetiva em formato de palco.</h2>
-        <p class="lead">Tributo ao Rei é um espetáculo de aproximadamente 90 minutos com repertório consagrado de Roberto Carlos, executado com produção completa: orquestra ao vivo em formato híbrido com OVS, telão de palco, figurino em corte italiano e direção musical exclusiva.</p>
-        <p class="lead" style="margin-top:18px">Concebido para teatros municipais, praças públicas com estrutura adequada e eventos corporativos de médio e grande porte. Adequado a plateias entre 500 e 3.000 pessoas, com formato adaptável conforme o espaço e a curadoria do contratante.</p>
-        <p class="lead" style="margin-top:18px">A performance combina fidelidade interpretativa rara à obra original com identidade artística própria, sem caricatura e sem trabalho de sósia.</p>
-      </div>
-      <div class="photoTrio">
-        <img src="img/espetaculo_macae_natal2025.jpg" alt="Tingo Santi em palco no Natal Magia">
-        <img src="img/galeria_rosas_plateia.jpg" alt="Plateia no show de Tingo Santi">
-        <img src="img/galeria_palco_orquestra_pcsf.jpg" alt="Palco com orquestra">
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="singularidade">
-    <div class="wrap">
-      <div class="eyebrow">Singularidade</div>
-      <h2>Quatro pilares de diferenciação</h2>
-      <div class="pillars">
-        <article class="pillar"><div class="icon">01</div><h3>Voz natural reconhecida</h3><p>Semelhança vocal natural com Roberto Carlos. Sem peruca, sem imitação forçada, sem caricatura. Identidade própria no figurino e no comportamento de palco.</p></article>
-        <article class="pillar"><div class="icon">02</div><h3>Produção completa de palco</h3><p>Orquestra ao vivo em formato híbrido com OVS, telão, figurino em corte italiano e direção musical dedicada. Padrão acima do segmento de releitura.</p></article>
-        <article class="pillar"><div class="icon">03</div><h3>Estrutura institucional NKT Artes</h3><p>Empresa formalmente constituída, ativa, apta a emitir nota fiscal, firmar contrato e atender a Administração Pública por inexigibilidade.</p></article>
-        <article class="pillar"><div class="icon">04</div><h3>Marca registrada INPI</h3><p>Tingo Santi é marca registrada no Instituto Nacional da Propriedade Industrial, processo 933831951, classe 41, vigente até janeiro de 2036.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section dark" id="prova">
-    <div class="wrap">
-      <div class="eyebrow">Prova digital</div>
-      <h2>Alcance e aderência de público</h2>
-      <p class="lead">Indicadores de tração digital orgânica, com contexto para contratantes públicos e corporativos.</p>
-      <div class="numbers">
-        <div class="number"><strong>63K+</strong><span>Seguidores no Instagram</span><small>Fonte: Meta Insights, 2026</small></div>
-        <div class="number"><strong>21,4M</strong><span>Execuções globais</span><small>Fonte: CDBaby, 2026</small></div>
-        <div class="number"><strong>5M+</strong><span>Visualizações de posts</span><small>Fonte: Meta Insights, 2026</small></div>
-        <div class="number"><strong>189</strong><span>Países alcançados</span><small>Fonte: CDBaby, 2026</small></div>
-      </div>
-      <p class="sourceLine">Indicadores de tração digital construídos de forma orgânica, sem investimento em mídia paga.</p>
-    </div>
-  </section>
-
-  <section class="section white" id="videos">
-    <div class="wrap">
-      <div class="eyebrow">Em palco</div>
-      <h2>Vídeos de performance</h2>
-      <p class="lead">Registros ao vivo. Áudio captado em palco e tratado em estúdio.</p>
-      <div class="videoGrid">
-        <div class="videoCard"><iframe src="https://www.youtube.com/embed/M7ehpNbIbUY" title="Tributo ao Rei ao vivo" allowfullscreen></iframe></div>
-        <div class="videoCard"><iframe src="https://www.youtube.com/embed/bXdIIxEg7PY" title="É Muita Saudade Pra Pouco Eu" allowfullscreen></iframe></div>
-        <div class="videoCard"><div class="fallback"><div><b>Slot editorial 3</b><br>Inserir vídeo com música mais identificável do repertório Roberto Carlos.</div></div></div>
-        <div class="videoCard"><div class="fallback"><div><b>Slot editorial 4</b><br>Inserir corte institucional de 2 a 3 minutos com cenas variadas.</div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="galeria">
-    <div class="wrap">
-      <div class="eyebrow">Galeria de palco</div>
-      <h2>Galeria</h2>
-      <div class="gallery">
-        <img src="img/galeria_natal_magia_palco.jpg" alt="Tingo Santi no Natal Magia">
-        <img src="img/galeria_show_braco_aberto.jpg" alt="Tingo Santi em performance">
-        <img src="img/galeria_rosas_plateia.jpg" alt="Plateia com rosas">
-        <img src="img/galeria_bracos_abertos.jpg" alt="Performance com braços abertos">
-        <img src="img/galeria_drone_igreja.jpg" alt="Vista aérea do evento">
-        <img src="img/galeria_pcsf_plateia.jpg" alt="Plateia no Praia Clube São Francisco">
-        <img src="img/galeria_lenco_verde.jpg" alt="Tingo Santi com lenço verde">
-        <img src="img/galeria_palco_orquestra_pcsf.jpg" alt="Palco com orquestra">
-        <img src="img/galeria_sorriso.jpg" alt="Tingo Santi sorrindo">
-      </div>
-    </div>
-  </section>
-
-  <section class="section white" id="validacao">
-    <div class="wrap">
-      <div class="eyebrow">Validação institucional</div>
-      <h2>Reconhecimento por administração pública, imprensa e órgãos de cultura.</h2>
-      <div class="validationBox">
-        <strong>Contratado pelo Município de Macaé</strong>
-        <div>
-          <p>Espetáculo “Tributo ao Rei” no Natal Magia 2025.</p>
-          <p>Inexigibilidade de Licitação, art. 74, II, Lei 14.133/2021.</p>
-          <p>Contrato 098/2025, publicado em DOM Macaé, edição 1348, 11/12/2025.</p>
-        </div>
-      </div>
-      <div class="logos" aria-label="Veículos de imprensa">
-        <span class="logoPill">Projeto Draft</span><span class="logoPill">Folha de Niterói</span><span class="logoPill">Antena 1</span><span class="logoPill">O Dia</span><span class="logoPill">ERJOTA</span><span class="logoPill">NitNegócios</span>
-      </div>
-      <div class="sealGrid">
-        <div class="seal"><b>Marca registrada INPI</b><br>Processo 933831951</div>
-        <div class="seal"><b>NKT Artes Ltda ativa</b><br>CNPJ regular</div>
-        <div class="seal"><b>FUNARJ aprovado</b><br>Validação cultural</div>
-        <div class="seal"><b>Precedentes públicos</b><br>Macaé e Itaboraí</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contratantes">
-    <div class="wrap">
-      <div class="eyebrow">Para contratantes</div>
-      <h2>Caminhos diferentes para públicos diferentes.</h2>
-      <p class="lead">Ambos com documentação completa e atendimento direto pela NKT Artes.</p>
-      <div class="paths">
-        <article class="path">
-          <h3>Para prefeituras e secretarias de cultura</h3>
-          <p>Espetáculo apto a contratação direta por inexigibilidade de licitação, com fundamentação no art. 74, II, da Lei 14.133/2021.</p>
-          <ul>
-            <li>Dossiê técnico de notoriedade artística</li>
-            <li>Precedente administrativo público: Município de Macaé, 2025</li>
-            <li>Carta de exclusividade de representação NKT Artes</li>
-            <li>Documentação fiscal e jurídica regular</li>
-          </ul>
-          <a class="btn primary" href="#portal">Solicitar dossiê técnico</a>
-        </article>
-        <article class="path">
-          <h3>Para eventos corporativos e hotelaria premium</h3>
-          <p>Espetáculo adaptável a auditórios corporativos, hotéis-resort, convenções, eventos de fim de ano e celebrações institucionais.</p>
-          <ul>
-            <li>Produção completa com equipe dedicada</li>
-            <li>Formato modular conforme espaço e duração</li>
-            <li>Proposta personalizada por evento</li>
-            <li>Atendimento direto via NKT Artes</li>
-          </ul>
-          <a class="btn primary" href="#contato">Solicitar proposta comercial</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section white" id="portal">
-    <div class="wrap">
-      <div class="portal">
-        <div>
-          <div class="eyebrow">Portal do contratante</div>
-          <h2>Material institucional completo para análise interna.</h2>
-          <p>O acesso é liberado mediante identificação. A produção envia mídia kit, dossiê técnico, rider técnico, carta de exclusividade e certidões fiscais sob demanda específica.</p>
-          <p style="margin-top:18px;color:rgba(255,255,255,.72)">Materiais enviados em até 24 horas úteis, em PDF de alta resolução, via e-mail diretamente da NKT Artes.</p>
-        </div>
-        <form action="https://formspree.io/f/xyklpzbk" method="POST">
-          <input name="nome" required placeholder="Nome completo">
-          <input name="instituicao" required placeholder="Instituição ou empresa">
-          <div class="field2">
-            <input name="cargo" required placeholder="Cargo">
-            <input name="telefone" placeholder="Telefone">
+      <div class="hcard" id="heroVideoCard" onclick="playHeroVideo()">
+        <div class="hcover"></div>
+        <div class="hplay"><div class="hplaybtn">▶</div></div>
+        <div class="hmeta">
+          <div>
+            <div class="hmeta-label">Vídeo em destaque</div>
+            <div class="hmeta-title">Tributo ao Rei · Show ao Vivo</div>
           </div>
-          <input name="email" type="email" required placeholder="E-mail corporativo">
-          <input type="hidden" name="assunto" value="Solicitação de acesso ao Portal do Contratante">
-          <button class="btn primary" type="submit">Solicitar acesso</button>
-        </form>
+          <div class="hmeta-year">2026</div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="universo">
-    <div class="wrap">
-      <div class="eyebrow">Universo Tingo Santi</div>
-      <h2>Onde encontrar</h2>
-      <div class="platforms">
-        <article class="platform spotify">
-          <h3>Spotify</h3>
-          <p>Mais de 50 composições autorais publicadas.</p>
-          <iframe src="https://open.spotify.com/embed/artist/1XfDGJ4C2wEsrAbWbVaZ4b?utm_source=generator&theme=0" title="Spotify Tingo Santi" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <p style="margin-top:14px"><a class="btn secondary" href="https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b" target="_blank">Ouvir no Spotify</a></p>
-        </article>
-        <article class="platform">
-          <h3>Instagram</h3>
-          <p>Performances, bastidores e novos lançamentos.</p>
-          <p style="margin-top:24px"><a class="btn secondary" href="https://instagram.com/tingosanti" target="_blank">Seguir @tingosanti</a></p>
-        </article>
-        <article class="platform">
-          <h3>YouTube</h3>
-          <p>Apresentações ao vivo e clipes de performance.</p>
-          <p style="margin-top:24px"><a class="btn secondary" href="https://www.youtube.com/@tingosanti" target="_blank">Ver no YouTube</a></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section white" id="autoral">
-    <div class="wrap grid2">
-      <div>
-        <div class="eyebrow">Composição autoral</div>
-        <h2>“É Muita Saudade Pra Pouco Eu”</h2>
-        <p class="lead">Composição autoral com 21,4 milhões de execuções e consumo em 189 países. A faixa posiciona Tingo Santi não apenas como intérprete de tributo, mas como compositor com obra própria validada pelo mercado.</p>
-        <p class="lead" style="margin-top:18px">A música integra o universo do espetáculo em arranjo orquestral exclusivo.</p>
-      </div>
-      <div class="videoCard"><iframe src="https://www.youtube.com/embed/bXdIIxEg7PY" title="É Muita Saudade Pra Pouco Eu" allowfullscreen></iframe></div>
-    </div>
-  </section>
-
-  <section class="section" id="contato">
-    <div class="wrap contactGrid">
-      <div>
-        <div class="eyebrow">Contato</div>
-        <h2>Fale com a produção</h2>
-        <div class="contactItem"><b>NKT Artes Ltda</b>CNPJ 56.047.654/0001-25</div>
-        <div class="contactItem"><b>Telefone</b><a href="https://wa.me/5521975214169" target="_blank">(21) 97521-4169</a></div>
-        <div class="contactItem"><b>E-mail</b><a href="mailto:tingo.santi@proton.me">tingo.santi@proton.me</a></div>
-        <div class="contactItem"><b>Endereço de referência</b>Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ</div>
-      </div>
-      <form action="https://formspree.io/f/xyklpzbk" method="POST">
-        <input name="nome" required placeholder="Nome">
-        <input name="email" type="email" required placeholder="E-mail">
-        <select name="tipo">
-          <option value="">Tipo de solicitação</option>
-          <option>Prefeitura / Secretaria de Cultura</option>
-          <option>Evento corporativo</option>
-          <option>Imprensa</option>
-          <option>Outro</option>
-        </select>
-        <textarea name="mensagem" required placeholder="Mensagem"></textarea>
-        <button class="btn primary" type="submit">Enviar mensagem</button>
-      </form>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="wrap">
-      <div>NKT Artes Ltda — CNPJ 56.047.654/0001-25<br>© 2026 NKT Artes Ltda. Todos os direitos reservados.</div>
-      <div><a href="mailto:tingo.santi@proton.me">tingo.santi@proton.me</a> | <a href="https://wa.me/5521975214169" target="_blank">(21) 97521-4169</a><br><a href="https://instagram.com/tingosanti" target="_blank">Instagram</a> | <a href="https://www.youtube.com/@tingosanti" target="_blank">YouTube</a> | <a href="https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b" target="_blank">Spotify</a></div>
-    </div>
-  </footer>
-
-  <div class="modal" id="videoModal" onclick="closeVideo(event)">
-    <div class="modalInner">
-      <button class="close" onclick="closeVideo(event)">×</button>
-      <iframe id="modalFrame" src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
+  <div class="hplayer" id="heroPlayerWrap">
+    <button class="hclose" id="heroCloseBtn" type="button" onclick="closeHeroVideo()">✕</button>
+    <iframe id="heroPlayer" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen playsinline></iframe>
+  </div>
+  <div class="hscr"><span>Role</span><div class="hscrl"></div></div>
+</section>
 
-  <script>
-    function toggleMenu(force) {
-      var menu = document.getElementById('mobileMenu');
-      if (typeof force === 'boolean') menu.classList.toggle('open', force);
-      else menu.classList.toggle('open');
+<!-- ESPETÁCULO -->
+<section id="show" class="sec">
+  <div class="con">
+    <div class="sg">
+      <div style="position:relative">
+        <div class="sph" id="showPhotoMain"></div>
+        <div class="spa" id="showPhotoAccent"></div>
+      </div>
+      <div>
+        <div class="ey"><div class="eyl"></div><span class="eys">O Espetáculo</span></div>
+        <h2 class="sh">Tributo ao <em>Rei</em></h2>
+        <p class="sl" id="showIntro" style="margin-bottom:2rem"></p>
+        <div class="sf" id="showFeatures"></div>
+        <div style="margin-top:2.8rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <a href="#contact" class="bp" onclick="trackCTA('show_proposta')">Solicitar Proposta</a>
+          <a href="#cont"    class="bout">Materiais Técnicos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="sec">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Galeria</span></div>
+    <h2 class="sh" style="margin-bottom:.5rem">Momentos de <em>palco</em></h2>
+    <div class="gm" id="galGrid"></div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section id="numeros" class="sec">
+  <div class="con">
+    <div class="numh">
+      <h2 class="numht" id="numTitle"></h2>
+      <p class="numhs" id="numSubtitle"></p>
+    </div>
+    <div class="numg" id="numGrid"></div>
+    <p class="numrod" id="numRod"></p>
+  </div>
+</section>
+
+<!-- OUÇA & ACOMPANHE -->
+<section id="compositor" class="sec">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys" id="socEyebrow"></span></div>
+    <h2 class="soc-title" id="cmpTitulo"></h2>
+    <p class="soc-intro" id="cmpSubtitulo"></p>
+    <div class="soc-highlight">
+      <div class="soc-highlight-title" id="cmpHighlightTitle"></div>
+      <div class="soc-highlight-desc" id="cmpHighlightDesc"></div>
+    </div>
+
+    <div class="soc-grid">
+      <article class="soc-card spotify">
+        <h3 class="soc-card-title" id="socSpotTitle"></h3>
+        <div class="soc-card-label" id="socSpotLabel"></div>
+        <div class="soc-spotify-wrap">
+          <iframe id="cmpSpot" src="" title="Spotify Tingo" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div class="soc-actions">
+          <a href="#" id="cmpBtnSpot" class="soc-btn spotify" target="_blank" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify</a>
+        </div>
+      </article>
+
+      <article class="soc-card instagram">
+        <div class="soc-ig-head">
+          <div class="soc-ig-handle" id="socIgHandle"></div>
+          <div class="soc-card-label" id="socIgLabel"></div>
+        </div>
+        <div class="soc-ig-grid">
+          <behold-widget id="socIgFeed"></behold-widget>
+        </div>
+        <div class="soc-actions">
+          <a href="#" id="cmpBtnIg" class="soc-btn instagram" target="_blank" onclick="trackCTA('cmp_instagram')">Seguir no Instagram ↗</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- NOTORIEDADE -->
+<section id="not" class="sec" style="background:linear-gradient(180deg,#fff 0%,var(--off) 100%)">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Notoriedade</span></div>
+    <h2 class="sh">O show que a <em>imprensa</em> cobre</h2>
+    <p class="sl">Publicações editoriais de peso, capas de jornal, matérias em veículos regionais e nacionais e aprovação por órgãos oficiais. Cada show gera cobertura. Cada cobertura reforça o posicionamento.</p>
+
+    <div class="vlogos" id="vlogosGrid"></div>
+    <div class="pblocks" id="pgrid2"></div>
+    <div class="presq">
+      <div class="presq-mark">"</div>
+      <p class="presq-text" id="presqText"></p>
+      <p class="presq-src" id="presqSrc"></p>
+    </div>
+    <div class="vinst">
+      <p class="vinst-title">Validações institucionais</p>
+      <div class="vinst-grid" id="vinstGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRATANTES -->
+<section id="cont" class="sec sec-off">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys">Para Contratantes</span></div>
+    <h2 class="sh">Estrutura para <em>contratar</em></h2>
+    <p class="sl" id="contIntro"></p>
+    <div class="cblock">
+      <div class="cpane">
+        <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Documentação disponível</p>
+        <ul class="cdocs" id="cdocsList"></ul>
+        <div class="cactions">
+          <a href="#contact" class="bp" onclick="trackCTA('cont_solicitar')">Solicitar Materiais</a>
+          <a href="javascript:void(0)" id="waContBtn" class="bout" onclick="trackWA('cont')">WhatsApp da Produção</a>
+        </div>
+      </div>
+      <div class="cpane">
+        <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Precedentes de contratação</p>
+        <div class="cprec" id="cprecList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="sec">
+  <div class="con">
+    <div class="sgr">
+      <div>
+        <div class="sphoto" id="sobreFoto"></div>
+        <div class="squote">
+          <p class="sqt" id="sobreCitacao"></p>
+          <p class="sqa">Tingo Santi · Ailton Santos</p>
+        </div>
+      </div>
+      <div>
+        <div class="ey"><div class="eyl"></div><span class="eys">Sobre o Artista</span></div>
+        <h2 class="sh">Tingo <em>Santi</em></h2>
+        <div id="sobreParas" style="margin-bottom:.5rem"></div>
+        <div class="smil" id="sobreMil"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <h2 class="bant">Leve o espetáculo para a sua programação</h2>
+  <p class="bans">Proposta comercial, agenda e documentação para contratação pública e privada disponíveis sob demanda.</p>
+  <div class="bana">
+    <a href="#contact" class="bp"  onclick="trackCTA('band_proposta')">Solicitar Proposta</a>
+    <a href="javascript:void(0)" id="waBandBtn" class="bout" onclick="trackWA('band')">WhatsApp · <span id="waBandLabel"></span></a>
+  </div>
+</div>
+
+<!-- CONTATO -->
+<section id="contact" class="sec sec-off">
+  <div class="con">
+    <div class="csp">
+      <div>
+        <div class="ey"><div class="eyl"></div><span class="eys">Contato</span></div>
+        <h2 class="sh" id="contactTitle">Fale com a <em>produção</em></h2>
+        <p id="contactIntro" style="font-size:.98rem;font-weight:300;color:var(--tm);line-height:1.82;margin-bottom:2.5rem">Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.</p>
+        <div class="cit"><div class="cic">@</div><div><div class="cil">E-mail</div><div class="civ" id="cEmail"></div></div></div>
+        <div class="cit"><div class="cic">☎</div><div><div class="cil" id="cPhoneLabel">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
+        <div class="cit" id="cEnderecoWrap"><div class="cic">⌂</div><div><div class="cil">Endereço</div><div class="civ" style="font-size:.88rem;line-height:1.5" id="cEndereco"></div></div></div>
+        <div class="cit" id="cCnpjWrap"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:var(--blue)"></a></div></div></div>
+        <a href="javascript:void(0)" id="waMainBtn" class="whatsapp-btn" onclick="trackWA('contato')">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Iniciar conversa no WhatsApp
+        </a>
+        <div style="margin-top:1.5rem;display:flex;gap:.8rem">
+          <a href="javascript:void(0)" id="igBtn" class="sl2" onclick="trackCTA('social_ig')" target="_blank">IG</a>
+          <a href="javascript:void(0)" id="ytBtn" class="sl2" onclick="trackCTA('social_yt')" target="_blank">YT</a>
+          <a href="javascript:void(0)" id="spBtn" class="sl2" onclick="trackCTA('social_sp')" target="_blank">SP</a>
+        </div>
+      </div>
+      <div id="contactFormWrap">
+        <form id="cform">
+          <div class="ff"><label class="fl">Nome</label><input type="text" name="nome" class="fi" placeholder="Seu nome" data-fs-field required></div>
+          <div class="ff"><label class="fl">Organização / Município</label><input type="text" name="organizacao" class="fi" placeholder="Prefeitura de... / Empresa..." data-fs-field></div>
+          <div class="ff"><label class="fl">E-mail</label><input type="email" name="email" class="fi" placeholder="seu@email.com" data-fs-field required></div>
+          <span data-fs-error="email" style="display:block;font-size:.8rem;color:#d32f2f;margin-top:.3rem;margin-bottom:.8rem"></span>
+          <div class="ff"><label class="fl">Telefone / WhatsApp</label><input type="tel" name="telefone" class="fi" placeholder="(XX) XXXXX-XXXX" data-fs-field></div>
+          <div class="ff"><label class="fl">Tipo de Solicitação</label>
+            <select name="tipo" class="fsl" data-fs-field>
+              <option value="">Selecione...</option>
+              <option>Proposta comercial</option>
+              <option>Contratação pública (inexigibilidade)</option>
+              <option>Evento corporativo</option>
+              <option>Materiais técnicos e riders</option>
+              <option>Imprensa / Assessoria</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="ff"><label class="fl">Mensagem</label><textarea name="mensagem" class="ft" placeholder="Evento, data aproximada, cidade e outras informações relevantes..." data-fs-field required></textarea></div>
+          <span data-fs-error="mensagem" style="display:block;font-size:.8rem;color:#d32f2f;margin-top:.3rem;margin-bottom:.8rem"></span>
+          <button type="submit" class="bp" style="width:100%;padding:1.05rem" onclick="trackCTA('form_submit')" data-fs-submit-btn>Enviar Solicitação</button>
+        </form>
+        <div data-fs-success style="margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid #4caf50;border-radius:4px;background:rgba(76,175,80,.08);color:#2e7d32;font-size:.9rem;display:none">
+          ✓ Mensagem enviada com sucesso. Retornaremos em até 24 horas úteis.
+        </div>
+        <div data-fs-error style="margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid #d32f2f;border-radius:4px;background:rgba(211,47,47,.08);color:#b71c1c;font-size:.9rem;display:none"></div>
+      </div>
+      <div id="contactDirectOnly" style="display:none;padding:1.4rem 1.6rem;border:1px solid var(--off2);border-radius:var(--rl);background:var(--w)">
+        <div style="font-size:.88rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);margin-bottom:.9rem">Contato direto</div>
+        <p style="font-size:.95rem;font-weight:300;color:var(--tm);line-height:1.75">Nesta rota, o atendimento comercial é feito diretamente pelos contatos exibidos ao lado, via e-mail e WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg">
+    <div>
+      <svg width="100" height="44" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(250,40)">
+          <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="rgba(155,189,232,.65)" stroke-width="1.4" stroke-linejoin="round"/>
+          <circle cx="0" cy="0" r="3" fill="rgba(155,189,232,.65)"/>
+        </g>
+        <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">TINGO</text>
+        <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.84)">SANTI</text>
+      </svg>
+      <p class="ftag">Tributo ao Rei · Roberto Carlos<br>Espetáculo de interpretação elegante, memória afetiva e produção profissional completa.</p>
+    </div>
+    <div><div class="fct">Navegação</div><ul class="fl2">
+      <li><a href="#show">O Espetáculo</a></li>
+      <li><a href="#compositor">O Compositor</a></li>
+      <li><a href="#not">Notoriedade</a></li>
+      <li><a href="#sobre">Sobre o Artista</a></li>
+    </ul></div>
+    <div><div class="fct">Contratação</div><ul class="fl2">
+      <li><a href="#cont">Para Contratantes</a></li>
+      <li><a href="#contact">Solicitar Proposta</a></li>
+      <li><a href="javascript:void(0)" id="waFooterLink" onclick="trackWA('footer')">WhatsApp</a></li>
+    </ul></div>
+    <div><div class="fct">Contato</div><ul class="fl2">
+      <li><a id="footerEmail" href="#"></a></li>
+      <li><a id="footerPhone" href="#"></a></li>
+      <li><a id="footerIG" href="#" target="_blank">Instagram</a></li>
+      <li><a id="footerYT" href="#" target="_blank">YouTube</a></li>
+      <li><a id="footerSP" href="#" target="_blank">Spotify</a></li>
+    </ul></div>
+  </div>
+  <div class="fb">
+    <span class="fleg">© 2026 Tingo Santi · NKT Artes Ltda · <a id="footerCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:rgba(255,255,255,.3)"></a></span>
+    <div class="fso">
+      <a id="fsoIG" href="#" class="sl2" target="_blank">IG</a>
+      <a id="fsoYT" href="#" class="sl2" target="_blank">YT</a>
+      <a id="fsoSP" href="#" class="sl2" target="_blank">SP</a>
+      <a id="fsoWA" href="#" class="sl2" onclick="trackWA('footer_icon')">WA</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function getRouteKey() {
+  var path = (window.location.pathname || '/').toLowerCase().replace(/\/+$/, '') || '/';
+  return path === '/ds1' ? 'ds1' : 'default';
+}
+
+function getCurrentContact() {
+  var key = getRouteKey();
+  if (SITE.contatos && SITE.contatos[key]) return SITE.contatos[key];
+  if (SITE.contato) return SITE.contato;
+  return {};
+}
+
+function init() {
+  const C = getCurrentContact();
+  SITE.contato = C;
+  const waUrl = 'https://wa.me/' + C.whatsapp;
+
+  // HERO
+  document.getElementById('heroTagline').textContent = 'Cantor e intérprete. Um tributo a Roberto Carlos com voz natural, produção profissional e repertório pensado para emocionar plateias públicas e privadas.';
+  const heroBg = document.getElementById('heroBg');
+  const heroIframe = document.getElementById('hyt');
+  const heroCover = document.querySelector('.hcover');
+  if (heroCover && SITE.hero) {
+    var heroCardCover = SITE.hero.videoCover || SITE.hero.foto;
+    if (heroCardCover) {
+      heroCover.style.backgroundImage = "url('" + heroCardCover + "')";
     }
-    function openVideo(id) {
-      var modal = document.getElementById('videoModal');
-      var frame = document.getElementById('modalFrame');
-      frame.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
-      modal.classList.add('open');
+  }
+  if (SITE.hero && SITE.hero.youtubeId) {
+    heroBg.style.display = 'none';
+    heroBg.style.backgroundImage = 'none';
+    heroIframe.style.display = 'block';
+    heroIframe.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+      '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
+      '&controls=0&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1&playsinline=1';
+  } else if (SITE.hero && SITE.hero.foto) {
+    heroBg.style.backgroundImage = "url('" + SITE.hero.foto + "')";
+    heroBg.style.display = 'block';
+    heroIframe.style.display = 'none';
+    heroIframe.src = '';
+  }
+
+  // SHOW
+  document.getElementById('showPhotoMain').style.backgroundImage = "url('" + SITE.show.fotoMain + "')";
+  document.getElementById('showPhotoAccent').style.backgroundImage = "url('" + SITE.show.fotoAccent + "')";
+  document.getElementById('showIntro').textContent = SITE.show.intro;
+  var sf = document.getElementById('showFeatures');
+  SITE.show.features.forEach(function(f) {
+    sf.innerHTML += '<div class="sfi"><div class="sfd"></div><div><div class="sft">' + f.titulo + '</div><div class="sfd2">' + f.desc + '</div></div></div>';
+  });
+
+  // OUÇA & ACOMPANHE
+  document.getElementById('socEyebrow').textContent = SITE.compositor.eyebrow;
+  document.getElementById('cmpTitulo').innerHTML = SITE.compositor.titulo;
+  document.getElementById('cmpSubtitulo').textContent = SITE.compositor.subtitulo;
+  var cmpHighlightTitle = document.getElementById('cmpHighlightTitle');
+  var cmpHighlightDesc = document.getElementById('cmpHighlightDesc');
+  if (cmpHighlightTitle && SITE.compositor.destaque) cmpHighlightTitle.textContent = SITE.compositor.destaque.titulo || '';
+  if (cmpHighlightDesc && SITE.compositor.destaque) cmpHighlightDesc.textContent = SITE.compositor.destaque.desc || '';
+  document.getElementById('socSpotTitle').textContent = SITE.compositor.spotify.titulo;
+  document.getElementById('socSpotLabel').textContent = SITE.compositor.spotify.label;
+  document.getElementById('socIgHandle').textContent = SITE.compositor.instagram.handle;
+  document.getElementById('socIgLabel').textContent = SITE.compositor.instagram.label;
+  document.getElementById('cmpSpot').src = 'https://open.spotify.com/embed/' + SITE.compositor.spotify.embedType + '/' + SITE.compositor.spotify.embedId + '?utm_source=generator&theme=0';
+  document.getElementById('cmpBtnSpot').href = C.spotify;
+  document.getElementById('cmpBtnIg').href = 'https://instagram.com/' + C.instagram;
+  document.getElementById('socIgFeed').setAttribute('feed-id', SITE.compositor.instagram.beholdFeedId);
+  if (!document.querySelector('script[data-behold-widget="1"]')) {
+    var beholdScript = document.createElement('script');
+    beholdScript.type = 'module';
+    beholdScript.src = 'https://w.behold.so/widget.js';
+    beholdScript.setAttribute('data-behold-widget', '1');
+    document.head.appendChild(beholdScript);
+  }
+
+  // VÍDEO DO SHOW
+
+  // GALERIA
+  var gal = document.getElementById('galGrid');
+  SITE.galeria.forEach(function(g) {
+    var el = document.createElement('div');
+    el.className = 'gi';
+    el.innerHTML = '<img src="' + g.arquivo + '" loading="lazy" alt="Show Tingo Santi">';
+    gal.appendChild(el);
+  });
+
+  // NÚMEROS
+  document.getElementById('numTitle').innerHTML = SITE.numerosTitulo;
+  document.getElementById('numSubtitle').textContent = SITE.numerosSubtitulo;
+  var ng = document.getElementById('numGrid');
+  var idxNormal = 0;
+  SITE.numeros.forEach(function(n) {
+    var cls = 'numc';
+    if (n.destaque) cls += ' hero';
+    else {
+      cls += (idxNormal < 3) ? ' m' : ' s';
+      idxNormal++;
     }
-    function closeVideo(e) {
-      if (e) e.stopPropagation();
-      document.getElementById('videoModal').classList.remove('open');
-      document.getElementById('modalFrame').src = '';
+    ng.innerHTML += '<div class="' + cls + '">' +
+      '<div class="numn">' + n.numero + '</div>' +
+      '<div class="numl">' + n.label + '</div>' +
+      (n.desc ? '<div class="numd">' + n.desc + '</div>' : '') +
+      '</div>';
+  });
+  document.getElementById('numRod').textContent = SITE.numerosRodape;
+
+  // IMPRENSA
+  var vg2 = document.getElementById('vlogosGrid');
+  SITE.veiculosImprensa.forEach(function(v) {
+    var parts = v.split('|');
+    vg2.innerHTML += '<div class="vlogo">' + parts[0] +
+      (parts[1] ? '<span class="vlogo-sub">' + parts[1] + '</span>' : '') + '</div>';
+  });
+  var pg2 = document.getElementById('pgrid2');
+  var blocks = {
+    editorial: [],
+    official: [],
+    general: []
+  };
+  
+  // Categorizar cards em blocos
+  SITE.imprensa.forEach(function(p) {
+    if (p.featured || p.tamanho === 'sz-l') {
+      blocks.editorial.push(p);
+    } else if (p.official) {
+      blocks.official.push(p);
+    } else {
+      blocks.general.push(p);
     }
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeVideo();
-    });
-  </script>
+  });
+  
+  // Renderizar BLOCO 1: Editorial
+  var html = '<div class="pblock">' +
+    '<h3 class="pblock-h">Destaques Editorial</h3>' +
+    '<div class="pgrid2">';
+  blocks.editorial.forEach(function(p) {
+    var href = p.link ? p.link : 'javascript:void(0)';
+    var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
+    var sz   = p.tamanho || 'sz-m';
+    var featured = p.featured ? ' featured' : '';
+    var linkIcon = p.link ? '<div class="pcard-link">↗</div>' : '';
+    html +=
+      '<a class="pcard ' + sz + '" href="' + href + '" ' + tgt + ' onclick="trackCTA(\'imprensa_' + p.veiculo.toLowerCase().replace(/[^a-z]/g,'_').slice(0,15) + '\')">' +
+        linkIcon +
+        '<div class="pcard-img" style="background-image:url(\'' + p.imagem + '\');background-position:' + (p.pos || 'center top') + '">' +
+          '<div class="pcard-ov"></div>' +
+          '<div class="pcard-body">' +
+            '<span class="pcard-vc' + featured + '">' + p.veiculo + '</span>' +
+            '<div class="pcard-mh">' + p.manchete + '</div>' +
+            (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
+          '</div>' +
+        '</div>' +
+      '</a>';
+  });
+  html += '</div></div>';
+  
+  // Renderizar BLOCO 2: Oficial
+  html += '<div class="pblock pblock-official">' +
+    '<h3 class="pblock-h">Publicado em Sites Oficiais</h3>' +
+    '<div class="pgrid2">';
+  blocks.official.forEach(function(p) {
+    var href = p.link ? p.link : 'javascript:void(0)';
+    var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
+    var sz   = p.tamanho || 'sz-m';
+    var linkIcon = p.link ? '<div class="pcard-link">↗</div>' : '';
+    html +=
+      '<a class="pcard ' + sz + ' pcard-official" href="' + href + '" ' + tgt + ' onclick="trackCTA(\'imprensa_' + p.veiculo.toLowerCase().replace(/[^a-z]/g,'_').slice(0,15) + '\')">' +
+        linkIcon +
+        '<div class="pcard-img" style="background-image:url(\'' + p.imagem + '\');background-position:' + (p.pos || 'center top') + '">' +
+          '<div class="pcard-ov"></div>' +
+          '<div class="pcard-body">' +
+            '<span class="pcard-vc">' + p.veiculo + '</span>' +
+            '<div class="pcard-mh">' + p.manchete + '</div>' +
+            (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
+          '</div>' +
+        '</div>' +
+      '</a>';
+  });
+  html += '</div></div>';
+  
+  // Renderizar BLOCO 3: Imprensa geral
+  var gradients = [
+    'linear-gradient(135deg,#0b3480 0%,#02091c 100%)',
+    'linear-gradient(135deg,#1a0a3c 0%,#0b3480 100%)',
+    'linear-gradient(135deg,#02091c 0%,#174fba 100%)',
+    'linear-gradient(135deg,#0a1228 0%,#2e3a6b 100%)',
+    'linear-gradient(135deg,#1b2a5e 0%,#02091c 100%)',
+    'linear-gradient(135deg,#0d1f4a 0%,#1a3070 100%)'
+  ];
+  html += '<div class="pblock">' +
+    '<h3 class="pblock-h">Cobertura de Imprensa</h3>' +
+    '<div class="pgrid2">';
+  blocks.general.forEach(function(p, idx) {
+    var href = p.link ? p.link : 'javascript:void(0)';
+    var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
+    var sz   = p.tamanho || 'sz-m';
+    var linkIcon = p.link ? '<div class="pcard-link">↗</div>' : '';
+    var bgStyle = p.imagem
+      ? 'background-image:url(\'' + p.imagem + '\');background-position:' + (p.pos || 'center top')
+      : 'background:' + gradients[idx % gradients.length];
+    html +=
+      '<a class="pcard ' + sz + '" href="' + href + '" ' + tgt + ' onclick="trackCTA(\'imprensa_' + p.veiculo.toLowerCase().replace(/[^a-z]/g,'_').slice(0,15) + '\')">' +
+        linkIcon +
+        '<div class="pcard-img" style="' + bgStyle + '">' +
+          '<div class="pcard-ov"></div>' +
+          '<div class="pcard-body">' +
+            '<span class="pcard-vc">' + p.veiculo + '</span>' +
+            '<div class="pcard-mh">' + p.manchete + '</div>' +
+            (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
+          '</div>' +
+        '</div>' +
+      '</a>';
+  });
+  html += '</div></div>';
+  pg2.innerHTML = html;
+  if (SITE.imprensaQuote) {
+    document.getElementById('presqText').textContent = SITE.imprensaQuote.texto;
+    document.getElementById('presqSrc').textContent = SITE.imprensaQuote.fonte;
+  }
+  var vi = document.getElementById('vinstGrid');
+  SITE.validacoes.forEach(function(v) {
+    vi.innerHTML += '<div class="vinst-card"><div class="vinst-ico">' + v.icone + '</div><div class="vinst-ttl">' + v.titulo + '</div><div class="vinst-sub">' + v.subtitulo + '</div></div>';
+  });
+
+  // CONTRATANTES
+  document.getElementById('contIntro').textContent = SITE.contratantes.intro;
+  var cl = document.getElementById('cdocsList');
+  SITE.contratantes.documentos.forEach(function(d) { cl.innerHTML += '<li>' + d + '</li>'; });
+  var cp = document.getElementById('cprecList');
+  SITE.contratantes.precedentes.forEach(function(p) {
+    cp.innerHTML += '<div class="cpcard">' +
+      (p.categoria ? '<div class="cpcat">' + p.categoria + '</div>' : '') +
+      '<div class="cpmun">' + p.municipio + '</div>' +
+      '<div class="cpev">' + p.evento + '</div></div>';
+  });
+  document.getElementById('waContBtn').href = waUrl;
+
+  // SOBRE
+  document.getElementById('sobreFoto').style.backgroundImage = "url('" + SITE.sobre.foto + "')";
+  document.getElementById('sobreCitacao').textContent = '"' + SITE.sobre.citacao + '"';
+  var sp = document.getElementById('sobreParas');
+  SITE.sobre.paras.forEach(function(p) {
+    sp.innerHTML += '<p style="font-size:1rem;font-weight:300;color:var(--tm);line-height:1.88;margin-bottom:1.2rem">' + p + '</p>';
+  });
+  var sm = document.getElementById('sobreMil');
+  SITE.sobre.marcos.forEach(function(m) {
+    sm.innerHTML += '<div class="smilc"><div class="smily">' + m.ano + '</div><div class="smild">' + m.desc + '</div></div>';
+  });
+
+  // CONTATO
+  document.getElementById('contactTitle').innerHTML = C.sectionTitle || 'Fale com a <em>produção</em>';
+  document.getElementById('contactIntro').textContent = C.sectionIntro || '';
+  document.getElementById('cEmail').textContent    = C.email || '';
+  document.getElementById('cPhoneLabel').textContent = C.companyLabel || 'Produção';
+  document.getElementById('cPhone').textContent    = C.whatsappLabel || '';
+  document.getElementById('cEndereco').textContent = C.endereco || '';
+  document.getElementById('cCnpj').textContent     = C.cnpj || '';
+  document.getElementById('cEnderecoWrap').style.display = C.endereco ? '' : 'none';
+  document.getElementById('cCnpjWrap').style.display = C.cnpj ? '' : 'none';
+  document.getElementById('waMainBtn').href        = waUrl;
+  document.getElementById('waBandBtn').href        = waUrl;
+  document.getElementById('waBandLabel').textContent = C.whatsappLabel || '';
+  document.getElementById('igBtn').href  = 'https://instagram.com/' + C.instagram;
+  document.getElementById('ytBtn').href  = 'https://youtube.com/' + C.youtube;
+  document.getElementById('spBtn').href  = C.spotify;
+  document.getElementById('contactFormWrap').style.display = C.formEnabled ? '' : 'none';
+  document.getElementById('contactDirectOnly').style.display = C.formEnabled ? 'none' : 'block';
+
+  // FOOTER
+  document.getElementById('footerEmail').href        = 'mailto:' + C.email;
+  document.getElementById('footerEmail').textContent = C.email;
+  document.getElementById('footerPhone').href        = 'tel:+' + C.whatsapp;
+  document.getElementById('footerPhone').textContent = (C.companyLabel ? C.companyLabel + ' · ' : '') + C.whatsappLabel;
+  document.getElementById('footerIG').href = 'https://instagram.com/' + C.instagram;
+  document.getElementById('footerYT').href = 'https://youtube.com/' + C.youtube;
+  document.getElementById('footerSP').href = C.spotify;
+  document.getElementById('footerCnpj').textContent = C.cnpj ? 'CNPJ ' + C.cnpj : '';
+  document.getElementById('footerCnpj').style.display = C.cnpj ? '' : 'none';
+  document.getElementById('fsoIG').href  = 'https://instagram.com/' + C.instagram;
+  document.getElementById('fsoYT').href  = 'https://youtube.com/' + C.youtube;
+  document.getElementById('fsoSP').href  = C.spotify;
+  document.getElementById('fsoWA').href  = waUrl;
+  document.getElementById('waFooterLink').href = waUrl;
+}
+
+function playVideo() {
+  var yid = SITE.videoShow.youtubeId;
+  if (!yid) return;
+  document.getElementById('vfov').style.display = 'none';
+  var f = document.getElementById('vfif');
+  f.style.display = 'block';
+  f.src = 'https://www.youtube.com/embed/' + yid + '?autoplay=1&rel=0';
+  trackCTA('video_play_show');
+}
+
+
+function playHeroVideo() {
+  var yid = SITE.videoShow && SITE.videoShow.youtubeId ? SITE.videoShow.youtubeId : SITE.hero.youtubeId;
+  if (!yid) return;
+  var hero = document.getElementById('hero');
+  var iframe = document.getElementById('heroPlayer');
+  hero.classList.add('is-playing');
+  iframe.src = 'https://www.youtube.com/embed/' + yid + '?autoplay=1&rel=0&playsinline=1';
+  trackCTA('hero_video_play');
+}
+function closeHeroVideo() {
+  var hero = document.getElementById('hero');
+  var iframe = document.getElementById('heroPlayer');
+  hero.classList.remove('is-playing');
+  iframe.src = '';
+}
+
+let soundOn = false;
+function toggleSound() {}
+
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeHeroVideo(); });
+
+window.addEventListener('scroll', function(){
+  var s = scrollY > 60;
+  document.getElementById('nav').classList.toggle('s', s);
+  document.getElementById('logoL').style.display = s ? 'none' : 'block';
+  document.getElementById('logoD').style.display = s ? 'block' : 'none';
+});
+document.getElementById('ham').onclick = function(){ document.getElementById('mm').classList.toggle('o'); };
+function cm(){ document.getElementById('mm').classList.remove('o'); }
+
+function trackCTA(label) {
+  if (window._gtag) window._gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
+}
+function trackWA(origem) {
+  if (window._gtag) window._gtag('event', 'whatsapp_click', { event_category: 'conversion', event_label: 'whatsapp_' + origem });
+  window.open('https://wa.me/' + SITE.contato.whatsapp, '_blank');
+}
+
+if (typeof SITE !== 'undefined') { init(); } else { document.addEventListener('DOMContentLoaded', init); }
+</script>
+
+<!-- Formspree Ajax Integration -->
+<script>
+  (function () {
+    var C = (typeof getCurrentContact === 'function') ? getCurrentContact() : null;
+    if (!C || !C.formEnabled || !C.formspree) return;
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#cform', formId: C.formspree });
+    var s = document.createElement('script');
+    s.src = 'https://unpkg.com/@formspree/ajax@1';
+    s.defer = true;
+    document.body.appendChild(s);
+  })();
+</script>
 </body>
 </html>
