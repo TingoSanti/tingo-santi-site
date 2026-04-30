@@ -1,56 +1,56 @@
-# Tingo Santi · Site v2 (institucional B2G)
+# Tingo Santi — Site Oficial revisão institucional
 
-Site reformulado para vender prioritariamente para prefeituras, secretarias de cultura, fundações e contratantes públicos.
+## Versão gerada
 
-## Arquivos
+Intervenção aplicada sobre a base atual enviada em `tingo-santi-site.zip`.
 
-- `index.html` — estrutura, CSS e JS em arquivo único
-- `data.js` — todo o conteúdo editável (textos, fotos, contatos, imprensa, números, sobre)
-- `img/` — fotos do show, retrato, imprensa
-- `netlify.toml` — config de deploy
+## Principais mudanças
 
-## Para editar conteúdo
+1. Home reestruturada conforme revisão estratégica:
+   - Hero institucional
+   - O espetáculo
+   - Quatro pilares de diferenciação
+   - Prova digital
+   - Vídeos de performance
+   - Galeria
+   - Validação institucional
+   - Dois caminhos para contratantes
+   - Portal do contratante
+   - Universo Tingo Santi
+   - Composição autoral
+   - Contato
 
-Abra `data.js` em qualquer editor. Não é preciso mexer no HTML.
+2. Copy reposicionada para contratantes públicos e corporativos.
 
-## Deploy
+3. Paleta ajustada para azul profundo, branco e dourado apenas como acento.
 
-Sobe na Netlify por arrasto (ou git push). O `netlify.toml` já está incluído.
+4. Formulários conectados ao Formspree ID existente: `xyklpzbk`.
 
-## Paleta
+5. Página `/imprensa/` criada como rota simples para material editorial.
 
-- Azul Rei `#0A2342` — dominante institucional
-- Azul Profundo `#16407A` — botões, links, acentos
-- Azul Cintilante `#3B6FB5` — hover, gradientes
-- Branco editorial `#FAFAF7`
-- Off branco `#F0EFE8` — faixa alternada
-- Tinta `#0B1220` — texto principal
-- Tinta clara `#5A6478` — texto secundário
+## Observações
 
-## Tipografia
+- Foram preservados os assets existentes em `/img`.
+- O arquivo `data.js` foi preservado para referência, mas a nova home está mais estática e auditável.
+- O pacote exclui `.git`, `__MACOSX`, `.DS_Store` e backups internos pesados.
+- Recomenda-se testar localmente antes de subir ao Netlify.
 
-- Playfair Display (700/900) — títulos, nome do artista, citações
-- Inter (300/400/500/600) — corpo, UI, números, CTAs
-- Cormorant Garamond (italic) — citações longas
+## Como testar
 
-## Pendências resolvidas (vs. v1)
+Abra `index.html` no navegador ou rode um servidor local:
 
-- ✅ Telefone único (NKT Artes) em todo o site
-- ✅ Hero com foto estática de fundo (resolvido fallback de iframe)
-- ✅ Formspree integrado (form id `xyklpzbk`)
-- ✅ Paleta sem dourado, azul Rei dominante
-- ✅ CNPJ clicável → Receita Federal
-- ✅ Fonte dos números no rodapé
-- ✅ Bio institucional com NKT, livro, doutorado
-- ✅ Press com tags "OFICIAL" para sites de prefeituras
-- ✅ Mobile com 3 campos obrigatórios essenciais
-- ✅ Preload de hero_principal.jpg
-- ✅ font-display: swap nos Google Fonts
-- ✅ Schema.org MusicGroup
+```bash
+python3 -m http.server 8080
+```
 
-## Pendências em aberto (não bloqueantes)
+Depois acesse:
 
-- 🟠 Vídeos em destaque: hoje só hero card. Para múltiplos vídeos, criar `siteData.videos` e nova seção
-- 🟠 Hero como vídeo de fundo (biquini.com.br): hoje é foto estática. Pode ser adicionado depois quando houver footage de palco em loop
-- 🟠 Logo SVG (estrela 5 pontas) no nav: hoje uso "Tingo Santi" em Playfair. Substitui SVG quando estiver finalizado
-- 🟢 Teste em 375px (iPhone SE) — site responde, mas conferir após deploy
+```text
+http://localhost:8080
+```
+
+Teste também:
+
+```text
+http://localhost:8080/imprensa/
+```
