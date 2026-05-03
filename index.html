@@ -33,7 +33,7 @@
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
 :root{
   --w:#ffffff; --off:#f5f7fc; --off2:#eaeff8;
@@ -71,26 +71,58 @@ button{cursor:pointer;font-family:var(--sans)}
 #mm a{font-size:.9rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);padding:.5rem 0;border-bottom:1px solid var(--off2)}
 
 /* ── HERO ── */
-#hero{position:relative;width:100vw;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--navy)}
-.hbg{position:absolute;inset:0;z-index:0}
-.hfb{position:absolute;inset:0;background-size:cover;background-position:center 25%;z-index:0}
-.hbg iframe{position:absolute;inset:-10%;width:120%;height:120%;border:none;pointer-events:none;z-index:1}
-.hov{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(2,9,28,.52) 0%,rgba(2,9,28,.22) 45%,rgba(2,9,28,.82) 100%)}
-.hc{position:relative;z-index:3;text-align:center;padding:0 5vw;max-width:940px;animation:fu 1.3s ease both}
-@keyframes fu{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:translateY(0)}}
-.htag{font-family:var(--serif);font-size:clamp(1.2rem,2.5vw,1.75rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.86);margin-top:2.2rem;margin-bottom:2.6rem;line-height:1.42}
-.ha{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.bpw{display:inline-block;padding:.95rem 2.2rem;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;transition:all .2s;cursor:pointer}
-.bpw:hover{background:var(--bm);transform:translateY(-2px)}
-.bow{display:inline-block;padding:.95rem 2.2rem;border:1px solid rgba(255,255,255,.4);color:#fff;background:transparent;border-radius:var(--r);font-size:.82rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;transition:all .2s}
-.bow:hover{border-color:rgba(255,255,255,.8);background:rgba(255,255,255,.09)}
-.hscr{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:bob 2.5s ease-in-out infinite}
+#hero{position:relative;width:100vw;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--navy);padding:calc(var(--nh) + 2rem) 0 4rem}
+.hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hfb{position:absolute;inset:0;display:block;background-size:cover;background-position:center center;background-repeat:no-repeat;z-index:0;filter:saturate(1.04) contrast(1.02) brightness(.98)}
+.hbg iframe{position:absolute;top:50%;left:50%;width:177.77777778vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.18);border:none;pointer-events:none;z-index:1;opacity:.34;filter:saturate(1.08) contrast(1.02) brightness(1.06)}
+.hov{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(32,92,188,.80) 0%,rgba(56,132,233,.68) 34%,rgba(78,164,247,.58) 55%,rgba(35,102,204,.72) 100%)}
+.hc{position:relative;z-index:3;max-width:var(--max);width:100%;padding:0 5vw;animation:fu 1s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.hg{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,586px);gap:4rem;align-items:center}
+.hcopy{max-width:560px}
+.hk{display:flex;align-items:center;gap:.8rem;margin-bottom:1.4rem;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.86)}
+.hk::before{content:"";width:12px;height:12px;border-radius:50%;background:rgba(155,189,232,.9);box-shadow:0 0 0 6px rgba(155,189,232,.12)}
+.hname{font-family:'Playfair Display',var(--serif);font-size:clamp(4rem,8vw,6.8rem);font-weight:700;line-height:.94;letter-spacing:.01em;color:#f3f6ff;text-transform:uppercase;margin:0 0 1.8rem;text-shadow:0 8px 32px rgba(2,9,28,.22)}
+.htag{font-size:clamp(1.15rem,1.6vw,1.35rem);font-weight:400;color:rgba(255,255,255,.96);margin:0;line-height:1.72;max-width:32rem}
+.hcard{position:relative;aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:#08173f;box-shadow:0 34px 90px rgba(2,9,28,.34);border:1px solid rgba(255,255,255,.18);cursor:pointer;transition:transform .25s ease, box-shadow .25s ease}
+.hcard:hover{transform:translateY(-2px);box-shadow:0 38px 100px rgba(2,9,28,.4)}
+.hcover{position:absolute;inset:0;background-image:url("img/hero_principal.jpg");background-size:cover;background-position:center center;z-index:1}
+.hcover::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(4,10,28,.78) 0%,rgba(4,10,28,.18) 48%,rgba(4,10,28,.08) 100%)}
+.hplay{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center}
+.hplaybtn{width:116px;height:116px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:#0b1430;font-size:3rem;display:flex;align-items:center;justify-content:center;box-shadow:0 24px 60px rgba(2,9,28,.25)}
+.hmeta{position:absolute;left:2rem;right:2rem;bottom:1.4rem;z-index:3;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;color:#fff}
+.hmeta-label{font-size:.82rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:.45rem}
+.hmeta-title{font-family:var(--serif);font-size:1.05rem;font-weight:500;line-height:1.2;color:#fff}
+.hmeta-year{font-size:.9rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+.hplayer{position:absolute;inset:0;z-index:4;display:none;background:rgba(2,9,28,.18)}
+.hplayer iframe{width:100%;height:100%;border:none}
+.hclose{position:absolute;top:1rem;right:1rem;z-index:5;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.38);background:rgba(2,9,28,.5);backdrop-filter:blur(10px);color:#fff;font-size:1.2rem;display:none;align-items:center;justify-content:center}
+#hero.is-playing .hcopy,#hero.is-playing .hcard{opacity:0;pointer-events:none;transition:opacity .2s ease}
+#hero.is-playing .hplayer{display:block;position:absolute;left:5vw;right:5vw;top:calc(var(--nh) + 2.25rem);bottom:3rem;border-radius:28px;overflow:hidden;box-shadow:0 30px 80px rgba(2,9,28,.45)}
+#hero.is-playing .hclose{display:flex}
+.hscr{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:bob 2.5s ease-in-out infinite}
 .hscr span{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.42)}
 .hscrl{width:1px;height:42px;background:linear-gradient(to bottom,rgba(255,255,255,.36),transparent)}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
-#soundBtn{position:absolute;bottom:2.5rem;right:2.5rem;z-index:5;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);color:#fff;font-size:1.2rem;cursor:pointer;transition:all .25s;display:none;align-items:center;justify-content:center}
-#soundBtn:hover{background:var(--blue);border-color:var(--blue);transform:scale(1.08)}
-#soundBtn.on{background:var(--blue);border-color:var(--blue)}
+#soundBtn{display:none !important}
+@media (max-width: 980px){
+  #hero{padding:calc(var(--nh) + 1.4rem) 0 3rem;min-height:auto}
+  .hg{grid-template-columns:1fr;gap:2rem}
+  .hcopy{max-width:none}
+  .hname{font-size:clamp(3rem,17vw,5rem);line-height:.9}
+  .htag{font-size:1.05rem;max-width:none}
+  .hcard{max-width:100%}
+  #hero.is-playing .hplayer{left:4vw;right:4vw;top:calc(var(--nh) + 1.2rem);bottom:2rem;border-radius:20px}
+}
+@media (max-width: 640px){
+  .hc{padding:0 1.25rem}
+  .hname{font-size:clamp(2.75rem,18vw,4.2rem)}
+  .hk{font-size:.78rem;margin-bottom:1rem}
+  .hplaybtn{width:92px;height:92px;font-size:2.4rem}
+  .hmeta{left:1.25rem;right:1.25rem;bottom:1rem}
+  .hmeta-title{font-size:.95rem}
+  .hmeta-year,.hmeta-label{font-size:.72rem}
+}
 
 /* ── SHARED ── */
 .sec{padding:clamp(5rem,9vw,9rem) 5vw}
@@ -124,33 +156,37 @@ button{cursor:pointer;font-family:var(--sans)}
 .sft{font-size:.96rem;font-weight:600;margin-bottom:.35rem;color:var(--navy)}
 .sfd2{font-size:.88rem;font-weight:300;color:var(--tm);line-height:1.68}
 
-/* ── COMPOSITOR ── */
-#compositor{background:linear-gradient(160deg,#eef3fb 0%,var(--off) 50%,#e8eef8 100%);position:relative;overflow:hidden}
-#compositor::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,var(--blue),var(--bl),transparent)}
-.cmpg{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:1rem}
-.cmpv{aspect-ratio:9/16;max-width:360px;margin:0 auto;background:#000;border-radius:var(--rl);overflow:hidden;box-shadow:0 28px 64px rgba(11,52,128,.18);position:relative}
-.cmpv iframe{width:100%;height:100%;border:none;display:block}
-.cmpr{display:flex;flex-direction:column;gap:1.8rem}
-.cmpdest{padding:1.5rem 1.7rem;border-left:3px solid var(--spotify);background:rgba(29,185,84,.07);border-radius:0 var(--r) var(--r) 0}
-.cmpdestl{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#15803d;margin-bottom:.5rem}
-.cmpdestt{font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--navy);margin-bottom:.5rem;line-height:1.2}
-.cmpdestd{font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.65}
-.cmpspot{border-radius:var(--rl);overflow:hidden;box-shadow:0 20px 48px rgba(11,52,128,.12)}
-.cmpspot iframe{width:100%;height:352px;border:none;display:block}
-.cmpnums{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--bb)}
-.cmpnumi{text-align:center}
-.cmpnumn{font-family:var(--serif);font-size:clamp(1.6rem,2.6vw,2.1rem);font-weight:500;color:var(--blue);line-height:1;margin-bottom:.35rem}
-.cmpnuml{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);line-height:1.4}
-.cmpcta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
-.cmpbtn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;border-radius:var(--r);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:all .2s}
-.cmpbtn-spot{background:var(--spotify);color:#fff}
-.cmpbtn-spot:hover{background:#1ed760;transform:translateY(-2px)}
-.cmpbtn-ig{border:1px solid var(--bb);color:var(--blue)}
-.cmpbtn-ig:hover{border-color:var(--blue);background:rgba(11,52,128,.06)}
-
+/* ── OUÇA & ACOMPANHE ── */
+#compositor{background:var(--off);position:relative;overflow:hidden}
+#compositor::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--bl),transparent)}
+.soc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.8rem;align-items:stretch}
+.soc-card{background:var(--w);border:1px solid var(--off2);border-radius:28px;padding:2.4rem;box-shadow:0 18px 44px rgba(11,52,128,.08);display:flex;flex-direction:column;height:100%}
+.soc-card.spotify{background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%)}
+.soc-card.instagram{background:linear-gradient(180deg,#ffffff 0%,#fbfcff 100%)}
+.soc-kicker{font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mu);margin-bottom:1.1rem}
+.soc-title{font-family:var(--serif);font-size:clamp(2.2rem,4.2vw,3.4rem);font-weight:400;line-height:1.02;color:var(--navy);margin-bottom:.75rem}
+.soc-title em{font-style:italic;color:var(--blue)}
+.soc-intro{font-size:1rem;font-weight:300;color:var(--tm);max-width:860px;line-height:1.8;margin-bottom:1.2rem}
+.soc-highlight{display:inline-flex;flex-direction:column;gap:.45rem;padding:1rem 1.2rem;border-left:3px solid var(--blue);background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%);border-radius:0 18px 18px 0;margin:0 0 2.4rem;max-width:760px;box-shadow:0 10px 24px rgba(11,52,128,.06)}
+.soc-highlight-title{font-family:var(--serif);font-size:clamp(1.35rem,2vw,1.75rem);font-weight:500;line-height:1.15;color:var(--navy)}
+.soc-highlight-desc{font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.7}
+.soc-card-title{font-family:var(--serif);font-size:clamp(2rem,3vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);margin-bottom:.4rem}
+.soc-card-label{font-size:.7rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--mu);margin-bottom:1.6rem}
+.soc-spotify-wrap{border-radius:24px;overflow:hidden;box-shadow:0 20px 48px rgba(2,9,28,.12);background:#111;aspect-ratio:3/2}
+.soc-spotify-wrap iframe{width:100%;height:100%;border:none;display:block}
+.soc-ig-head{margin-bottom:1.5rem}
+.soc-ig-handle{font-family:var(--serif);font-size:clamp(2rem,3.4vw,3rem);font-weight:400;line-height:1.05;color:var(--navy);word-break:break-word}
+.soc-ig-grid{border-radius:24px;overflow:hidden;background:#fff;border:1px solid rgba(11,52,128,.08);padding:0;aspect-ratio:3/2}
+.soc-ig-grid behold-widget{display:block;width:100%;height:100%;min-height:0}
+.soc-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
+.soc-btn{display:inline-flex;align-items:center;justify-content:center;padding:1rem 1.8rem;border-radius:999px;font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:all .2s}
+.soc-btn.spotify{background:var(--blue);color:#fff;border:1px solid var(--blue)}
+.soc-btn.spotify:hover{background:var(--bm);border-color:var(--bm);transform:translateY(-2px)}
+.soc-btn.instagram{background:transparent;color:var(--blue);border:1px solid var(--bb)}
+.soc-btn.instagram:hover{background:var(--bfaint);border-color:var(--blue)}
 /* ── VÍDEO — SIMPLIFICADO (1 video só) ── */
 .vf{position:relative;aspect-ratio:16/9;background:var(--navy);border-radius:var(--rl);overflow:hidden;cursor:pointer;max-width:1100px;margin:0 auto;box-shadow:0 30px 70px rgba(11,52,128,.14)}
-.vft{position:absolute;inset:0;background-image:url('https://img.youtube.com/vi/rte3baDRUEg/maxresdefault.jpg');background-size:cover;background-position:center;transition:transform .4s}
+.vft{position:absolute;inset:0;background-image:url('https://img.youtube.com/vi/M7ehpNbIbUY/maxresdefault.jpg');background-size:cover;background-position:center;transition:transform .4s}
 .vf:hover .vft{transform:scale(1.03)}
 .vfo{position:absolute;inset:0;background:rgba(2,9,28,.38);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem}
 .vpb{width:84px;height:84px;border-radius:50%;border:2px solid rgba(255,255,255,.6);background:rgba(11,52,128,.36);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.9rem;transition:all .2s}
@@ -243,12 +279,14 @@ button{cursor:pointer;font-family:var(--sans)}
 .vinst-sub{font-size:.78rem;color:var(--tm);line-height:1.55}
 
 /* ── CONTRATANTES ── */
-.cblock{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.cdocs{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.cblock{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:stretch}
+.cpane{display:flex;flex-direction:column;min-height:430px}
+.cactions{margin-top:auto;padding-top:2rem;display:flex;gap:1rem;flex-wrap:wrap}
+.cdocs{list-style:none;display:flex;flex-direction:column;gap:.72rem}
 .cdocs li{display:flex;gap:.85rem;align-items:flex-start;font-size:.92rem;font-weight:300;color:var(--tm);line-height:1.5}
 .cdocs li::before{content:'✓';color:var(--blue);font-weight:600;flex-shrink:0;margin-top:.05rem}
-.cprec{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
-.cpcard{padding:1.3rem 1.5rem;border:1px solid var(--off2);border-radius:var(--r);background:var(--w);border-left:3px solid var(--blue)}
+.cprec{display:flex;flex-direction:column;gap:.72rem;margin-top:0;justify-content:space-between;flex:1}
+.cpcard{padding:1rem 1.35rem;border:1px solid var(--off2);border-radius:var(--r);background:var(--w);border-left:3px solid var(--blue)}
 .cpcat{font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem}
 .cpmun{font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.3rem}
 .cpev{font-size:.9rem;font-weight:300;color:var(--tm);line-height:1.5}
@@ -302,7 +340,8 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
-  .sg,.sgr,.csp,.cblock,.cmpg{grid-template-columns:1fr;gap:3.5rem}
+  .sg,.sgr,.csp,.cblock,.soc-grid{grid-template-columns:1fr;gap:3.5rem}
+  .cpane{min-height:auto}
   .fg{grid-template-columns:1fr 1fr}
   .spa{display:none}
   .gm{columns:2}
@@ -324,7 +363,8 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   .gi.tall{display:block}
   .fg{grid-template-columns:1fr}
   .smil{grid-template-columns:1fr}
-  .cmpnums{grid-template-columns:repeat(2,1fr)}
+    .soc-card{padding:1.6rem}
+  .soc-ig-grid behold-widget{min-height:0}
   .pcard.sz-l,.pcard.sz-m,.pcard.sz-s{grid-column:span 12}
   .presq{padding:2.5rem 1.8rem 2rem 1.8rem}
   .presq-mark{top:.5rem;left:1rem;font-size:5rem}
@@ -363,7 +403,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   <ul class="nl">
     <li><a href="#show">O Espetáculo</a></li>
     <li><a href="#compositor">O Compositor</a></li>
-    <li><a href="#videos">Vídeo</a></li>
     <li><a href="#not">Notoriedade</a></li>
     <li><a href="#cont">Contratantes</a></li>
     <li><a href="#sobre">O Artista</a></li>
@@ -374,7 +413,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 <div id="mm">
   <a href="#show"       onclick="cm()">O Espetáculo</a>
   <a href="#compositor" onclick="cm()">O Compositor</a>
-  <a href="#videos"     onclick="cm()">Vídeo do Show</a>
   <a href="#galeria"    onclick="cm()">Galeria</a>
   <a href="#numeros"    onclick="cm()">Números</a>
   <a href="#not"        onclick="cm()">Notoriedade</a>
@@ -387,40 +425,33 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 <section id="hero">
   <div class="hbg">
     <div class="hfb" id="heroBg"></div>
-    <iframe id="hyt" src="" allow="autoplay;encrypted-media" allowfullscreen playsinline style="display:none"></iframe>
+    <iframe id="hyt" src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen playsinline></iframe>
   </div>
   <div class="hov"></div>
   <div class="hc">
-    <div style="display:flex;justify-content:center">
-      <svg width="380" height="166" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 32px rgba(2,9,28,.48))">
-        <line x1="55" y1="40" x2="194" y2="40" stroke="rgba(155,189,232,.32)" stroke-width="1"/>
-        <circle cx="192" cy="40" r="2.4" fill="rgba(155,189,232,.55)"/>
-        <line x1="308" y1="40" x2="445" y2="40" stroke="rgba(155,189,232,.32)" stroke-width="1"/>
-        <circle cx="308" cy="40" r="2.4" fill="rgba(155,189,232,.55)"/>
-        <g transform="translate(250,40)">
-          <circle cx="0" cy="0" r="28" fill="none" stroke="rgba(155,189,232,.13)" stroke-width="1.1"/>
-          <polygon points="0,-22 6.43,-8.84 20.87,-6.8 10.43,3.57 12.86,18.05 0,11 -12.86,18.05 -10.43,3.57 -20.87,-6.8 -6.43,-8.84" fill="none" stroke="#9bbde8" stroke-width="1.7" stroke-linejoin="round"/>
-          <circle cx="0" cy="0" r="4.2" fill="#9bbde8"/>
-        </g>
-        <line x1="80" y1="74" x2="420" y2="74" stroke="rgba(155,189,232,.17)" stroke-width=".7"/>
-        <text x="250" y="138" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">TINGO</text>
-        <line x1="114" y1="154" x2="190" y2="154" stroke="rgba(155,189,232,.3)" stroke-width=".7"/>
-        <circle cx="200" cy="154" r="2" fill="rgba(155,189,232,.55)"/>
-        <circle cx="250" cy="154" r="3" fill="rgba(155,189,232,.75)"/>
-        <circle cx="300" cy="154" r="2" fill="rgba(155,189,232,.55)"/>
-        <line x1="310" y1="154" x2="386" y2="154" stroke="rgba(155,189,232,.3)" stroke-width=".7"/>
-        <text x="250" y="206" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="66" font-weight="400" letter-spacing="12" fill="#f0f5ff">SANTI</text>
-        <line x1="80" y1="216" x2="420" y2="216" stroke="rgba(155,189,232,.17)" stroke-width=".7"/>
-      </svg>
-    </div>
-    <p class="htag" id="heroTagline"></p>
-    <div class="ha">
-      <a href="#videos" class="bpw" onclick="trackCTA('hero_videos')">▶ Assistir ao Show</a>
-      <a href="#not"     class="bow"  onclick="trackCTA('hero_notoriedade')">Ver Notoriedade</a>
-      <a href="#contact" class="bow"  onclick="trackCTA('hero_contato')">Falar com a Produção</a>
+    <div class="hg">
+      <div class="hcopy">
+        <div class="hk">TINGO SANTI</div>
+        <h1 class="hname">TINGO<br>SANTI</h1>
+        <p class="htag" id="heroTagline"></p>
+      </div>
+      <div class="hcard" id="heroVideoCard" onclick="playHeroVideo()">
+        <div class="hcover"></div>
+        <div class="hplay"><div class="hplaybtn">▶</div></div>
+        <div class="hmeta">
+          <div>
+            <div class="hmeta-label">Vídeo em destaque</div>
+            <div class="hmeta-title">Tributo ao Rei · Show ao Vivo</div>
+          </div>
+          <div class="hmeta-year">2026</div>
+        </div>
+      </div>
     </div>
   </div>
-  <button id="soundBtn" onclick="toggleSound()" title="Ativar som"><span id="soundIcon">🔇</span></button>
+  <div class="hplayer" id="heroPlayerWrap">
+    <button class="hclose" id="heroCloseBtn" type="button" onclick="closeHeroVideo()">✕</button>
+    <iframe id="heroPlayer" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen playsinline></iframe>
+  </div>
   <div class="hscr"><span>Role</span><div class="hscrl"></div></div>
 </section>
 
@@ -446,50 +477,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
   </div>
 </section>
 
-<!-- COMPOSITOR (NOVA SEÇÃO) -->
-<section id="compositor" class="sec">
-  <div class="con">
-    <div class="ey"><div class="eyl"></div><span class="eys">O Compositor</span></div>
-    <h2 class="sh" id="cmpTitulo"></h2>
-    <p class="sl" id="cmpSubtitulo"></p>
-    <div class="cmpg">
-      <div class="cmpv">
-        <iframe id="cmpYt" src="" title="É Muita Saudade Pra Pouco Eu" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="cmpr">
-        <div class="cmpdest">
-          <div class="cmpdestl">Single em destaque</div>
-          <div class="cmpdestt" id="cmpDestT"></div>
-          <div class="cmpdestd" id="cmpDestD"></div>
-        </div>
-        <div class="cmpspot">
-          <iframe id="cmpSpot" src="" title="Spotify Tingo" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
-        <div class="cmpcta">
-          <a href="#" id="cmpBtnSpot" class="cmpbtn cmpbtn-spot" target="_blank" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify →</a>
-          <a href="#" id="cmpBtnIg"   class="cmpbtn cmpbtn-ig"   target="_blank" onclick="trackCTA('cmp_instagram')">Seguir no Instagram</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VÍDEO DO SHOW (SIMPLIFICADO) -->
-<section id="videos" class="sec sec-off">
-  <div class="con">
-    <div class="ey"><div class="eyl"></div><span class="eys">Vídeo do Show</span></div>
-    <h2 class="sh" style="margin-bottom:2.5rem">O show que <em>convence</em></h2>
-    <div class="vf" id="vfeat" onclick="playVideo()">
-      <div class="vft"></div>
-      <div class="vfo" id="vfov">
-        <div class="vpb">▶</div>
-        <div class="vft2" id="vfttl"></div>
-      </div>
-      <iframe id="vfif" src="" allow="autoplay;encrypted-media" allowfullscreen style="display:none"></iframe>
-    </div>
-  </div>
-</section>
-
 <!-- GALERIA -->
 <section id="galeria" class="sec">
   <div class="con">
@@ -510,6 +497,46 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <p class="numrod" id="numRod"></p>
   </div>
 </section>
+
+<!-- OUÇA & ACOMPANHE -->
+<section id="compositor" class="sec">
+  <div class="con">
+    <div class="ey"><div class="eyl"></div><span class="eys" id="socEyebrow"></span></div>
+    <h2 class="soc-title" id="cmpTitulo"></h2>
+    <p class="soc-intro" id="cmpSubtitulo"></p>
+    <div class="soc-highlight">
+      <div class="soc-highlight-title" id="cmpHighlightTitle"></div>
+      <div class="soc-highlight-desc" id="cmpHighlightDesc"></div>
+    </div>
+
+    <div class="soc-grid">
+      <article class="soc-card spotify">
+        <h3 class="soc-card-title" id="socSpotTitle"></h3>
+        <div class="soc-card-label" id="socSpotLabel"></div>
+        <div class="soc-spotify-wrap">
+          <iframe id="cmpSpot" src="" title="Spotify Tingo" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div class="soc-actions">
+          <a href="#" id="cmpBtnSpot" class="soc-btn spotify" target="_blank" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify</a>
+        </div>
+      </article>
+
+      <article class="soc-card instagram">
+        <div class="soc-ig-head">
+          <div class="soc-ig-handle" id="socIgHandle"></div>
+          <div class="soc-card-label" id="socIgLabel"></div>
+        </div>
+        <div class="soc-ig-grid">
+          <behold-widget id="socIgFeed"></behold-widget>
+        </div>
+        <div class="soc-actions">
+          <a href="#" id="cmpBtnIg" class="soc-btn instagram" target="_blank" onclick="trackCTA('cmp_instagram')">Seguir no Instagram ↗</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 
 <!-- NOTORIEDADE -->
 <section id="not" class="sec" style="background:linear-gradient(180deg,#fff 0%,var(--off) 100%)">
@@ -539,15 +566,15 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <h2 class="sh">Estrutura para <em>contratar</em></h2>
     <p class="sl" id="contIntro"></p>
     <div class="cblock">
-      <div>
+      <div class="cpane">
         <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Documentação disponível</p>
         <ul class="cdocs" id="cdocsList"></ul>
-        <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+        <div class="cactions">
           <a href="#contact" class="bp" onclick="trackCTA('cont_solicitar')">Solicitar Materiais</a>
           <a href="javascript:void(0)" id="waContBtn" class="bout" onclick="trackWA('cont')">WhatsApp da Produção</a>
         </div>
       </div>
-      <div>
+      <div class="cpane">
         <p style="font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem">Precedentes de contratação</p>
         <div class="cprec" id="cprecList"></div>
       </div>
@@ -592,12 +619,12 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <div class="csp">
       <div>
         <div class="ey"><div class="eyl"></div><span class="eys">Contato</span></div>
-        <h2 class="sh">Fale com a <em>produção</em></h2>
-        <p style="font-size:.98rem;font-weight:300;color:var(--tm);line-height:1.82;margin-bottom:2.5rem">Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.</p>
+        <h2 class="sh" id="contactTitle">Fale com a <em>produção</em></h2>
+        <p id="contactIntro" style="font-size:.98rem;font-weight:300;color:var(--tm);line-height:1.82;margin-bottom:2.5rem">Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.</p>
         <div class="cit"><div class="cic">@</div><div><div class="cil">E-mail</div><div class="civ" id="cEmail"></div></div></div>
-        <div class="cit"><div class="cic">☎</div><div><div class="cil">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
-        <div class="cit"><div class="cic">⌂</div><div><div class="cil">Endereço</div><div class="civ" style="font-size:.88rem;line-height:1.5" id="cEndereco"></div></div></div>
-        <div class="cit"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:var(--blue)"></a></div></div></div>
+        <div class="cit"><div class="cic">☎</div><div><div class="cil" id="cPhoneLabel">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
+        <div class="cit" id="cEnderecoWrap"><div class="cic">⌂</div><div><div class="cil">Endereço</div><div class="civ" style="font-size:.88rem;line-height:1.5" id="cEndereco"></div></div></div>
+        <div class="cit" id="cCnpjWrap"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:var(--blue)"></a></div></div></div>
         <a href="javascript:void(0)" id="waMainBtn" class="whatsapp-btn" onclick="trackWA('contato')">
           <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Iniciar conversa no WhatsApp
@@ -608,7 +635,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
           <a href="javascript:void(0)" id="spBtn" class="sl2" onclick="trackCTA('social_sp')" target="_blank">SP</a>
         </div>
       </div>
-      <div>
+      <div id="contactFormWrap">
         <form id="cform">
           <div class="ff"><label class="fl">Nome</label><input type="text" name="nome" class="fi" placeholder="Seu nome" data-fs-field required></div>
           <div class="ff"><label class="fl">Organização / Município</label><input type="text" name="organizacao" class="fi" placeholder="Prefeitura de... / Empresa..." data-fs-field></div>
@@ -635,6 +662,10 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
         </div>
         <div data-fs-error style="margin-top:1.2rem;padding:1.1rem 1.3rem;border:1px solid #d32f2f;border-radius:4px;background:rgba(211,47,47,.08);color:#b71c1c;font-size:.9rem;display:none"></div>
       </div>
+      <div id="contactDirectOnly" style="display:none;padding:1.4rem 1.6rem;border:1px solid var(--off2);border-radius:var(--rl);background:var(--w)">
+        <div style="font-size:.88rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);margin-bottom:.9rem">Contato direto</div>
+        <p style="font-size:.95rem;font-weight:300;color:var(--tm);line-height:1.75">Nesta rota, o atendimento comercial é feito diretamente pelos contatos exibidos ao lado, via e-mail e WhatsApp.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -656,7 +687,6 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
     <div><div class="fct">Navegação</div><ul class="fl2">
       <li><a href="#show">O Espetáculo</a></li>
       <li><a href="#compositor">O Compositor</a></li>
-      <li><a href="#videos">Vídeo do Show</a></li>
       <li><a href="#not">Notoriedade</a></li>
       <li><a href="#sobre">Sobre o Artista</a></li>
     </ul></div>
@@ -685,20 +715,46 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 </footer>
 
 <script>
+function getRouteKey() {
+  var path = (window.location.pathname || '/').toLowerCase().replace(/\/+$/, '') || '/';
+  return path === '/ds1' ? 'ds1' : 'default';
+}
+
+function getCurrentContact() {
+  var key = getRouteKey();
+  if (SITE.contatos && SITE.contatos[key]) return SITE.contatos[key];
+  if (SITE.contato) return SITE.contato;
+  return {};
+}
+
 function init() {
-  const C = SITE.contato;
+  const C = getCurrentContact();
+  SITE.contato = C;
   const waUrl = 'https://wa.me/' + C.whatsapp;
 
   // HERO
-  document.getElementById('heroBg').style.backgroundImage = "url('" + SITE.hero.foto + "')";
-  document.getElementById('heroTagline').textContent = SITE.hero.tagline;
-  if (SITE.hero.youtubeId) {
-    const f = document.getElementById('hyt');
-    f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
+  document.getElementById('heroTagline').textContent = 'Cantor e intérprete. Um tributo a Roberto Carlos com voz natural, produção profissional e repertório pensado para emocionar plateias públicas e privadas.';
+  const heroBg = document.getElementById('heroBg');
+  const heroIframe = document.getElementById('hyt');
+  const heroCover = document.querySelector('.hcover');
+  if (heroCover && SITE.hero) {
+    var heroCardCover = SITE.hero.videoCover || SITE.hero.foto;
+    if (heroCardCover) {
+      heroCover.style.backgroundImage = "url('" + heroCardCover + "')";
+    }
+  }
+  if (SITE.hero && SITE.hero.youtubeId) {
+    heroBg.style.display = 'none';
+    heroBg.style.backgroundImage = 'none';
+    heroIframe.style.display = 'block';
+    heroIframe.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
       '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
-      '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&playsinline=1';
-    f.style.display = 'block';
-    document.getElementById('soundBtn').style.display = 'flex';
+      '&controls=0&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1&playsinline=1';
+  } else if (SITE.hero && SITE.hero.foto) {
+    heroBg.style.backgroundImage = "url('" + SITE.hero.foto + "')";
+    heroBg.style.display = 'block';
+    heroIframe.style.display = 'none';
+    heroIframe.src = '';
   }
 
   // SHOW
@@ -710,18 +766,31 @@ function init() {
     sf.innerHTML += '<div class="sfi"><div class="sfd"></div><div><div class="sft">' + f.titulo + '</div><div class="sfd2">' + f.desc + '</div></div></div>';
   });
 
-  // COMPOSITOR
+  // OUÇA & ACOMPANHE
+  document.getElementById('socEyebrow').textContent = SITE.compositor.eyebrow;
   document.getElementById('cmpTitulo').innerHTML = SITE.compositor.titulo;
   document.getElementById('cmpSubtitulo').textContent = SITE.compositor.subtitulo;
-  document.getElementById('cmpYt').src = 'https://www.youtube.com/embed/' + SITE.compositor.youtubeShortId + '?rel=0';
-  document.getElementById('cmpSpot').src = 'https://open.spotify.com/embed/' + SITE.compositor.spotifyEmbedType + '/' + SITE.compositor.spotifyEmbedId + '?utm_source=generator&theme=0';
-  document.getElementById('cmpDestT').textContent = SITE.compositor.destaque.titulo;
-  document.getElementById('cmpDestD').textContent = SITE.compositor.destaque.desc;
+  var cmpHighlightTitle = document.getElementById('cmpHighlightTitle');
+  var cmpHighlightDesc = document.getElementById('cmpHighlightDesc');
+  if (cmpHighlightTitle && SITE.compositor.destaque) cmpHighlightTitle.textContent = SITE.compositor.destaque.titulo || '';
+  if (cmpHighlightDesc && SITE.compositor.destaque) cmpHighlightDesc.textContent = SITE.compositor.destaque.desc || '';
+  document.getElementById('socSpotTitle').textContent = SITE.compositor.spotify.titulo;
+  document.getElementById('socSpotLabel').textContent = SITE.compositor.spotify.label;
+  document.getElementById('socIgHandle').textContent = SITE.compositor.instagram.handle;
+  document.getElementById('socIgLabel').textContent = SITE.compositor.instagram.label;
+  document.getElementById('cmpSpot').src = 'https://open.spotify.com/embed/' + SITE.compositor.spotify.embedType + '/' + SITE.compositor.spotify.embedId + '?utm_source=generator&theme=0';
   document.getElementById('cmpBtnSpot').href = C.spotify;
   document.getElementById('cmpBtnIg').href = 'https://instagram.com/' + C.instagram;
+  document.getElementById('socIgFeed').setAttribute('feed-id', SITE.compositor.instagram.beholdFeedId);
+  if (!document.querySelector('script[data-behold-widget="1"]')) {
+    var beholdScript = document.createElement('script');
+    beholdScript.type = 'module';
+    beholdScript.src = 'https://w.behold.so/widget.js';
+    beholdScript.setAttribute('data-behold-widget', '1');
+    document.head.appendChild(beholdScript);
+  }
 
   // VÍDEO DO SHOW
-  document.getElementById('vfttl').textContent = SITE.videoShow.titulo;
 
   // GALERIA
   var gal = document.getElementById('galGrid');
@@ -896,26 +965,34 @@ function init() {
   });
 
   // CONTATO
-  document.getElementById('cEmail').textContent    = C.email;
-  document.getElementById('cPhone').textContent    = C.whatsappLabel;
-  document.getElementById('cEndereco').textContent = C.endereco;
-  document.getElementById('cCnpj').textContent     = C.cnpj;
+  document.getElementById('contactTitle').innerHTML = C.sectionTitle || 'Fale com a <em>produção</em>';
+  document.getElementById('contactIntro').textContent = C.sectionIntro || '';
+  document.getElementById('cEmail').textContent    = C.email || '';
+  document.getElementById('cPhoneLabel').textContent = C.companyLabel || 'Produção';
+  document.getElementById('cPhone').textContent    = C.whatsappLabel || '';
+  document.getElementById('cEndereco').textContent = C.endereco || '';
+  document.getElementById('cCnpj').textContent     = C.cnpj || '';
+  document.getElementById('cEnderecoWrap').style.display = C.endereco ? '' : 'none';
+  document.getElementById('cCnpjWrap').style.display = C.cnpj ? '' : 'none';
   document.getElementById('waMainBtn').href        = waUrl;
   document.getElementById('waBandBtn').href        = waUrl;
-  document.getElementById('waBandLabel').textContent = C.whatsappLabel;
+  document.getElementById('waBandLabel').textContent = C.whatsappLabel || '';
   document.getElementById('igBtn').href  = 'https://instagram.com/' + C.instagram;
   document.getElementById('ytBtn').href  = 'https://youtube.com/' + C.youtube;
   document.getElementById('spBtn').href  = C.spotify;
+  document.getElementById('contactFormWrap').style.display = C.formEnabled ? '' : 'none';
+  document.getElementById('contactDirectOnly').style.display = C.formEnabled ? 'none' : 'block';
 
   // FOOTER
   document.getElementById('footerEmail').href        = 'mailto:' + C.email;
   document.getElementById('footerEmail').textContent = C.email;
   document.getElementById('footerPhone').href        = 'tel:+' + C.whatsapp;
-  document.getElementById('footerPhone').textContent = C.whatsappLabel;
+  document.getElementById('footerPhone').textContent = (C.companyLabel ? C.companyLabel + ' · ' : '') + C.whatsappLabel;
   document.getElementById('footerIG').href = 'https://instagram.com/' + C.instagram;
   document.getElementById('footerYT').href = 'https://youtube.com/' + C.youtube;
   document.getElementById('footerSP').href = C.spotify;
-  document.getElementById('footerCnpj').textContent = 'CNPJ ' + C.cnpj;
+  document.getElementById('footerCnpj').textContent = C.cnpj ? 'CNPJ ' + C.cnpj : '';
+  document.getElementById('footerCnpj').style.display = C.cnpj ? '' : 'none';
   document.getElementById('fsoIG').href  = 'https://instagram.com/' + C.instagram;
   document.getElementById('fsoYT').href  = 'https://youtube.com/' + C.youtube;
   document.getElementById('fsoSP').href  = C.spotify;
@@ -933,22 +1010,27 @@ function playVideo() {
   trackCTA('video_play_show');
 }
 
-let soundOn = false;
-function toggleSound() {
-  const f = document.getElementById('hyt');
-  const icon = document.getElementById('soundIcon');
-  const btn = document.getElementById('soundBtn');
-  if (!f || !SITE.hero.youtubeId) return;
-  soundOn = !soundOn;
-  f.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
-    '?autoplay=1&loop=1&playlist=' + SITE.hero.youtubeId +
-    '&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1' +
-    '&mute=' + (soundOn ? '0' : '1');
-  icon.textContent = soundOn ? '🔊' : '🔇';
-  btn.classList.toggle('on', soundOn);
-  btn.title = soundOn ? 'Desativar som' : 'Ativar som';
-  if (window._gtag) window._gtag('event', 'sound_toggle', { event_category: 'engagement', event_label: soundOn ? 'on' : 'off' });
+
+function playHeroVideo() {
+  var yid = SITE.videoShow && SITE.videoShow.youtubeId ? SITE.videoShow.youtubeId : SITE.hero.youtubeId;
+  if (!yid) return;
+  var hero = document.getElementById('hero');
+  var iframe = document.getElementById('heroPlayer');
+  hero.classList.add('is-playing');
+  iframe.src = 'https://www.youtube.com/embed/' + yid + '?autoplay=1&rel=0&playsinline=1';
+  trackCTA('hero_video_play');
 }
+function closeHeroVideo() {
+  var hero = document.getElementById('hero');
+  var iframe = document.getElementById('heroPlayer');
+  hero.classList.remove('is-playing');
+  iframe.src = '';
+}
+
+let soundOn = false;
+function toggleSound() {}
+
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeHeroVideo(); });
 
 window.addEventListener('scroll', function(){
   var s = scrollY > 60;
@@ -972,9 +1054,16 @@ if (typeof SITE !== 'undefined') { init(); } else { document.addEventListener('D
 
 <!-- Formspree Ajax Integration -->
 <script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#cform', formId: 'xyklpzbk' });
+  (function () {
+    var C = (typeof getCurrentContact === 'function') ? getCurrentContact() : null;
+    if (!C || !C.formEnabled || !C.formspree) return;
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#cform', formId: C.formspree });
+    var s = document.createElement('script');
+    s.src = 'https://unpkg.com/@formspree/ajax@1';
+    s.defer = true;
+    document.body.appendChild(s);
+  })();
 </script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
