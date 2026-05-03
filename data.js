@@ -37,6 +37,22 @@ const SITE = {
       sectionTitle:  "Fale com a <em>DS1 Produções</em>",
       sectionIntro:  "Solicitações comerciais, propostas e agenda via DS1 Produções | Uriel Marques.",
       formEnabled:   false
+    },
+    tinavalente: {
+      whatsapp:      "5521998261009",
+      whatsappLabel: "(21) 99826-1009",
+      email:         "cristinavalentes51@gmail.com",
+      instagram:     "tingosanti",
+      youtube:       "@tingosanti",
+      spotifyArtistId: "1XfDGJ4C2wEsrAbWbVaZ4b",
+      spotify:       "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
+      formspree:     "",
+      cnpj:          "",
+      endereco:      "",
+      companyLabel:  "Tina Valente",
+      sectionTitle:  "Fale com <em>Tina Valente</em>",
+      sectionIntro:  "Solicitações comerciais, propostas e agenda via Tina Valente.",
+      formEnabled:   false
     }
   },
 

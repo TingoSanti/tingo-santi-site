@@ -717,7 +717,9 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 <script>
 function getRouteKey() {
   var path = (window.location.pathname || '/').toLowerCase().replace(/\/+$/, '') || '/';
-  return path === '/ds1' ? 'ds1' : 'default';
+  if (path === '/ds1') return 'ds1';
+  if (path === '/tinavalente') return 'tinavalente';
+  return 'default';
 }
 
 function getCurrentContact() {

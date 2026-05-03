@@ -33,3 +33,13 @@
   from = "/ds1/"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/tinavalente"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tinavalente/"
+  to = "/index.html"
+  status = 200
