@@ -73,8 +73,9 @@ button{cursor:pointer;font-family:var(--sans)}
 /* ── HERO ── */
 #hero{position:relative;width:100vw;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--navy);padding:calc(var(--nh) + 2rem) 0 4rem}
 .hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hfb{position:absolute;inset:0;display:block;background-size:cover;background-position:center center;background-repeat:no-repeat;z-index:0;filter:none}
-.hbg iframe{position:absolute;top:50%;left:50%;width:177.77777778vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.18);border:none;pointer-events:none;z-index:1;opacity:1;filter:none}
+.hfb{position:absolute;inset:0;display:block;background-size:cover;background-position:center center;background-repeat:no-repeat;z-index:0;filter:none;opacity:1}
+.hbg iframe{position:absolute;top:50%;left:50%;width:177.77777778vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.18);border:none;pointer-events:none;z-index:1;opacity:0;filter:none;transition:opacity .8s ease}
+.hbg iframe.ready{opacity:1}
 .hov{display:none}
 .hc{position:relative;z-index:3;max-width:var(--max);width:100%;padding:0 5vw;animation:fu 1s ease both}
 @keyframes fu{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
@@ -745,16 +746,21 @@ function init() {
       heroCover.style.backgroundImage = "url('" + heroCardCover + "')";
     }
   }
+  if (SITE.hero && SITE.hero.foto) {
+    heroBg.style.backgroundImage = "url('" + SITE.hero.foto + "')";
+    heroBg.style.display = 'block';
+  }
   if (SITE.hero && SITE.hero.youtubeId) {
-    heroBg.style.display = 'none';
-    heroBg.style.backgroundImage = 'none';
+    heroIframe.classList.remove('ready');
     heroIframe.style.display = 'block';
     heroIframe.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
       '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
       '&controls=0&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1&playsinline=1';
-  } else if (SITE.hero && SITE.hero.foto) {
-    heroBg.style.backgroundImage = "url('" + SITE.hero.foto + "')";
-    heroBg.style.display = 'block';
+    setTimeout(function(){
+      if (heroIframe) heroIframe.classList.add('ready');
+    }, 5000);
+  } else {
+    heroIframe.classList.remove('ready');
     heroIframe.style.display = 'none';
     heroIframe.src = '';
   }
