@@ -112,19 +112,20 @@ button{cursor:pointer;font-family:var(--sans)}
   .hcopy{max-width:none}
   .hname{font-size:clamp(3rem,17vw,5rem);line-height:.9}
   .htag{font-size:1.05rem;max-width:none}
-  .hcard{max-width:100%;aspect-ratio:9/16;max-height:72vh;margin:0 auto}
+  .hcard{display:block !important;position:relative;z-index:4;width:100%;max-width:680px;aspect-ratio:16/9;min-height:210px;max-height:none;margin:1.4rem auto 0;border-radius:22px}
   .hbg iframe{width:100vw;height:177.77777778vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.01)}
-  #hero.is-playing .hplayer{left:4vw;right:4vw;top:calc(var(--nh) + 1.2rem);bottom:2rem;border-radius:20px}
+  #hero.is-playing .hplayer{left:4vw;right:4vw;top:calc(var(--nh) + 1.2rem);bottom:2rem;border-radius:20px;z-index:20}
   #hero.is-playing .hplayer iframe{aspect-ratio:9/16;width:100%;height:100%}
 }
 @media (max-width: 640px){
   .hc{padding:0 1.25rem}
   .hname{font-size:clamp(2.75rem,18vw,4.2rem)}
   .hk{font-size:.78rem;margin-bottom:1rem}
-  .hplaybtn{width:92px;height:92px;font-size:2.4rem}
-  .hmeta{left:1.25rem;right:1.25rem;bottom:1rem}
-  .hmeta-title{font-size:.95rem}
-  .hmeta-year,.hmeta-label{font-size:.72rem}
+  .hplaybtn{width:84px;height:84px;font-size:2.25rem}
+  .hmeta{left:1rem;right:1rem;bottom:.9rem}
+  .hmeta-title{font-size:.9rem}
+  .hmeta-year,.hmeta-label{font-size:.68rem}
+  .hcard{min-height:190px;margin-top:1.2rem;border-radius:20px}
 }
 
 /* ── SHARED ── */
