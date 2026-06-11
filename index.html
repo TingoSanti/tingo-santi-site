@@ -73,8 +73,8 @@ button{cursor:pointer;font-family:var(--sans)}
 /* ── HERO ── */
 #hero{position:relative;width:100vw;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--navy);padding:calc(var(--nh) + 2rem) 0 4rem}
 .hbg{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hfb{position:absolute;inset:0;display:block;background-size:cover;background-position:center center;background-repeat:no-repeat;z-index:0;filter:none;opacity:1}
-.hbg iframe{position:absolute;top:50%;left:50%;width:177.77777778vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.18);border:none;pointer-events:none;z-index:1;opacity:0;filter:none;transition:opacity .8s ease}
+.hfb{position:absolute;inset:0;display:block;background-size:cover;background-position:center center;background-repeat:no-repeat;z-index:0;filter:blur(18px);opacity:.62;transform:scale(1.08)}
+.hbg iframe{position:absolute;top:50%;left:50%;width:56.25vh;height:100vh;min-width:auto;min-height:100%;transform:translate(-50%,-50%) scale(1.04);border:none;pointer-events:none;z-index:1;opacity:0;filter:none;transition:opacity .25s ease}
 .hbg iframe.ready{opacity:1}
 .hov{display:none}
 .hc{position:relative;z-index:3;max-width:var(--max);width:100%;padding:0 5vw;animation:fu 1s ease both}
@@ -112,8 +112,10 @@ button{cursor:pointer;font-family:var(--sans)}
   .hcopy{max-width:none}
   .hname{font-size:clamp(3rem,17vw,5rem);line-height:.9}
   .htag{font-size:1.05rem;max-width:none}
-  .hcard{max-width:100%}
+  .hcard{max-width:100%;aspect-ratio:9/16;max-height:72vh;margin:0 auto}
+  .hbg iframe{width:100vw;height:177.77777778vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.01)}
   #hero.is-playing .hplayer{left:4vw;right:4vw;top:calc(var(--nh) + 1.2rem);bottom:2rem;border-radius:20px}
+  #hero.is-playing .hplayer iframe{aspect-ratio:9/16;width:100%;height:100%}
 }
 @media (max-width: 640px){
   .hc{padding:0 1.25rem}
@@ -756,9 +758,8 @@ function init() {
     heroIframe.src = 'https://www.youtube.com/embed/' + SITE.hero.youtubeId +
       '?autoplay=1&mute=1&loop=1&playlist=' + SITE.hero.youtubeId +
       '&controls=0&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1&playsinline=1';
-    setTimeout(function(){
-      if (heroIframe) heroIframe.classList.add('ready');
-    }, 5000);
+    heroIframe.addEventListener('load', function(){ heroIframe.classList.add('ready'); }, { once:true });
+    requestAnimationFrame(function(){ heroIframe.classList.add('ready'); });
   } else {
     heroIframe.classList.remove('ready');
     heroIframe.style.display = 'none';

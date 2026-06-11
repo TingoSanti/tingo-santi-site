@@ -63,7 +63,7 @@ const SITE = {
   },
 
   hero: {
-    youtubeId:  "rte3baDRUEg",
+    youtubeId:  "8ZEOYNBVoOY",
     tagline:    "A obra de Roberto Carlos ao vivo, com voz natural, orquestra e emoção verdadeira.",
     foto:       "img/hero_principal.jpg",
     videoCover: "img/hero_video_cover_v2.jpg"
@@ -72,7 +72,7 @@ const SITE = {
   /* ── VÍDEOS — APENAS 1 (SIMPLIFICADO) ─────────────────── */
   videoShow: {
     titulo:    "Tributo ao Rei · Show ao Vivo",
-    youtubeId: "rte3baDRUEg"
+    youtubeId: "8ZEOYNBVoOY"
   },
 
   /* ── GALERIA — mosaico com orientação corrigida ────────
