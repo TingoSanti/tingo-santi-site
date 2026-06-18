@@ -27,6 +27,19 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style id="crit">
+/* CSS crítico anti-flash: header e hero já pintam estilizados antes do site.css */
+:root{--navy:#02091c;--blue:#0b3480;--bx:#9bbde8;--gold:#c9a55a;--r:4px;--nh:80px;--max:1280px;--sans:'Outfit',system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--navy);color:#0c1830}
+#nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;z-index:200;background:transparent}
+#nav .nl{display:flex;gap:1.7rem;list-style:none}
+#nav .nl a{font-size:.74rem;color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.13em;font-weight:500}
+.nc{padding:.6rem 1.5rem;border:1px solid rgba(255,255,255,.45);border-radius:var(--r);color:#fff;font-size:.76rem;text-transform:uppercase}
+.ham{display:none}#mm{display:none}#logoD{display:none}
+#hero{position:relative;width:100vw;min-height:100vh;overflow:hidden;background:var(--navy)}
+@media(max-width:768px){#nav .nl,.nc{display:none}.ham{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:4px}}
+</style>
 <link rel="stylesheet" href="/site.css">
 </head>
 <body>
@@ -61,6 +74,7 @@
     <li><a href="#not">Notoriedade</a></li>
     <li><a href="#cont">Contratantes</a></li>
     <li><a href="#sobre">O Artista</a></li>
+    <li><a href="/ia">Palestras</a></li>
   </ul>
   <a href="#contact" class="nc" onclick="trackCTA('nav_contato')">Falar com a Produção</a>
   <button class="ham" id="ham"><span></span><span></span><span></span></button>
@@ -73,6 +87,7 @@
   <a href="#not"        onclick="cm()">Notoriedade</a>
   <a href="#cont"       onclick="cm()">Contratantes</a>
   <a href="#sobre"      onclick="cm()">O Artista</a>
+  <a href="/ia"         onclick="cm()">Palestras</a>
   <a href="#contact"    onclick="cm()">Contato</a>
 </div>
 

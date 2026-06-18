@@ -27,6 +27,25 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style id="crit">
+/* CSS crítico anti-flash: header e hero já pintam estilizados antes do site.css */
+:root{--navy:#02091c;--w:#fff;--blue:#0b3480;--bl:#2e6dd4;--bx:#9bbde8;--gold:#c9a55a;--goldl:#e3c987;--bb:rgba(11,52,128,.14);--r:4px;--nh:80px;--max:1280px;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--navy);color:#0c1830}
+#nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;z-index:200;background:transparent}
+#nav .nl{display:flex;gap:1.7rem;list-style:none}
+#nav .nl a{font-size:.74rem;color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.13em;font-weight:500}
+.nc{padding:.6rem 1.5rem;border:1px solid rgba(255,255,255,.45);border-radius:var(--r);color:#fff;font-size:.76rem;text-transform:uppercase}
+.ham{display:none}#mm{display:none}#logoD{display:none}
+.ia-hero{position:relative;width:100vw;min-height:100vh;overflow:hidden;display:flex;align-items:center;background:var(--navy);padding:calc(var(--nh) + 2rem) 0 4rem}
+.ia-hbg,.ia-hbg-img,.ia-hbg-grad,.ia-hbg-net{position:absolute;inset:0}
+.ia-hbg-img{background:#02091c}
+.ia-hc{position:relative;z-index:3;max-width:var(--max);width:100%;margin:0 auto;padding:0 5vw}
+.ia-hg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,500px);gap:4rem;align-items:center}
+@media(max-width:1024px){.ia-hg{grid-template-columns:1fr}}
+@media(max-width:768px){#nav .nl,.nc{display:none}.ham{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:4px}}
+</style>
 <link rel="stylesheet" href="/site.css">
 
 <!-- ===================== DADOS ESTRUTURADOS (GEO/SEO) ===================== -->
@@ -39,12 +58,12 @@
       "@id": "https://tingosanti.com.br/#ailton",
       "name": "Ailton Santos Filho",
       "alternateName": "Tingo Santi",
-      "jobTitle": "Executivo de tecnologia, palestrante e autor",
-      "description": "Executivo de tecnologia, estratégia e transformação digital, palestrante sobre Inteligência Artificial, liderança e centralidade humana. Como Tingo Santi, atua também no campo artístico e musical.",
-      "knowsAbout": ["Inteligência Artificial", "Liderança", "Transformação digital", "Estratégia", "Futuro do trabalho", "Governança", "Modelos de negócio"],
+      "jobTitle": "Executivo, conselheiro, autor, pesquisador e artista",
+      "description": "Executivo, conselheiro, autor, pesquisador e artista. Palestrante sobre Inteligência Artificial, liderança e centralidade humana. Como Tingo Santi, desenvolve também uma trajetória artística como cantor, compositor e intérprete.",
+      "knowsAbout": ["Inteligência Artificial", "Liderança", "Governança digital", "Cidades inteligentes", "Futuro das instituições", "Transformação digital", "Centralidade humana"],
       "author": {
         "@type": "Book",
-        "name": "A Segunda Maçã"
+        "name": "A Segunda Maçã: Inteligência Artificial e o Futuro da Sociedade Brasileira"
       },
       "sameAs": [
         "https://www.linkedin.com/in/ailtonsantosfilho",
@@ -110,7 +129,7 @@
       </g>
       <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">TINGO</text>
       <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="rgba(255,255,255,.93)">SANTI</text>
-      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(201,165,90,.75)">IA · Liderança · Palco</text>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(201,165,90,.75)">Tributo ao Rei</text>
     </svg>
     <svg id="logoD" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="display:none">
       <g transform="translate(250,40)">
@@ -119,7 +138,7 @@
       </g>
       <text x="250" y="122" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">TINGO</text>
       <text x="250" y="188" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="52" font-weight="400" letter-spacing="9" fill="#02091c">SANTI</text>
-      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(11,52,128,.6)">IA · Liderança · Palco</text>
+      <text x="250" y="215" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="13" font-weight="300" font-style="italic" letter-spacing="5" fill="rgba(11,52,128,.6)">Tributo ao Rei</text>
     </svg>
   </a>
   <ul class="nl">
@@ -176,7 +195,7 @@
           <a href="#sobre-palestra" class="ia-bout-l">Sobre a palestra</a>
         </div>
         <div class="ia-hmeta-row">
-          <div class="ia-hmeta-it"><div class="ia-hmeta-k">Executivo</div><div class="ia-hmeta-l">Tecnologia &amp; estratégia</div></div>
+          <div class="ia-hmeta-it"><div class="ia-hmeta-k">Executivo</div><div class="ia-hmeta-l">Liderança &amp; estratégia</div></div>
           <div class="ia-hmeta-it"><div class="ia-hmeta-k">Autor</div><div class="ia-hmeta-l">A Segunda Maçã</div></div>
           <div class="ia-hmeta-it"><div class="ia-hmeta-k">Tingo Santi</div><div class="ia-hmeta-l">Palco &amp; sensibilidade</div></div>
         </div>
@@ -198,13 +217,6 @@
     <div class="ey"><div class="eyl"></div><span class="eys">Sobre a palestra</span></div>
     <h2 class="sh">A IA como nova camada <em>de inteligência</em></h2>
     <p class="sl">A palestra não trata a Inteligência Artificial apenas como ferramenta. Ela apresenta a IA como uma nova camada de inteligência operacional, cognitiva e estratégica, capaz de reorganizar processos, serviços, mercados, relações com clientes, formas de trabalho e modelos de negócio.</p>
-    <div class="ia-cred">
-      <div class="ia-cred-i">Nokia<span>Tecnologia</span></div>
-      <div class="ia-cred-i">HP<span>Tecnologia</span></div>
-      <div class="ia-cred-i">EDS<span>Serviços de TI</span></div>
-      <div class="ia-cred-i">Baker Hughes<span>Energia</span></div>
-      <div class="ia-cred-i">Xerox<span>Transformação</span></div>
-    </div>
   </div>
 </section>
 
@@ -254,13 +266,15 @@
       <div class="ia-bridge-photo" role="img" aria-label="Ailton Santos, também conhecido como Tingo Santi"></div>
       <div>
         <div class="ey"><div class="eyl"></div><span class="eys">Sobre o palestrante</span></div>
-        <h2 class="sh">Uma pessoa, <em>duas linguagens</em></h2>
+        <h2 class="sh">O executivo que pensa, <em>o artista que sente</em></h2>
         <div class="ia-tabs">
           <span class="ia-tab">Ailton Santos · Executivo &amp; Autor</span>
           <span class="ia-tab gold">Tingo Santi · Intérprete</span>
         </div>
         <div class="ia-prose">
-          <p><strong>Ailton Santos Filho</strong> é executivo de tecnologia, estratégia e transformação digital, com trajetória em liderança, negócios e relações institucionais. Como <strong>Tingo Santi</strong>, também atua no campo artístico e musical. Sua palestra combina visão executiva, reflexão estratégica e sensibilidade humana para discutir IA, liderança e o futuro da centralidade humana.</p>
+          <p><strong>Ailton Santos Filho</strong> é executivo, conselheiro, autor, pesquisador e artista, com trajetória marcada pela combinação entre liderança empresarial, transformação digital, reflexão intelectual e expressão criativa. Ao longo de mais de três décadas, ocupou posições de alta liderança em tecnologia, software, telecomunicações e operações globais, atuando em contextos de mudança estratégica, inovação e construção institucional.</p>
+          <p>Hoje, dedica-se a temas ligados à inteligência artificial, governança digital, cidades inteligentes, futuro das instituições e transformação da sociedade. É autor de <strong>A Segunda Maçã: Inteligência Artificial e o Futuro da Sociedade Brasileira</strong>.</p>
+          <p>Como <strong>Tingo Santi</strong>, desenvolve também uma trajetória artística como cantor, compositor e intérprete, unindo emoção, memória afetiva e presença de palco. Sua palestra nasce justamente dessa combinação: o executivo que pensa e o artista que sente.</p>
         </div>
         <div class="ia-quote">
           <div class="ia-quote-t">A IA vai automatizar o previsível. O que sobra para nós é justamente o que não cabe num algoritmo: sentido, presença e a coragem de decidir.</div>
@@ -278,7 +292,7 @@
     <h2 class="sh">Autoridade que <em>raramente</em> coincide</h2>
     <p class="sl">Há quem entenda de IA. Há quem saiba prender uma plateia. É incomum encontrar as duas coisas na mesma pessoa, e mais raro ainda com vivência real de comando executivo por trás.</p>
     <div class="ia-pil">
-      <div class="ia-pilc"><div class="ia-piln">Executivo</div><div class="ia-pill">Vivência de comando</div><div class="ia-pild">Trajetória em liderança, negócios e relações institucionais em tecnologia. Fala de transformação de dentro, não de fora.</div></div>
+      <div class="ia-pilc"><div class="ia-piln">Executivo</div><div class="ia-pill">Vivência de comando</div><div class="ia-pild">Mais de três décadas em liderança, negócios e construção institucional na tecnologia. Fala de transformação de dentro, não de fora.</div></div>
       <div class="ia-pilc"><div class="ia-piln">Estratégia</div><div class="ia-pill">Visão de decisão</div><div class="ia-pild">Rigor para separar o que a IA de fato muda do que é apenas ruído de mercado, na linguagem de quem decide.</div></div>
       <div class="ia-pilc"><div class="ia-piln">Autor</div><div class="ia-pill">Tese própria</div><div class="ia-pild">A Segunda Maçã estrutura um argumento sobre IA, cultura, trabalho e sentido. Conteúdo autoral, não palestra genérica.</div></div>
       <div class="ia-pilc"><div class="ia-piln">Palco</div><div class="ia-pill">Domínio de plateia</div><div class="ia-pild">Como Tingo Santi, intérprete com presença de palco. A mensagem não só se entende: ela se sente e se lembra.</div></div>
@@ -295,14 +309,14 @@
         <div class="ia-livro-ph">Capa provisória</div>
         <div class="ia-livro-mark">❦</div>
         <div class="ia-livro-t">A Segunda<br>Maçã</div>
-        <div class="ia-livro-s">Tecnologia · Humanidade · Sentido</div>
+        <div class="ia-livro-s">IA &amp; o Futuro da Sociedade Brasileira</div>
         <div class="ia-livro-a">Ailton Santos Filho</div>
       </div>
       <div>
         <div class="ey"><div class="eyl"></div><span class="eys">A base intelectual</span></div>
         <h2 class="sh">O livro por trás <em>da palestra</em></h2>
         <div class="ia-livro-prose">
-          <p><strong>A Segunda Maçã</strong> propõe uma reflexão sobre tecnologia, desejo, humanidade e transformação, conectando inteligência artificial, cultura, trabalho e sentido.</p>
+          <p><strong>A Segunda Maçã: Inteligência Artificial e o Futuro da Sociedade Brasileira</strong> propõe uma reflexão sobre tecnologia, desejo, humanidade e transformação, conectando inteligência artificial, cultura, trabalho e sentido.</p>
           <p>A palestra não é um resumo do livro: é a sua tradução para a sala de quem decide. Cada formato parte de uma tese estruturada, não de uma colagem de tendências.</p>
         </div>
         <div class="ia-tags">
@@ -487,8 +501,6 @@
 
 <script>
 /* ===================== CONFIG DA /ia ===================== */
-/* Única fonte de verdade dos dados de contato/formulário desta página.
-   A /ia NÃO carrega data.js (991KB, conteúdo do show) por performance. */
 var IA = {
   whatsapp:  "5521981820680",          /* +55 (21) 98182-0680 */
   email:     "santos@ailton.net",
