@@ -42,6 +42,20 @@ body{font-family:var(--sans);background:var(--navy);color:#0c1830}
 @media(max-width:768px){#nav .nl,.nc{display:none}.ham{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:4px}}
 </style>
 <link rel="stylesheet" href="/site.css">
+<style id="herofx">
+/* HERO com MOVIMENTO (Ken Burns + crossfade) usando fotos de palco — sem YouTube */
+.hbg{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--navy)}
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center center;opacity:0;animation:heroKB 32s ease-in-out infinite;will-change:opacity,transform}
+.hero-slide.hs1{background-image:url('img/galeria_palco_orquestra_pcsf.jpg');animation-delay:0s}
+.hero-slide.hs2{background-image:url('img/galeria_bracos_abertos.jpg');animation-delay:8s}
+.hero-slide.hs3{background-image:url('img/galeria_natal_magia_palco.jpg');animation-delay:16s}
+.hero-slide.hs4{background-image:url('img/galeria_rosas_plateia.jpg');animation-delay:24s}
+@keyframes heroKB{0%{opacity:0;transform:scale(1.05)}8%{opacity:.82}25%{opacity:.82;transform:scale(1.13)}33%{opacity:0;transform:scale(1.13)}100%{opacity:0;transform:scale(1.05)}}
+.hero-media-grad{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(2,9,28,.94) 0%,rgba(5,16,42,.82) 42%,rgba(2,9,28,.5) 100%)}
+@media(max-width:768px){.hero-media-grad{background:linear-gradient(180deg,rgba(2,9,28,.8) 0%,rgba(2,9,28,.68) 48%,rgba(2,9,28,.88) 100%)}}
+@media (prefers-reduced-motion: reduce){.hero-slide{animation:none;opacity:0}.hero-slide.hs1{opacity:.6;transform:none}}
+</style>
 </head>
 <body>
 
@@ -93,7 +107,13 @@ body{font-family:var(--sans);background:var(--navy);color:#0c1830}
 <!-- HERO -->
 <section id="hero">
   <div class="hbg">
-    <div class="hfb" id="heroBg"></div>
+    <div class="hero-media" aria-hidden="true">
+      <div class="hero-slide hs1"></div>
+      <div class="hero-slide hs2"></div>
+      <div class="hero-slide hs3"></div>
+      <div class="hero-slide hs4"></div>
+    </div>
+    <div class="hero-media-grad"></div>
   </div>
   <div class="hov"></div>
   <div class="hc">
@@ -404,7 +424,6 @@ function init() {
 
   // HERO
   document.getElementById('heroTagline').textContent = 'Cantor e intérprete. Um tributo a Roberto Carlos com voz natural, produção profissional e repertório pensado para emocionar plateias públicas e privadas.';
-  const heroBg = document.getElementById('heroBg');
   const heroCover = document.querySelector('.hcover');
   if (heroCover && SITE.hero) {
     var heroCardCover = SITE.hero.videoCover || SITE.hero.foto;
@@ -412,11 +431,6 @@ function init() {
       heroCover.style.backgroundImage = "url('" + heroCardCover + "')";
     }
   }
-  if (SITE.hero && SITE.hero.foto) {
-    heroBg.style.backgroundImage = "url('" + SITE.hero.foto + "')";
-    heroBg.style.display = 'block';
-  }
-  // Fundo do hero: somente poster (img). O YouTube abre apenas via clique no card (modal).
 
   // SHOW
   document.getElementById('showPhotoMain').style.backgroundImage = "url('" + SITE.show.fotoMain + "')";
