@@ -24,16 +24,29 @@
     Cache-Control = "public, max-age=0, must-revalidate"
     Content-Type = "application/javascript; charset=utf-8"
 
+# Página da palestra (URL principal)
+[[redirects]]
+  from = "/palestra"
+  to = "/palestra.html"
+  status = 200
+
+[[redirects]]
+  from = "/palestra/"
+  to = "/palestra.html"
+  status = 200
+
+# URL antiga /ia -> /palestra (301 permanente, preserva query/UTM)
 [[redirects]]
   from = "/ia"
-  to = "/ia.html"
-  status = 200
+  to = "/palestra"
+  status = 301
 
 [[redirects]]
   from = "/ia/"
-  to = "/ia.html"
-  status = 200
+  to = "/palestra"
+  status = 301
 
+# Rotas de contato do show (inalteradas)
 [[redirects]]
   from = "/ds1"
   to = "/index.html"

@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Palestra sobre Inteligência Artificial, Liderança e Centralidade Humana | Ailton Santos / Tingo Santi</title>
 <meta name="description" content="Receba a apresentação da palestra sobre Inteligência Artificial, liderança, modelos de negócio, trabalho, plataformas, governança e centralidade humana.">
-<link rel="canonical" href="https://tingosanti.com.br/ia">
+<link rel="canonical" href="https://tingosanti.com.br/palestra">
 <meta name="robots" content="index, follow">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Inteligência Artificial, Liderança e o Futuro da Centralidade Humana">
 <meta property="og:description" content="Palestra de Ailton Santos (Tingo Santi) sobre IA, liderança e centralidade humana. Receba a apresentação e os materiais complementares.">
 <meta property="og:image" content="https://tingosanti.com.br/img/sobre_artista_close.jpg">
-<meta property="og:url" content="https://tingosanti.com.br/ia">
+<meta property="og:url" content="https://tingosanti.com.br/palestra">
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- Google Analytics (mesma propriedade do site, carga única) -->
@@ -26,6 +26,7 @@
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style id="crit">
@@ -80,8 +81,8 @@ body{font-family:var(--sans);background:var(--navy);color:#0c1830}
     },
     {
       "@type": "WebPage",
-      "@id": "https://tingosanti.com.br/ia",
-      "url": "https://tingosanti.com.br/ia",
+      "@id": "https://tingosanti.com.br/palestra",
+      "url": "https://tingosanti.com.br/palestra",
       "name": "Palestra sobre Inteligência Artificial, Liderança e Centralidade Humana",
       "isPartOf": {"@id": "https://tingosanti.com.br/#website"},
       "about": {"@id": "https://tingosanti.com.br/#ailton"},
@@ -93,13 +94,14 @@ body{font-family:var(--sans);background:var(--navy);color:#0c1830}
       "provider": {"@id": "https://tingosanti.com.br/#ailton"},
       "areaServed": "BR",
       "audience": {"@type": "BusinessAudience", "audienceType": "Executivos, conselhos e lideranças"},
-      "name": "Palestra: Inteligência Artificial, Liderança e o Futuro da Centralidade Humana"
+      "name": "Palestra: Inteligência Artificial, Liderança e o Futuro da Centralidade Humana",
+      "url": "https://tingosanti.com.br/palestra"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://tingosanti.com.br/"},
-        {"@type": "ListItem", "position": 2, "name": "Palestra de IA", "item": "https://tingosanti.com.br/ia"}
+        {"@type": "ListItem", "position": 2, "name": "Palestra", "item": "https://tingosanti.com.br/palestra"}
       ]
     },
     {
@@ -500,14 +502,14 @@ body{font-family:var(--sans);background:var(--navy);color:#0c1830}
 </footer>
 
 <script>
-/* ===================== CONFIG DA /ia ===================== */
+/* ===================== CONFIG DA /palestra ===================== */
 var IA = {
   whatsapp:  "5521981820680",          /* +55 (21) 98182-0680 */
   email:     "santos@ailton.net",
   linkedin:  "https://www.linkedin.com/in/ailtonsantosfilho",
   instagram: "https://instagram.com/tingosanti",
   origem:    "Palestra IA",
-  /* >>> Cole aqui o ID do formulário Formspree dedicado da /ia <<< */
+  /* >>> Cole aqui o ID do formulário Formspree dedicado da palestra <<< */
   formspree: "https://formspree.io/f/REPLACE_WITH_IA_FORM_ID"
 };
 
@@ -524,13 +526,13 @@ function utmString(){ var u=getUTM(); return Object.keys(u).map(function(k){retu
 captureUTM();
 
 /* ===================== Analytics ===================== */
-function trackCTA(label){ if(window._gtag) window._gtag('event','cta_click',{event_category:'engagement',event_label:'ia_'+label}); }
+function trackCTA(label){ if(window._gtag) window._gtag('event','cta_click',{event_category:'engagement',event_label:'palestra_'+label}); }
 function trackEvent(name,params){ if(window._gtag) window._gtag('event',name,params||{}); }
 
 /* ===================== WhatsApp ===================== */
 function waContact(origem){
-  trackEvent('whatsapp_click',{event_category:'conversion',event_label:'ia_wa_'+origem});
-  var msg='Olá, Ailton. Vim pela página /ia (palestra de IA). Gostaria de receber a apresentação e conversar sobre uma palestra/evento.';
+  trackEvent('whatsapp_click',{event_category:'conversion',event_label:'palestra_wa_'+origem});
+  var msg='Olá, Ailton. Vim pela página /palestra. Gostaria de receber a apresentação e conversar sobre uma palestra/evento.';
   var u=utmString(); if(u) msg+=' ['+u+']';
   window.open('https://wa.me/'+IA.whatsapp+'?text='+encodeURIComponent(msg),'_blank');
 }
@@ -548,17 +550,17 @@ form.addEventListener('submit', function(e){
     nome:form.nome.value, email:form.email.value, whatsapp:form.whatsapp.value,
     empresa:form.empresa.value, cargo:form.cargo.value, interesse:form.interesse.value,
     mensagem:form.mensagem.value, origem:IA.origem, utm:utmString(),
-    _subject:'Lead /ia ('+IA.origem+'): '+form.nome.value
+    _subject:'Lead /palestra ('+IA.origem+'): '+form.nome.value
   };
 
   /* Sem ID Formspree configurado: cai no WhatsApp como alternativa, sem perder o lead */
   if(IA.formspree.indexOf('REPLACE_WITH')>-1){
-    var txt='Solicitação via /ia ('+IA.origem+')%0A%0A'
+    var txt='Solicitação via /palestra ('+IA.origem+')%0A%0A'
       +'Nome: '+enc(data.nome)+'%0AE-mail: '+enc(data.email)+'%0AWhatsApp: '+enc(data.whatsapp)
       +'%0AEmpresa: '+enc(data.empresa)+'%0ACargo: '+enc(data.cargo)+'%0AInteresse: '+enc(data.interesse)
       +'%0AMensagem: '+enc(data.mensagem)+(data.utm?'%0AOrigem: '+enc(data.utm):'');
     window.open('https://wa.me/'+IA.whatsapp+'?text='+txt,'_blank');
-    showOk(); form.reset(); trackEvent('generate_lead',{event_label:'ia_form_wa_fallback'});
+    showOk(); form.reset(); trackEvent('generate_lead',{event_label:'palestra_form_wa_fallback'});
     return;
   }
 
@@ -566,7 +568,7 @@ form.addEventListener('submit', function(e){
   fetch(IA.formspree,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
     .then(function(r){
       btn.disabled=false;
-      if(r.ok){ showOk(); form.reset(); trackEvent('generate_lead',{event_category:'conversion',event_label:'ia_form_formspree'}); }
+      if(r.ok){ showOk(); form.reset(); trackEvent('generate_lead',{event_category:'conversion',event_label:'palestra_form_formspree'}); }
       else { showErr('Não foi possível enviar agora. Tente novamente ou use o WhatsApp/e-mail ao lado.'); }
     })
     .catch(function(){ btn.disabled=false; showErr('Falha de conexão. Use o WhatsApp ou o e-mail ao lado.'); });

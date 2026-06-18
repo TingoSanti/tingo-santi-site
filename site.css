@@ -1,9 +1,3 @@
-/* ============================================================
-   tingosanti.com.br — FOLHA DE ESTILO COMPARTILHADA
-   Bloco 1: estilos do site (extraídos do index.html, sem alteração)
-   Bloco 2: componentes da página /ia (prefixo .ia-*, escopado)
-   ============================================================ */
-
 :root{
   --w:#ffffff; --off:#f5f7fc; --off2:#eaeff8;
   --navy:#02091c; --blue:#0b3480; --bm:#174fba; --bl:#2e6dd4; --bx:#9bbde8;
