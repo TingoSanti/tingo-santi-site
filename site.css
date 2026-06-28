@@ -16,6 +16,7 @@ body{font-family:var(--sans);background:var(--w);color:var(--t);line-height:1.65
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{cursor:pointer;font-family:var(--sans)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--bl);outline-offset:2px;border-radius:2px}
 
 /* ── NAV ── */
 #nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;z-index:200;transition:all .4s;background:transparent}
@@ -304,6 +305,7 @@ footer{background:var(--navy);color:#fff;padding:4.5rem 5vw 2.5rem}
 .fso{display:flex;gap:.7rem}
 .sl2{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.82rem;transition:all .2s}
 .sl2:hover{border-color:var(--bx);color:#fff}
+.fdisc{max-width:var(--max);margin:1.4rem auto 0;font-size:.72rem;line-height:1.55;color:rgba(255,255,255,.6);text-align:center}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){

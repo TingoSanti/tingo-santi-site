@@ -1,0 +1,260 @@
+########################################################
+# DIFF LOTE SEGURO — tingosanti.com.br
+# Gerado em 2026-06-19 21:35
+# Base: arquivos enviados (uploads) -> versao revisada (outputs)
+########################################################
+
+==================== index.html ====================
+--- a/index.html	2026-06-18 22:47:47.667960805 +0000
++++ b/index.html	2026-06-19 21:34:28.471763733 +0000
+@@ -3,13 +3,72 @@
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-<meta name="description" content="Tingo Santi canta Roberto Carlos – Espetáculo de tributo com orquestra ao vivo, fidelidade interpretativa e produção profissional. Contratação por prefeituras, fundações, Sescs e eventos corporativos.">
+-<meta property="og:title" content="Tingo Santi – Tributo ao Rei · Roberto Carlos">
+-<meta property="og:description" content="A obra de Roberto Carlos ao vivo — com voz natural, orquestra e emoção verdadeira.">
++<meta name="description" content="Tingo Santi, cantor e intérprete: Tributo ao Rei, espetáculo ao vivo em homenagem ao repertório romântico consagrado por Roberto Carlos, com orquestra e produção profissional. Contratação para prefeituras, eventos públicos, privados e corporativos.">
++<meta name="robots" content="index, follow">
++<meta property="og:type" content="website">
++<meta property="og:site_name" content="Tingo Santi">
++<meta property="og:locale" content="pt_BR">
++<meta property="og:url" content="https://tingosanti.com.br/">
++<meta property="og:title" content="Tingo Santi · Tributo ao Rei · Roberto Carlos">
++<meta property="og:description" content="Tributo ao repertório de Roberto Carlos ao vivo: voz natural, orquestra e emoção verdadeira. Show para eventos públicos, privados e corporativos.">
+ <meta property="og:image" content="https://tingosanti.com.br/img/hero_principal.jpg">
+-<title>Tingo Santi – Tributo ao Rei · Roberto Carlos</title>
++<meta name="twitter:card" content="summary_large_image">
++<meta name="twitter:title" content="Tingo Santi · Tributo ao Rei · Roberto Carlos">
++<meta name="twitter:description" content="Cantor e intérprete. Tributo ao repertório romântico consagrado por Roberto Carlos, com produção profissional para eventos públicos, privados e corporativos.">
++<meta name="twitter:image" content="https://tingosanti.com.br/img/hero_principal.jpg">
++<title>Tingo Santi · Tributo ao Rei · Roberto Carlos</title>
+ <link rel="canonical" href="https://tingosanti.com.br/">
+ 
++<!-- ===================== DADOS ESTRUTURADOS (SEO/GEO) ===================== -->
++<script type="application/ld+json">
++{
++  "@context": "https://schema.org",
++  "@graph": [
++    {
++      "@type": "WebSite",
++      "@id": "https://tingosanti.com.br/#website",
++      "url": "https://tingosanti.com.br/",
++      "name": "Tingo Santi",
++      "inLanguage": "pt-BR"
++    },
++    {
++      "@type": "WebPage",
++      "@id": "https://tingosanti.com.br/#webpage",
++      "url": "https://tingosanti.com.br/",
++      "name": "Tingo Santi · Tributo ao Rei · Roberto Carlos",
++      "isPartOf": {"@id": "https://tingosanti.com.br/#website"},
++      "about": {"@id": "https://tingosanti.com.br/#tingosanti"},
++      "inLanguage": "pt-BR"
++    },
++    {
++      "@type": ["Person", "MusicGroup"],
++      "@id": "https://tingosanti.com.br/#tingosanti",
++      "name": "Tingo Santi",
++      "alternateName": "Ailton Santos",
++      "jobTitle": "Cantor e intérprete",
++      "description": "Cantor e intérprete brasileiro. Apresenta o espetáculo Tributo ao Rei, em homenagem ao repertório romântico consagrado por Roberto Carlos, com produção profissional para eventos públicos, privados e corporativos.",
++      "genre": ["Música romântica", "MPB", "Tributo musical"],
++      "url": "https://tingosanti.com.br/",
++      "sameAs": [
++        "https://instagram.com/tingosanti",
++        "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
++        "https://www.linkedin.com/in/ailtonsantosfilho"
++      ]
++    },
++    {
++      "@type": "Service",
++      "@id": "https://tingosanti.com.br/#show",
++      "serviceType": "Contratação de show musical em tributo ao repertório de Roberto Carlos",
++      "name": "Tributo ao Rei · Show ao vivo de Tingo Santi",
++      "description": "Espetáculo musical ao vivo em homenagem ao repertório romântico consagrado por Roberto Carlos, com produção profissional. Disponível para eventos públicos, privados e corporativos, prefeituras, secretarias de cultura, teatros, casas de espetáculo e programação cultural.",
++      "provider": {"@id": "https://tingosanti.com.br/#tingosanti"},
++      "areaServed": "BR",
++      "audience": {"@type": "Audience", "audienceType": "Prefeituras, secretarias de cultura, empresas, produtores culturais e casas de espetáculo"}
++    }
++  ]
++}
++</script>
++
+ <script>
+   window.addEventListener('DOMContentLoaded', function() {
+     if (typeof SITE === 'undefined' || !SITE.analytics.googleAnalyticsId || SITE.analytics.googleAnalyticsId.includes('INSIRA')) return;
+@@ -58,8 +117,8 @@
+ 
+ <!-- NAV -->
+ <nav id="nav">
+-  <a href="#hero" id="navLogo">
+-    <svg id="logoL" width="150" height="65" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
++  <a href="#hero" id="navLogo" aria-label="Tingo Santi, ir para o topo">
++    <svg id="logoL" width="150" height="65" role="img" aria-label="Tingo Santi" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+       <g transform="translate(250,40)">
+         <polygon points="0,-18 5.26,-7.24 17.09,-5.57 8.54,2.92 10.53,14.78 0,9 -10.53,14.78 -8.54,2.92 -17.09,-5.57 -5.26,-7.24" fill="none" stroke="rgba(255,255,255,.88)" stroke-width="1.4" stroke-linejoin="round"/>
+         <circle cx="0" cy="0" r="3" fill="rgba(255,255,255,.9)"/>
+@@ -85,7 +144,7 @@
+     <li><a href="/palestra">Palestras</a></li>
+   </ul>
+   <a href="#contact" class="nc" onclick="trackCTA('nav_contato')">Falar com a Produção</a>
+-  <button class="ham" id="ham"><span></span><span></span><span></span></button>
++  <button class="ham" id="ham" aria-label="Abrir menu" aria-expanded="false" aria-controls="mm"><span></span><span></span><span></span></button>
+ </nav>
+ <div id="mm">
+   <a href="#show"       onclick="cm()">O Espetáculo</a>
+@@ -196,7 +255,7 @@
+           <iframe id="cmpSpot" src="" title="Spotify Tingo" loading="lazy" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+         </div>
+         <div class="soc-actions">
+-          <a href="#" id="cmpBtnSpot" class="soc-btn spotify" target="_blank" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify</a>
++          <a href="#" id="cmpBtnSpot" class="soc-btn spotify" target="_blank" rel="noopener noreferrer" onclick="trackCTA('cmp_spotify')">Ouvir no Spotify</a>
+         </div>
+       </article>
+ 
+@@ -209,7 +268,7 @@
+           <behold-widget id="socIgFeed"></behold-widget>
+         </div>
+         <div class="soc-actions">
+-          <a href="#" id="cmpBtnIg" class="soc-btn instagram" target="_blank" onclick="trackCTA('cmp_instagram')">Seguir no Instagram ↗</a>
++          <a href="#" id="cmpBtnIg" class="soc-btn instagram" target="_blank" rel="noopener noreferrer" onclick="trackCTA('cmp_instagram')">Seguir no Instagram ↗</a>
+         </div>
+       </article>
+     </div>
+@@ -303,26 +362,26 @@
+         <div class="cit"><div class="cic">@</div><div><div class="cil">E-mail</div><div class="civ" id="cEmail"></div></div></div>
+         <div class="cit"><div class="cic">☎</div><div><div class="cil" id="cPhoneLabel">NKT Artes Ltda</div><div class="civ" id="cPhone"></div></div></div>
+         <div class="cit" id="cEnderecoWrap"><div class="cic">⌂</div><div><div class="cil">Endereço</div><div class="civ" style="font-size:.88rem;line-height:1.5" id="cEndereco"></div></div></div>
+-        <div class="cit" id="cCnpjWrap"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:var(--blue)"></a></div></div></div>
++        <div class="cit" id="cCnpjWrap"><div class="cic">✦</div><div><div class="cil">CNPJ</div><div class="civ"><a id="cCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" rel="noopener noreferrer" style="color:var(--blue)"></a></div></div></div>
+         <a href="javascript:void(0)" id="waMainBtn" class="whatsapp-btn" onclick="trackWA('contato')">
+           <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+           Iniciar conversa no WhatsApp
+         </a>
+         <div style="margin-top:1.5rem;display:flex;gap:.8rem">
+-          <a href="javascript:void(0)" id="igBtn" class="sl2" onclick="trackCTA('social_ig')" target="_blank">IG</a>
+-          <a href="javascript:void(0)" id="ytBtn" class="sl2" onclick="trackCTA('social_yt')" target="_blank">YT</a>
+-          <a href="javascript:void(0)" id="spBtn" class="sl2" onclick="trackCTA('social_sp')" target="_blank">SP</a>
++          <a href="javascript:void(0)" id="igBtn" class="sl2" onclick="trackCTA('social_ig')" target="_blank" rel="noopener noreferrer">IG</a>
++          <a href="javascript:void(0)" id="ytBtn" class="sl2" onclick="trackCTA('social_yt')" target="_blank" rel="noopener noreferrer">YT</a>
++          <a href="javascript:void(0)" id="spBtn" class="sl2" onclick="trackCTA('social_sp')" target="_blank" rel="noopener noreferrer">SP</a>
+         </div>
+       </div>
+       <div id="contactFormWrap">
+         <form id="cform">
+-          <div class="ff"><label class="fl">Nome</label><input type="text" name="nome" class="fi" placeholder="Seu nome" data-fs-field required></div>
+-          <div class="ff"><label class="fl">Organização / Município</label><input type="text" name="organizacao" class="fi" placeholder="Prefeitura de... / Empresa..." data-fs-field></div>
+-          <div class="ff"><label class="fl">E-mail</label><input type="email" name="email" class="fi" placeholder="seu@email.com" data-fs-field required></div>
++          <div class="ff"><label class="fl" for="cf-nome">Nome</label><input id="cf-nome" type="text" name="nome" class="fi" placeholder="Seu nome" data-fs-field required></div>
++          <div class="ff"><label class="fl" for="cf-org">Organização / Município</label><input id="cf-org" type="text" name="organizacao" class="fi" placeholder="Prefeitura de... / Empresa..." data-fs-field></div>
++          <div class="ff"><label class="fl" for="cf-email">E-mail</label><input id="cf-email" type="email" name="email" class="fi" placeholder="seu@email.com" data-fs-field required></div>
+           <span data-fs-error="email" style="display:block;font-size:.8rem;color:#d32f2f;margin-top:.3rem;margin-bottom:.8rem"></span>
+-          <div class="ff"><label class="fl">Telefone / WhatsApp</label><input type="tel" name="telefone" class="fi" placeholder="(XX) XXXXX-XXXX" data-fs-field></div>
+-          <div class="ff"><label class="fl">Tipo de Solicitação</label>
+-            <select name="tipo" class="fsl" data-fs-field>
++          <div class="ff"><label class="fl" for="cf-tel">Telefone / WhatsApp</label><input id="cf-tel" type="tel" name="telefone" class="fi" placeholder="(XX) XXXXX-XXXX" data-fs-field></div>
++          <div class="ff"><label class="fl" for="cf-tipo">Tipo de Solicitação</label>
++            <select id="cf-tipo" name="tipo" class="fsl" data-fs-field>
+               <option value="">Selecione...</option>
+               <option>Proposta comercial</option>
+               <option>Contratação pública (inexigibilidade)</option>
+@@ -332,7 +391,7 @@
+               <option>Outro</option>
+             </select>
+           </div>
+-          <div class="ff"><label class="fl">Mensagem</label><textarea name="mensagem" class="ft" placeholder="Evento, data aproximada, cidade e outras informações relevantes..." data-fs-field required></textarea></div>
++          <div class="ff"><label class="fl" for="cf-msg">Mensagem</label><textarea id="cf-msg" name="mensagem" class="ft" placeholder="Evento, data aproximada, cidade e outras informações relevantes..." data-fs-field required></textarea></div>
+           <span data-fs-error="mensagem" style="display:block;font-size:.8rem;color:#d32f2f;margin-top:.3rem;margin-bottom:.8rem"></span>
+           <button type="submit" class="bp" style="width:100%;padding:1.05rem" onclick="trackCTA('form_submit')" data-fs-submit-btn>Enviar Solicitação</button>
+         </form>
+@@ -377,20 +436,21 @@
+     <div><div class="fct">Contato</div><ul class="fl2">
+       <li><a id="footerEmail" href="#"></a></li>
+       <li><a id="footerPhone" href="#"></a></li>
+-      <li><a id="footerIG" href="#" target="_blank">Instagram</a></li>
+-      <li><a id="footerYT" href="#" target="_blank">YouTube</a></li>
+-      <li><a id="footerSP" href="#" target="_blank">Spotify</a></li>
++      <li><a id="footerIG" href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
++      <li><a id="footerYT" href="#" target="_blank" rel="noopener noreferrer">YouTube</a></li>
++      <li><a id="footerSP" href="#" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+     </ul></div>
+   </div>
+   <div class="fb">
+-    <span class="fleg">© 2026 Tingo Santi · NKT Artes Ltda · <a id="footerCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" style="color:rgba(255,255,255,.3)"></a></span>
++    <span class="fleg">© 2026 Tingo Santi · NKT Artes Ltda · <a id="footerCnpj" href="https://cnpj.receita.fazenda.gov.br/consulta-publica-cnpj" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,.3)"></a></span>
+     <div class="fso">
+-      <a id="fsoIG" href="#" class="sl2" target="_blank">IG</a>
+-      <a id="fsoYT" href="#" class="sl2" target="_blank">YT</a>
+-      <a id="fsoSP" href="#" class="sl2" target="_blank">SP</a>
++      <a id="fsoIG" href="#" class="sl2" target="_blank" rel="noopener noreferrer">IG</a>
++      <a id="fsoYT" href="#" class="sl2" target="_blank" rel="noopener noreferrer">YT</a>
++      <a id="fsoSP" href="#" class="sl2" target="_blank" rel="noopener noreferrer">SP</a>
+       <a id="fsoWA" href="#" class="sl2" onclick="trackWA('footer_icon')">WA</a>
+     </div>
+   </div>
++  <p class="fdisc">Espetáculo de homenagem artística. Não se trata de apresentação oficial de Roberto Carlos nem de produção vinculada ao artista.</p>
+ </footer>
+ 
+ <script>
+@@ -482,7 +542,7 @@
+   SITE.galeria.forEach(function(g) {
+     var el = document.createElement('div');
+     el.className = 'gi';
+-    el.innerHTML = '<img src="' + g.arquivo + '" loading="lazy" alt="Show Tingo Santi">';
++    el.innerHTML = '<img src="' + g.arquivo + '" loading="lazy" alt="' + (g.alt || 'Tingo Santi em show ao vivo, tributo a Roberto Carlos') + '">';
+     gal.appendChild(el);
+   });
+ 
+@@ -723,8 +783,15 @@
+   document.getElementById('logoL').style.display = s ? 'none' : 'block';
+   document.getElementById('logoD').style.display = s ? 'block' : 'none';
+ });
+-document.getElementById('ham').onclick = function(){ document.getElementById('mm').classList.toggle('o'); };
+-function cm(){ document.getElementById('mm').classList.remove('o'); }
++document.getElementById('ham').onclick = function(){
++  var open = document.getElementById('mm').classList.toggle('o');
++  this.setAttribute('aria-expanded', open ? 'true' : 'false');
++};
++function cm(){
++  document.getElementById('mm').classList.remove('o');
++  var h = document.getElementById('ham');
++  if (h) h.setAttribute('aria-expanded', 'false');
++}
+ 
+ function trackCTA(label) {
+   if (window._gtag) window._gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
+
+==================== site.css ====================
+--- a/site.css	2026-06-18 22:48:10.284425756 +0000
++++ b/site.css	2026-06-19 21:33:55.706132661 +0000
+@@ -16,6 +16,7 @@
+ img{display:block;max-width:100%}
+ a{color:inherit;text-decoration:none}
+ button{cursor:pointer;font-family:var(--sans)}
++a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--bl);outline-offset:2px;border-radius:2px}
+ 
+ /* ── NAV ── */
+ #nav{position:fixed;top:0;left:0;right:0;height:var(--nh);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;z-index:200;transition:all .4s;background:transparent}
+@@ -304,6 +305,7 @@
+ .fso{display:flex;gap:.7rem}
+ .sl2{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.82rem;transition:all .2s}
+ .sl2:hover{border-color:var(--bx);color:#fff}
++.fdisc{max-width:var(--max);margin:1.4rem auto 0;font-size:.72rem;line-height:1.55;color:rgba(255,255,255,.6);text-align:center}
+ 
+ /* ── RESPONSIVE ── */
+ @media(max-width:1024px){
+
+==================== netlify.toml ====================
+--- a/netlify.toml	2026-06-18 22:03:23.492455175 +0000
++++ b/netlify.toml	2026-06-19 21:33:50.024174763 +0000
+@@ -7,6 +7,9 @@
+     X-Frame-Options = "SAMEORIGIN"
+     X-Content-Type-Options = "nosniff"
+     Referrer-Policy = "strict-origin-when-cross-origin"
++    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
++    Permissions-Policy = "camera=(), microphone=(), geolocation=(), browsing-topics=()"
++    Content-Security-Policy-Report-Only = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://w.behold.so https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self' https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://open.spotify.com; connect-src 'self' https://formspree.io https://*.formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://w.behold.so https://*.behold.so; form-action 'self' https://formspree.io"
+ 
+ [[headers]]
+   for = "/img/*"
