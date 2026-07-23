@@ -16,7 +16,7 @@ const SITE = {
       spotify:       "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
       formspree:     "xyklpzbk",
       cnpj:          "56.047.654/0001-25",
-      endereco:      "",
+      endereco:      "Av. Jornalista Alberto Francisco Torres, 389/1001 · Icaraí · Niterói · RJ · CEP 24230-006",
       companyLabel:  "NKT Artes Ltda",
       sectionTitle:  "Fale com a <em>produção</em>",
       sectionIntro:  "Solicitações de proposta, agenda e materiais técnicos atendidas pela NKT Artes Ltda. Retorno em até 24 horas úteis.",
@@ -128,7 +128,7 @@ const SITE = {
       desc:   "Catálogo autoral e interpretativo com presença ativa no Spotify e Apple Music. Maior prova quantitativa de aderência do público ao projeto."
     },
     {
-      numero: "68K+",
+      numero: "70K+",
       label:  "Seguidores no Instagram",
       desc:   "Crescimento 100% orgânico, sem tráfego pago."
     },
@@ -396,7 +396,7 @@ const SITE = {
       { ano: "2021", desc: "Entrevista no podcast Lado Pessoal, da Antena 1, como CEO da Nokia Brasil." },
       { ano: "2023", desc: "Início do projeto artístico. +50 composições autorais publicadas." },
       { ano: "2024", desc: "Estreia internacional em Portugal. Validação pela FUNARJ." },
-      { ano: "2025", desc: "Contratos com Macaé, Itaboraí. 4 shows no PCSF. +68K seguidores. 21M+ execuções." },
+      { ano: "2025", desc: "Contratos com Macaé, Itaboraí. 4 shows no PCSF. +70K seguidores. 21M+ execuções." },
       { ano: "2026", desc: "Doutorado COPPEAD/UFRJ. Publicação autoral no Projeto Draft." }
     ]
   },
