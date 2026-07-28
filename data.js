@@ -128,7 +128,7 @@ const SITE = {
       desc:   "Catálogo autoral e interpretativo com presença ativa no Spotify e Apple Music. Maior prova quantitativa de aderência do público ao projeto."
     },
     {
-      numero: "70K+",
+      numero: "71K+",
       label:  "Seguidores no Instagram",
       desc:   "Crescimento 100% orgânico, sem tráfego pago."
     },
@@ -396,13 +396,13 @@ const SITE = {
       { ano: "2021", desc: "Entrevista no podcast Lado Pessoal, da Antena 1, como CEO da Nokia Brasil." },
       { ano: "2023", desc: "Início do projeto artístico. +50 composições autorais publicadas." },
       { ano: "2024", desc: "Estreia internacional em Portugal. Validação pela FUNARJ." },
-      { ano: "2025", desc: "Contratos com Macaé, Itaboraí. 4 shows no PCSF. +70K seguidores. 21M+ execuções." },
+      { ano: "2025", desc: "Contratos com Macaé, Itaboraí. 4 shows no PCSF. +71K seguidores. 21M+ execuções." },
       { ano: "2026", desc: "Doutorado COPPEAD/UFRJ. Publicação autoral no Projeto Draft." }
     ]
   },
 
   show: {
-    fotoMain:   "img/espetaculo_macae_natal2025_v2.jpg",
+    fotoMain:   "img/espetaculo_macae_natal2025.jpg",
     fotoAccent: "img/espetaculo_accent_itaborai.jpg",
     intro:      "Tingo Santi interpreta Roberto Carlos com semelhança vocal natural, respeito profundo ao repertório e produção de palco de alto nível. O que o público sente no show é sobre a própria vida dele, ativada pelas canções do Rei, entregues com fidelidade e sofisticação.",
     features: [
