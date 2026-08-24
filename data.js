@@ -128,7 +128,7 @@ const SITE = {
       desc:   "Catálogo autoral e interpretativo com presença ativa no Spotify e Apple Music. Maior prova quantitativa de aderência do público ao projeto."
     },
     {
-      numero: "71K+",
+      numero: "72K+",
       label:  "Seguidores no Instagram",
       desc:   "Crescimento 100% orgânico, sem tráfego pago."
     },
@@ -428,8 +428,8 @@ const SITE = {
   },
 
   show: {
-    fotoMain:   "img/espetaculo_macae_natal2025.jpg",
-    fotoAccent: "img/espetaculo_accent_itaborai.jpg",
+    foto:       "img/espetaculo_accent_itaborai.jpg",
+    fotoAlt:    "Tingo Santi cantando ao vivo no espetáculo Tributo ao Rei, sob iluminação azul de palco",
     intro:      "Tingo Santi interpreta Roberto Carlos com semelhança vocal natural, respeito profundo ao repertório e produção de palco de alto nível. O que o público sente no show é sobre a própria vida dele, ativada pelas canções do Rei, entregues com fidelidade e sofisticação.",
     features: [
       {

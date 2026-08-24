@@ -214,9 +214,8 @@ body{font-family:var(--sans);background:var(--navy);color:#0c1830}
 <section id="show" class="sec">
   <div class="con">
     <div class="sg">
-      <div style="position:relative">
-        <div class="sph" id="showPhotoMain"></div>
-        <div class="spa" id="showPhotoAccent"></div>
+      <div class="sph">
+        <img id="showPhoto" src="" alt="" loading="lazy" decoding="async">
       </div>
       <div>
         <div class="ey"><div class="eyl"></div><span class="eys">O Espetáculo</span></div>
@@ -520,8 +519,9 @@ function init() {
   }
 
   // SHOW
-  document.getElementById('showPhotoMain').style.backgroundImage = "url('" + SITE.show.fotoMain + "')";
-  document.getElementById('showPhotoAccent').style.backgroundImage = "url('" + SITE.show.fotoAccent + "')";
+  var showPhoto = document.getElementById('showPhoto');
+  showPhoto.src = SITE.show.foto;
+  showPhoto.alt = SITE.show.fotoAlt;
   document.getElementById('showIntro').textContent = SITE.show.intro;
   var sf = document.getElementById('showFeatures');
   SITE.show.features.forEach(function(f) {
