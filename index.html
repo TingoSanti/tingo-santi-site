@@ -52,7 +52,24 @@
       "sameAs": [
         "https://instagram.com/tingosanti",
         "https://open.spotify.com/artist/1XfDGJ4C2wEsrAbWbVaZ4b",
+        "https://www.youtube.com/@tingosanti",
         "https://www.linkedin.com/in/ailtonsantosfilho"
+      ],
+      "subjectOf": [
+        {
+          "@type": "NewsArticle",
+          "headline": "CEO deixa vida corporativa e faz shows cantando sucessos de Roberto Carlos",
+          "datePublished": "2026-08-23T10:20:00-03:00",
+          "url": "https://viva.com.br/carreira-e-educacao/ceo-deixa-vida-corporativa-e-faz-shows-cantando-sucessos-de-roberto-carlos.html",
+          "publisher": {"@type": "Organization", "name": "Viva.com.br"}
+        },
+        {
+          "@type": "VideoObject",
+          "name": "Tingo Santi | Cantor, compositor e ex-executivo | Papo com Clê",
+          "thumbnailUrl": "https://i.ytimg.com/vi/cjZcFIM4fjg/hqdefault.jpg",
+          "embedUrl": "https://www.youtube.com/embed/cjZcFIM4fjg",
+          "url": "https://www.youtube.com/watch?v=cjZcFIM4fjg"
+        }
       ]
     },
     {
@@ -575,6 +592,7 @@ function init() {
   });
   var pg2 = document.getElementById('pgrid2');
   var blocks = {
+    priority: [],
     editorial: [],
     official: [],
     general: []
@@ -582,7 +600,9 @@ function init() {
   
   // Categorizar cards em blocos
   SITE.imprensa.forEach(function(p) {
-    if (p.featured || p.tamanho === 'sz-l') {
+    if (p.priority) {
+      blocks.priority.push(p);
+    } else if (p.featured || p.tamanho === 'sz-l') {
       blocks.editorial.push(p);
     } else if (p.official) {
       blocks.official.push(p);
@@ -591,28 +611,40 @@ function init() {
     }
   });
   
-  // Renderizar BLOCO 1: Editorial
-  var html = '<div class="pblock">' +
-    '<h3 class="pblock-h">Destaques Editorial</h3>' +
+  function renderPressCard(p, extraClass) {
+    var href = p.link ? p.link : 'javascript:void(0)';
+    var tgt  = p.link ? 'target="_blank" rel="noopener noreferrer"' : '';
+    var sz   = p.tamanho || 'sz-m';
+    var featured = p.featured || p.priority ? ' featured' : '';
+    var linkIcon = p.link ? '<div class="pcard-link" aria-hidden="true">' + (p.video ? '&#9654;' : '&#8599;') + '</div>' : '';
+    return '<a class="pcard ' + sz + (extraClass ? ' ' + extraClass : '') + '" href="' + href + '" ' + tgt + ' onclick="trackCTA(\'imprensa_' + p.veiculo.toLowerCase().replace(/[^a-z]/g,'_').slice(0,15) + '\')">' +
+      linkIcon +
+      '<div class="pcard-img" style="background-image:url(\'' + p.imagem + '\');background-position:' + (p.pos || 'center top') + '">' +
+        '<div class="pcard-ov"></div>' +
+        '<div class="pcard-body">' +
+          '<span class="pcard-vc' + featured + '">' + p.veiculo + '</span>' +
+          '<div class="pcard-mh">' + p.manchete + '</div>' +
+          (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
+        '</div>' +
+      '</div>' +
+    '</a>';
+  }
+
+  // Renderizar BLOCO 1: entrevistas e matérias recentes de maior valor comercial
+  var html = '<div class="pblock pblock-priority">' +
+    '<h3 class="pblock-h">Entrevistas e matérias em destaque</h3>' +
+    '<div class="pgrid2">';
+  blocks.priority.forEach(function(p) {
+    html += renderPressCard(p, 'pcard-priority');
+  });
+  html += '</div></div>';
+
+  // Renderizar BLOCO 2: editorial de referência
+  html += '<div class="pblock">' +
+    '<h3 class="pblock-h">Editorial de referência</h3>' +
     '<div class="pgrid2">';
   blocks.editorial.forEach(function(p) {
-    var href = p.link ? p.link : 'javascript:void(0)';
-    var tgt  = p.link ? 'target="_blank" rel="noopener"' : '';
-    var sz   = p.tamanho || 'sz-m';
-    var featured = p.featured ? ' featured' : '';
-    var linkIcon = p.link ? '<div class="pcard-link">↗</div>' : '';
-    html +=
-      '<a class="pcard ' + sz + '" href="' + href + '" ' + tgt + ' onclick="trackCTA(\'imprensa_' + p.veiculo.toLowerCase().replace(/[^a-z]/g,'_').slice(0,15) + '\')">' +
-        linkIcon +
-        '<div class="pcard-img" style="background-image:url(\'' + p.imagem + '\');background-position:' + (p.pos || 'center top') + '">' +
-          '<div class="pcard-ov"></div>' +
-          '<div class="pcard-body">' +
-            '<span class="pcard-vc' + featured + '">' + p.veiculo + '</span>' +
-            '<div class="pcard-mh">' + p.manchete + '</div>' +
-            (p.data ? '<div class="pcard-dt">' + p.data + '</div>' : '') +
-          '</div>' +
-        '</div>' +
-      '</a>';
+    html += renderPressCard(p, '');
   });
   html += '</div></div>';
   

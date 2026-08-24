@@ -155,13 +155,37 @@ const SITE = {
   ],
   numerosRodape: "Fonte: CDBaby / Meta Insights / Spotify for Artists · atualizado em 2026",
 
-  /* ── IMPRENSA — 12 cards reorganizados por hierarquia ────────
-     BLOCO 1: Editorial destaque (Projeto Draft dourado + Folha + Antena 1)
-     BLOCO 2: Sites oficiais de prefeituras (com marcação visual especial)
-     BLOCO 3: Cobertura geral de imprensa (grid compacto)
+  /* ── IMPRENSA — cards organizados por hierarquia ─────────────
+     BLOCO 1: Entrevistas e matérias em destaque
+     BLOCO 2: Editorial de referência
+     BLOCO 3: Sites oficiais de prefeituras (com marcação visual especial)
+     BLOCO 4: Cobertura geral de imprensa (grid compacto)
   */
   imprensa: [
-    /* ─── BLOCO 1: EDITORIAL DESTAQUE ─── */
+    /* ─── BLOCO 1: ENTREVISTAS E MATÉRIAS EM DESTAQUE ─── */
+    {
+      veiculo:  "Viva.com.br",
+      data:     "Carreira e Educação · Agosto 2026",
+      manchete: "O artista que permaneceu vivo durante toda a trajetória profissional",
+      imagem:   "https://viva.com.br/media/_versions/2026/08/tingo-santi-1_pxcbhlne_widelg.jpg",
+      pos:      "center center",
+      tamanho:  "sz-m",
+      priority: true,
+      link:     "https://viva.com.br/carreira-e-educacao/ceo-deixa-vida-corporativa-e-faz-shows-cantando-sucessos-de-roberto-carlos.html"
+    },
+    {
+      veiculo:  "Papo com Clê · Corredor 5",
+      data:     "Entrevista em vídeo · Agosto 2026",
+      manchete: "Tingo Santi: cantor, compositor e uma vida inteira ligada à música",
+      imagem:   "https://i.ytimg.com/vi/cjZcFIM4fjg/hqdefault.jpg",
+      pos:      "center center",
+      tamanho:  "sz-m",
+      priority: true,
+      video:    true,
+      link:     "https://www.youtube.com/watch?v=cjZcFIM4fjg"
+    },
+
+    /* ─── BLOCO 2: EDITORIAL DE REFERÊNCIA ─── */
     {
       veiculo:  "Projeto Draft",
       data:     "Lifehackers · Abril 2026",
@@ -340,6 +364,8 @@ const SITE = {
   },
 
   veiculosImprensa: [
+    "Viva.com.br|Portal nacional",
+    "Corredor 5|Papo com Clê",
     "Projeto Draft|Lifehackers",
     "Folha de Niterói|Capa + Matérias",
     "Antena 1|Podcast",
